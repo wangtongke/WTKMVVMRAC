@@ -1,0 +1,47 @@
+//
+//  WTKPrefix.pch
+//  WTKWineMVVM
+//
+//  Created by 王同科 on 16/9/12.
+//  Copyright © 2016年 王同科. All rights reserved.
+//
+
+#ifndef WTKPrefix_pch
+#define WTKPrefix_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+// 第三方
+#import <ReactiveCocoa/ReactiveCocoa.h>
+#import <Masonry/Masonry.h>
+#import <SVProgressHUD/SVProgressHUD.h>
+#import <MJRefresh/MJRefresh.h>
+#import "UIImageView+WebCache.h"
+#import "IQKeyBoardManager.h"
+
+
+//宏
+#import "WTKColorHeader.h"
+#import "WTKMacro.h"
+#import "WTKURLMacro.h"
+
+//类别
+#import "UIColor+WTK.h"
+#import "UIImage+WTK.h"
+#import "UIButton+WTKBtn.h"
+#import "UIFont+WTK.h"
+
+
+
+#import "WTKBasedViewModel.h"
+#import "WTKBindProtocol.h"
+#import "WTKViewModelServices.h"
+#import "WTKBasedViewController.h"
+#import "WTKRequestManager.h"
+#import "WTKGood.h"
+#import "WTKTouchID.h"
+#import "WTKUser.h"
+
+
+#endif /* WTKPrefix_pch */

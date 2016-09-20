@@ -1,0 +1,38 @@
+(
+{
+"event_mark" = 1;
+"event_memo" = 571853b0af48436e6b623008;
+"field_mark" = 1;
+id = 57da0e355b7329771c63264d;
+img = "http://www.jiuyunda.net:90/system/carousel_applies/avatars/57da/0d07/5b73/2977/1716/8839/original/%E5%BE%B7%E5%9B%BD11.jpg?1473907975";
+url = "<null>";
+},
+{
+"event_mark" = 1;
+"event_memo" = 5721e0bdaf48436db0622f70;
+"field_mark" = 2;
+id = 57da0fda5b7329771c63265f;
+img = "http://www.jiuyunda.net:90/system/carousel_applies/avatars/57da/0d81/5b73/2977/1716/883e/original/%E6%AD%8C%E7%BB%B4%E7%89%B9.jpg?1473908097";
+url = "<null>";
+},
+{
+"event_mark" = 3;
+"event_memo" = 57c8017d5b732958db4e94e2;
+"field_mark" = 3;
+id = 57da0fd25b73297720ab8b50;
+img = "http://www.jiuyunda.net:90/system/carousel_applies/avatars/57da/0dc7/5b73/2977/1c63/264a/original/%E7%A2%B1%E6%80%A7%E9%85%92.jpg?1473908167";
+"product_group_title" = "9\U6708\U4efd\U767d\U9152";
+url = "<null>";
+},
+{
+"event_mark" = 2;
+"event_memo" = "http://www.jiuyunda.net:90/off_promotions/57c811da5b73297aa2a12a6a/app_show";
+"field_mark" = 4;
+id = 57c8dbbb5b73295450834b6a;
+img = "http://www.jiuyunda.net:90/system/carousel_applies/avatars/57da/0dee/5b73/2977/2406/d6e9/original/%E4%B9%9D%E6%9C%88%E6%B4%BB%E5%8A%A8.jpg?1473908206";
+url = "<null>";
+"url_share_content" = "\U9152\U8fd0\U8fbe\Uff0c\U5373\U523b\U8fbe";
+"url_share_logo" = "http://www.jiuyunda.net:90//images/logo_400_400.png";
+"url_share_title" = "9\U6708\U9886\U7f8e\U9152\U5566";
+}
+)

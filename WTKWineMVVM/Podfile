@@ -1,0 +1,13 @@
+use_frameworks!
+platform :ios, ‘8.0’
+target “WTKWineMVVM” do
+pod 'ReactiveCocoa', '~> 4.2.1'
+pod 'AFNetworking', '~> 3.1.0'
+pod 'SVProgressHUD', '~> 2.0.3'
+pod 'SDWebImage' , '3.7.3'
+pod 'RESideMenu'
+pod 'Masonry'
+pod 'MJRefresh', '~> 3.1.12'
+pod 'FDFullscreenPopGesture', '~> 1.1'
+
+end

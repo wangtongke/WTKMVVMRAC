@@ -1,0 +1,1064 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		83184EDC4D2521D8EC3C71AC /* Pods_WTKWineMVVM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E158A064F71CB82494B85710 /* Pods_WTKWineMVVM.framework */; };
+		F53106F41D88E3F3003B402C /* WTKTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = F53106F31D88E3F3003B402C /* WTKTabBarController.m */; };
+		F53106F71D88E432003B402C /* WTKNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = F53106F61D88E432003B402C /* WTKNavigationController.m */; };
+		F53106FA1D88E444003B402C /* WTKBasedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F53106F91D88E444003B402C /* WTKBasedViewController.m */; };
+		F53107001D88E486003B402C /* WTKHomeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F53106FF1D88E486003B402C /* WTKHomeVC.m */; };
+		F531070B1D88E5B0003B402C /* WTKFoundVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F531070A1D88E5B0003B402C /* WTKFoundVC.m */; };
+		F53107131D88E644003B402C /* WTKCategoryVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F53107121D88E644003B402C /* WTKCategoryVC.m */; };
+		F53107191D88E681003B402C /* WTKMeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F53107181D88E681003B402C /* WTKMeVC.m */; };
+		F531071E1D88F048003B402C /* UIColor+WTK.m in Sources */ = {isa = PBXBuildFile; fileRef = F531071D1D88F048003B402C /* UIColor+WTK.m */; };
+		F53107211D88F33A003B402C /* WTKShoppingCarVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F53107201D88F33A003B402C /* WTKShoppingCarVC.m */; };
+		F53107241D891B1B003B402C /* WTKBasedViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F53107231D891B1B003B402C /* WTKBasedViewModel.m */; };
+		F531072D1D8923D2003B402C /* WTKViewModelNavigationImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = F531072C1D8923D2003B402C /* WTKViewModelNavigationImpl.m */; };
+		F53107301D8928BD003B402C /* WTKHomeViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F531072F1D8928BD003B402C /* WTKHomeViewModel.m */; };
+		F53107331D8928D4003B402C /* WTKCategoryViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F53107321D8928D4003B402C /* WTKCategoryViewModel.m */; };
+		F53107361D8928E6003B402C /* WTKFoundViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F53107351D8928E6003B402C /* WTKFoundViewModel.m */; };
+		F53107391D8928F4003B402C /* WTKShoppingCarViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F53107381D8928F4003B402C /* WTKShoppingCarViewModel.m */; };
+		F531073C1D892905003B402C /* WTKMeViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F531073B1D892905003B402C /* WTKMeViewModel.m */; };
+		F531073F1D892B0D003B402C /* WTKHomeCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = F531073E1D892B0D003B402C /* WTKHomeCollectionView.m */; };
+		F53107431D892D41003B402C /* WTKHomeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F53107421D892D41003B402C /* WTKHomeCell.m */; };
+		F53107461D892F74003B402C /* WTKHomeHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = F53107451D892F74003B402C /* WTKHomeHeadView.m */; };
+		F531074D1D893D34003B402C /* HomeData in Resources */ = {isa = PBXBuildFile; fileRef = F531074B1D893D34003B402C /* HomeData */; };
+		F531074E1D893D34003B402C /* HomeHead in Resources */ = {isa = PBXBuildFile; fileRef = F531074C1D893D34003B402C /* HomeHead */; };
+		F53107511D893E1E003B402C /* WTKRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F53107501D893E1E003B402C /* WTKRequestManager.m */; };
+		F532DE5A1D8F88AA00E68943 /* WTKTouchID.m in Sources */ = {isa = PBXBuildFile; fileRef = F532DE591D8F88AA00E68943 /* WTKTouchID.m */; };
+		F532DE5D1D8F8B5400E68943 /* WTKUser.m in Sources */ = {isa = PBXBuildFile; fileRef = F532DE5C1D8F8B5400E68943 /* WTKUser.m */; };
+		F532DE601D8FBA0D00E68943 /* WTKSearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = F532DE5F1D8FBA0D00E68943 /* WTKSearchBar.m */; };
+		F588CE241D86AE5D003E3A74 /* UIButton+WTKBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = F588CE231D86AE5D003E3A74 /* UIButton+WTKBtn.m */; };
+		F588CE271D86B3A9003E3A74 /* UIImage+WTK.m in Sources */ = {isa = PBXBuildFile; fileRef = F588CE261D86B3A9003E3A74 /* UIImage+WTK.m */; };
+		F596DA4C1D869FD30058844C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F596DA4B1D869FD30058844C /* main.m */; };
+		F596DA4F1D869FD30058844C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F596DA4E1D869FD30058844C /* AppDelegate.m */; };
+		F596DA521D869FD30058844C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F596DA511D869FD30058844C /* ViewController.m */; };
+		F596DA551D869FD30058844C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F596DA531D869FD30058844C /* Main.storyboard */; };
+		F596DA571D869FD30058844C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F596DA561D869FD30058844C /* Assets.xcassets */; };
+		F596DA5A1D869FD30058844C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F596DA581D869FD30058844C /* LaunchScreen.storyboard */; };
+		F596DA651D869FD30058844C /* WTKWineMVVMTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F596DA641D869FD30058844C /* WTKWineMVVMTests.m */; };
+		F596DA701D869FD30058844C /* WTKWineMVVMUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = F596DA6F1D869FD30058844C /* WTKWineMVVMUITests.m */; };
+		F596DAAD1D86A0650058844C /* IQNSArray+Sort.m in Sources */ = {isa = PBXBuildFile; fileRef = F596DA8B1D86A0650058844C /* IQNSArray+Sort.m */; };
+		F596DAAE1D86A0650058844C /* IQUITextFieldView+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = F596DA8D1D86A0650058844C /* IQUITextFieldView+Additions.m */; };
+		F596DAAF1D86A0650058844C /* IQUIView+Hierarchy.m in Sources */ = {isa = PBXBuildFile; fileRef = F596DA8F1D86A0650058844C /* IQUIView+Hierarchy.m */; };
+		F596DAB01D86A0650058844C /* IQUIViewController+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = F596DA911D86A0650058844C /* IQUIViewController+Additions.m */; };
+		F596DAB11D86A0650058844C /* IQUIWindow+Hierarchy.m in Sources */ = {isa = PBXBuildFile; fileRef = F596DA931D86A0650058844C /* IQUIWindow+Hierarchy.m */; };
+		F596DAB21D86A0650058844C /* IQKeyboardManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F596DA981D86A0650058844C /* IQKeyboardManager.m */; };
+		F596DAB31D86A0650058844C /* IQKeyboardReturnKeyHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = F596DA9A1D86A0650058844C /* IQKeyboardReturnKeyHandler.m */; };
+		F596DAB41D86A0650058844C /* IQSegmentedNextPrevious.m in Sources */ = {isa = PBXBuildFile; fileRef = F596DA9D1D86A0650058844C /* IQSegmentedNextPrevious.m */; };
+		F596DAB51D86A0650058844C /* IQTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = F596DAA01D86A0650058844C /* IQTextView.m */; };
+		F596DAB61D86A0650058844C /* IQBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = F596DAA31D86A0650058844C /* IQBarButtonItem.m */; };
+		F596DAB71D86A0650058844C /* IQTitleBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = F596DAA51D86A0650058844C /* IQTitleBarButtonItem.m */; };
+		F596DAB81D86A0650058844C /* IQToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = F596DAA71D86A0650058844C /* IQToolbar.m */; };
+		F596DAB91D86A0650058844C /* IQUIView+IQKeyboardToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = F596DAA91D86A0650058844C /* IQUIView+IQKeyboardToolbar.m */; };
+		F596DABA1D86A0650058844C /* IQKeyboardManager.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F596DAAC1D86A0650058844C /* IQKeyboardManager.bundle */; };
+		F5A00BDB1D8E3C3A0026DF67 /* WTKGood.m in Sources */ = {isa = PBXBuildFile; fileRef = F5A00BDA1D8E3C3A0026DF67 /* WTKGood.m */; };
+		F5A00BDE1D8E43EA0026DF67 /* UIFont+WTK.m in Sources */ = {isa = PBXBuildFile; fileRef = F5A00BDD1D8E43EA0026DF67 /* UIFont+WTK.m */; };
+		F5A00BE11D8E5F0D0026DF67 /* WTKGoodManagerView.m in Sources */ = {isa = PBXBuildFile; fileRef = F5A00BE01D8E5F0D0026DF67 /* WTKGoodManagerView.m */; };
+		F5A00BE51D8E79900026DF67 /* WTKHomeBannerCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F5A00BE31D8E79900026DF67 /* WTKHomeBannerCollectionViewCell.m */; };
+		F5A00BE61D8E79900026DF67 /* WTKHomeBannerCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F5A00BE41D8E79900026DF67 /* WTKHomeBannerCollectionViewCell.xib */; };
+		F5A00C541D8E93AB0026DF67 /* WTKGoodsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F5A00C531D8E93AB0026DF67 /* WTKGoodsVC.m */; };
+		F5A00C571D8E93F50026DF67 /* WTKGoodsViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F5A00C561D8E93F50026DF67 /* WTKGoodsViewModel.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F596DA611D869FD30058844C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F596DA3F1D869FD30058844C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F596DA461D869FD30058844C;
+			remoteInfo = WTKWineMVVM;
+		};
+		F596DA6C1D869FD30058844C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F596DA3F1D869FD30058844C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F596DA461D869FD30058844C;
+			remoteInfo = WTKWineMVVM;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		D9E426C5B301181044319B4E /* Pods-WTKWineMVVM.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WTKWineMVVM.release.xcconfig"; path = "Pods/Target Support Files/Pods-WTKWineMVVM/Pods-WTKWineMVVM.release.xcconfig"; sourceTree = "<group>"; };
+		E158A064F71CB82494B85710 /* Pods_WTKWineMVVM.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WTKWineMVVM.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E2969E7005841F781BBE8D64 /* Pods-WTKWineMVVM.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WTKWineMVVM.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WTKWineMVVM/Pods-WTKWineMVVM.debug.xcconfig"; sourceTree = "<group>"; };
+		F53106F21D88E3F3003B402C /* WTKTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTKTabBarController.h; sourceTree = "<group>"; };
+		F53106F31D88E3F3003B402C /* WTKTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTKTabBarController.m; sourceTree = "<group>"; };
+		F53106F51D88E432003B402C /* WTKNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTKNavigationController.h; sourceTree = "<group>"; };
+		F53106F61D88E432003B402C /* WTKNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTKNavigationController.m; sourceTree = "<group>"; };
+		F53106F81D88E444003B402C /* WTKBasedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTKBasedViewController.h; sourceTree = "<group>"; };
+		F53106F91D88E444003B402C /* WTKBasedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTKBasedViewController.m; sourceTree = "<group>"; };
+		F53106FE1D88E486003B402C /* WTKHomeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTKHomeVC.h; sourceTree = "<group>"; };
+		F53106FF1D88E486003B402C /* WTKHomeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTKHomeVC.m; sourceTree = "<group>"; };
+		F53107091D88E5B0003B402C /* WTKFoundVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTKFoundVC.h; sourceTree = "<group>"; };
+		F531070A1D88E5B0003B402C /* WTKFoundVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTKFoundVC.m; sourceTree = "<group>"; };
+		F53107111D88E644003B402C /* WTKCategoryVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTKCategoryVC.h; sourceTree = "<group>"; };
+		F53107121D88E644003B402C /* WTKCategoryVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTKCategoryVC.m; sourceTree = "<group>"; };
+		F53107171D88E681003B402C /* WTKMeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTKMeVC.h; sourceTree = "<group>"; };
+		F53107181D88E681003B402C /* WTKMeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTKMeVC.m; sourceTree = "<group>"; };
+		F531071A1D88EBE4003B402C /* WTKColorHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WTKColorHeader.h; sourceTree = "<group>"; };
+		F531071B1D88EC6E003B402C /* WTKMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WTKMacro.h; sourceTree = "<group>"; };
+		F531071C1D88F048003B402C /* UIColor+WTK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+WTK.h"; sourceTree = "<group>"; };
+		F531071D1D88F048003B402C /* UIColor+WTK.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+WTK.m"; sourceTree = "<group>"; };
+		F531071F1D88F33A003B402C /* WTKShoppingCarVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTKShoppingCarVC.h; sourceTree = "<group>"; };
+		F53107201D88F33A003B402C /* WTKShoppingCarVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTKShoppingCarVC.m; sourceTree = "<group>"; };
+		F53107221D891B1B003B402C /* WTKBasedViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTKBasedViewModel.h; sourceTree = "<group>"; };
+		F53107231D891B1B003B402C /* WTKBasedViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTKBasedViewModel.m; sourceTree = "<group>"; };
+		F53107251D891C69003B402C /* WTKBindProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTKBindProtocol.h; sourceTree = "<group>"; };
+		F531072A1D8922D4003B402C /* WTKViewModelServices.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTKViewModelServices.h; sourceTree = "<group>"; };
+		F531072B1D8923D2003B402C /* WTKViewModelNavigationImpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTKViewModelNavigationImpl.h; sourceTree = "<group>"; };
+		F531072C1D8923D2003B402C /* WTKViewModelNavigationImpl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTKViewModelNavigationImpl.m; sourceTree = "<group>"; };
+		F531072E1D8928BD003B402C /* WTKHomeViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTKHomeViewModel.h; sourceTree = "<group>"; };
+		F531072F1D8928BD003B402C /* WTKHomeViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTKHomeViewModel.m; sourceTree = "<group>"; };
+		F53107311D8928D4003B402C /* WTKCategoryViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTKCategoryViewModel.h; sourceTree = "<group>"; };
+		F53107321D8928D4003B402C /* WTKCategoryViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTKCategoryViewModel.m; sourceTree = "<group>"; };
+		F53107341D8928E6003B402C /* WTKFoundViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTKFoundViewModel.h; sourceTree = "<group>"; };
+		F53107351D8928E6003B402C /* WTKFoundViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTKFoundViewModel.m; sourceTree = "<group>"; };
+		F53107371D8928F4003B402C /* WTKShoppingCarViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTKShoppingCarViewModel.h; sourceTree = "<group>"; };
+		F53107381D8928F4003B402C /* WTKShoppingCarViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTKShoppingCarViewModel.m; sourceTree = "<group>"; };
+		F531073A1D892905003B402C /* WTKMeViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTKMeViewModel.h; sourceTree = "<group>"; };
+		F531073B1D892905003B402C /* WTKMeViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTKMeViewModel.m; sourceTree = "<group>"; };
+		F531073D1D892B0D003B402C /* WTKHomeCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTKHomeCollectionView.h; sourceTree = "<group>"; };
+		F531073E1D892B0D003B402C /* WTKHomeCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTKHomeCollectionView.m; sourceTree = "<group>"; };
+		F53107411D892D41003B402C /* WTKHomeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTKHomeCell.h; sourceTree = "<group>"; };
+		F53107421D892D41003B402C /* WTKHomeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTKHomeCell.m; sourceTree = "<group>"; };
+		F53107441D892F74003B402C /* WTKHomeHeadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTKHomeHeadView.h; sourceTree = "<group>"; };
+		F53107451D892F74003B402C /* WTKHomeHeadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTKHomeHeadView.m; sourceTree = "<group>"; };
+		F531074B1D893D34003B402C /* HomeData */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = HomeData; sourceTree = "<group>"; };
+		F531074C1D893D34003B402C /* HomeHead */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = HomeHead; sourceTree = "<group>"; };
+		F531074F1D893E1E003B402C /* WTKRequestManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTKRequestManager.h; sourceTree = "<group>"; };
+		F53107501D893E1E003B402C /* WTKRequestManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTKRequestManager.m; sourceTree = "<group>"; };
+		F53107521D8940EE003B402C /* WTKURLMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WTKURLMacro.h; sourceTree = "<group>"; };
+		F532DE581D8F88AA00E68943 /* WTKTouchID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTKTouchID.h; sourceTree = "<group>"; };
+		F532DE591D8F88AA00E68943 /* WTKTouchID.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTKTouchID.m; sourceTree = "<group>"; };
+		F532DE5B1D8F8B5400E68943 /* WTKUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTKUser.h; sourceTree = "<group>"; };
+		F532DE5C1D8F8B5400E68943 /* WTKUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTKUser.m; sourceTree = "<group>"; };
+		F532DE5E1D8FBA0D00E68943 /* WTKSearchBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTKSearchBar.h; sourceTree = "<group>"; };
+		F532DE5F1D8FBA0D00E68943 /* WTKSearchBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTKSearchBar.m; sourceTree = "<group>"; };
+		F588CE221D86AE5D003E3A74 /* UIButton+WTKBtn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+WTKBtn.h"; sourceTree = "<group>"; };
+		F588CE231D86AE5D003E3A74 /* UIButton+WTKBtn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+WTKBtn.m"; sourceTree = "<group>"; };
+		F588CE251D86B3A9003E3A74 /* UIImage+WTK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+WTK.h"; sourceTree = "<group>"; };
+		F588CE261D86B3A9003E3A74 /* UIImage+WTK.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+WTK.m"; sourceTree = "<group>"; };
+		F596DA471D869FD30058844C /* WTKWineMVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WTKWineMVVM.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F596DA4B1D869FD30058844C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F596DA4D1D869FD30058844C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = ../AppDelegate.h; sourceTree = "<group>"; };
+		F596DA4E1D869FD30058844C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = ../AppDelegate.m; sourceTree = "<group>"; };
+		F596DA501D869FD30058844C /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		F596DA511D869FD30058844C /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		F596DA541D869FD30058844C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F596DA561D869FD30058844C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F596DA591D869FD30058844C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F596DA5B1D869FD30058844C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F596DA601D869FD30058844C /* WTKWineMVVMTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WTKWineMVVMTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F596DA641D869FD30058844C /* WTKWineMVVMTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WTKWineMVVMTests.m; sourceTree = "<group>"; };
+		F596DA661D869FD30058844C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F596DA6B1D869FD30058844C /* WTKWineMVVMUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WTKWineMVVMUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F596DA6F1D869FD30058844C /* WTKWineMVVMUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WTKWineMVVMUITests.m; sourceTree = "<group>"; };
+		F596DA711D869FD30058844C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F596DA8A1D86A0650058844C /* IQNSArray+Sort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "IQNSArray+Sort.h"; sourceTree = "<group>"; };
+		F596DA8B1D86A0650058844C /* IQNSArray+Sort.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "IQNSArray+Sort.m"; sourceTree = "<group>"; };
+		F596DA8C1D86A0650058844C /* IQUITextFieldView+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "IQUITextFieldView+Additions.h"; sourceTree = "<group>"; };
+		F596DA8D1D86A0650058844C /* IQUITextFieldView+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "IQUITextFieldView+Additions.m"; sourceTree = "<group>"; };
+		F596DA8E1D86A0650058844C /* IQUIView+Hierarchy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "IQUIView+Hierarchy.h"; sourceTree = "<group>"; };
+		F596DA8F1D86A0650058844C /* IQUIView+Hierarchy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "IQUIView+Hierarchy.m"; sourceTree = "<group>"; };
+		F596DA901D86A0650058844C /* IQUIViewController+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "IQUIViewController+Additions.h"; sourceTree = "<group>"; };
+		F596DA911D86A0650058844C /* IQUIViewController+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "IQUIViewController+Additions.m"; sourceTree = "<group>"; };
+		F596DA921D86A0650058844C /* IQUIWindow+Hierarchy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "IQUIWindow+Hierarchy.h"; sourceTree = "<group>"; };
+		F596DA931D86A0650058844C /* IQUIWindow+Hierarchy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "IQUIWindow+Hierarchy.m"; sourceTree = "<group>"; };
+		F596DA951D86A0650058844C /* IQKeyboardManagerConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IQKeyboardManagerConstants.h; sourceTree = "<group>"; };
+		F596DA961D86A0650058844C /* IQKeyboardManagerConstantsInternal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IQKeyboardManagerConstantsInternal.h; sourceTree = "<group>"; };
+		F596DA971D86A0650058844C /* IQKeyboardManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IQKeyboardManager.h; sourceTree = "<group>"; };
+		F596DA981D86A0650058844C /* IQKeyboardManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IQKeyboardManager.m; sourceTree = "<group>"; };
+		F596DA991D86A0650058844C /* IQKeyboardReturnKeyHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IQKeyboardReturnKeyHandler.h; sourceTree = "<group>"; };
+		F596DA9A1D86A0650058844C /* IQKeyboardReturnKeyHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IQKeyboardReturnKeyHandler.m; sourceTree = "<group>"; };
+		F596DA9C1D86A0650058844C /* IQSegmentedNextPrevious.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IQSegmentedNextPrevious.h; sourceTree = "<group>"; };
+		F596DA9D1D86A0650058844C /* IQSegmentedNextPrevious.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IQSegmentedNextPrevious.m; sourceTree = "<group>"; };
+		F596DA9F1D86A0650058844C /* IQTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IQTextView.h; sourceTree = "<group>"; };
+		F596DAA01D86A0650058844C /* IQTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IQTextView.m; sourceTree = "<group>"; };
+		F596DAA21D86A0650058844C /* IQBarButtonItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IQBarButtonItem.h; sourceTree = "<group>"; };
+		F596DAA31D86A0650058844C /* IQBarButtonItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IQBarButtonItem.m; sourceTree = "<group>"; };
+		F596DAA41D86A0650058844C /* IQTitleBarButtonItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IQTitleBarButtonItem.h; sourceTree = "<group>"; };
+		F596DAA51D86A0650058844C /* IQTitleBarButtonItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IQTitleBarButtonItem.m; sourceTree = "<group>"; };
+		F596DAA61D86A0650058844C /* IQToolbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IQToolbar.h; sourceTree = "<group>"; };
+		F596DAA71D86A0650058844C /* IQToolbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IQToolbar.m; sourceTree = "<group>"; };
+		F596DAA81D86A0650058844C /* IQUIView+IQKeyboardToolbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "IQUIView+IQKeyboardToolbar.h"; sourceTree = "<group>"; };
+		F596DAA91D86A0650058844C /* IQUIView+IQKeyboardToolbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "IQUIView+IQKeyboardToolbar.m"; sourceTree = "<group>"; };
+		F596DAAA1D86A0650058844C /* KeyboardManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeyboardManager.h; sourceTree = "<group>"; };
+		F596DAAC1D86A0650058844C /* IQKeyboardManager.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = IQKeyboardManager.bundle; sourceTree = "<group>"; };
+		F596DABB1D86A88B0058844C /* WTKPrefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WTKPrefix.pch; sourceTree = "<group>"; };
+		F5A00BD91D8E3C3A0026DF67 /* WTKGood.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTKGood.h; sourceTree = "<group>"; };
+		F5A00BDA1D8E3C3A0026DF67 /* WTKGood.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTKGood.m; sourceTree = "<group>"; };
+		F5A00BDC1D8E43EA0026DF67 /* UIFont+WTK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+WTK.h"; sourceTree = "<group>"; };
+		F5A00BDD1D8E43EA0026DF67 /* UIFont+WTK.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+WTK.m"; sourceTree = "<group>"; };
+		F5A00BDF1D8E5F0D0026DF67 /* WTKGoodManagerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTKGoodManagerView.h; sourceTree = "<group>"; };
+		F5A00BE01D8E5F0D0026DF67 /* WTKGoodManagerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTKGoodManagerView.m; sourceTree = "<group>"; };
+		F5A00BE21D8E79900026DF67 /* WTKHomeBannerCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTKHomeBannerCollectionViewCell.h; sourceTree = "<group>"; };
+		F5A00BE31D8E79900026DF67 /* WTKHomeBannerCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTKHomeBannerCollectionViewCell.m; sourceTree = "<group>"; };
+		F5A00BE41D8E79900026DF67 /* WTKHomeBannerCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WTKHomeBannerCollectionViewCell.xib; sourceTree = "<group>"; };
+		F5A00C521D8E93AB0026DF67 /* WTKGoodsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTKGoodsVC.h; sourceTree = "<group>"; };
+		F5A00C531D8E93AB0026DF67 /* WTKGoodsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTKGoodsVC.m; sourceTree = "<group>"; };
+		F5A00C551D8E93F50026DF67 /* WTKGoodsViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTKGoodsViewModel.h; sourceTree = "<group>"; };
+		F5A00C561D8E93F50026DF67 /* WTKGoodsViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTKGoodsViewModel.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F596DA441D869FD30058844C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				83184EDC4D2521D8EC3C71AC /* Pods_WTKWineMVVM.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F596DA5D1D869FD30058844C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F596DA681D869FD30058844C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6430294CA4CFB36D16DEC878 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E2969E7005841F781BBE8D64 /* Pods-WTKWineMVVM.debug.xcconfig */,
+				D9E426C5B301181044319B4E /* Pods-WTKWineMVVM.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		738105B7EDCDC96147DA8B49 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E158A064F71CB82494B85710 /* Pods_WTKWineMVVM.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F53107401D892D1D003B402C /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				F53107411D892D41003B402C /* WTKHomeCell.h */,
+				F53107421D892D41003B402C /* WTKHomeCell.m */,
+				F53107441D892F74003B402C /* WTKHomeHeadView.h */,
+				F53107451D892F74003B402C /* WTKHomeHeadView.m */,
+				F5A00BE21D8E79900026DF67 /* WTKHomeBannerCollectionViewCell.h */,
+				F5A00BE31D8E79900026DF67 /* WTKHomeBannerCollectionViewCell.m */,
+				F5A00BE41D8E79900026DF67 /* WTKHomeBannerCollectionViewCell.xib */,
+			);
+			path = cell;
+			sourceTree = "<group>";
+		};
+		F588CE1F1D86ADBD003E3A74 /* Category(类别) */ = {
+			isa = PBXGroup;
+			children = (
+				F588CE221D86AE5D003E3A74 /* UIButton+WTKBtn.h */,
+				F588CE231D86AE5D003E3A74 /* UIButton+WTKBtn.m */,
+				F588CE251D86B3A9003E3A74 /* UIImage+WTK.h */,
+				F588CE261D86B3A9003E3A74 /* UIImage+WTK.m */,
+				F531071C1D88F048003B402C /* UIColor+WTK.h */,
+				F531071D1D88F048003B402C /* UIColor+WTK.m */,
+				F5A00BDC1D8E43EA0026DF67 /* UIFont+WTK.h */,
+				F5A00BDD1D8E43EA0026DF67 /* UIFont+WTK.m */,
+			);
+			path = "Category(类别)";
+			sourceTree = "<group>";
+		};
+		F596DA3E1D869FD30058844C = {
+			isa = PBXGroup;
+			children = (
+				F596DA491D869FD30058844C /* WTKWineMVVM */,
+				F596DA631D869FD30058844C /* WTKWineMVVMTests */,
+				F596DA6E1D869FD30058844C /* WTKWineMVVMUITests */,
+				F596DA481D869FD30058844C /* Products */,
+				6430294CA4CFB36D16DEC878 /* Pods */,
+				738105B7EDCDC96147DA8B49 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		F596DA481D869FD30058844C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F596DA471D869FD30058844C /* WTKWineMVVM.app */,
+				F596DA601D869FD30058844C /* WTKWineMVVMTests.xctest */,
+				F596DA6B1D869FD30058844C /* WTKWineMVVMUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F596DA491D869FD30058844C /* WTKWineMVVM */ = {
+			isa = PBXGroup;
+			children = (
+				F596DA7D1D86A0640058844C /* Appdelegate */,
+				F596DA7E1D86A0640058844C /* Class */,
+				F596DA851D86A0650058844C /* Resource */,
+				F596DA861D86A0650058844C /* Tools */,
+				F596DA501D869FD30058844C /* ViewController.h */,
+				F596DA511D869FD30058844C /* ViewController.m */,
+				F596DA531D869FD30058844C /* Main.storyboard */,
+				F596DA561D869FD30058844C /* Assets.xcassets */,
+				F596DA581D869FD30058844C /* LaunchScreen.storyboard */,
+				F596DA5B1D869FD30058844C /* Info.plist */,
+				F596DA4A1D869FD30058844C /* Supporting Files */,
+			);
+			path = WTKWineMVVM;
+			sourceTree = "<group>";
+		};
+		F596DA4A1D869FD30058844C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F596DA4B1D869FD30058844C /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F596DA631D869FD30058844C /* WTKWineMVVMTests */ = {
+			isa = PBXGroup;
+			children = (
+				F596DA641D869FD30058844C /* WTKWineMVVMTests.m */,
+				F596DA661D869FD30058844C /* Info.plist */,
+			);
+			path = WTKWineMVVMTests;
+			sourceTree = "<group>";
+		};
+		F596DA6E1D869FD30058844C /* WTKWineMVVMUITests */ = {
+			isa = PBXGroup;
+			children = (
+				F596DA6F1D869FD30058844C /* WTKWineMVVMUITests.m */,
+				F596DA711D869FD30058844C /* Info.plist */,
+			);
+			path = WTKWineMVVMUITests;
+			sourceTree = "<group>";
+		};
+		F596DA7D1D86A0640058844C /* Appdelegate */ = {
+			isa = PBXGroup;
+			children = (
+				F596DA4D1D869FD30058844C /* AppDelegate.h */,
+				F596DA4E1D869FD30058844C /* AppDelegate.m */,
+			);
+			path = Appdelegate;
+			sourceTree = "<group>";
+		};
+		F596DA7E1D86A0640058844C /* Class */ = {
+			isa = PBXGroup;
+			children = (
+				F596DA811D86A0650058844C /* Util */,
+				F596DA7F1D86A0640058844C /* Based */,
+				F596DA801D86A0640058844C /* Model */,
+				F596DA821D86A0650058844C /* View */,
+				F596DA831D86A0650058844C /* ViewController */,
+				F596DA841D86A0650058844C /* ViewModel */,
+			);
+			path = Class;
+			sourceTree = "<group>";
+		};
+		F596DA7F1D86A0640058844C /* Based */ = {
+			isa = PBXGroup;
+			children = (
+				F53106F21D88E3F3003B402C /* WTKTabBarController.h */,
+				F53106F31D88E3F3003B402C /* WTKTabBarController.m */,
+				F53106F51D88E432003B402C /* WTKNavigationController.h */,
+				F53106F61D88E432003B402C /* WTKNavigationController.m */,
+				F53106F81D88E444003B402C /* WTKBasedViewController.h */,
+				F53106F91D88E444003B402C /* WTKBasedViewController.m */,
+				F53107221D891B1B003B402C /* WTKBasedViewModel.h */,
+				F53107231D891B1B003B402C /* WTKBasedViewModel.m */,
+				F531072A1D8922D4003B402C /* WTKViewModelServices.h */,
+				F531072B1D8923D2003B402C /* WTKViewModelNavigationImpl.h */,
+				F531072C1D8923D2003B402C /* WTKViewModelNavigationImpl.m */,
+				F53107251D891C69003B402C /* WTKBindProtocol.h */,
+			);
+			path = Based;
+			sourceTree = "<group>";
+		};
+		F596DA801D86A0640058844C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F5A00BD91D8E3C3A0026DF67 /* WTKGood.h */,
+				F5A00BDA1D8E3C3A0026DF67 /* WTKGood.m */,
+				F532DE5B1D8F8B5400E68943 /* WTKUser.h */,
+				F532DE5C1D8F8B5400E68943 /* WTKUser.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F596DA811D86A0650058844C /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				F596DABB1D86A88B0058844C /* WTKPrefix.pch */,
+				F531071A1D88EBE4003B402C /* WTKColorHeader.h */,
+				F531071B1D88EC6E003B402C /* WTKMacro.h */,
+				F53107521D8940EE003B402C /* WTKURLMacro.h */,
+				F588CE1F1D86ADBD003E3A74 /* Category(类别) */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		F596DA821D86A0650058844C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F53107401D892D1D003B402C /* cell */,
+				F531073D1D892B0D003B402C /* WTKHomeCollectionView.h */,
+				F531073E1D892B0D003B402C /* WTKHomeCollectionView.m */,
+				F5A00BDF1D8E5F0D0026DF67 /* WTKGoodManagerView.h */,
+				F5A00BE01D8E5F0D0026DF67 /* WTKGoodManagerView.m */,
+				F532DE5E1D8FBA0D00E68943 /* WTKSearchBar.h */,
+				F532DE5F1D8FBA0D00E68943 /* WTKSearchBar.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F596DA831D86A0650058844C /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				F53106FE1D88E486003B402C /* WTKHomeVC.h */,
+				F53106FF1D88E486003B402C /* WTKHomeVC.m */,
+				F53107111D88E644003B402C /* WTKCategoryVC.h */,
+				F53107121D88E644003B402C /* WTKCategoryVC.m */,
+				F53107091D88E5B0003B402C /* WTKFoundVC.h */,
+				F531070A1D88E5B0003B402C /* WTKFoundVC.m */,
+				F531071F1D88F33A003B402C /* WTKShoppingCarVC.h */,
+				F53107201D88F33A003B402C /* WTKShoppingCarVC.m */,
+				F53107171D88E681003B402C /* WTKMeVC.h */,
+				F53107181D88E681003B402C /* WTKMeVC.m */,
+				F5A00C521D8E93AB0026DF67 /* WTKGoodsVC.h */,
+				F5A00C531D8E93AB0026DF67 /* WTKGoodsVC.m */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		F596DA841D86A0650058844C /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				F531072E1D8928BD003B402C /* WTKHomeViewModel.h */,
+				F531072F1D8928BD003B402C /* WTKHomeViewModel.m */,
+				F53107311D8928D4003B402C /* WTKCategoryViewModel.h */,
+				F53107321D8928D4003B402C /* WTKCategoryViewModel.m */,
+				F53107341D8928E6003B402C /* WTKFoundViewModel.h */,
+				F53107351D8928E6003B402C /* WTKFoundViewModel.m */,
+				F53107371D8928F4003B402C /* WTKShoppingCarViewModel.h */,
+				F53107381D8928F4003B402C /* WTKShoppingCarViewModel.m */,
+				F531073A1D892905003B402C /* WTKMeViewModel.h */,
+				F531073B1D892905003B402C /* WTKMeViewModel.m */,
+				F5A00C551D8E93F50026DF67 /* WTKGoodsViewModel.h */,
+				F5A00C561D8E93F50026DF67 /* WTKGoodsViewModel.m */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		F596DA851D86A0650058844C /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				F531074B1D893D34003B402C /* HomeData */,
+				F531074C1D893D34003B402C /* HomeHead */,
+				F596DA871D86A0650058844C /* Vendor */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		F596DA861D86A0650058844C /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				F531074F1D893E1E003B402C /* WTKRequestManager.h */,
+				F53107501D893E1E003B402C /* WTKRequestManager.m */,
+				F532DE581D8F88AA00E68943 /* WTKTouchID.h */,
+				F532DE591D8F88AA00E68943 /* WTKTouchID.m */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		F596DA871D86A0650058844C /* Vendor */ = {
+			isa = PBXGroup;
+			children = (
+				F596DA881D86A0650058844C /* IQKeyBoardManager */,
+			);
+			name = Vendor;
+			path = ../Vendor;
+			sourceTree = "<group>";
+		};
+		F596DA881D86A0650058844C /* IQKeyBoardManager */ = {
+			isa = PBXGroup;
+			children = (
+				F596DA891D86A0650058844C /* Categories */,
+				F596DA941D86A0650058844C /* Constants */,
+				F596DA971D86A0650058844C /* IQKeyboardManager.h */,
+				F596DA981D86A0650058844C /* IQKeyboardManager.m */,
+				F596DA991D86A0650058844C /* IQKeyboardReturnKeyHandler.h */,
+				F596DA9A1D86A0650058844C /* IQKeyboardReturnKeyHandler.m */,
+				F596DA9B1D86A0650058844C /* IQSegmentedNextPrevious */,
+				F596DA9E1D86A0650058844C /* IQTextView */,
+				F596DAA11D86A0650058844C /* IQToolbar */,
+				F596DAAA1D86A0650058844C /* KeyboardManager.h */,
+				F596DAAB1D86A0650058844C /* Resources */,
+			);
+			path = IQKeyBoardManager;
+			sourceTree = "<group>";
+		};
+		F596DA891D86A0650058844C /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				F596DA8A1D86A0650058844C /* IQNSArray+Sort.h */,
+				F596DA8B1D86A0650058844C /* IQNSArray+Sort.m */,
+				F596DA8C1D86A0650058844C /* IQUITextFieldView+Additions.h */,
+				F596DA8D1D86A0650058844C /* IQUITextFieldView+Additions.m */,
+				F596DA8E1D86A0650058844C /* IQUIView+Hierarchy.h */,
+				F596DA8F1D86A0650058844C /* IQUIView+Hierarchy.m */,
+				F596DA901D86A0650058844C /* IQUIViewController+Additions.h */,
+				F596DA911D86A0650058844C /* IQUIViewController+Additions.m */,
+				F596DA921D86A0650058844C /* IQUIWindow+Hierarchy.h */,
+				F596DA931D86A0650058844C /* IQUIWindow+Hierarchy.m */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		F596DA941D86A0650058844C /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				F596DA951D86A0650058844C /* IQKeyboardManagerConstants.h */,
+				F596DA961D86A0650058844C /* IQKeyboardManagerConstantsInternal.h */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		F596DA9B1D86A0650058844C /* IQSegmentedNextPrevious */ = {
+			isa = PBXGroup;
+			children = (
+				F596DA9C1D86A0650058844C /* IQSegmentedNextPrevious.h */,
+				F596DA9D1D86A0650058844C /* IQSegmentedNextPrevious.m */,
+			);
+			path = IQSegmentedNextPrevious;
+			sourceTree = "<group>";
+		};
+		F596DA9E1D86A0650058844C /* IQTextView */ = {
+			isa = PBXGroup;
+			children = (
+				F596DA9F1D86A0650058844C /* IQTextView.h */,
+				F596DAA01D86A0650058844C /* IQTextView.m */,
+			);
+			path = IQTextView;
+			sourceTree = "<group>";
+		};
+		F596DAA11D86A0650058844C /* IQToolbar */ = {
+			isa = PBXGroup;
+			children = (
+				F596DAA21D86A0650058844C /* IQBarButtonItem.h */,
+				F596DAA31D86A0650058844C /* IQBarButtonItem.m */,
+				F596DAA41D86A0650058844C /* IQTitleBarButtonItem.h */,
+				F596DAA51D86A0650058844C /* IQTitleBarButtonItem.m */,
+				F596DAA61D86A0650058844C /* IQToolbar.h */,
+				F596DAA71D86A0650058844C /* IQToolbar.m */,
+				F596DAA81D86A0650058844C /* IQUIView+IQKeyboardToolbar.h */,
+				F596DAA91D86A0650058844C /* IQUIView+IQKeyboardToolbar.m */,
+			);
+			path = IQToolbar;
+			sourceTree = "<group>";
+		};
+		F596DAAB1D86A0650058844C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F596DAAC1D86A0650058844C /* IQKeyboardManager.bundle */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F596DA461D869FD30058844C /* WTKWineMVVM */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F596DA741D869FD30058844C /* Build configuration list for PBXNativeTarget "WTKWineMVVM" */;
+			buildPhases = (
+				6F927336BC33F9FCE240F5E6 /* [CP] Check Pods Manifest.lock */,
+				F596DA431D869FD30058844C /* Sources */,
+				F596DA441D869FD30058844C /* Frameworks */,
+				F596DA451D869FD30058844C /* Resources */,
+				B9B9AEF702FB0CC1340A9E96 /* [CP] Embed Pods Frameworks */,
+				8216E477D15F4D10990977DB /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WTKWineMVVM;
+			productName = WTKWineMVVM;
+			productReference = F596DA471D869FD30058844C /* WTKWineMVVM.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F596DA5F1D869FD30058844C /* WTKWineMVVMTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F596DA771D869FD30058844C /* Build configuration list for PBXNativeTarget "WTKWineMVVMTests" */;
+			buildPhases = (
+				F596DA5C1D869FD30058844C /* Sources */,
+				F596DA5D1D869FD30058844C /* Frameworks */,
+				F596DA5E1D869FD30058844C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F596DA621D869FD30058844C /* PBXTargetDependency */,
+			);
+			name = WTKWineMVVMTests;
+			productName = WTKWineMVVMTests;
+			productReference = F596DA601D869FD30058844C /* WTKWineMVVMTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F596DA6A1D869FD30058844C /* WTKWineMVVMUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F596DA7A1D869FD30058844C /* Build configuration list for PBXNativeTarget "WTKWineMVVMUITests" */;
+			buildPhases = (
+				F596DA671D869FD30058844C /* Sources */,
+				F596DA681D869FD30058844C /* Frameworks */,
+				F596DA691D869FD30058844C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F596DA6D1D869FD30058844C /* PBXTargetDependency */,
+			);
+			name = WTKWineMVVMUITests;
+			productName = WTKWineMVVMUITests;
+			productReference = F596DA6B1D869FD30058844C /* WTKWineMVVMUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F596DA3F1D869FD30058844C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "王同科";
+				TargetAttributes = {
+					F596DA461D869FD30058844C = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+					F596DA5F1D869FD30058844C = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = F596DA461D869FD30058844C;
+					};
+					F596DA6A1D869FD30058844C = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = F596DA461D869FD30058844C;
+					};
+				};
+			};
+			buildConfigurationList = F596DA421D869FD30058844C /* Build configuration list for PBXProject "WTKWineMVVM" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F596DA3E1D869FD30058844C;
+			productRefGroup = F596DA481D869FD30058844C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F596DA461D869FD30058844C /* WTKWineMVVM */,
+				F596DA5F1D869FD30058844C /* WTKWineMVVMTests */,
+				F596DA6A1D869FD30058844C /* WTKWineMVVMUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F596DA451D869FD30058844C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5A00BE61D8E79900026DF67 /* WTKHomeBannerCollectionViewCell.xib in Resources */,
+				F596DA5A1D869FD30058844C /* LaunchScreen.storyboard in Resources */,
+				F596DA571D869FD30058844C /* Assets.xcassets in Resources */,
+				F531074E1D893D34003B402C /* HomeHead in Resources */,
+				F531074D1D893D34003B402C /* HomeData in Resources */,
+				F596DABA1D86A0650058844C /* IQKeyboardManager.bundle in Resources */,
+				F596DA551D869FD30058844C /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F596DA5E1D869FD30058844C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F596DA691D869FD30058844C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6F927336BC33F9FCE240F5E6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		8216E477D15F4D10990977DB /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WTKWineMVVM/Pods-WTKWineMVVM-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B9B9AEF702FB0CC1340A9E96 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WTKWineMVVM/Pods-WTKWineMVVM-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F596DA431D869FD30058844C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5A00C571D8E93F50026DF67 /* WTKGoodsViewModel.m in Sources */,
+				F5A00BE51D8E79900026DF67 /* WTKHomeBannerCollectionViewCell.m in Sources */,
+				F596DAB21D86A0650058844C /* IQKeyboardManager.m in Sources */,
+				F596DAB71D86A0650058844C /* IQTitleBarButtonItem.m in Sources */,
+				F53106F71D88E432003B402C /* WTKNavigationController.m in Sources */,
+				F53107391D8928F4003B402C /* WTKShoppingCarViewModel.m in Sources */,
+				F53106FA1D88E444003B402C /* WTKBasedViewController.m in Sources */,
+				F5A00BDE1D8E43EA0026DF67 /* UIFont+WTK.m in Sources */,
+				F531073C1D892905003B402C /* WTKMeViewModel.m in Sources */,
+				F532DE5D1D8F8B5400E68943 /* WTKUser.m in Sources */,
+				F531073F1D892B0D003B402C /* WTKHomeCollectionView.m in Sources */,
+				F532DE601D8FBA0D00E68943 /* WTKSearchBar.m in Sources */,
+				F53107461D892F74003B402C /* WTKHomeHeadView.m in Sources */,
+				F596DAB51D86A0650058844C /* IQTextView.m in Sources */,
+				F5A00BDB1D8E3C3A0026DF67 /* WTKGood.m in Sources */,
+				F596DAB91D86A0650058844C /* IQUIView+IQKeyboardToolbar.m in Sources */,
+				F53107001D88E486003B402C /* WTKHomeVC.m in Sources */,
+				F53107131D88E644003B402C /* WTKCategoryVC.m in Sources */,
+				F53107211D88F33A003B402C /* WTKShoppingCarVC.m in Sources */,
+				F596DAAD1D86A0650058844C /* IQNSArray+Sort.m in Sources */,
+				F596DA521D869FD30058844C /* ViewController.m in Sources */,
+				F53107331D8928D4003B402C /* WTKCategoryViewModel.m in Sources */,
+				F53107431D892D41003B402C /* WTKHomeCell.m in Sources */,
+				F53107361D8928E6003B402C /* WTKFoundViewModel.m in Sources */,
+				F531072D1D8923D2003B402C /* WTKViewModelNavigationImpl.m in Sources */,
+				F596DAB81D86A0650058844C /* IQToolbar.m in Sources */,
+				F596DAB01D86A0650058844C /* IQUIViewController+Additions.m in Sources */,
+				F53107301D8928BD003B402C /* WTKHomeViewModel.m in Sources */,
+				F596DAB11D86A0650058844C /* IQUIWindow+Hierarchy.m in Sources */,
+				F588CE241D86AE5D003E3A74 /* UIButton+WTKBtn.m in Sources */,
+				F53107191D88E681003B402C /* WTKMeVC.m in Sources */,
+				F596DAB31D86A0650058844C /* IQKeyboardReturnKeyHandler.m in Sources */,
+				F596DAB61D86A0650058844C /* IQBarButtonItem.m in Sources */,
+				F588CE271D86B3A9003E3A74 /* UIImage+WTK.m in Sources */,
+				F532DE5A1D8F88AA00E68943 /* WTKTouchID.m in Sources */,
+				F531071E1D88F048003B402C /* UIColor+WTK.m in Sources */,
+				F53106F41D88E3F3003B402C /* WTKTabBarController.m in Sources */,
+				F596DA4F1D869FD30058844C /* AppDelegate.m in Sources */,
+				F531070B1D88E5B0003B402C /* WTKFoundVC.m in Sources */,
+				F5A00BE11D8E5F0D0026DF67 /* WTKGoodManagerView.m in Sources */,
+				F596DA4C1D869FD30058844C /* main.m in Sources */,
+				F596DAAF1D86A0650058844C /* IQUIView+Hierarchy.m in Sources */,
+				F53107511D893E1E003B402C /* WTKRequestManager.m in Sources */,
+				F596DAAE1D86A0650058844C /* IQUITextFieldView+Additions.m in Sources */,
+				F5A00C541D8E93AB0026DF67 /* WTKGoodsVC.m in Sources */,
+				F596DAB41D86A0650058844C /* IQSegmentedNextPrevious.m in Sources */,
+				F53107241D891B1B003B402C /* WTKBasedViewModel.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F596DA5C1D869FD30058844C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F596DA651D869FD30058844C /* WTKWineMVVMTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F596DA671D869FD30058844C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F596DA701D869FD30058844C /* WTKWineMVVMUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F596DA621D869FD30058844C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F596DA461D869FD30058844C /* WTKWineMVVM */;
+			targetProxy = F596DA611D869FD30058844C /* PBXContainerItemProxy */;
+		};
+		F596DA6D1D869FD30058844C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F596DA461D869FD30058844C /* WTKWineMVVM */;
+			targetProxy = F596DA6C1D869FD30058844C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F596DA531D869FD30058844C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F596DA541D869FD30058844C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F596DA581D869FD30058844C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F596DA591D869FD30058844C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F596DA721D869FD30058844C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F596DA731D869FD30058844C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F596DA751D869FD30058844C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E2969E7005841F781BBE8D64 /* Pods-WTKWineMVVM.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/WTKWineMVVM/Class/Util/WTKPrefix.pch";
+				INFOPLIST_FILE = WTKWineMVVM/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.wang.WTKWineMVVM;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		F596DA761D869FD30058844C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D9E426C5B301181044319B4E /* Pods-WTKWineMVVM.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/WTKWineMVVM/Class/Util/WTKPrefix.pch";
+				INFOPLIST_FILE = WTKWineMVVM/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.wang.WTKWineMVVM;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		F596DA781D869FD30058844C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = WTKWineMVVMTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.wang.WTKWineMVVMTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WTKWineMVVM.app/WTKWineMVVM";
+			};
+			name = Debug;
+		};
+		F596DA791D869FD30058844C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = WTKWineMVVMTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.wang.WTKWineMVVMTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WTKWineMVVM.app/WTKWineMVVM";
+			};
+			name = Release;
+		};
+		F596DA7B1D869FD30058844C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = WTKWineMVVMUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.wang.WTKWineMVVMUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = WTKWineMVVM;
+			};
+			name = Debug;
+		};
+		F596DA7C1D869FD30058844C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = WTKWineMVVMUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.wang.WTKWineMVVMUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = WTKWineMVVM;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F596DA421D869FD30058844C /* Build configuration list for PBXProject "WTKWineMVVM" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F596DA721D869FD30058844C /* Debug */,
+				F596DA731D869FD30058844C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F596DA741D869FD30058844C /* Build configuration list for PBXNativeTarget "WTKWineMVVM" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F596DA751D869FD30058844C /* Debug */,
+				F596DA761D869FD30058844C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F596DA771D869FD30058844C /* Build configuration list for PBXNativeTarget "WTKWineMVVMTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F596DA781D869FD30058844C /* Debug */,
+				F596DA791D869FD30058844C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F596DA7A1D869FD30058844C /* Build configuration list for PBXNativeTarget "WTKWineMVVMUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F596DA7B1D869FD30058844C /* Debug */,
+				F596DA7C1D869FD30058844C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F596DA3F1D869FD30058844C /* Project object */;
+}
