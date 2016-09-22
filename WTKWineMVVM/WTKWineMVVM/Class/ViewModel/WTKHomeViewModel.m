@@ -32,7 +32,8 @@
     self.refreshCommand = [[RACCommand alloc]initWithSignalBlock:^RACSignal *(id input) {
         @strongify(self)
         
-        RACSignal *signal1 = [WTKRequestManager postArrayDataWithURL:HOME_HEAD withpramater:nil];
+//        RACSignal *signal1 = [WTKRequestManager postArrayDataWithURL:HOME_HEAD withpramater:nil];
+        RACSignal *signal1 = [WTKRequestManager getWithURL:@"http://www.jiuyunda.net:90/api/v1/product/slideshow" withParamater:@{@"id":@"56c45924c2fb4e2050000022"}];
         RACSignal *signal2 = [WTKRequestManager postArrayDataWithURL:Home_Data withpramater:nil];
         
         RACSignal *signal3 = [self rac_liftSelector:@selector(updateData:headDic:) withSignalsFromArray:@[signal1,signal2]];
@@ -49,17 +50,17 @@
 //        return signal;
     }];
     
-    [[self.refreshCommand.executing skip:1] subscribeNext:^(id x) {
-        if ([x boolValue])
-        {
-//            正在执行
-            [SVProgressHUD showWithStatus:@"正在加载"];
-        }
-        else
-        {
-            [SVProgressHUD dismiss];
-        }
-    }];
+//    [[self.refreshCommand.executing skip:1] subscribeNext:^(id x) {
+//        if ([x boolValue])
+//        {
+////            正在执行
+//            [SVProgressHUD showWithStatus:@"正在加载"];
+//        }
+//        else
+//        {
+//            [SVProgressHUD dismiss];
+//        }
+//    }];
     
     self.headCommand    = [[RACCommand alloc]initWithSignalBlock:^RACSignal *(id input) {
         NSLog(@"%@",input);
@@ -82,6 +83,13 @@
         UIButton *btn = input;
         return [RACSignal empty];
     }];
+    
+    self.searchSubject  = [RACSubject subject];
+    [self.searchSubject subscribeNext:^(id x) {
+//       跳转搜索界面
+        NSLog(@"dainji ");
+    }];
+
 }
 
 - (void)updateData:(NSArray *)headArray headDic:(NSArray *)dataArray

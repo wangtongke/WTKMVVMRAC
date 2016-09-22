@@ -19,6 +19,7 @@
 #import <MJRefresh/MJRefresh.h>
 #import "UIImageView+WebCache.h"
 #import "IQKeyBoardManager.h"
+#import <AFNetworking/AFNetworking.h>
 
 
 //宏
@@ -40,8 +41,9 @@
 #import "WTKBasedViewController.h"
 #import "WTKRequestManager.h"
 #import "WTKGood.h"
-#import "WTKTouchID.h"
 #import "WTKUser.h"
-
+#import "WTKTool.h"
+#import "WTKShoppingManager.h"
+#import "WTKDataManager.h"
 
 #endif /* WTKPrefix_pch */

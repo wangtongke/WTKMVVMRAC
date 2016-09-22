@@ -13,7 +13,12 @@
 ///是否开启指纹验证
 @property(nonatomic,assign)BOOL isTouchID;
 
+///角标
+@property(nonatomic,assign)NSInteger bageValue;
+
 
 + (instancetype)currentUser;
+
+
 
 @end

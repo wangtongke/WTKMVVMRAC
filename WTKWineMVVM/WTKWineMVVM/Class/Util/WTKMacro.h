@@ -11,6 +11,9 @@
 
 #define WS(weakSelf)  __weak __typeof(&*self)weakSelf = self;
 
+///读取用户数据完成
+#define READ_USER_DATA_FINISH @"readUserDataFinish"
+
 ///------
 /// NSLog
 ///------
@@ -26,5 +29,9 @@
 #define kHeight [[UIScreen mainScreen] bounds].size.height
 #define kWidth [[UIScreen mainScreen] bounds].size.width
 #define ZOOM_SCALL kWidth/375.0
+
+
+
+
 
 #endif /* WTKMacro_h */

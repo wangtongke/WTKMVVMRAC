@@ -155,8 +155,9 @@
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     WTKHomeBannerCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"cell" forIndexPath:indexPath];
-    NSURL *url = [NSURL URLWithString:self.imageArray[indexPath.row][@"img"]];
-    [cell.imageView sd_setImageWithURL:url placeholderImage:[UIImage imageNamed:@"placehoder3"]];
+//    NSURL *url = [NSURL URLWithString:self.imageArray[indexPath.row][@"img"]];
+    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://www.jiuyunda.net:90%@",self.imageArray[indexPath.row][@"img"]]];
+    [cell.imageView sd_setImageWithURL:url placeholderImage:[UIImage imageNamed:@"headPlaceholder.jpg"]];
     return cell;
     
 }

@@ -46,4 +46,18 @@
     }] delay:1.5];
 }
 
++ (RACSignal *)getWithURL:(NSString *)urlString withParamater:(NSDictionary *)paramter
+{
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    manager.requestSerializer.timeoutInterval = 5;
+    RACSubject *sub =[ RACSubject subject];
+    [manager GET:urlString parameters:paramter progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        [sub sendNext:responseObject];
+
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        
+    }];
+    return sub;
+}
+
 @end

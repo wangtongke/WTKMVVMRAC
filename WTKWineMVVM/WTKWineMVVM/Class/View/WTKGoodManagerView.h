@@ -14,6 +14,9 @@
 ///已添加购物车数量
 @property (nonatomic, assign) NSInteger num;
 
+/// 添加到购物车
+@property(nonatomic,strong)RACSubject *addSubject;
+
 - (void)updateGood:(WTKGood *)good;
 
 @end

@@ -12,4 +12,6 @@
 
 @property(nonatomic,strong)UISearchBar *searchBar;
 
+@property(nonatomic,strong)UIColor *wtk_bgColor;
+
 @end

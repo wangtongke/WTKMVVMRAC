@@ -15,6 +15,7 @@
 @property (nonatomic, strong) UIButton *wtkRightButton;
 @property (nonatomic, strong) UILabel *wtkNumLable;
 @property (nonatomic, assign) NSInteger stokeNum;
+@property (nonatomic, strong) WTKGood *goods;
 
 
 @property (nonatomic, assign) BOOL isHiddenButton;
@@ -27,6 +28,7 @@
     self = [super init];
     if (self)
     {
+        self.addSubject = [RACSubject subject];
         [self configView];
     }
     return self;
@@ -81,7 +83,16 @@
 - (void)leftBtnClick:(UIButton *)btn
 {
     self.num = self.num - 1;
-
+    self.goods.num = self.num;
+    if (self.goods.num == 0)
+    {
+        [[WTKShoppingManager manager].goodsDic removeObjectForKey:self.goods.id];
+    }
+    else
+    {
+        [[WTKShoppingManager manager].goodsDic setObject:self.goods forKey:self.goods.id];
+    }
+    [WTKUser currentUser].bageValue--;
 }
 
 ///点击加
@@ -95,15 +106,22 @@
         });
         return;
     }
+    [self.addSubject sendNext:[NSNumber numberWithInteger:self.num]];
     self.num = self.num + 1;
-
+    self.goods.num = self.num;
+    
+    [[WTKShoppingManager manager].goodsDic setObject:self.goods forKey:self.goods.id];
+//    角标
+    [WTKUser currentUser].bageValue++;
     
 }
 
 - (void)updateGood:(WTKGood *)good
 {
-    self.stokeNum = good.stock;
-    self.num      = good.num;
+    self.stokeNum   = good.stock;
+    self.num        = good.num;
+    
+    self.goods      = good;
 
 }
 

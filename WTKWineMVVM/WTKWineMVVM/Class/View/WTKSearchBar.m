@@ -8,20 +8,29 @@
 
 #import "WTKSearchBar.h"
 
+@interface WTKSearchBar ()
+
+@property(nonatomic,strong)UIView *view;
+
+
+@end
+
 @implementation WTKSearchBar
 
 - (instancetype)initWithFrame:(CGRect)frame
 {
     if (self = [super initWithFrame:frame])
     {
+//        _wtk_bgColor = WTKCOLOR(245, 245, 245, 0);
         [self configView];
+        self.backgroundColor = [UIColor clearColor];
     }
     return self;
 }
 
 - (void)configView
 {
-    _searchBar      = [[UISearchBar alloc]initWithFrame:CGRectMake(0, -1, kWidth - 160, 30)];
+    _searchBar      = [[UISearchBar alloc]initWithFrame:CGRectMake(0, 0, kWidth - 100, 30)];
     _searchBar.placeholder       = @"搜索";
     _searchBar.backgroundColor   = WTKCOLOR(255, 255, 255, 0);
     _searchBar.tintColor         = WTKCOLOR(255, 255, 255, 0);
@@ -33,7 +42,9 @@
                 grandSonView.backgroundColor = WTKCOLOR(255, 255, 255, 0);
                 grandSonView.alpha = 0;
             }else if([grandSonView isKindOfClass:NSClassFromString(@"UISearchBarTextField")] ){
-                grandSonView.backgroundColor = WTKCOLOR(200, 200, 200, 0.6);
+                grandSonView.backgroundColor = WTKCOLOR(245, 245, 245, 0);
+                
+                self.view = grandSonView;
                 NSLog(@"Keep textfiedld bkg color");
             }else{
 //                grandSonView.backgroundColor = [UIColor whiteColor];
@@ -43,14 +54,25 @@
         }//for cacheViews
     }
     UITextField * searchField = [_searchBar valueForKey:@"_searchField"];
-    [searchField setValue:WTKCOLOR(253, 253, 253, 1) forKeyPath:@"_placeholderLabel.textColor"];
+    [searchField setValue:[UIColor whiteColor] forKeyPath:@"_placeholderLabel.textColor"];
     
     [self addSubview:_searchBar];
     self.backgroundColor      = [UIColor clearColor];
     
     self.layer.cornerRadius   = 5;
     self.layer.masksToBounds  = YES;
+    _searchBar.layer.cornerRadius = 5;
+    _searchBar.layer.masksToBounds = YES;
 }
+
+- (void)setWtk_bgColor:(UIColor *)wtk_bgColor
+{
+    _wtk_bgColor = wtk_bgColor;
+    
+    self.view.backgroundColor = wtk_bgColor;
+}
+
+
 
 /*
 // Only override drawRect: if you perform custom drawing.

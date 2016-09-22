@@ -27,4 +27,6 @@
 
 ///导航栏
 @property(nonatomic,strong)RACCommand *naviCommand;
+
+@property(nonatomic,strong)RACSubject *searchSubject;
 @end

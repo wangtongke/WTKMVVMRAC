@@ -45,6 +45,51 @@
     return self;
 }
 
+
+
+- (void)bind
+{
+
+    @weakify(self);
+    [RACObserve(self.managerView, num) subscribeNext:^(id x) {
+//        NSLog(@"%@",x);
+    }];
+    
+    [self.managerView.addSubject subscribeNext:^(id x) {
+        @strongify(self);
+        [WTKTool beginAddAnimationWithImageView:self.wtkImageView animationTime:0.55];
+    }];
+}
+
+- (void)updateGood:(WTKGood *)goods
+{
+//  检查购物车是否有商品
+      if ([[WTKShoppingManager manager].goodsDic objectForKey:goods.id])
+    {
+        goods.num = [[[WTKShoppingManager manager].goodsDic objectForKey:goods.id] integerValue];
+    }
+    
+    
+    self.goods = goods;
+    self.wtkTitleLabel.text = goods.title;
+    self.wtkPriceLabel.text = [NSString stringWithFormat:@"%.2f",goods.price];
+    
+    [self.wtkImageView sd_setImageWithURL:[NSURL URLWithString:goods.thumb_url] placeholderImage:[UIImage imageNamed:@"placehoder2"]];
+    if (goods.stock <= 0)
+    {
+        self.wtkStockLabel.hidden   = NO;
+        self.managerView.hidden     = YES;
+    }
+    else
+    {
+        self.wtkStockLabel.hidden   = YES;
+        self.managerView.hidden     = NO;
+        [self.managerView updateGood:goods];
+    }
+    
+}
+
+
 - (void)configView
 {
     CGFloat width = self.bounds.size.width;
@@ -115,38 +160,6 @@
         make.width.mas_equalTo(110);
         make.height.equalTo(@40);
     }];
-}
-
-- (void)bind
-{
-
-    [RACObserve(self.managerView, num) subscribeNext:^(id x) {
-        NSLog(@"%@",x);
-    }];
-}
-
-- (void)updateGood:(WTKGood *)goods
-{
-#warning 检查购物车是否有商品
-    
-    
-    self.goods = goods;
-    self.wtkTitleLabel.text = goods.title;
-    self.wtkPriceLabel.text = [NSString stringWithFormat:@"%.2f",goods.price];
-    
-    [self.wtkImageView sd_setImageWithURL:[NSURL URLWithString:goods.thumb_url] placeholderImage:[UIImage imageNamed:@"placehoder2"]];
-    if (goods.stock <= 0)
-    {
-        self.wtkStockLabel.hidden   = NO;
-        self.managerView.hidden     = YES;
-    }
-    else
-    {
-        self.wtkStockLabel.hidden   = YES;
-        self.managerView.hidden     = NO;
-        [self.managerView updateGood:goods];
-    }
-    
 }
 
 

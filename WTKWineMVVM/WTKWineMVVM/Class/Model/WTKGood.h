@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface WTKGood : NSObject
+@interface WTKGood : NSObject<NSCoding>
 
 //商品的图片地址
 @property (nonatomic, copy) NSString *avatar_url;

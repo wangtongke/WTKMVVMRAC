@@ -13,10 +13,17 @@
 @end
 
 @implementation WTKMeVC
-
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+//    [[WTKRequestManager getWithURL:@"http://www.jiuyunda.net:90/api/v1/product/slideshow" withParamater:@{@"id":@"56c45924c2fb4e2050000022"}] subscribeNext:^(id x) {
+//        NSLog(@"111111%@",x);
+//    }];
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor   = [UIColor redColor];
+
 }
 
 - (void)didReceiveMemoryWarning {

@@ -16,8 +16,17 @@
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         user = [[WTKUser alloc]init];
+        user.bageValue = 0;
     });
     return user;
+}
+- (void)setBageValue:(NSInteger)bageValue
+{
+    _bageValue = bageValue;
+    if (bageValue <= 0)
+    {
+        _bageValue = 0;
+    }
 }
 
 
