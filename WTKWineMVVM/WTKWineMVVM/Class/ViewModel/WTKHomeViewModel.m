@@ -34,6 +34,9 @@
         
 //        RACSignal *signal1 = [WTKRequestManager postArrayDataWithURL:HOME_HEAD withpramater:nil];
         RACSignal *signal1 = [WTKRequestManager getWithURL:@"http://www.jiuyunda.net:90/api/v1/product/slideshow" withParamater:@{@"id":@"56c45924c2fb4e2050000022"}];
+        [signal1 subscribeNext:^(id x) {
+            NSLog(@"%@",x);
+        }];
         RACSignal *signal2 = [WTKRequestManager postArrayDataWithURL:Home_Data withpramater:nil];
         
         RACSignal *signal3 = [self rac_liftSelector:@selector(updateData:headDic:) withSignalsFromArray:@[signal1,signal2]];
@@ -74,6 +77,7 @@
     
     self.goodCommand    = [[RACCommand alloc]initWithSignalBlock:^RACSignal *(id input) {
         WTKGoodsViewModel *viewModel = [[WTKGoodsViewModel alloc]initWithService:nil params:@{@"title":@"商品详情"}];
+        viewModel.goods = (WTKGood *)input;
         self.naviImpl.className = @"WTKGoodsVC";
         [self.naviImpl pushViewModel:viewModel animated:YES];
         return [RACSignal empty];

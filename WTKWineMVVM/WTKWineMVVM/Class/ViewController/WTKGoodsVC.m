@@ -8,22 +8,54 @@
 
 #import "WTKGoodsVC.h"
 #import "WTKGoodsViewModel.h"
-@interface WTKGoodsVC ()
+#import <WebKit/WebKit.h>
+@interface WTKGoodsVC ()<WKNavigationDelegate,WKUIDelegate>
 
 @property(nonatomic,strong,readwrite)WTKGoodsViewModel *viewModel;
+@property(nonatomic,strong)WKWebView *webView;
+
+
+
 
 @end
 
 @implementation WTKGoodsVC
 @dynamic viewModel;
+
+#pragma mark - lifeCycle
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self bindViewModel];
+    [self initView];
 }
 
 - (void)bindViewModel
 {
     [super bindViewModel];
+}
+
+- (void)initView{
+    [self.navigationController.navigationBar setBackgroundImage:[UIImage imageWithColor:THEME_COLOR size:CGSizeMake(kWidth, 64)] forBarMetrics:UIBarMetricsDefault];
+    self.navigationController.navigationBar.shadowImage = nil;
+    NSString *urlStr = [NSString stringWithFormat:@"%@/userinfos/%@/products/%@/desc",@"http://www.jiuyunda.net:90",[WTKUser currentUser].bid,self.viewModel.goods.id];
+    [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:urlStr]]];
+}
+
+- (WKWebView *)webView
+{
+    if (!_webView)
+    {
+        _webView = [[WKWebView alloc]initWithFrame:self.view.frame];
+        _webView.navigationDelegate     = self;
+        _webView.UIDelegate             = self;
+        [self.view addSubview:_webView];
+    }
+    return _webView;
 }
 
 - (void)didReceiveMemoryWarning {

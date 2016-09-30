@@ -8,8 +8,9 @@
 
 #import "WTKBasedViewController.h"
 
-@interface WTKBasedViewController ()
+@interface WTKBasedViewController ()<UIGestureRecognizerDelegate>
 @property(nonatomic,strong,readwrite)WTKBasedViewModel *viewModel;
+@property(nonatomic,strong,readwrite)UIPercentDrivenInteractiveTransition *interactivePopTransition;
 @end
 
 @implementation WTKBasedViewController
@@ -27,8 +28,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor   = WTKCOLOR(240, 240, 240, 1);
-    [self resetNaviWithTitle:@""];
+    
     self.viewModel.naviImpl             = [[WTKViewModelNavigationImpl alloc]initWithNavigationController:self.navigationController];
+    if (self.navigationController && self != self.navigationController.viewControllers.firstObject)
+    {
+        [self resetNaviWithTitle:@""];
+        UIPanGestureRecognizer *popRecognizer = [[UIPanGestureRecognizer alloc]initWithTarget:self action:@selector(handlePopRecognizer:)];
+        [self.view addGestureRecognizer:popRecognizer];
+        popRecognizer.delegate = self;
+    }
 }
 
 - (void)bindViewModel
@@ -50,6 +58,38 @@
     
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithCustomView:leftBtn];
 }
+
+- (void)handlePopRecognizer:(UIPanGestureRecognizer *)recognizer
+{
+    CGFloat progress = [recognizer translationInView:self.view].x / CGRectGetWidth(self.view.frame);
+    progress = MIN(1.0, MAX(0.0, progress));
+    NSLog(@"progress---%.2f",progress);
+    if (progress <= 0) {
+        return;
+    }
+    if (recognizer.state == UIGestureRecognizerStateBegan)
+    {
+        self.interactivePopTransition = [[UIPercentDrivenInteractiveTransition alloc]init];
+        [self.navigationController popViewControllerAnimated:YES];
+    }
+    else if (recognizer.state == UIGestureRecognizerStateChanged)
+    {
+        [self.interactivePopTransition updateInteractiveTransition:progress];
+    }
+    else if (recognizer.state == UIGestureRecognizerStateEnded || recognizer.state == UIGestureRecognizerStateCancelled)
+    {
+        if (progress > 0.25)
+        {
+            [self.interactivePopTransition finishInteractiveTransition];
+        }
+        else
+        {
+            [self.interactivePopTransition cancelInteractiveTransition];
+        }
+        self.interactivePopTransition = nil;
+    }
+}
+
 
 - (void)leftBtnClick
 {

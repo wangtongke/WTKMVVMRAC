@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		83184EDC4D2521D8EC3C71AC /* Pods_WTKWineMVVM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E158A064F71CB82494B85710 /* Pods_WTKWineMVVM.framework */; };
 		F53106F41D88E3F3003B402C /* WTKTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = F53106F31D88E3F3003B402C /* WTKTabBarController.m */; };
-		F53106F71D88E432003B402C /* WTKNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = F53106F61D88E432003B402C /* WTKNavigationController.m */; };
 		F53106FA1D88E444003B402C /* WTKBasedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F53106F91D88E444003B402C /* WTKBasedViewController.m */; };
 		F53107001D88E486003B402C /* WTKHomeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F53106FF1D88E486003B402C /* WTKHomeVC.m */; };
 		F531070B1D88E5B0003B402C /* WTKFoundVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F531070A1D88E5B0003B402C /* WTKFoundVC.m */; };
@@ -37,6 +36,16 @@
 		F577D1891D9289F0003E1D2E /* WTKDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F577D1881D9289F0003E1D2E /* WTKDataManager.m */; };
 		F588CE241D86AE5D003E3A74 /* UIButton+WTKBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = F588CE231D86AE5D003E3A74 /* UIButton+WTKBtn.m */; };
 		F588CE271D86B3A9003E3A74 /* UIImage+WTK.m in Sources */ = {isa = PBXBuildFile; fileRef = F588CE261D86B3A9003E3A74 /* UIImage+WTK.m */; };
+		F5937E5A1D9CEBB800C9E0B7 /* WTKNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5937E591D9CEBB800C9E0B7 /* WTKNavigationController.m */; };
+		F5937E6E1D9CEBDB00C9E0B7 /* UIApplication+WTK.m in Sources */ = {isa = PBXBuildFile; fileRef = F5937E5D1D9CEBDB00C9E0B7 /* UIApplication+WTK.m */; };
+		F5937E6F1D9CEBDB00C9E0B7 /* UIViewController+WTKAnimationTransitioningSnapshot.m in Sources */ = {isa = PBXBuildFile; fileRef = F5937E5F1D9CEBDB00C9E0B7 /* UIViewController+WTKAnimationTransitioningSnapshot.m */; };
+		F5937E701D9CEBDB00C9E0B7 /* WTKAnimationDefault.m in Sources */ = {isa = PBXBuildFile; fileRef = F5937E611D9CEBDB00C9E0B7 /* WTKAnimationDefault.m */; };
+		F5937E711D9CEBDB00C9E0B7 /* WTKAnimationDiffNavi.m in Sources */ = {isa = PBXBuildFile; fileRef = F5937E631D9CEBDB00C9E0B7 /* WTKAnimationDiffNavi.m */; };
+		F5937E721D9CEBDB00C9E0B7 /* WTKAnimationKuGou.m in Sources */ = {isa = PBXBuildFile; fileRef = F5937E651D9CEBDB00C9E0B7 /* WTKAnimationKuGou.m */; };
+		F5937E731D9CEBDB00C9E0B7 /* WTKAnimationOval.m in Sources */ = {isa = PBXBuildFile; fileRef = F5937E671D9CEBDB00C9E0B7 /* WTKAnimationOval.m */; };
+		F5937E741D9CEBDB00C9E0B7 /* WTKAnimationRound.m in Sources */ = {isa = PBXBuildFile; fileRef = F5937E691D9CEBDB00C9E0B7 /* WTKAnimationRound.m */; };
+		F5937E751D9CEBDB00C9E0B7 /* WTKBaseAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = F5937E6B1D9CEBDB00C9E0B7 /* WTKBaseAnimation.m */; };
+		F5937E761D9CEBDB00C9E0B7 /* WTKTouchManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F5937E6D1D9CEBDB00C9E0B7 /* WTKTouchManager.m */; };
 		F596DA4C1D869FD30058844C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F596DA4B1D869FD30058844C /* main.m */; };
 		F596DA4F1D869FD30058844C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F596DA4E1D869FD30058844C /* AppDelegate.m */; };
 		F596DA521D869FD30058844C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F596DA511D869FD30058844C /* ViewController.m */; };
@@ -94,7 +103,6 @@
 		F53106F21D88E3F3003B402C /* WTKTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTKTabBarController.h; sourceTree = "<group>"; };
 		F53106F31D88E3F3003B402C /* WTKTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTKTabBarController.m; sourceTree = "<group>"; };
 		F53106F51D88E432003B402C /* WTKNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTKNavigationController.h; sourceTree = "<group>"; };
-		F53106F61D88E432003B402C /* WTKNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTKNavigationController.m; sourceTree = "<group>"; };
 		F53106F81D88E444003B402C /* WTKBasedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTKBasedViewController.h; sourceTree = "<group>"; };
 		F53106F91D88E444003B402C /* WTKBasedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTKBasedViewController.m; sourceTree = "<group>"; };
 		F53106FE1D88E486003B402C /* WTKHomeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTKHomeVC.h; sourceTree = "<group>"; };
@@ -151,6 +159,25 @@
 		F588CE231D86AE5D003E3A74 /* UIButton+WTKBtn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+WTKBtn.m"; sourceTree = "<group>"; };
 		F588CE251D86B3A9003E3A74 /* UIImage+WTK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+WTK.h"; sourceTree = "<group>"; };
 		F588CE261D86B3A9003E3A74 /* UIImage+WTK.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+WTK.m"; sourceTree = "<group>"; };
+		F5937E591D9CEBB800C9E0B7 /* WTKNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTKNavigationController.m; sourceTree = "<group>"; };
+		F5937E5C1D9CEBDB00C9E0B7 /* UIApplication+WTK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIApplication+WTK.h"; sourceTree = "<group>"; };
+		F5937E5D1D9CEBDB00C9E0B7 /* UIApplication+WTK.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIApplication+WTK.m"; sourceTree = "<group>"; };
+		F5937E5E1D9CEBDB00C9E0B7 /* UIViewController+WTKAnimationTransitioningSnapshot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+WTKAnimationTransitioningSnapshot.h"; sourceTree = "<group>"; };
+		F5937E5F1D9CEBDB00C9E0B7 /* UIViewController+WTKAnimationTransitioningSnapshot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+WTKAnimationTransitioningSnapshot.m"; sourceTree = "<group>"; };
+		F5937E601D9CEBDB00C9E0B7 /* WTKAnimationDefault.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTKAnimationDefault.h; sourceTree = "<group>"; };
+		F5937E611D9CEBDB00C9E0B7 /* WTKAnimationDefault.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTKAnimationDefault.m; sourceTree = "<group>"; };
+		F5937E621D9CEBDB00C9E0B7 /* WTKAnimationDiffNavi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTKAnimationDiffNavi.h; sourceTree = "<group>"; };
+		F5937E631D9CEBDB00C9E0B7 /* WTKAnimationDiffNavi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTKAnimationDiffNavi.m; sourceTree = "<group>"; };
+		F5937E641D9CEBDB00C9E0B7 /* WTKAnimationKuGou.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTKAnimationKuGou.h; sourceTree = "<group>"; };
+		F5937E651D9CEBDB00C9E0B7 /* WTKAnimationKuGou.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTKAnimationKuGou.m; sourceTree = "<group>"; };
+		F5937E661D9CEBDB00C9E0B7 /* WTKAnimationOval.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTKAnimationOval.h; sourceTree = "<group>"; };
+		F5937E671D9CEBDB00C9E0B7 /* WTKAnimationOval.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTKAnimationOval.m; sourceTree = "<group>"; };
+		F5937E681D9CEBDB00C9E0B7 /* WTKAnimationRound.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTKAnimationRound.h; sourceTree = "<group>"; };
+		F5937E691D9CEBDB00C9E0B7 /* WTKAnimationRound.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTKAnimationRound.m; sourceTree = "<group>"; };
+		F5937E6A1D9CEBDB00C9E0B7 /* WTKBaseAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTKBaseAnimation.h; sourceTree = "<group>"; };
+		F5937E6B1D9CEBDB00C9E0B7 /* WTKBaseAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTKBaseAnimation.m; sourceTree = "<group>"; };
+		F5937E6C1D9CEBDB00C9E0B7 /* WTKTouchManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTKTouchManager.h; sourceTree = "<group>"; };
+		F5937E6D1D9CEBDB00C9E0B7 /* WTKTouchManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTKTouchManager.m; sourceTree = "<group>"; };
 		F596DA471D869FD30058844C /* WTKWineMVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WTKWineMVVM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F596DA4B1D869FD30058844C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F596DA4D1D869FD30058844C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = ../AppDelegate.h; sourceTree = "<group>"; };
@@ -299,6 +326,31 @@
 			path = "Category(类别)";
 			sourceTree = "<group>";
 		};
+		F5937E5B1D9CEBDB00C9E0B7 /* WTKTransition */ = {
+			isa = PBXGroup;
+			children = (
+				F5937E5C1D9CEBDB00C9E0B7 /* UIApplication+WTK.h */,
+				F5937E5D1D9CEBDB00C9E0B7 /* UIApplication+WTK.m */,
+				F5937E5E1D9CEBDB00C9E0B7 /* UIViewController+WTKAnimationTransitioningSnapshot.h */,
+				F5937E5F1D9CEBDB00C9E0B7 /* UIViewController+WTKAnimationTransitioningSnapshot.m */,
+				F5937E601D9CEBDB00C9E0B7 /* WTKAnimationDefault.h */,
+				F5937E611D9CEBDB00C9E0B7 /* WTKAnimationDefault.m */,
+				F5937E621D9CEBDB00C9E0B7 /* WTKAnimationDiffNavi.h */,
+				F5937E631D9CEBDB00C9E0B7 /* WTKAnimationDiffNavi.m */,
+				F5937E641D9CEBDB00C9E0B7 /* WTKAnimationKuGou.h */,
+				F5937E651D9CEBDB00C9E0B7 /* WTKAnimationKuGou.m */,
+				F5937E661D9CEBDB00C9E0B7 /* WTKAnimationOval.h */,
+				F5937E671D9CEBDB00C9E0B7 /* WTKAnimationOval.m */,
+				F5937E681D9CEBDB00C9E0B7 /* WTKAnimationRound.h */,
+				F5937E691D9CEBDB00C9E0B7 /* WTKAnimationRound.m */,
+				F5937E6A1D9CEBDB00C9E0B7 /* WTKBaseAnimation.h */,
+				F5937E6B1D9CEBDB00C9E0B7 /* WTKBaseAnimation.m */,
+				F5937E6C1D9CEBDB00C9E0B7 /* WTKTouchManager.h */,
+				F5937E6D1D9CEBDB00C9E0B7 /* WTKTouchManager.m */,
+			);
+			path = WTKTransition;
+			sourceTree = "<group>";
+		};
 		F596DA3E1D869FD30058844C = {
 			isa = PBXGroup;
 			children = (
@@ -395,7 +447,7 @@
 				F53106F21D88E3F3003B402C /* WTKTabBarController.h */,
 				F53106F31D88E3F3003B402C /* WTKTabBarController.m */,
 				F53106F51D88E432003B402C /* WTKNavigationController.h */,
-				F53106F61D88E432003B402C /* WTKNavigationController.m */,
+				F5937E591D9CEBB800C9E0B7 /* WTKNavigationController.m */,
 				F53106F81D88E444003B402C /* WTKBasedViewController.h */,
 				F53106F91D88E444003B402C /* WTKBasedViewController.m */,
 				F53107221D891B1B003B402C /* WTKBasedViewModel.h */,
@@ -486,6 +538,7 @@
 		F596DA851D86A0650058844C /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				F5937E5B1D9CEBDB00C9E0B7 /* WTKTransition */,
 				F531074B1D893D34003B402C /* HomeData */,
 				F531074C1D893D34003B402C /* HomeHead */,
 				F596DA871D86A0650058844C /* Vendor */,
@@ -790,11 +843,12 @@
 				F5A00BE51D8E79900026DF67 /* WTKHomeBannerCollectionViewCell.m in Sources */,
 				F596DAB21D86A0650058844C /* IQKeyboardManager.m in Sources */,
 				F596DAB71D86A0650058844C /* IQTitleBarButtonItem.m in Sources */,
-				F53106F71D88E432003B402C /* WTKNavigationController.m in Sources */,
+				F5937E741D9CEBDB00C9E0B7 /* WTKAnimationRound.m in Sources */,
 				F53107391D8928F4003B402C /* WTKShoppingCarViewModel.m in Sources */,
 				F53106FA1D88E444003B402C /* WTKBasedViewController.m in Sources */,
 				F5A00BDE1D8E43EA0026DF67 /* UIFont+WTK.m in Sources */,
 				F531073C1D892905003B402C /* WTKMeViewModel.m in Sources */,
+				F5937E6F1D9CEBDB00C9E0B7 /* UIViewController+WTKAnimationTransitioningSnapshot.m in Sources */,
 				F532DE5D1D8F8B5400E68943 /* WTKUser.m in Sources */,
 				F577D1891D9289F0003E1D2E /* WTKDataManager.m in Sources */,
 				F531073F1D892B0D003B402C /* WTKHomeCollectionView.m in Sources */,
@@ -802,10 +856,13 @@
 				F53107461D892F74003B402C /* WTKHomeHeadView.m in Sources */,
 				F596DAB51D86A0650058844C /* IQTextView.m in Sources */,
 				F5A00BDB1D8E3C3A0026DF67 /* WTKGood.m in Sources */,
+				F5937E711D9CEBDB00C9E0B7 /* WTKAnimationDiffNavi.m in Sources */,
 				F596DAB91D86A0650058844C /* IQUIView+IQKeyboardToolbar.m in Sources */,
 				F53107001D88E486003B402C /* WTKHomeVC.m in Sources */,
+				F5937E761D9CEBDB00C9E0B7 /* WTKTouchManager.m in Sources */,
 				F53107131D88E644003B402C /* WTKCategoryVC.m in Sources */,
 				F596DAAD1D86A0650058844C /* IQNSArray+Sort.m in Sources */,
+				F5937E721D9CEBDB00C9E0B7 /* WTKAnimationKuGou.m in Sources */,
 				F596DA521D869FD30058844C /* ViewController.m in Sources */,
 				F53107331D8928D4003B402C /* WTKCategoryViewModel.m in Sources */,
 				F53107431D892D41003B402C /* WTKHomeCell.m in Sources */,
@@ -813,18 +870,22 @@
 				F577D1821D926081003E1D2E /* WTKTool.m in Sources */,
 				F531072D1D8923D2003B402C /* WTKViewModelNavigationImpl.m in Sources */,
 				F596DAB81D86A0650058844C /* IQToolbar.m in Sources */,
+				F5937E751D9CEBDB00C9E0B7 /* WTKBaseAnimation.m in Sources */,
 				F596DAB01D86A0650058844C /* IQUIViewController+Additions.m in Sources */,
 				F53107301D8928BD003B402C /* WTKHomeViewModel.m in Sources */,
 				F596DAB11D86A0650058844C /* IQUIWindow+Hierarchy.m in Sources */,
 				F588CE241D86AE5D003E3A74 /* UIButton+WTKBtn.m in Sources */,
 				F53107191D88E681003B402C /* WTKMeVC.m in Sources */,
+				F5937E6E1D9CEBDB00C9E0B7 /* UIApplication+WTK.m in Sources */,
 				F596DAB31D86A0650058844C /* IQKeyboardReturnKeyHandler.m in Sources */,
 				F596DAB61D86A0650058844C /* IQBarButtonItem.m in Sources */,
 				F588CE271D86B3A9003E3A74 /* UIImage+WTK.m in Sources */,
 				F531071E1D88F048003B402C /* UIColor+WTK.m in Sources */,
 				F53106F41D88E3F3003B402C /* WTKTabBarController.m in Sources */,
 				F596DA4F1D869FD30058844C /* AppDelegate.m in Sources */,
+				F5937E701D9CEBDB00C9E0B7 /* WTKAnimationDefault.m in Sources */,
 				F531070B1D88E5B0003B402C /* WTKFoundVC.m in Sources */,
+				F5937E5A1D9CEBB800C9E0B7 /* WTKNavigationController.m in Sources */,
 				F577D1861D9272CD003E1D2E /* WTKShoppingManager.m in Sources */,
 				F5A00BE11D8E5F0D0026DF67 /* WTKGoodManagerView.m in Sources */,
 				F596DA4C1D869FD30058844C /* main.m in Sources */,
@@ -834,6 +895,7 @@
 				F596DAAE1D86A0650058844C /* IQUITextFieldView+Additions.m in Sources */,
 				F5A00C541D8E93AB0026DF67 /* WTKGoodsVC.m in Sources */,
 				F596DAB41D86A0650058844C /* IQSegmentedNextPrevious.m in Sources */,
+				F5937E731D9CEBDB00C9E0B7 /* WTKAnimationOval.m in Sources */,
 				F53107241D891B1B003B402C /* WTKBasedViewModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -17,6 +17,9 @@
 @property(nonatomic,assign)NSInteger bageValue;
 
 
+@property(nonatomic,copy)NSString *bid;
+
+
 + (instancetype)currentUser;
 
 

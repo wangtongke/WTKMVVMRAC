@@ -7,8 +7,10 @@
 //
 
 #import "WTKNavigationController.h"
+#import "WTKBasedViewController.h"
+#import "WTKBaseAnimation.h"
 
-@interface WTKNavigationController ()
+@interface WTKNavigationController ()<UINavigationControllerDelegate>
 
 @end
 
@@ -17,6 +19,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self resetNavi];
+    self.delegate = self;
 }
 /**
  导航栏
@@ -35,6 +38,37 @@
     }
     [super pushViewController:viewController animated:animated];
 }
+
+- (nullable id <UIViewControllerInteractiveTransitioning>)navigationController:(UINavigationController *)navigationController
+                                   interactionControllerForAnimationController:(WTKBaseAnimation*) animationControlle
+{
+    return animationControlle.interactivePopTransition;
+}
+
+- (nullable id <UIViewControllerAnimatedTransitioning>)navigationController:(UINavigationController *)navigationController
+                                            animationControllerForOperation:(UINavigationControllerOperation)operation
+                                                         fromViewController:(WTKBasedViewController *)fromVC
+                                                           toViewController:(UIViewController *)toVC
+{
+    //    WTKBaseAnimation *animation = [[WTKBaseAnimation alloc]init];
+    if (fromVC.interactivePopTransition)
+    {
+        WTKBaseAnimation *animation = [[WTKBaseAnimation alloc]initWithType:operation Duration:0.6 animateType:WTKAnimateTypeRound];
+        animation.interactivePopTransition = fromVC.interactivePopTransition;
+        return animation; //手势
+    }
+    else
+    {
+        WTKBaseAnimation *animation = [[WTKBaseAnimation alloc]initWithType:operation Duration:0.6 animateType:WTKAnimateTypeRound];
+        return animation;//非手势
+    }
+    
+    
+    
+}
+
+
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

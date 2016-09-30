@@ -33,7 +33,13 @@
     }
     return self;
 }
-
+#pragma mark - lifeCycle
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [self.collectionView reloadSections:[NSIndexSet indexSetWithIndex:0]];
+    [self.navigationController.navigationBar setBackgroundImage:[UIImage imageFromColor:WTKCOLOR(255, 255, 255, 0.01)] forBarMetrics:UIBarMetricsDefault];
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
 //    self.automaticallyAdjustsScrollViewInsets = NO;
@@ -73,10 +79,8 @@
 - (void)_setNavigationItem
 {
 
-    self.navigationController.navigationBar.shadowImage = [UIImage new];
+//    self.navigationController.navigationBar.shadowImage = [UIImage new];
 //    self.automaticallyAdjustsScrollViewInsets = NO;
-    [self.navigationController.navigationBar setBackgroundImage:[UIImage imageFromColor:WTKCOLOR(255, 255, 255, 0.01)] forBarMetrics:UIBarMetricsDefault];
-    
 
     [self.leftButton setBackgroundImage:[UIImage imageNamed:@"wtksaoyisaoh"] forState:UIControlStateNormal];
     self.leftButton.frame = CGRectMake(0, 0, 25, 23);
@@ -93,14 +97,11 @@
         CGFloat y = point.y;
         if (y < 0)
         {
-
-//            [self.navigationController.navigationBar setHidden:YES];
             [self.navigationController setNavigationBarHidden:YES animated:YES];
             self.navigationController.navigationBar.barStyle = UIBarStyleDefault;
         }
         else
         {
-//            [self.navigationController.navigationBar setHidden:NO];
             [self.navigationController setNavigationBarHidden:NO animated:YES];
             self.navigationController.navigationBar.barStyle = UIBarStyleBlack;
         }
@@ -142,15 +143,13 @@
 }
 
 #pragma mark - searchDelegate
-- (BOOL)searchBarShouldBeginEditing:(UISearchBar *)searchBar
-{
+- (BOOL)searchBarShouldBeginEditing:(UISearchBar *)searchBar{
     [self.viewModel.searchSubject sendNext:@1];
     return NO;
 }
 
 #pragma mark - lazyLoad
-- (WTKHomeCollectionView *)collectionView
-{
+- (WTKHomeCollectionView *)collectionView{
     if (!_collectionView)
     {
         UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc]init];
@@ -162,14 +161,12 @@
 
 - (UIButton *)leftButton
 {
-    if (!_leftButton)
-    {
+    if (!_leftButton){
         _leftButton = [UIButton buttonWithType:UIButtonTypeCustom];
     }
     return _leftButton;
 }
-- (UIButton *)rightBtn
-{
+- (UIButton *)rightBtn{
     if (!_rightBtn)
     {
         _rightBtn = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -177,8 +174,7 @@
     return _rightBtn;
 }
 
-- (WTKSearchBar *)searchBar
-{
+- (WTKSearchBar *)searchBar{
     if (!_searchBar)
     {
         _searchBar = [[WTKSearchBar alloc]initWithFrame:CGRectMake(0, 60, kWidth - 120, 28)];

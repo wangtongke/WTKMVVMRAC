@@ -7,7 +7,23 @@
 //
 
 #import "WTKGoodsViewModel.h"
-
+#import "WTKGood.h"
 @implementation WTKGoodsViewModel
+
+- (instancetype)initWithService:(id<WTKViewModelServices>)service params:(NSDictionary *)params
+{
+    
+    self = [super initWithService:service params:params];
+    if (self)
+    {
+        [self initViewModel];
+    }
+    return self;
+}
+
+- (void)initViewModel
+{
+    
+}
 
 @end

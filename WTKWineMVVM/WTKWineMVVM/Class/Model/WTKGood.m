@@ -25,7 +25,7 @@
 
 - (void)setValue:(id)value forUndefinedKey:(NSString *)key
 {
-    
+//            NSString *urlString = [NSString stringWithFormat:@"%@/userinfos/%@/products/%@/desc",JK_IMAGE_URL,bid,self.goods.id];
 }
 
 - (instancetype)initWithCoder:(NSCoder *)aDecoder

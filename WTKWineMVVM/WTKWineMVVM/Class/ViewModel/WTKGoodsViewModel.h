@@ -7,7 +7,8 @@
 //
 
 #import "WTKBasedViewModel.h"
-
+@class WTKGood;
 @interface WTKGoodsViewModel : WTKBasedViewModel
+@property(nonatomic,strong)WTKGood *goods;
 
 @end

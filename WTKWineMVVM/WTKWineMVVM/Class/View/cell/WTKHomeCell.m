@@ -66,7 +66,8 @@
 //  检查购物车是否有商品
       if ([[WTKShoppingManager manager].goodsDic objectForKey:goods.id])
     {
-        goods.num = [[[WTKShoppingManager manager].goodsDic objectForKey:goods.id] integerValue];
+        WTKGood *good = [[WTKShoppingManager manager].goodsDic objectForKey:goods.id];
+        goods.num = good.num ;
     }
     
     

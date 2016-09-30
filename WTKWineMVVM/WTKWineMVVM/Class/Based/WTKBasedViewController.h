@@ -10,6 +10,7 @@
 #import "WTKViewModelNavigationImpl.h"
 @interface WTKBasedViewController : UIViewController
 @property(nonatomic,strong,readonly)WTKBasedViewModel *viewModel;
+@property(nonatomic,strong,readonly)UIPercentDrivenInteractiveTransition *interactivePopTransition;
 
 
 - (instancetype)initWithViewModel:(WTKBasedViewModel *)viewModel;

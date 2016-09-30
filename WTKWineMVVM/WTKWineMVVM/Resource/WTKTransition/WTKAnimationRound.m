@@ -136,6 +136,9 @@
         }
         else
         {
+            fromVC.snapshot.layer.mask = nil;
+            fromVC.view.layer.mask = nil;
+            fromVC.view.hidden = NO;
             [self.transitionContext completeTransition:NO];
         }
     }

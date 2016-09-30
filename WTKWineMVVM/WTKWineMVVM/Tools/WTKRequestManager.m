@@ -53,6 +53,7 @@
     RACSubject *sub =[ RACSubject subject];
     [manager GET:urlString parameters:paramter progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         [sub sendNext:responseObject];
+        [sub sendCompleted];
 
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         

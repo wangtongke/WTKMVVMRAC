@@ -17,6 +17,7 @@
     dispatch_once(&onceToken, ^{
         user = [[WTKUser alloc]init];
         user.bageValue = 0;
+        user.bid = @"56c45924c2fb4e2050000022";
     });
     return user;
 }

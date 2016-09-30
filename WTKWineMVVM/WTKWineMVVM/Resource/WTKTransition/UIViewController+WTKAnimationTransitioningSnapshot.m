@@ -34,13 +34,6 @@
     if(!view)
     {
         view = [self.navigationController.view resizableSnapshotViewFromRect:CGRectMake(0, 0, CGRectGetWidth([[UIScreen mainScreen] bounds]), 64) afterScreenUpdates:NO withCapInsets:UIEdgeInsetsZero];
-//        view = [self.navigationController.navigationBar snapshotViewAfterScreenUpdates:NO];
-//        UIGraphicsBeginImageContext(CGSizeMake([[UIScreen mainScreen] bounds].size.width, 64));
-//        CGContextRef context = UIGraphicsGetCurrentContext();
-//        [self.navigationController.navigationBar.layer renderInContext:context];
-//        UIImage *theImage = UIGraphicsGetImageFromCurrentImageContext();
-//        UIGraphicsEndImageContext();
-//        UIImageView *imgView = [[UIImageView alloc]initWithImage:theImage];
         
         [self setTopSnapshot:view];
     }
