@@ -10,8 +10,8 @@
 
 @interface WTKSearchBar : UIView
 
-@property(nonatomic,strong)UISearchBar *searchBar;
+@property(nonatomic,strong)UISearchBar  *searchBar;
 
-@property(nonatomic,strong)UIColor *wtk_bgColor;
+@property(nonatomic,strong)UIColor      *wtk_bgColor;
 
 @end

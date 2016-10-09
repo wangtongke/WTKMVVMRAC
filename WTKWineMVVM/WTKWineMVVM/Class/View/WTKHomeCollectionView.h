@@ -10,9 +10,9 @@
 #import "WTKHomeViewModel.h"
 @interface WTKHomeCollectionView : UICollectionView
 
-@property(nonatomic,strong)NSArray *headArray;
+@property(nonatomic,strong)NSArray          *headArray;
 
-@property(nonatomic,strong)NSMutableArray *dataArray;
+@property(nonatomic,strong)NSMutableArray   *dataArray;
 
 @property(nonatomic,strong)WTKHomeViewModel *viewModel;
 

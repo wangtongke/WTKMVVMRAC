@@ -66,21 +66,17 @@
 //    navi
     RAC(self,leftButton.rac_command)    = RACObserve(self.viewModel, naviCommand);
    
-
 }
+
 
 - (void)configView
 {
-    
     [self.view addSubview:self.collectionView];
     
 }
 //导航
 - (void)_setNavigationItem
 {
-
-//    self.navigationController.navigationBar.shadowImage = [UIImage new];
-//    self.automaticallyAdjustsScrollViewInsets = NO;
 
     [self.leftButton setBackgroundImage:[UIImage imageNamed:@"wtksaoyisaoh"] forState:UIControlStateNormal];
     self.leftButton.frame = CGRectMake(0, 0, 25, 23);
@@ -103,7 +99,7 @@
         else
         {
             [self.navigationController setNavigationBarHidden:NO animated:YES];
-            self.navigationController.navigationBar.barStyle = UIBarStyleBlack;
+//            self.navigationController.navigationBar.barStyle = UIBarStyleBlack;
         }
         
         if (y < kWidth * 0.23 && y >= 0)

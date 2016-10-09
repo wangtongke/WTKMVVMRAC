@@ -16,7 +16,13 @@
  *  @param time         动画时间
  */
 + (void)beginAddAnimationWithImageView:(UIImageView *)imageView
-                         animationTime:(float)time;
+                         animationTime:(float)time
+                            startPoint:(CGPoint)startP
+                              endPoint:(CGPoint)endP;
+/**
+ *  播放添加购物车声音
+ */
++ (void)playSound;
 
 /**
  *  注册指纹验证
@@ -27,5 +33,10 @@
  *  删除指纹
  */
 + (BOOL) delegateTouchID;
+
+/**
+ * 分享
+ */
++ (void)shared;
 
 @end

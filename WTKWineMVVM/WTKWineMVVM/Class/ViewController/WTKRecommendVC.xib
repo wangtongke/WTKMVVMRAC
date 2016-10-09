@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WTKRecommendVC">
+            <connections>
+                <outlet property="imageView" destination="nuT-7e-b62" id="7EA-Ci-o47"/>
+                <outlet property="shareBtn" destination="18R-9W-Ahf" id="w4a-hi-9pI"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="送给朋友8000积分大礼包，您也可" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BRR-BX-Gvd">
+                    <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="37" id="1mo-42-rbj"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="1mo-42-rbj"/>
+                        </mask>
+                    </variation>
+                    <variation key="widthClass=compact">
+                        <mask key="constraints">
+                            <include reference="1mo-42-rbj"/>
+                        </mask>
+                    </variation>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="以获得2000的积分" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1OK-CQ-fnb">
+                    <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="37" id="bUg-BF-E35"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="bUg-BF-E35"/>
+                        </mask>
+                    </variation>
+                    <variation key="widthClass=compact">
+                        <mask key="constraints">
+                            <include reference="bUg-BF-E35"/>
+                        </mask>
+                    </variation>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="18R-9W-Ahf">
+                    <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                    <color key="backgroundColor" red="1" green="0.38365831441636927" blue="0.37938503421502823" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="45" id="neo-JJ-caR"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <state key="normal" title="分享到社交媒体">
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="neo-JJ-caR"/>
+                        </mask>
+                    </variation>
+                    <variation key="widthClass=compact">
+                        <mask key="constraints">
+                            <include reference="neo-JJ-caR"/>
+                        </mask>
+                    </variation>
+                    <connections>
+                        <action selector="shareBtnClick:" destination="-1" eventType="touchUpInside" id="4rB-S8-dy4"/>
+                    </connections>
+                </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wtkRecommend" translatesAutoresizingMaskIntoConstraints="NO" id="nuT-7e-b62">
+                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="nuT-7e-b62" secondAttribute="height" multiplier="32:25" id="2zI-Bq-Kwk"/>
+                    </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="2zI-Bq-Kwk"/>
+                        </mask>
+                    </variation>
+                    <variation key="widthClass=compact">
+                        <mask key="constraints">
+                            <include reference="2zI-Bq-Kwk"/>
+                        </mask>
+                    </variation>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="BRR-BX-Gvd" firstAttribute="top" secondItem="nuT-7e-b62" secondAttribute="bottom" constant="12" id="3YF-Pr-Ci7"/>
+                <constraint firstItem="18R-9W-Ahf" firstAttribute="top" secondItem="1OK-CQ-fnb" secondAttribute="bottom" constant="37" id="5E4-SM-44C"/>
+                <constraint firstItem="1OK-CQ-fnb" firstAttribute="top" secondItem="BRR-BX-Gvd" secondAttribute="bottom" constant="5" id="5Rf-1b-eB2"/>
+                <constraint firstAttribute="trailing" secondItem="nuT-7e-b62" secondAttribute="trailing" id="7Qi-Lk-QXs"/>
+                <constraint firstItem="1OK-CQ-fnb" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="50" id="93H-WT-DCD"/>
+                <constraint firstItem="nuT-7e-b62" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="A5p-xW-z7b"/>
+                <constraint firstItem="BRR-BX-Gvd" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="DDD-aC-3PU"/>
+                <constraint firstAttribute="trailing" secondItem="BRR-BX-Gvd" secondAttribute="trailing" id="IfK-CY-Sgq"/>
+                <constraint firstItem="nuT-7e-b62" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Nao-GL-fxA"/>
+                <constraint firstAttribute="trailing" secondItem="1OK-CQ-fnb" secondAttribute="trailing" constant="49" id="VR8-Ye-LUN"/>
+                <constraint firstItem="18R-9W-Ahf" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="40" id="hO2-P3-ZeL"/>
+                <constraint firstAttribute="trailing" secondItem="18R-9W-Ahf" secondAttribute="trailing" constant="40" id="iyX-nK-9jW"/>
+            </constraints>
+            <variation key="default">
+                <mask key="subviews">
+                    <exclude reference="BRR-BX-Gvd"/>
+                    <exclude reference="1OK-CQ-fnb"/>
+                    <exclude reference="18R-9W-Ahf"/>
+                    <exclude reference="nuT-7e-b62"/>
+                </mask>
+                <mask key="constraints">
+                    <exclude reference="5E4-SM-44C"/>
+                    <exclude reference="hO2-P3-ZeL"/>
+                    <exclude reference="iyX-nK-9jW"/>
+                    <exclude reference="5Rf-1b-eB2"/>
+                    <exclude reference="93H-WT-DCD"/>
+                    <exclude reference="VR8-Ye-LUN"/>
+                    <exclude reference="3YF-Pr-Ci7"/>
+                    <exclude reference="DDD-aC-3PU"/>
+                    <exclude reference="IfK-CY-Sgq"/>
+                    <exclude reference="7Qi-Lk-QXs"/>
+                    <exclude reference="A5p-xW-z7b"/>
+                    <exclude reference="Nao-GL-fxA"/>
+                </mask>
+            </variation>
+            <variation key="widthClass=compact">
+                <mask key="subviews">
+                    <include reference="BRR-BX-Gvd"/>
+                    <include reference="1OK-CQ-fnb"/>
+                    <include reference="18R-9W-Ahf"/>
+                    <include reference="nuT-7e-b62"/>
+                </mask>
+                <mask key="constraints">
+                    <include reference="5E4-SM-44C"/>
+                    <include reference="hO2-P3-ZeL"/>
+                    <include reference="iyX-nK-9jW"/>
+                    <include reference="5Rf-1b-eB2"/>
+                    <include reference="93H-WT-DCD"/>
+                    <include reference="VR8-Ye-LUN"/>
+                    <include reference="3YF-Pr-Ci7"/>
+                    <include reference="DDD-aC-3PU"/>
+                    <include reference="IfK-CY-Sgq"/>
+                    <include reference="7Qi-Lk-QXs"/>
+                    <include reference="A5p-xW-z7b"/>
+                    <include reference="Nao-GL-fxA"/>
+                </mask>
+            </variation>
+            <point key="canvasLocation" x="285" y="337"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="wtkRecommend" width="640" height="500"/>
+    </resources>
+</document>

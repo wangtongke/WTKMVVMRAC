@@ -17,19 +17,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
-//        [RACObserve([WTKUser currentUser], bageValue) subscribeNext:^(id x) {
-//
-//            NSInteger num = [x integerValue];
-//            if (num <= 0)
-//            {
-//                self.tabBarItem.badgeValue = nil;
-//            }
-//            else
-//            {
-//                self.tabBarItem.badgeValue = [NSString stringWithFormat:@"%ld",num];
-//            }
-//        }];
+    [self bindViewModel];
+
+}
+
+- (void)bindViewModel
+{
+    [super bindViewModel];
 }
 
 - (void)didReceiveMemoryWarning {

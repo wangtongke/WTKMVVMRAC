@@ -8,6 +8,8 @@
 
 #import "WTKHomeViewModel.h"
 #import "WTKGoodsViewModel.h"
+#import "WTKRecommendViewModel.h"
+
 @interface WTKHomeViewModel ()
 
 
@@ -72,6 +74,34 @@
     
     self.btnCommand     = [[RACCommand alloc]initWithSignalBlock:^RACSignal *(id input) {
         NSLog(@"%@",input);
+        NSInteger tag   = [input integerValue];
+        switch (tag) {
+            case 100:
+            {
+                
+            }
+                break;
+            case 101:
+            {
+                WTKRecommendViewModel *viewModel = [[WTKRecommendViewModel alloc]initWithService:self.services params:@{@"title":@"推荐有奖"}];
+                self.naviImpl.className = @"WTKRecommendVC";
+                [self.naviImpl pushViewModel:viewModel animated:YES];
+
+            }
+                break;
+            case 102:
+            {
+                
+            }
+                break;
+            case 103:
+            {
+                
+            }
+                break;
+            default:
+                break;
+        }
         return [RACSignal empty];
     }];
     
@@ -96,17 +126,25 @@
 
 }
 
-- (void)updateData:(NSArray *)headArray headDic:(NSArray *)dataArray
+- (void)updateData:(id)headArray headDic:(NSArray *)dataArray
 {
-    self.headData = headArray;
-    NSMutableArray *array = [NSMutableArray array];
-    for (NSDictionary *dic in dataArray)
+    if ([headArray[@"code"] integerValue] == 100)
     {
-        WTKGood *good = [[WTKGood alloc]initWithDic:dic];
-        [array addObject:good];
+        self.headData = headArray[@"data"];
+        NSMutableArray *array = [NSMutableArray array];
+        for (NSDictionary *dic in dataArray)
+        {
+            WTKGood *good = [[WTKGood alloc]initWithDic:dic];
+            [array addObject:good];
+            
+        }
+        self.dataArray = [NSArray arrayWithArray:array];
+    }
+    else
+    {
         
     }
-    self.dataArray = [NSArray arrayWithArray:array];
+    
 }
 
 

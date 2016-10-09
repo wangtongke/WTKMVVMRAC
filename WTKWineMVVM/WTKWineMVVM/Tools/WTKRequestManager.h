@@ -15,8 +15,11 @@
                        withpramater:(NSDictionary *)paremater;
 
 + (RACSignal *)postDicDataWithURL:(NSString *)urlString
-                       withpramater:(NSDictionary *)paremater;
+                     withpramater:(NSDictionary *)paremater;
 
 + (RACSignal *)getWithURL:(NSString *)uslString
             withParamater:(NSDictionary *)paramter;
+
++ (RACSignal *)postWithURL:(NSString *)urlString
+             withParamater:(NSDictionary *)parameter;
 @end

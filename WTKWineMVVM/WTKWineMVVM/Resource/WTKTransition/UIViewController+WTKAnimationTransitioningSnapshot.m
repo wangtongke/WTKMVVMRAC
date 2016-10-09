@@ -16,6 +16,7 @@
     UIView *view = objc_getAssociatedObject(self, @"WTKAnimationTransitioningSnapshot");
     if (!view)
     {
+        
         view = [self.navigationController.view snapshotViewAfterScreenUpdates:NO];
         [self setSnapshot:view];
     }

@@ -29,7 +29,7 @@
     UIViewController *fromVC    = [transitionContext viewControllerForKey:UITransitionContextFromViewControllerKey];
     UIViewController *toVC      = [transitionContext viewControllerForKey:UITransitionContextToViewControllerKey];
     NSTimeInterval duration     = [self transitionDuration:transitionContext];
-    
+
     CGRect bounds               = [[UIScreen mainScreen]bounds];
     
     UIView *containView         = [transitionContext containerView];

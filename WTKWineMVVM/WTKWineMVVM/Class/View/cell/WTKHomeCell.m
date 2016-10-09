@@ -57,7 +57,7 @@
     
     [self.managerView.addSubject subscribeNext:^(id x) {
         @strongify(self);
-        [WTKTool beginAddAnimationWithImageView:self.wtkImageView animationTime:0.55];
+        [WTKTool beginAddAnimationWithImageView:self.wtkImageView animationTime:0.55 startPoint:CGPointZero endPoint:CGPointZero];
     }];
 }
 

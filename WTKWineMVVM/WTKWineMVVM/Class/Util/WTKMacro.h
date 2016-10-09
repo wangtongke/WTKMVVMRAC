@@ -30,6 +30,8 @@
 #define kWidth [[UIScreen mainScreen] bounds].size.width
 #define ZOOM_SCALL kWidth/375.0
 
+#define IMG_URL @"http://www.jiuyunda.net:90"
+
 
 
 

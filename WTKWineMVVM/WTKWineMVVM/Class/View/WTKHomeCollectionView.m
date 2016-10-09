@@ -38,11 +38,7 @@
     [self registerClass:[WTKHomeCell class] forCellWithReuseIdentifier:@"cell"];
     [self registerClass:[WTKHomeHeadView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"header"];
 }
-//- (void)setDataArray:(NSMutableArray *)dataArray
-//{
-//    _dataArray = dataArray;
-//    [self reloadData];
-//}
+
 
 
 #pragma mark - dataSource
@@ -55,7 +51,6 @@
 }
 - (NSInteger )collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-//    return 10;
     return self.dataArray.count;
 }
 

@@ -9,6 +9,10 @@
 #import "WTKBasedViewModel.h"
 @class WTKGood;
 @interface WTKGoodsViewModel : WTKBasedViewModel
-@property(nonatomic,strong)WTKGood *goods;
+@property(nonatomic,strong)WTKGood      *goods;
+
+@property(nonatomic,strong)RACCommand   *addCommand;
+
+@property(nonatomic,strong)RACCommand   *clickShopCommand;
 
 @end

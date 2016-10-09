@@ -52,12 +52,31 @@
     manager.requestSerializer.timeoutInterval = 5;
     RACSubject *sub =[ RACSubject subject];
     [manager GET:urlString parameters:paramter progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        [sub sendNext:responseObject];
+        [sub sendNext:@{@"code":@100,@"data":responseObject}];
         [sub sendCompleted];
 
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        
+        [sub sendNext:@{@"code":@-400}];
+        [sub sendCompleted];
     }];
+    return sub;
+}
+
++ (RACSignal *)postWithURL:(NSString *)urlString withParamater:(NSDictionary *)parameter
+{
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    manager.requestSerializer.timeoutInterval = 5;
+    RACSubject *sub =[ RACSubject subject];
+    [manager POST:urlString parameters:parameter progress:^(NSProgress * _Nonnull uploadProgress) {
+        
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        [sub sendNext:responseObject];
+        [sub sendCompleted];
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        [sub sendNext:@{@"code":@-400}];
+        [sub sendCompleted];
+    }];
+    
     return sub;
 }
 
