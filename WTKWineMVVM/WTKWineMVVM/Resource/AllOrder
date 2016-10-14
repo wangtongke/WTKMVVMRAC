@@ -1,0 +1,1017 @@
+(
+{
+address = "(null)\U6cb3\U5357\U7701\U90d1\U5dde\U5e02\U65b0\U5bc6\U5e02\U5c0f\U5eb7\U6c9f(null)";
+coupons =     (
+);
+"created_at" = "2016-09-19 10:26:42";
+"customer_integral" = 0;
+"delivery_mobile" = "<null>";
+"delivery_real_name" = "<null>";
+"delivery_user_desc" = "<null>";
+fright = 0;
+getcoupons =     (
+);
+getintegral = 0;
+goodsvalue = 8100;
+id = 57df4ce15b73293dca4b004b;
+"is_comment" = "<null>";
+"jyd_coupon_value" = 0;
+lat = "34.44437117269512";
+lng = "113.4310129972183";
+"online_paid" = 0;
+ordergoods =     (
+{
+"avatar_url" = "http://img.51xiaoniu.cn/product/main_assets/assets/5774/c3e1/206a/af69/93c8/bb9e/5774c20aaf48430d6c245e95.jpg@!avatar";
+integral = 1;
+"is_gift" = 0;
+price = 135;
+"product_id" = 5774c1f1af48430d64245e59;
+qrcode = 6908037104446;
+quantity = 60;
+specification = "1500ml*1/\U74f6\Uff1b48\U5ea6  ";
+state = online;
+title = "48\U00b0 \U9ad8\U7956\U79d8\U917f\U4e00\U53f7\U575b1500ml";
+}
+);
+orderno = 20160919102641731022;
+paycost = 8100;
+paymode = 2;
+remarks = "<null>";
+"store_name" = "<null>";
+telephone = 18337141227;
+"temp_consignee" = "<null>";
+"temp_telephone" = "";
+totalcost = 8100;
+totalquantity = 60;
+useintegral = 0;
+"useintegral_cost" = 0;
+"workflow_state" = generation;
+},
+{
+address = "\U5e73\U9876\U5c71\U5e02\U5e73\U9876\U5c71\U5e02\U90cf\U53bf\U5f20\U6b66\U697c\U67515";
+consignee = "\U738b";
+coupons =     (
+);
+"created_at" = "2016-03-03 21:00:09";
+"customer_integral" = "<null>";
+"delivery_mobile" = 18238668911;
+"delivery_real_name" = "\U9648\U6653\U745e";
+"delivery_user_desc" = "<null>";
+fright = 0;
+getcoupons =     (
+);
+getintegral = 0;
+goodsvalue = 1128;
+id = 56d7dc8fe138237000e45501;
+"is_comment" = 0;
+"jyd_coupon_value" = 0;
+lat = "0.0";
+lng = "0.0";
+"online_paid" = 0;
+ordergoods =     (
+{
+"avatar_url" = "http://img.51xiaoniu.cn/product/main_assets/assets/570d/bab9/206a/af31/6b98/6b2e/56c97388af48431bc9cd8e17.jpg@!avatar";
+integral = 1;
+"is_gift" = 0;
+price = 1128;
+"product_id" = 56c9324aaf48431bd5cd8f6b;
+qrcode = 3531380012651;
+quantity = 1;
+specification = "750ml*6/\U7bb1";
+state = "<null>";
+title = "\U5e93\U6717\U7ea2\U8461\U8404\U9152\U6574\U7bb1";
+}
+);
+orderno = 2016030314411929448;
+paycost = 1128;
+paymode = 0;
+remarks = "\U6d4b\U8bd5";
+"store_name" = "\U90d1\U6c74\U8def\U5e97";
+telephone = 18224529355;
+"temp_consignee" = "";
+"temp_telephone" = "";
+totalcost = 1128;
+totalquantity = 1;
+useintegral = 0;
+"useintegral_cost" = 0;
+"workflow_state" = cancelled;
+},
+{
+address = "\U5e73\U9876\U5c71\U5e02\U5e73\U9876\U5c71\U5e02\U90cf\U53bf\U5f20\U6b66\U697c\U67515";
+consignee = "\U738b";
+coupons =     (
+);
+"created_at" = "2016-02-27 23:10:26";
+"customer_integral" = "<null>";
+"delivery_mobile" = 15249737024;
+"delivery_real_name" = "\U674e\U6167\U65b0";
+"delivery_user_desc" = "<null>";
+fright = 0;
+getcoupons =     (
+);
+getintegral = 0;
+goodsvalue = "21.8";
+id = 56d1756ae138235a6e9966a7;
+"is_comment" = 0;
+"jyd_coupon_value" = 0;
+lat = "0.0";
+lng = "0.0";
+"online_paid" = 0;
+ordergoods =     (
+{
+"avatar_url" = "<null>";
+integral = 1;
+"is_gift" = 0;
+price = "10.9";
+"product_id" = 566a6bc9af48434f06002037;
+qrcode = 4043800019311;
+quantity = 2;
+specification = "500ml*1/\U7f50";
+state = "<null>";
+title = "\U5fb7\U56fd\U591c\U5bb4\U5c0f\U9ea6\U9ed1\U5564\U9152";
+}
+);
+orderno = 20160227180738850270;
+paycost = "21.8";
+paymode = 0;
+remarks = "\U6d4b\U8bd5";
+"store_name" = "\U90d1\U6c74\U8def\U5e97";
+telephone = 18224529355;
+"temp_consignee" = "";
+"temp_telephone" = "";
+totalcost = "21.8";
+totalquantity = 2;
+useintegral = 0;
+"useintegral_cost" = 0;
+"workflow_state" = cancelled;
+},
+{
+address = "\U5e73\U9876\U5c71\U5e02\U5e73\U9876\U5c71\U5e02\U90cf\U53bf\U5f20\U6b66\U697c\U67515";
+consignee = "\U738b";
+coupons =     (
+);
+"created_at" = "2016-02-27 16:18:04";
+"customer_integral" = "<null>";
+"delivery_mobile" = 18224529355;
+"delivery_real_name" = "\U8d35";
+"delivery_user_desc" = "<null>";
+fright = 3;
+getcoupons =     (
+);
+getintegral = 0;
+goodsvalue = "6.5";
+id = 56d15b96e138235a6a9965b1;
+"is_comment" = 0;
+"jyd_coupon_value" = 0;
+lat = "0.0";
+lng = "0.0";
+"online_paid" = 0;
+ordergoods =     (
+{
+"avatar_url" = "http://img.51xiaoniu.cn/product/main_assets/assets/570d/5884/206a/af31/6024/2e5e/56c58932af48431bd5cd7e3f.jpg@!avatar";
+integral = 1;
+"is_gift" = 0;
+price = "6.5";
+"product_id" = 569741f3af484322dd000110;
+qrcode = 6920927181894;
+quantity = 1;
+specification = "1250ml*1/\U74f6";
+state = "<null>";
+title = "\U7f8e\U6c41\U6e90\U679c\U7c92\U6a591250ml";
+}
+);
+orderno = 20160227161726543035;
+paycost = "9.5";
+paymode = 0;
+remarks = "\U6d4b\U8bd5";
+"store_name" = "\U90d1\U6c74\U8def\U5e97";
+telephone = 18224529355;
+"temp_consignee" = "";
+"temp_telephone" = "";
+totalcost = "9.5";
+totalquantity = 1;
+useintegral = 0;
+"useintegral_cost" = 0;
+"workflow_state" = cancelled;
+},
+{
+address = "\U5e73\U9876\U5c71\U5e02\U5e73\U9876\U5c71\U5e02\U90cf\U53bf\U5f20\U6b66\U697c\U67515";
+consignee = "\U738b";
+coupons =     (
+);
+"created_at" = "2016-02-27 15:19:03";
+"customer_integral" = "<null>";
+"delivery_mobile" = 18224529355;
+"delivery_real_name" = "\U8d35";
+"delivery_user_desc" = "<null>";
+fright = 3;
+getcoupons =     (
+);
+getintegral = 0;
+goodsvalue = "6.5";
+id = 56d14a73e138235a6e99651c;
+"is_comment" = 0;
+"jyd_coupon_value" = 0;
+lat = "0.0";
+lng = "0.0";
+"online_paid" = 0;
+ordergoods =     (
+{
+"avatar_url" = "http://img.51xiaoniu.cn/product/main_assets/assets/570d/5884/206a/af31/6024/2e5e/56c58932af48431bd5cd7e3f.jpg@!avatar";
+integral = 1;
+"is_gift" = 0;
+price = "6.5";
+"product_id" = 569741f3af484322dd000110;
+qrcode = 6920927181894;
+quantity = 1;
+specification = "1250ml*1/\U74f6";
+state = "<null>";
+title = "\U7f8e\U6c41\U6e90\U679c\U7c92\U6a591250ml";
+}
+);
+orderno = 20160227150419483701;
+paycost = "9.5";
+paymode = 0;
+remarks = "\U6d4b\U8bd5";
+"store_name" = "\U90d1\U6c74\U8def\U5e97";
+telephone = 18224529355;
+"temp_consignee" = "";
+"temp_telephone" = "";
+totalcost = "9.5";
+totalquantity = 1;
+useintegral = 0;
+"useintegral_cost" = 0;
+"workflow_state" = cancelled;
+},
+{
+address = "\U5e73\U9876\U5c71\U5e02\U5e73\U9876\U5c71\U5e02\U90cf\U53bf\U5f20\U6b66\U697c\U67515";
+consignee = "\U738b";
+coupons =     (
+);
+"created_at" = "2016-02-27 15:48:18";
+"customer_integral" = "<null>";
+"delivery_mobile" = 18224529355;
+"delivery_real_name" = "\U8d35";
+"delivery_user_desc" = "<null>";
+fright = 3;
+getcoupons =     (
+);
+getintegral = 0;
+goodsvalue = "6.5";
+id = 56d149e6e138235a769964f4;
+"is_comment" = 0;
+"jyd_coupon_value" = 0;
+lat = "0.0";
+lng = "0.0";
+"online_paid" = 0;
+ordergoods =     (
+{
+"avatar_url" = "http://img.51xiaoniu.cn/product/main_assets/assets/570d/5884/206a/af31/6024/2e5e/56c58932af48431bd5cd7e3f.jpg@!avatar";
+integral = 1;
+"is_gift" = 0;
+price = "6.5";
+"product_id" = 569741f3af484322dd000110;
+qrcode = 6920927181894;
+quantity = 1;
+specification = "1250ml*1/\U74f6";
+state = "<null>";
+title = "\U7f8e\U6c41\U6e90\U679c\U7c92\U6a591250ml";
+}
+);
+orderno = 20160227150158409833;
+paycost = "9.5";
+paymode = 0;
+remarks = "\U6d4b\U8bd5";
+"store_name" = "\U90d1\U6c74\U8def\U5e97";
+telephone = 18224529355;
+"temp_consignee" = "";
+"temp_telephone" = "";
+totalcost = "9.5";
+totalquantity = 1;
+useintegral = 0;
+"useintegral_cost" = 0;
+"workflow_state" = completed;
+},
+{
+address = "\U5e73\U9876\U5c71\U5e02\U5e73\U9876\U5c71\U5e02\U90cf\U53bf\U5f20\U6b66\U697c\U67515";
+consignee = "\U738b";
+coupons =     (
+);
+"created_at" = "2016-02-27 15:50:32";
+"customer_integral" = "<null>";
+"delivery_mobile" = 18224529355;
+"delivery_real_name" = "\U8d35";
+"delivery_user_desc" = "<null>";
+fright = 3;
+getcoupons =     (
+);
+getintegral = 0;
+goodsvalue = 7;
+id = 56d1420ee138235a6e9964f3;
+"is_comment" = 0;
+"jyd_coupon_value" = 0;
+lat = "0.0";
+lng = "0.0";
+"online_paid" = 0;
+ordergoods =     (
+{
+"avatar_url" = "http://img.51xiaoniu.cn/product/main_assets/assets/570d/1ff1/206a/af31/6b97/df41/56b1571daf484354d14a385a.jpg@!avatar";
+integral = 1;
+"is_gift" = 0;
+price = 7;
+"product_id" = 566a8518af48435dbc00030e;
+qrcode = 6916050680559;
+quantity = 1;
+specification = "500ml*1/\U542c";
+state = "<null>";
+title = "\U767e\U5a01\U542c\U88c5500ml";
+}
+);
+orderno = 20160227142830997434;
+paycost = 10;
+paymode = 0;
+remarks = "\U6d4b\U8bd5";
+"store_name" = "\U90d1\U6c74\U8def\U5e97";
+telephone = 18224529355;
+"temp_consignee" = "";
+"temp_telephone" = "";
+totalcost = 10;
+totalquantity = 1;
+useintegral = 0;
+"useintegral_cost" = 0;
+"workflow_state" = completed;
+},
+{
+address = "\U5e73\U9876\U5c71\U5e02\U5e73\U9876\U5c71\U5e02\U90cf\U53bf\U5f20\U6b66\U697c\U67515";
+consignee = "\U738b";
+coupons =     (
+);
+"created_at" = "2016-02-27 16:04:03";
+"customer_integral" = "<null>";
+"delivery_mobile" = 18224529355;
+"delivery_real_name" = "\U8d35";
+"delivery_user_desc" = "<null>";
+fright = 3;
+getcoupons =     (
+);
+getintegral = 0;
+goodsvalue = "6.5";
+id = 56d141ade138235a6e9964ec;
+"is_comment" = 0;
+"jyd_coupon_value" = 0;
+lat = "0.0";
+lng = "0.0";
+"online_paid" = 0;
+ordergoods =     (
+{
+"avatar_url" = "http://img.51xiaoniu.cn/product/main_assets/assets/570d/5884/206a/af31/6024/2e5e/56c58932af48431bd5cd7e3f.jpg@!avatar";
+integral = 1;
+"is_gift" = 0;
+price = "6.5";
+"product_id" = 569741f3af484322dd000110;
+qrcode = 6920927181894;
+quantity = 1;
+specification = "1250ml*1/\U74f6";
+state = "<null>";
+title = "\U7f8e\U6c41\U6e90\U679c\U7c92\U6a591250ml";
+}
+);
+orderno = 20160227142653592792;
+paycost = "9.5";
+paymode = 0;
+remarks = "\U6d4b\U8bd5";
+"store_name" = "\U90d1\U6c74\U8def\U5e97";
+telephone = 18224529355;
+"temp_consignee" = "";
+"temp_telephone" = "";
+totalcost = "9.5";
+totalquantity = 1;
+useintegral = 0;
+"useintegral_cost" = 0;
+"workflow_state" = completed;
+},
+{
+address = "\U5e73\U9876\U5c71\U5e02\U5e73\U9876\U5c71\U5e02\U90cf\U53bf\U5f20\U6b66\U697c\U67515";
+consignee = "\U738b";
+coupons =     (
+);
+"created_at" = "2016-02-27 13:42:19";
+"customer_integral" = "<null>";
+"delivery_mobile" = 18224529355;
+"delivery_real_name" = "\U8d35";
+"delivery_user_desc" = "<null>";
+fright = 3;
+getcoupons =     (
+);
+getintegral = 0;
+goodsvalue = 13;
+id = 56d13707e138235a6e9964a3;
+"is_comment" = 0;
+"jyd_coupon_value" = 0;
+lat = "0.0";
+lng = "0.0";
+"online_paid" = 0;
+ordergoods =     (
+{
+"avatar_url" = "http://img.51xiaoniu.cn/product/main_assets/assets/570d/5884/206a/af31/6024/2e5e/56c58932af48431bd5cd7e3f.jpg@!avatar";
+integral = 1;
+"is_gift" = 0;
+price = "6.5";
+"product_id" = 569741f3af484322dd000110;
+qrcode = 6920927181894;
+quantity = 2;
+specification = "1250ml*1/\U74f6";
+state = "<null>";
+title = "\U7f8e\U6c41\U6e90\U679c\U7c92\U6a591250ml";
+}
+);
+orderno = 20160227134127995878;
+paycost = 16;
+paymode = 0;
+remarks = "\U6d4b\U8bd5";
+"store_name" = "\U90d1\U6c74\U8def\U5e97";
+telephone = 18224529355;
+"temp_consignee" = "";
+"temp_telephone" = "";
+totalcost = 16;
+totalquantity = 2;
+useintegral = 0;
+"useintegral_cost" = 0;
+"workflow_state" = cancelled;
+},
+{
+address = "\U5e73\U9876\U5c71\U5e02\U5e73\U9876\U5c71\U5e02\U90cf\U53bf\U5f20\U6b66\U697c\U67515";
+consignee = "\U738b";
+coupons =     (
+);
+"created_at" = "2016-03-01 16:06:29";
+"customer_integral" = "<null>";
+"delivery_mobile" = 18224529355;
+"delivery_real_name" = "\U8d35";
+"delivery_user_desc" = "<null>";
+fright = 3;
+getcoupons =     (
+);
+getintegral = 0;
+goodsvalue = "6.5";
+id = 56d11e05e138235a7299644d;
+"is_comment" = 0;
+"jyd_coupon_value" = 0;
+lat = "0.0";
+lng = "0.0";
+"online_paid" = 0;
+ordergoods =     (
+{
+"avatar_url" = "http://img.51xiaoniu.cn/product/main_assets/assets/570d/5884/206a/af31/6024/2e5e/56c58932af48431bd5cd7e3f.jpg@!avatar";
+integral = 1;
+"is_gift" = 0;
+price = "6.5";
+"product_id" = 569741f3af484322dd000110;
+qrcode = 6920927181894;
+quantity = 1;
+specification = "1250ml*1/\U74f6";
+state = "<null>";
+title = "\U7f8e\U6c41\U6e90\U679c\U7c92\U6a591250ml";
+}
+);
+orderno = 20160227115445688710;
+paycost = "9.5";
+paymode = 0;
+remarks = "\U6d4b\U8bd5";
+"store_name" = "\U90d1\U6c74\U8def\U5e97";
+telephone = 18224529355;
+"temp_consignee" = "";
+"temp_telephone" = "";
+totalcost = "9.5";
+totalquantity = 1;
+useintegral = 0;
+"useintegral_cost" = 0;
+"workflow_state" = completed;
+},
+{
+address = "\U5e73\U9876\U5c71\U5e02\U5e73\U9876\U5c71\U5e02\U90cf\U53bf\U5f20\U6b66\U697c\U67515";
+consignee = "\U738b";
+coupons =     (
+);
+"created_at" = "2016-02-27 16:16:01";
+"customer_integral" = "<null>";
+"delivery_mobile" = 18224529355;
+"delivery_real_name" = "\U8d35";
+"delivery_user_desc" = "<null>";
+fright = 3;
+getcoupons =     (
+);
+getintegral = 0;
+goodsvalue = 7;
+id = 56d11af2e138235a6a996442;
+"is_comment" = 0;
+"jyd_coupon_value" = 0;
+lat = "0.0";
+lng = "0.0";
+"online_paid" = 0;
+ordergoods =     (
+{
+"avatar_url" = "http://img.51xiaoniu.cn/product/main_assets/assets/570d/1ff1/206a/af31/6b97/df41/56b1571daf484354d14a385a.jpg@!avatar";
+integral = 1;
+"is_gift" = 0;
+price = 7;
+"product_id" = 566a8518af48435dbc00030e;
+qrcode = 6916050680559;
+quantity = 1;
+specification = "500ml*1/\U542c";
+state = "<null>";
+title = "\U767e\U5a01\U542c\U88c5500ml";
+}
+);
+orderno = 20160227114138219876;
+paycost = 10;
+paymode = 0;
+remarks = "\U6d4b\U8bd5";
+"store_name" = "\U90d1\U6c74\U8def\U5e97";
+telephone = 18224529355;
+"temp_consignee" = "";
+"temp_telephone" = "";
+totalcost = 10;
+totalquantity = 1;
+useintegral = 0;
+"useintegral_cost" = 0;
+"workflow_state" = completed;
+},
+{
+address = "\U5e73\U9876\U5c71\U5e02\U5e73\U9876\U5c71\U5e02\U90cf\U53bf\U5f20\U6b66\U697c\U67515";
+consignee = "\U738b";
+coupons =     (
+);
+"created_at" = "2016-02-27 16:19:17";
+"customer_integral" = "<null>";
+"delivery_mobile" = 18224529355;
+"delivery_real_name" = "\U8d35";
+"delivery_user_desc" = "<null>";
+fright = 3;
+getcoupons =     (
+);
+getintegral = 0;
+goodsvalue = 7;
+id = 56d11769e138235a6e99644b;
+"is_comment" = 0;
+"jyd_coupon_value" = 0;
+lat = "0.0";
+lng = "0.0";
+"online_paid" = 0;
+ordergoods =     (
+{
+"avatar_url" = "http://img.51xiaoniu.cn/product/main_assets/assets/570d/1ff1/206a/af31/6b97/df41/56b1571daf484354d14a385a.jpg@!avatar";
+integral = 1;
+"is_gift" = 0;
+price = 7;
+"product_id" = 566a8518af48435dbc00030e;
+qrcode = 6916050680559;
+quantity = 1;
+specification = "500ml*1/\U542c";
+state = "<null>";
+title = "\U767e\U5a01\U542c\U88c5500ml";
+}
+);
+orderno = 20160227112633406445;
+paycost = 10;
+paymode = 0;
+remarks = "\U6d4b\U8bd5\U7528";
+"store_name" = "\U90d1\U6c74\U8def\U5e97";
+telephone = 18224529355;
+"temp_consignee" = "";
+"temp_telephone" = "";
+totalcost = 10;
+totalquantity = 1;
+useintegral = 0;
+"useintegral_cost" = 0;
+"workflow_state" = completed;
+},
+{
+address = "\U5e73\U9876\U5c71\U5e02\U5e73\U9876\U5c71\U5e02\U90cf\U53bf\U5f20\U6b66\U697c\U67515";
+consignee = "\U738b";
+coupons =     (
+);
+"created_at" = "2016-02-27 15:50:56";
+"customer_integral" = "<null>";
+"delivery_mobile" = 15515688986;
+"delivery_real_name" = "\U5f20\U96ea";
+"delivery_user_desc" = "<null>";
+fright = 0;
+getcoupons =     (
+);
+getintegral = 0;
+goodsvalue = 188;
+id = 56d116f6e138235a7699643e;
+"is_comment" = 0;
+"jyd_coupon_value" = 0;
+lat = "0.0";
+lng = "0.0";
+"online_paid" = 0;
+ordergoods =     (
+{
+"avatar_url" = "http://img.51xiaoniu.cn/product/main_assets/assets/570d/f7c2/206a/af31/672a/9bda/56c97146af48431bd5cd9219.jpg@!avatar";
+integral = 1;
+"is_gift" = 0;
+price = 188;
+"product_id" = 56c930e2af48431bd1cd8fc4;
+qrcode = 3531380012651;
+quantity = 1;
+specification = "750ml*1/\U74f6";
+state = "<null>";
+title = "\U5e93\U6717\U7ea2\U8461\U8404\U9152750ml";
+}
+);
+orderno = 20160227112438506305;
+paycost = 188;
+paymode = 0;
+remarks = "\U6d4b\U8bd5";
+"store_name" = "\U90d1\U6c74\U8def\U5e97";
+telephone = 18224529355;
+"temp_consignee" = "";
+"temp_telephone" = "";
+totalcost = 188;
+totalquantity = 1;
+useintegral = 0;
+"useintegral_cost" = 0;
+"workflow_state" = completed;
+},
+{
+address = "\U5e73\U9876\U5c71\U5e02\U5e73\U9876\U5c71\U5e02\U90cf\U53bf\U5f20\U6b66\U697c\U67515";
+consignee = "\U738b";
+coupons =     (
+);
+"created_at" = "2016-02-27 14:55:10";
+"customer_integral" = "<null>";
+"delivery_mobile" = 15249737024;
+"delivery_real_name" = "\U674e\U6167\U65b0";
+"delivery_user_desc" = "<null>";
+fright = 0;
+getcoupons =     (
+);
+getintegral = 0;
+goodsvalue = 899;
+id = 56d10fade138235a769963ed;
+"is_comment" = 0;
+"jyd_coupon_value" = 0;
+lat = "0.0";
+lng = "0.0";
+"online_paid" = 0;
+ordergoods =     (
+{
+"avatar_url" = "http://img.51xiaoniu.cn/product/main_assets/assets/5731/b89d/206a/af6a/1880/b9ed/56c2e8a8af48431bd5cd6aa8.jpg@!avatar";
+integral = 1;
+"is_gift" = 0;
+price = 899;
+"product_id" = 569495feaf4843725f000046;
+qrcode = 6902952880294;
+quantity = 1;
+specification = "500ml*1/\U74f6\Uff1b53\U00b0";
+state = "<null>";
+title = "\U98de\U5929\U8305\U53f053\U00b0";
+}
+);
+orderno = 20160227105333131644;
+paycost = 899;
+paymode = 0;
+remarks = "\U6d4b\U8bd5";
+"store_name" = "\U90d1\U6c74\U8def\U5e97";
+telephone = 18224529355;
+"temp_consignee" = "";
+"temp_telephone" = "";
+totalcost = 899;
+totalquantity = 1;
+useintegral = 0;
+"useintegral_cost" = 0;
+"workflow_state" = cancelled;
+},
+{
+address = "\U5e73\U9876\U5c71\U5e02\U5e73\U9876\U5c71\U5e02\U90cf\U53bf\U5f20\U6b66\U697c\U67515";
+consignee = "\U738b";
+coupons =     (
+);
+"created_at" = "2016-03-11 09:57:28";
+"customer_integral" = 2;
+"delivery_mobile" = 18224529355;
+"delivery_real_name" = "\U8d35";
+"delivery_user_desc" = "<null>";
+fright = 0;
+getcoupons =     (
+);
+getintegral = 0;
+goodsvalue = 1798;
+id = 56d10f6fe138235a769963e2;
+"is_comment" = 0;
+"jyd_coupon_value" = 0;
+lat = "0.0";
+lng = "0.0";
+"online_paid" = 0;
+ordergoods =     (
+{
+"avatar_url" = "http://img.51xiaoniu.cn/product/main_assets/assets/5731/b89d/206a/af6a/1880/b9ed/56c2e8a8af48431bd5cd6aa8.jpg@!avatar";
+integral = 1;
+"is_gift" = 0;
+price = 899;
+"product_id" = 569495feaf4843725f000046;
+qrcode = 6902952880294;
+quantity = 2;
+specification = "500ml*1/\U74f6\Uff1b53\U00b0";
+state = "<null>";
+title = "\U98de\U5929\U8305\U53f053\U00b0";
+}
+);
+orderno = 20160227105231370792;
+paycost = 1798;
+paymode = 0;
+remarks = "\U6d4b\U8bd5";
+"store_name" = "\U90d1\U6c74\U8def\U5e97";
+telephone = 18224529355;
+"temp_consignee" = "";
+"temp_telephone" = "";
+totalcost = 1798;
+totalquantity = 2;
+useintegral = 0;
+"useintegral_cost" = 0;
+"workflow_state" = completed;
+},
+{
+address = "\U5e73\U9876\U5c71\U5e02\U5e73\U9876\U5c71\U5e02\U90cf\U53bf\U5f20\U6b66\U697c\U67515";
+consignee = "\U738b";
+coupons =     (
+);
+"created_at" = "2016-02-26 14:39:35";
+"customer_integral" = "<null>";
+"delivery_mobile" = 15249737024;
+"delivery_real_name" = "\U674e\U6167\U65b0";
+"delivery_user_desc" = "<null>";
+fright = 0;
+getcoupons =     (
+);
+getintegral = 0;
+goodsvalue = 899;
+id = 56cfba23e13823546ef9b33e;
+"is_comment" = 0;
+"jyd_coupon_value" = 0;
+lat = "0.0";
+lng = "0.0";
+"online_paid" = 0;
+ordergoods =     (
+{
+"avatar_url" = "http://img.51xiaoniu.cn/product/main_assets/assets/5731/b89d/206a/af6a/1880/b9ed/56c2e8a8af48431bd5cd6aa8.jpg@!avatar";
+integral = 1;
+"is_gift" = 0;
+price = 899;
+"product_id" = 569495feaf4843725f000046;
+qrcode = 6902952880294;
+quantity = 1;
+specification = "500ml*1/\U74f6\Uff1b53\U00b0";
+state = "<null>";
+title = "\U98de\U5929\U8305\U53f053\U00b0";
+}
+);
+orderno = 20160226103619809672;
+paycost = 899;
+paymode = 0;
+remarks = "\U6d4b\U8bd5";
+"store_name" = "\U90d1\U6c74\U8def\U5e97";
+telephone = 18224529355;
+"temp_consignee" = "";
+"temp_telephone" = "";
+totalcost = 899;
+totalquantity = 1;
+useintegral = 0;
+"useintegral_cost" = 0;
+"workflow_state" = cancelled;
+},
+{
+address = "\U5e73\U9876\U5c71\U5e02\U5e73\U9876\U5c71\U5e02\U90cf\U53bf\U5f20\U6b66\U697c\U67515";
+consignee = "\U738b";
+coupons =     (
+);
+"created_at" = "2016-02-26 14:46:51";
+"customer_integral" = "<null>";
+"delivery_mobile" = 15249737024;
+"delivery_real_name" = "\U674e\U6167\U65b0";
+"delivery_user_desc" = "<null>";
+fright = 0;
+getcoupons =     (
+);
+getintegral = 0;
+goodsvalue = 899;
+id = 56cfba19e13823546ef9b338;
+"is_comment" = 0;
+"jyd_coupon_value" = 0;
+lat = "0.0";
+lng = "0.0";
+"online_paid" = 0;
+ordergoods =     (
+{
+"avatar_url" = "http://img.51xiaoniu.cn/product/main_assets/assets/5731/b89d/206a/af6a/1880/b9ed/56c2e8a8af48431bd5cd6aa8.jpg@!avatar";
+integral = 1;
+"is_gift" = 0;
+price = 899;
+"product_id" = 569495feaf4843725f000046;
+qrcode = 6902952880294;
+quantity = 1;
+specification = "500ml*1/\U74f6\Uff1b53\U00b0";
+state = "<null>";
+title = "\U98de\U5929\U8305\U53f053\U00b0";
+}
+);
+orderno = 20160226103609419739;
+paycost = 899;
+paymode = 0;
+remarks = "\U6d4b\U8bd5";
+"store_name" = "\U90d1\U6c74\U8def\U5e97";
+telephone = 18224529355;
+"temp_consignee" = "";
+"temp_telephone" = "";
+totalcost = 899;
+totalquantity = 1;
+useintegral = 0;
+"useintegral_cost" = 0;
+"workflow_state" = cancelled;
+},
+{
+address = "\U5e73\U9876\U5c71\U5e02\U5e73\U9876\U5c71\U5e02\U90cf\U53bf\U5f20\U6b66\U697c\U67515";
+consignee = "\U738b";
+coupons =     (
+);
+"created_at" = "2016-02-26 14:47:36";
+"customer_integral" = "<null>";
+"delivery_mobile" = 15249737024;
+"delivery_real_name" = "\U674e\U6167\U65b0";
+"delivery_user_desc" = "<null>";
+fright = 0;
+getcoupons =     (
+);
+getintegral = 0;
+goodsvalue = 899;
+id = 56cfba0ee13823546ef9b32f;
+"is_comment" = 0;
+"jyd_coupon_value" = 0;
+lat = "0.0";
+lng = "0.0";
+"online_paid" = 0;
+ordergoods =     (
+{
+"avatar_url" = "http://img.51xiaoniu.cn/product/main_assets/assets/5731/b89d/206a/af6a/1880/b9ed/56c2e8a8af48431bd5cd6aa8.jpg@!avatar";
+integral = 1;
+"is_gift" = 0;
+price = 899;
+"product_id" = 569495feaf4843725f000046;
+qrcode = 6902952880294;
+quantity = 1;
+specification = "500ml*1/\U74f6\Uff1b53\U00b0";
+state = "<null>";
+title = "\U98de\U5929\U8305\U53f053\U00b0";
+}
+);
+orderno = 20160226103558104288;
+paycost = 899;
+paymode = 0;
+remarks = "\U6d4b\U8bd5";
+"store_name" = "\U90d1\U6c74\U8def\U5e97";
+telephone = 18224529355;
+"temp_consignee" = "";
+"temp_telephone" = "";
+totalcost = 899;
+totalquantity = 1;
+useintegral = 0;
+"useintegral_cost" = 0;
+"workflow_state" = cancelled;
+},
+{
+address = "\U90d1\U5dde\U5e02\U90d1\U5dde\U5e02\U91d1\U6c34\U533a\U5efa\U4e1a\U4e94\U680b\U5927\U697ca tower5";
+consignee = "\U738b";
+coupons =     (
+);
+"created_at" = "2016-02-26 19:25:56";
+"customer_integral" = "<null>";
+"delivery_mobile" = 18224529355;
+"delivery_real_name" = "\U8d35";
+"delivery_user_desc" = "<null>";
+fright = 0;
+getcoupons =     (
+);
+getintegral = 0;
+goodsvalue = 386;
+id = 56cbb552e138232396512982;
+"is_comment" = 0;
+"jyd_coupon_value" = 0;
+lat = "34.75309296118897";
+lng = "113.7382424646859";
+"online_paid" = 0;
+ordergoods =     (
+{
+"avatar_url" = "http://img.51xiaoniu.cn/product/main_assets/assets/570d/f7c2/206a/af31/672a/9bda/56c97146af48431bd5cd9219.jpg@!avatar";
+integral = 1;
+"is_gift" = 0;
+price = 188;
+"product_id" = 56c930e2af48431bd1cd8fc4;
+qrcode = 3531380012651;
+quantity = 1;
+specification = "750ml*1/\U74f6";
+state = "<null>";
+title = "\U5e93\U6717\U7ea2\U8461\U8404\U9152750ml";
+},
+{
+"avatar_url" = "http://img.51xiaoniu.cn/product/main_assets/assets/570d/f7b0/206a/af31/672a/9bc3/56c844b5af48431bcdcd8d66.jpg@!avatar";
+integral = 1;
+"is_gift" = 0;
+price = 198;
+"product_id" = 56c843c2af48431bd5cd8e73;
+qrcode = 9341058019899;
+quantity = 1;
+specification = "750ml*1/\U74f6";
+state = "<null>";
+title = "\U767d\U9a6c\U8d64\U971e\U73e0\U5e72\U7ea2\U8461\U8404\U9152750ml";
+}
+);
+orderno = 20160223092642354263;
+paycost = 386;
+paymode = 0;
+remarks = "\U6d4b\U8bd5";
+"store_name" = "\U901a\U6cf0\U8def";
+telephone = "183 3714 1227";
+"temp_consignee" = "";
+"temp_telephone" = "";
+totalcost = 386;
+totalquantity = 2;
+useintegral = 0;
+"useintegral_cost" = 0;
+"workflow_state" = completed;
+},
+{
+address = "\U90d1\U5dde\U5e02\U90d1\U5dde\U5e02\U91d1\U6c34\U533a\U5efa\U4e1a\U4e94\U680b\U5927\U697ca tower5";
+consignee = "\U738b";
+coupons =     (
+);
+"created_at" = "2016-02-23 09:23:49";
+"customer_integral" = "<null>";
+"delivery_mobile" = 18224529355;
+"delivery_real_name" = "\U8d35";
+"delivery_user_desc" = "<null>";
+fright = 0;
+getcoupons =     (
+);
+getintegral = 0;
+goodsvalue = 2030;
+id = 56cbb43ee13823239a51294d;
+"is_comment" = 0;
+"jyd_coupon_value" = 0;
+lat = "34.75309296118897";
+lng = "113.7382424646859";
+"online_paid" = 0;
+ordergoods =     (
+{
+"avatar_url" = "http://img.51xiaoniu.cn/product/main_assets/assets/570d/f7c2/206a/af31/672a/9bda/56c97146af48431bd5cd9219.jpg@!avatar";
+integral = 1;
+"is_gift" = 0;
+price = 188;
+"product_id" = 56c930e2af48431bd1cd8fc4;
+qrcode = 3531380012651;
+quantity = 1;
+specification = "750ml*1/\U74f6";
+state = "<null>";
+title = "\U5e93\U6717\U7ea2\U8461\U8404\U9152750ml";
+},
+{
+"avatar_url" = "http://img.51xiaoniu.cn/product/main_assets/assets/570d/bab9/206a/af31/6b98/6b2e/56c97388af48431bc9cd8e17.jpg@!avatar";
+integral = 1;
+"is_gift" = 0;
+price = 1128;
+"product_id" = 56c9324aaf48431bd5cd8f6b;
+qrcode = 3531380012651;
+quantity = 1;
+specification = "750ml*6/\U7bb1";
+state = "<null>";
+title = "\U5e93\U6717\U7ea2\U8461\U8404\U9152\U6574\U7bb1";
+},
+{
+"avatar_url" = "http://img.51xiaoniu.cn/product/main_assets/assets/570d/995b/206a/af31/6b98/4778/56c94f5faf48431bd1cd9042.jpg@!avatar";
+integral = 1;
+"is_gift" = 0;
+price = 714;
+"product_id" = 56c94f54af48431bc9cd8bfc;
+qrcode = 3468000081394;
+quantity = 1;
+specification = "750ml*6/\U7bb1";
+state = "<null>";
+title = "\U8001\U6559\U5802\U73cd\U85cf\U5e72\U7ea2\U6574\U7bb1";
+}
+);
+orderno = 2016022309220658947;
+paycost = 2030;
+paymode = 0;
+remarks = "\U6d4b\U8bd5";
+"store_name" = "\U901a\U6cf0\U8def";
+telephone = "183 3714 1227";
+"temp_consignee" = "";
+"temp_telephone" = "";
+totalcost = 2030;
+totalquantity = 3;
+useintegral = 0;
+"useintegral_cost" = 0;
+"workflow_state" = completed;
+}
+)

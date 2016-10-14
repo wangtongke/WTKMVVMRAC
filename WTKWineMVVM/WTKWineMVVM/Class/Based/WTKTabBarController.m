@@ -13,6 +13,7 @@
 #import "WTKFoundVC.h"
 #import "WTKShoppingCarVC.h"
 #import "WTKMeVC.h"
+
 @interface WTKTabBarController ()<UIScrollViewDelegate>
 @property (nonatomic, copy) NSArray<__kindof UIViewController *> *backingViewControllers;
 @property (nonatomic, assign) NSUInteger backingSelectedIndex;
@@ -220,6 +221,7 @@
     [vc.tabBarItem setTitleTextAttributes:selectDic forState:UIControlStateSelected];
     
     WTKNavigationController *nav = [[WTKNavigationController alloc]initWithRootViewController:vc];
+
     return nav;
 }
 

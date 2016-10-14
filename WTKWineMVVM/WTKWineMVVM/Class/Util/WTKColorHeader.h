@@ -20,6 +20,8 @@
 
 #define THEME_COLOR WTKCOLOR(250, 98, 97, 1)
 
+#define THEME_COLOR_ALPHA WTKCOLOR(250, 98, 97, 0.99)
+
 #define BLACK_COLOR WTKCOLOR(50,50,50,1)
 
 #define WORDS_COLOR [UIColor colorWithHex:0x5c5c5c] // 常规文字

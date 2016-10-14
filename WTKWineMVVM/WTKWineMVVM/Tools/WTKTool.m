@@ -11,6 +11,9 @@
 #import <AVFoundation/AVFoundation.h>
 #import "FXBlurView.h"
 #import "WTKShareBtn.h"
+
+#define userTag @"user"
+
 static 	SystemSoundID soundID=0;
 
 @implementation WTKTool
@@ -172,14 +175,21 @@ static 	SystemSoundID soundID=0;
     return YES;
 }
 
-+ (void)shared
++(RACSignal *)shared
 {
-    FXBlurView *blurView = [[FXBlurView alloc]initWithFrame:CGRectMake(0, 0, kWidth, kHeight)];
+    RACSubject *subject     = [RACSubject subject];
+//    FXBlurView *blurView    = [[FXBlurView alloc]initWithFrame:CGRectMake(0, 0, kWidth, kHeight)];
+//    blurView.tintColor      = WTKCOLOR(235, 235, 235, 0.5);
+    
     UIWindow *window = [[UIApplication sharedApplication].delegate window];
+    UIView *blurView        = [[UIView alloc]initWithFrame:CGRectMake(0, 0, kWidth, kHeight)];
+    UIImageView *bgImage    = [[UIImageView alloc]initWithImage:[self imageWithView:window]];
+    bgImage.frame           = CGRectMake(0, 0, kWidth, kHeight);
+    [blurView addSubview:bgImage];
     [window addSubview:blurView];
-    [UIView animateWithDuration:0.35 animations:^{
-        blurView.blurRadius = 50;
-    }];
+//    [UIView animateWithDuration:0.35 animations:^{
+//        blurView.blurRadius = 40;
+//    }];
     UITapGestureRecognizer *gesture = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(dismissShareView:)];
     [blurView addGestureRecognizer:gesture];
     
@@ -198,12 +208,17 @@ static 	SystemSoundID soundID=0;
         NSInteger col = idx % 3;
         
         WTKShareBtn *btn =[WTKShareBtn button];
-        [btn setFrame:CGRectMake(0.5 * width + col * (width * 1.5), colMargin + row * (height + width * 0.5) + kHeight - colMargin, width, height)];
+        [btn setFrame:CGRectMake(0.5 * width + col * (width * 1.5), colMargin + row * (height + width * 0.3) + kHeight - colMargin, width, height)];
         btn.w_imageView.image   = [UIImage imageNamed:btnImages[idx]];
         btn.w_label.text        = btnTitles[idx];
         btn.tag                 = idx + 100;
-        
         [blurView addSubview:btn];
+        
+        [[btn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(id x) {
+            NSLog(@"888");
+            [subject sendNext:@(btn.tag)];
+        }];
+        
         
         [UIView animateWithDuration:1 + 0.1 * idx
                               delay:0
@@ -215,7 +230,7 @@ static 	SystemSoundID soundID=0;
                          }
                          completion:^(BOOL finished) {
                              
-        }];
+                         }];
     }];
     
     UIImageView *imageView = [[UIImageView alloc]initWithFrame:CGRectMake((kWidth - 242) / 2.0, colMargin - 106 - 30 - kHeight / 2.0, 242, 106)];
@@ -235,23 +250,25 @@ static 	SystemSoundID soundID=0;
                          
                      }];
     
+    
+    return subject;
 }
 
 + (void)dismissShareView:(UITapGestureRecognizer *)gesture
 {
     UIView *imgView = [gesture.view viewWithTag:200];
-    [UIView animateWithDuration:0.5
+    [UIView animateWithDuration:0.3
                      animations:^{
                          imgView.frame = CGRectMake((kWidth - 242) / 2.0, -106 - 30 , 242, 106);
                      }
                      completion:^(BOOL finished) {
-        
-    }];
-
+                         
+                     }];
+    
     for (int i = 0 ; i < 6; i++)
     {
         UIView *view = [gesture.view viewWithTag:100 + i];
-        [UIView animateWithDuration:0.8 - 0.08 * i
+        [UIView animateWithDuration:0.4 - 0.03 * i
                          animations:^{
                              view.frame = CGRectMake(view.frame.origin.x, view.frame.origin.y + kHeight  - view.frame.origin.y, view.frame.size.width, view.frame.size.height);
                          }
@@ -264,16 +281,51 @@ static 	SystemSoundID soundID=0;
                                  [gesture.view removeFromSuperview];
                                  num = 0;
                              }
-        }];
-
+                         }];
+        
     }
-
+    
     
 }
++ (UIImage *)imageWithView:(UIView *)view
+{
+    UIGraphicsBeginImageContextWithOptions(CGSizeMake(view.frame.size.width, view.frame.size.height),NO, 0);
+    [view.layer renderInContext:UIGraphicsGetCurrentContext()];
+    UIImage* img;
+        
+    for(UIView *subview in view.subviews)
+    {
+        [subview drawViewHierarchyInRect:subview.bounds afterScreenUpdates:YES];
+    }
+    img = UIGraphicsGetImageFromCurrentImageContext();
 
+    
+    //添加毛玻璃效果
+    img = [img applyBlurWithRadius:15 tintColor:[UIColor colorWithWhite:0.8 alpha:0.2] saturationDeltaFactor:1.8 maskImage:nil];
+    UIGraphicsEndImageContext();
+    
+    return img;
 
+}
 
+#pragma mark - 登录
++ (void)login
+{
+    [USER_DEFAULTS setObject:@"yidenglu" forKey:userTag];
+}
 
++ (void)exit
+{
+    [USER_DEFAULTS removeObjectForKey:userTag];
+}
 
++ (NSString *)getCacheSize
+{
+    return [NSString stringWithFormat:@"%.2fM",[[SDImageCache sharedImageCache] getSize] / 1024.0 / 1024.0];
+}
 
++ (NSString *)getVersion
+{
+    return [[[NSBundle mainBundle] infoDictionary]objectForKey:@"CFBundleShortVersionString"];
+}
 @end

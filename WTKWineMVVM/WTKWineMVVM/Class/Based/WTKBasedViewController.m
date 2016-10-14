@@ -50,11 +50,15 @@
 //    self.navigationItem.backBarButtonItem = btn;
 //    self.navigationController.navigationBar.barTintColor = THEME_COLOR;
     UIButton *leftBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    [leftBtn setBackgroundImage:[UIImage imageNamed:@"backbutton_icon2"] forState:UIControlStateNormal];
+    [leftBtn setBackgroundImage:[UIImage imageNamed:@"backbutton_icon3"] forState:UIControlStateNormal];
     leftBtn.frame = CGRectMake(0, 0, 30, 30);
-    [leftBtn addTarget:self action:@selector(leftBtnClick) forControlEvents:UIControlEventTouchUpInside];
+    [leftBtn addTarget:self action:@selector(backBtnClick) forControlEvents:UIControlEventTouchUpInside];
     
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithCustomView:leftBtn];
+}
+- (void)backBtnClick
+{
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (void)handlePopRecognizer:(UIPanGestureRecognizer *)recognizer

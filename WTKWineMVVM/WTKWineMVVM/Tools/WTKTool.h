@@ -35,8 +35,26 @@
 + (BOOL) delegateTouchID;
 
 /**
- * 分享
+ *  分享
  */
-+ (void)shared;
++ (RACSignal *)shared;
+
+/**
+ *  登录
+ */
++ (void)login;
+
+/**
+ *  退出
+ */
++ (void)exit;
+/**
+ *  获取缓存大小
+ */
++ (NSString *)getCacheSize;
+/**
+ *  获取当前版本
+ */
++ (NSString *)getVersion;
 
 @end

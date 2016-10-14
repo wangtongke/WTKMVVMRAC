@@ -7,7 +7,7 @@
 //
 
 #import "UIViewController+WTKAnimationTransitioningSnapshot.h"
-
+#import "WTKShoppingManager.h"
 #import <objc/runtime.h>
 @implementation UIViewController (WTKAnimationTransitioningSnapshot)
 
@@ -17,7 +17,9 @@
     if (!view)
     {
         
-        view = [self.navigationController.view snapshotViewAfterScreenUpdates:NO];
+//        view = [self.navigationController.view snapshotViewAfterScreenUpdates:NO];
+        view = [self.tabBarController.view snapshotViewAfterScreenUpdates:NO];
+      
         [self setSnapshot:view];
     }
     return view;

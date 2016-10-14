@@ -12,4 +12,6 @@
 
 @property(nonatomic,strong)RACCommand *refershCommand;
 
+@property(nonatomic,strong)RACCommand *shareCommand;
+
 @end

@@ -1,0 +1,50 @@
+(
+{
+address = "(null)\U6cb3\U5357\U7701\U90d1\U5dde\U5e02\U65b0\U5bc6\U5e02\U5c0f\U5eb7\U6c9f(null)";
+coupons =     (
+);
+"created_at" = "2016-09-19 10:26:42";
+"customer_integral" = 0;
+"delivery_mobile" = "<null>";
+"delivery_real_name" = "<null>";
+"delivery_user_desc" = "<null>";
+fright = 0;
+getcoupons =     (
+);
+getintegral = 0;
+goodsvalue = 8100;
+id = 57df4ce15b73293dca4b004b;
+"is_comment" = "<null>";
+"jyd_coupon_value" = 0;
+lat = "34.44437117269512";
+lng = "113.4310129972183";
+"online_paid" = 0;
+ordergoods =     (
+{
+"avatar_url" = "http://img.51xiaoniu.cn/product/main_assets/assets/5774/c3e1/206a/af69/93c8/bb9e/5774c20aaf48430d6c245e95.jpg@!avatar";
+integral = 1;
+"is_gift" = 0;
+price = 135;
+"product_id" = 5774c1f1af48430d64245e59;
+qrcode = 6908037104446;
+quantity = 60;
+specification = "1500ml*1/\U74f6\Uff1b48\U5ea6  ";
+state = online;
+title = "48\U00b0 \U9ad8\U7956\U79d8\U917f\U4e00\U53f7\U575b1500ml";
+}
+);
+orderno = 20160919102641731022;
+paycost = 8100;
+paymode = 2;
+remarks = "<null>";
+"store_name" = "<null>";
+telephone = 18337141227;
+"temp_consignee" = "<null>";
+"temp_telephone" = "";
+totalcost = 8100;
+totalquantity = 60;
+useintegral = 0;
+"useintegral_cost" = 0;
+"workflow_state" = generation;
+}
+)

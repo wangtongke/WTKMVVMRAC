@@ -9,5 +9,5 @@ pod 'RESideMenu'
 pod 'Masonry'
 pod 'MJRefresh', '~> 3.1.12'
 pod 'FDFullscreenPopGesture', '~> 1.1'
-
+pod 'DZNEmptyDataSet', '~> 1.8.1'
 end

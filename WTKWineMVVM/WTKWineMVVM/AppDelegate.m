@@ -14,6 +14,14 @@
 #import "WTKFoundVC.h"
 #import "WTKShoppingCarVC.h"
 #import "WTKMeVC.h"
+
+#import <ShareSDK/ShareSDK.h>
+#import <ShareSDKConnector/ShareSDKConnector.h>
+#import "WXApi.h"
+#import "WeiboSDK.h"
+#import <TencentOpenAPI/TencentOAuth.h>
+#import <TencentOpenAPI/TencentApiInterface.h>
+#import <TencentOpenAPI/QQApiInterface.h>
 @interface AppDelegate ()
 
 @end
@@ -37,6 +45,7 @@
 
     [self readUserData];
 
+    [self registShareSDK];
     
     return YES;
 }
@@ -45,16 +54,54 @@
 - (void)readUserData
 {
     [WTKDataManager readUserData];
-//    NSString *path = [NSHomeDirectory() stringByAppendingPathComponent:@"Documents/shoppingCar.plist"];
-//    NSError *error;
-//    NSData *data = [NSData dataWithContentsOfFile:path options:NSDataReadingMappedIfSafe error:&error];
-//    if (!error)
-//    {
-//        WTKShoppingManager *manager = [NSKeyedUnarchiver unarchiveObjectWithData:data];
-//        [WTKShoppingManager manager].goodsDic = manager.goodsDic;
-//    }
+
 }
 
+- (void)registShareSDK
+{
+    dispatch_async(dispatch_get_global_queue(0, 0), ^{
+        
+        
+        [ShareSDKConnector connectWeChat:[WXApi class] delegate:self];
+        
+        [ShareSDKConnector connectQQ:[QQApiInterface class] tencentOAuthClass:[TencentOAuth class]];
+        [ShareSDK registerApp:@"f67e4aa87334" activePlatforms:@[@(SSDKPlatformSubTypeWechatSession),@(SSDKPlatformSubTypeWechatTimeline),@(SSDKPlatformSubTypeQQFriend),@(SSDKPlatformSubTypeQZone),@(SSDKPlatformTypeSinaWeibo)] onImport:^(SSDKPlatformType platformType) {
+            switch (platformType)
+            {
+                case SSDKPlatformTypeWechat:
+                    [ShareSDKConnector connectWeChat:[WXApi class]];
+                    break;
+                case SSDKPlatformTypeQQ:
+                    [ShareSDKConnector connectQQ:[QQApiInterface class] tencentOAuthClass:[TencentOAuth class]];
+                    break;
+                case SSDKPlatformTypeSinaWeibo:
+                    [ShareSDKConnector connectWeibo:[WeiboSDK class]];
+                    break;
+                    
+                default:
+                    break;
+            }
+        } onConfiguration:^(SSDKPlatformType platformType, NSMutableDictionary *appInfo) {
+            switch (platformType)
+            {
+                    
+                case SSDKPlatformTypeWechat:
+                    [appInfo SSDKSetupWeChatByAppId:@"wx99edba10fa9ee81d"
+                                          appSecret:@"083faf098658c1633756cd3dbef84a72"];
+                    break;
+                case SSDKPlatformTypeQQ:
+                    [appInfo SSDKSetupQQByAppId:@"1105742566"
+                                         appKey:@"Jzj1vRwc8GNe4m36"
+                                       authType:SSDKAuthTypeBoth];
+                    break;
+                    
+                default:
+                    break;
+            }
+        }];
+        
+    });
+}
 
 - (void)changeRootViewController
 {
@@ -63,40 +110,9 @@
     tabbarC.tabBar.tintColor            = THEME_COLOR;
     window.rootViewController           = tabbarC;
     
-//    WTKHomeVC *homeVC           = [[WTKHomeVC alloc]initWithViewModel:[[WTKHomeViewModel alloc]initWithService:nil params:@{@"title":@"首页"}]];
-//    WTKNavigationController *nav1 = [self setChildVC:homeVC title:@"首页" imageName:@"homeNormal" withSelectedName:@"homeHight"];
-//    
-//    WTKCategoryVC *cateVC       = [[WTKCategoryVC alloc]initWithViewModel:[[WTKCategoryViewModel alloc]initWithService:nil params:@{@"title":@"分类"}]];
-//    WTKNavigationController *nav2 =  [self setChildVC:cateVC title:@"分类" imageName:@"categoryNormal" withSelectedName:@"categoryHight"];
-//    
-//    WTKFoundVC *foundVC         = [[WTKFoundVC alloc]initWithViewModel:[[WTKFoundViewModel alloc]initWithService:nil params:@{@"title":@"发现"}]];
-//    WTKNavigationController *nav3 =   [self setChildVC:foundVC title:@"发现" imageName:@"foundNormal" withSelectedName:@"foundHight"];
-//    
-//    WTKShoppingCarVC *shopVC    = [[WTKShoppingCarVC alloc]initWithViewModel:[[WTKShoppingCarViewModel alloc]initWithService:nil params:@{@"title":@"购物车"}]];
-//    WTKNavigationController *nav4 =  [self setChildVC:shopVC title:@"购物车" imageName:@"carNormal" withSelectedName:@"carHight"];
-//    
-//    WTKMeVC *meVC               = [[WTKMeVC alloc]initWithViewModel:[[WTKMeViewModel alloc]initWithService:nil params:@{@"title":@"我的"}]];
-//    WTKNavigationController *nav5 =  [self setChildVC:meVC title:@"我的" imageName:@"meNoraml" withSelectedName:@"meHight"];
-//    
-//    tabbarC.viewControllers = @[nav1,nav2,nav3,nav4,nav5];
+
 }
-- (WTKNavigationController *)setChildVC:(UIViewController *)vc title:(NSString *)title imageName:(NSString *)imgName withSelectedName:(NSString *)selectedName
-{
-    vc.title                = title;
-    vc.tabBarItem.image     = [UIImage imageNamed:imgName];
-    vc.tabBarItem.selectedImage = [UIImage imageNamed:selectedName];
-    
-    vc.tabBarController.tabBar.tintColor   = THEME_COLOR;
-    
-    NSDictionary *dic       = @{NSForegroundColorAttributeName:BLACK_COLOR,NSFontAttributeName:[UIFont systemFontOfSize:12]};
-    [vc.tabBarItem setTitleTextAttributes:dic forState:UIControlStateNormal];
-    
-    NSDictionary *selectDic = @{NSForegroundColorAttributeName:THEME_COLOR,NSFontAttributeName:[UIFont systemFontOfSize:12]};
-    [vc.tabBarItem setTitleTextAttributes:selectDic forState:UIControlStateSelected];
-    
-    WTKNavigationController *nav = [[WTKNavigationController alloc]initWithRootViewController:vc];
-    return nav;
-}
+
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

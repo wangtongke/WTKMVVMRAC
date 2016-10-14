@@ -28,7 +28,7 @@
 {
     if (self = [super initWithViewModel:viewModel])
     {
-        self.automaticallyAdjustsScrollViewInsets = NO;
+//        self.automaticallyAdjustsScrollViewInsets = NO;
         [self bindViewModel];
     }
     return self;
@@ -37,13 +37,24 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+    
     [self.collectionView reloadSections:[NSIndexSet indexSetWithIndex:0]];
     [self.navigationController.navigationBar setBackgroundImage:[UIImage imageFromColor:WTKCOLOR(255, 255, 255, 0.01)] forBarMetrics:UIBarMetricsDefault];
+        [self _setNavigationItem];
 }
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    [self.navigationController.navigationBar setBackgroundImage:[UIImage imageFromColor:WTKCOLOR(255, 255, 255, 0.99)] forBarMetrics:UIBarMetricsDefault];
+//#error jixu
+//    [[UINavigationBar appearance] setBarTintColor:[UIColor whiteColor]];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-//    self.automaticallyAdjustsScrollViewInsets = NO;
-    [self _setNavigationItem];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(cancelPop) name:@"wtk_cancelPop" object:nil];
+
     [self configView];
 }
 - (void)bindViewModel
@@ -65,8 +76,27 @@
     
 //    navi
     RAC(self,leftButton.rac_command)    = RACObserve(self.viewModel, naviCommand);
-   
+
+    [RACObserve(self.collectionView, contentOffset) subscribeNext:^(id x) {
+        
+        CGPoint point = [x CGPointValue];
+        CGFloat y = point.y;
+        if(y < kWidth * 0.23)
+        {
+            [self.leftButton setBackgroundImage:[UIImage imageNamed:@"wtksaoyisaob"] forState:UIControlStateNormal];
+            [self.rightBtn setBackgroundImage:[UIImage imageNamed:@"xiaoxib"] forState:UIControlStateNormal];
+            self.searchBar.wtk_bgColor = WTKCOLOR(240, 240, 240, 0.5);
+        }
+        else
+        {
+            [self.leftButton setBackgroundImage:[UIImage imageNamed:@"wtksaoyisaoh"] forState:UIControlStateNormal];
+            [self.rightBtn setBackgroundImage:[UIImage imageNamed:@"xiaoxih"] forState:UIControlStateNormal];
+            self.searchBar.wtk_bgColor = WTKCOLOR(160, 160, 160, 0.5);
+        }
+        
+    }];
 }
+
 
 
 - (void)configView
@@ -87,56 +117,18 @@
     self.rightBtn.frame = CGRectMake(0, 0, 25, 23);
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithCustomView:self.rightBtn];
     
-    [RACObserve(self.collectionView, contentOffset) subscribeNext:^(id x) {
-        
-        CGPoint point = [x CGPointValue];
-        CGFloat y = point.y;
-        if (y < 0)
-        {
-            [self.navigationController setNavigationBarHidden:YES animated:YES];
-            self.navigationController.navigationBar.barStyle = UIBarStyleDefault;
-        }
-        else
-        {
-            [self.navigationController setNavigationBarHidden:NO animated:YES];
-//            self.navigationController.navigationBar.barStyle = UIBarStyleBlack;
-        }
-        
-        if (y < kWidth * 0.23 && y >= 0)
-        {
-            float a = y / kWidth / 0.23;
-            NSLog(@"%f",a);
-            if (a < 0.9 && a > 0.02)
-            {
-                [self.navigationController.navigationBar setBackgroundImage:[UIImage imageFromColor:WTKCOLOR(255, 255, 255, a)] forBarMetrics:UIBarMetricsDefault];
-            }
-            if (a < 0.5)
-            {
-                self.navigationController.navigationBar.barStyle = UIBarStyleBlack;
-            }
-            else
-            {
-                self.navigationController.navigationBar.barStyle = UIBarStyleDefault;
-            }
-        }
-        if(y < kWidth * 0.23)
-        {
-            [self.leftButton setBackgroundImage:[UIImage imageNamed:@"wtksaoyisaob"] forState:UIControlStateNormal];
-            [self.rightBtn setBackgroundImage:[UIImage imageNamed:@"xiaoxib"] forState:UIControlStateNormal];
-            self.searchBar.wtk_bgColor = WTKCOLOR(240, 240, 240, 0.5);
-        }
-        else
-        {
-            [self.leftButton setBackgroundImage:[UIImage imageNamed:@"wtksaoyisaoh"] forState:UIControlStateNormal];
-            [self.rightBtn setBackgroundImage:[UIImage imageNamed:@"xiaoxih"] forState:UIControlStateNormal];
-            self.searchBar.wtk_bgColor = WTKCOLOR(160, 160, 160, 0.5);
-        }
-        
-    }];
+    
         self.navigationItem.titleView = self.searchBar;
     self.searchBar.center = CGPointMake(kWidth / 2.0, self.searchBar.center.y);
     
 }
+
+#pragma mark - notification
+- (void)cancelPop
+{
+    [self _setNavigationItem];
+}
+
 
 #pragma mark - searchDelegate
 - (BOOL)searchBarShouldBeginEditing:(UISearchBar *)searchBar{
@@ -149,7 +141,7 @@
     if (!_collectionView)
     {
         UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc]init];
-        _collectionView = [[WTKHomeCollectionView alloc]initWithFrame:CGRectMake(0, 0, kWidth, kHeight - 49) collectionViewLayout:layout];
+        _collectionView = [[WTKHomeCollectionView alloc]initWithFrame:CGRectMake(0, -64, kWidth, kHeight - 49 + 64) collectionViewLayout:layout];
         _collectionView.viewModel = self.viewModel;
     }
     return _collectionView;
@@ -191,10 +183,18 @@
     return _searchBar;
 }
 
+#pragma mark - dealloc
+- (void)dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+    NSLog(@"释放了");
+    
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     
 }
+
 
 /*
 #pragma mark - Navigation

@@ -9,6 +9,8 @@
 #import "WTKHomeViewModel.h"
 #import "WTKGoodsViewModel.h"
 #import "WTKRecommendViewModel.h"
+#import "WTKOrderViewModel.h"
+#import "WTKWebViewModel.h"
 
 @interface WTKHomeViewModel ()
 
@@ -96,7 +98,10 @@
                 break;
             case 103:
             {
-                
+                WTKOrderViewModel *viewModel = [[WTKOrderViewModel alloc]initWithService:self.services params:@{@"title":@"全部订单"}];
+                viewModel.orderType = 0;
+                self.naviImpl.className = @"WTKOrderVC";
+                [self.naviImpl pushViewModel:viewModel animated:YES];
             }
                 break;
             default:
@@ -142,7 +147,8 @@
     }
     else
     {
-        
+        self.headData = [NSArray array];
+        self.dataArray = [NSArray array];
     }
     
 }

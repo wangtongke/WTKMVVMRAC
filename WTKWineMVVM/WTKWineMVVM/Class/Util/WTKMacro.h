@@ -32,8 +32,26 @@
 
 #define IMG_URL @"http://www.jiuyunda.net:90"
 
+///userDefaults
 
+#define USER_DEFAULTS [NSUserDefaults standardUserDefaults]
 
+#define CURRENT_USER [WTKUser currentUser]
+
+///SVP
+#define SHOW_SVP(title) \
+[SVProgressHUD showWithStatus:title];
+
+#define SHOW_ERROE(title) \
+[SVProgressHUD showErrorWithStatus:title];
+
+#define SHOW_SUCCESS(title) \
+[SVProgressHUD showSuccessWithStatus:title];
+
+#define DISMISS_SVP(time) \
+dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(time * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{ \
+[SVProgressHUD dismiss]; \
+});
 
 
 #endif /* WTKMacro_h */

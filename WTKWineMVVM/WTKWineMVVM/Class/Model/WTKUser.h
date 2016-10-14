@@ -19,6 +19,10 @@
 
 @property(nonatomic,copy)NSString *bid;
 
+///是否登录
+@property(nonatomic,assign)BOOL isLogin;
+///手机号
+@property(nonatomic,copy)NSString *phoneNum;
 
 + (instancetype)currentUser;
 

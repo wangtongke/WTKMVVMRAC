@@ -10,7 +10,7 @@
 #import "WTKHomeCell.h"
 #import "WTKHomeHeadView.h"
 
-@interface WTKHomeCollectionView ()<UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout,UIScrollViewDelegate>
+@interface WTKHomeCollectionView ()<UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout,UIScrollViewDelegate,DZNEmptyDataSetSource,DZNEmptyDataSetDelegate>
 
 @property(nonatomic,assign)BOOL isAnimation;
 
@@ -37,6 +37,8 @@
     self.dataSource             = self;
     [self registerClass:[WTKHomeCell class] forCellWithReuseIdentifier:@"cell"];
     [self registerClass:[WTKHomeHeadView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"header"];
+    self.emptyDataSetSource     = self;
+    self.emptyDataSetDelegate   = self;
 }
 
 
@@ -139,6 +141,20 @@
         return CGSizeZero;
     }
     return CGSizeMake(kWidth, kWidth * 0.6);
+}
+
+#pragma mark - DZNEmptyData
+
+- (UIImage *)imageForEmptyDataSet:(UIScrollView *)scrollView
+{
+
+    return [UIImage imageNamed:@"NotWorkViews"];
+}
+
+- (void)emptyDataSet:(UIScrollView *)scrollView didTapView:(UIView *)view
+{
+    
+    [self.mj_header beginRefreshing];
 }
 
 #pragma mark - lazyLoad

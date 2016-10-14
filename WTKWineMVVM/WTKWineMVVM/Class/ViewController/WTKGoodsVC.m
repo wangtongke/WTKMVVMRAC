@@ -36,13 +36,12 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    [self.navigationController.navigationBar setBackgroundImage:[UIImage imageFromColor:THEME_COLOR] forBarMetrics:UIBarMetricsDefault];
+    [self.navigationController.navigationBar setBackgroundImage:[UIImage imageFromColor:THEME_COLOR_ALPHA] forBarMetrics:UIBarMetricsDefault];
 }
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
-    _addBtn.frame                       = CGRectMake(kWidth * 3 / 5, kHeight - 50 - 64, kWidth * 2 / 5, 50);
-    _shoppingCarBtn.frame               = CGRectMake(0, kHeight - 50 - 64, kWidth * 3 / 5, 50);
+    self.navigationController.navigationBar.shadowImage = nil;
 }
 - (void)viewDidLoad {
     [super viewDidLoad];

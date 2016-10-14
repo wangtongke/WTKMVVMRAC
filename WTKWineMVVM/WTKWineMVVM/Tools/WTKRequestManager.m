@@ -25,25 +25,26 @@
 + (RACSignal *)postArrayDataWithURL:(NSString *)urlString
        withpramater:(NSDictionary *)paremater
 {
-    
+    CGFloat time = arc4random()%15 / 10.0;
     NSArray *array = [NSArray arrayWithContentsOfFile:[[NSBundle mainBundle] pathForResource:urlString ofType:nil]];
     
     return [[RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
         [subscriber sendNext:array];
         [subscriber sendCompleted];
         return nil;
-    }]delay:1.5];
+    }]delay:time];
 }
 
 + (RACSignal *)postDicDataWithURL:(NSString *)urlString
                      withpramater:(NSDictionary *)paremater
 {
+    CGFloat time = arc4random()%15 / 10.0;
     NSDictionary *dic = [NSDictionary dictionaryWithContentsOfFile:[[NSBundle mainBundle] pathForResource:urlString ofType:nil]];
     return [[RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
         [subscriber sendNext:dic];
         [subscriber sendCompleted];
         return nil;
-    }] delay:1.5];
+    }] delay:time];
 }
 
 + (RACSignal *)getWithURL:(NSString *)urlString withParamater:(NSDictionary *)paramter

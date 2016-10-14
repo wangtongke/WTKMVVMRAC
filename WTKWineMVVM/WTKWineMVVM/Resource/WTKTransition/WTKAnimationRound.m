@@ -15,6 +15,7 @@
 @interface WTKAnimationRound ()
 @property(nonatomic,weak)id<UIViewControllerContextTransitioning> transitionContext;
 @property(nonatomic,assign)BOOL isPush;
+@property(nonatomic,assign)BOOL tabbarFlag;
 @end
 
 @implementation WTKAnimationRound
@@ -24,6 +25,7 @@
 
 
     self.isPush                 = YES;
+    self.tabbarFlag             = NO;
     self.transitionContext      = transitionContext;
     
     UIViewController *fromVC    = [transitionContext viewControllerForKey:UITransitionContextFromViewControllerKey];
@@ -35,13 +37,15 @@
     UIView *containView         = [transitionContext containerView];
     
     fromVC.view.hidden          = YES;
-    
     [containView addSubview:fromVC.snapshot];
     [containView addSubview:toVC.view];
     [[toVC.navigationController.view superview] insertSubview:fromVC.snapshot belowSubview:toVC.navigationController.view];
     
     CGRect frame                = CGRectMake([WTKTouchManager shareManager].touchPoint.x, [WTKTouchManager shareManager].touchPoint.y, 1, 1);
-    
+    if (fromVC.tabBarController)
+    {
+        fromVC.tabBarController.tabBar.hidden = YES;
+    }
 
 //    UIBezierPath *startPath     = [UIBezierPath bezierPathWithRoundedRect:frame cornerRadius:0];
 //    内切圆
@@ -68,6 +72,7 @@
 - (void)pop:(id<UIViewControllerContextTransitioning>)transitionContext
 {
     self.isPush                 = NO;
+    self.tabbarFlag             = NO;
     self.transitionContext      = transitionContext;
 
     WTKBasedViewController *fromVC    = [transitionContext viewControllerForKey:UITransitionContextFromViewControllerKey];
@@ -78,13 +83,21 @@
         duration = duration * 0.66;
     }
     UIView *containView         = [transitionContext containerView];
-
+    
     fromVC.view.hidden          = YES;
     fromVC.navigationController.navigationBar.hidden = YES;
     [containView addSubview:toVC.view];
     [containView addSubview:toVC.snapshot];
-    [containView sendSubviewToBack:toVC.snapshot];
+//    [containView sendSubviewToBack:toVC.snapshot];
     [containView addSubview:fromVC.snapshot];
+
+
+    if (toVC.tabBarController && toVC == [toVC.navigationController viewControllers].firstObject)
+    {
+        toVC.tabBarController.tabBar.hidden = YES;
+        self.tabbarFlag = YES;
+    }
+    
     
     CGRect frame                = CGRectMake([WTKTouchManager shareManager].touchPoint.x, [WTKTouchManager shareManager].touchPoint.y, 1, 1);
     float radiu                 = [WTKTouchManager shareManager].radius;
@@ -116,6 +129,11 @@
         [fromVC.snapshot removeFromSuperview];
         [self.transitionContext viewControllerForKey:UITransitionContextFromViewControllerKey].view.layer.mask = nil;
         [self.transitionContext viewControllerForKey:UITransitionContextToViewControllerKey].view.layer.mask = nil;
+        
+        if (self.tabbarFlag)
+        {
+            fromVC.tabBarController.tabBar.hidden = NO;
+        }
 
     }
     else
@@ -140,6 +158,11 @@
             fromVC.view.layer.mask = nil;
             fromVC.view.hidden = NO;
             [self.transitionContext completeTransition:NO];
+            [[NSNotificationCenter defaultCenter] postNotificationName:@"wtk_cancelPop" object:nil];
+        }
+        if (self.tabbarFlag)
+        {
+            toVC.tabBarController.tabBar.hidden = NO;
         }
     }
 }

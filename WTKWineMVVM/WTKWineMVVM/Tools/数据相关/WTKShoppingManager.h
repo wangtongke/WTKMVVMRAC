@@ -12,6 +12,8 @@
 
 @property(nonatomic,strong)NSMutableDictionary *goodsDic;
 
+@property(nonatomic,strong)UIView *view;
+
 + (instancetype)manager;
 
 @end

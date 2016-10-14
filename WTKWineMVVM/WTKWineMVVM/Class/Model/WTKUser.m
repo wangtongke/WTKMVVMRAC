@@ -8,6 +8,9 @@
 
 #import "WTKUser.h"
 #import <objc/runtime.h>
+
+#define userTag @"user"
+
 @implementation WTKUser
 
 + (instancetype)currentUser
@@ -30,6 +33,15 @@
     }
 }
 
+- (BOOL)isLogin
+{
+    if ([[NSUserDefaults standardUserDefaults] valueForKey:userTag])
+    {
+        return YES;
+    }
+    return  NO;
+}
+
 
 //实现归档解档
 - (instancetype)initWithCoder:(NSCoder *)aDecoder
@@ -42,7 +54,10 @@
         objc_property_t pro = propertyList[i];
         const char *name = property_getName(pro);
         NSString *key = [NSString stringWithUTF8String:name];
-        [self setValue:[aDecoder decodeObjectForKey:key] forKey:key];
+        if ([aDecoder decodeObjectForKey:key])
+        {
+            [self setValue:[aDecoder decodeObjectForKey:key] forKey:key];
+        }
     }
     return self;
 }

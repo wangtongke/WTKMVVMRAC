@@ -17,5 +17,10 @@
 @property (nonatomic, copy, readonly) NSDictionary *params;
 - (instancetype)initWithService:(id<WTKViewModelServices>)service params:(NSDictionary *)params;
 
+/**
+ *  判断是否登录
+ *  @param  goLogin 如果没有登录，是否跳转到登录页面
+ */
+- (BOOL)judgeWhetherLogin:(BOOL)goGoLogin;
 
 @end
