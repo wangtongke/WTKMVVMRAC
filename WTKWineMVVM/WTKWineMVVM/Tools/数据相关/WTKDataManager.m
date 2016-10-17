@@ -74,7 +74,11 @@
         
         const char *name = property_getName(pro);
         NSString *key = [NSString stringWithUTF8String:name];
-        [toObj setValue:[fromObj valueForKey:key] forKey:key];
+#warning 不为空的时候赋值，防止以后添加新的类，读取时无法设置默认值
+        if ([fromObj valueForKey:key])
+        {
+            [toObj setValue:[fromObj valueForKey:key] forKey:key];
+        }
     }
 }
 

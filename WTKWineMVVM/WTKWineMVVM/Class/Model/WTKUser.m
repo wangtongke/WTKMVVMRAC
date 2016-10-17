@@ -10,6 +10,8 @@
 #import <objc/runtime.h>
 
 #define userTag @"user"
+#define userSound @"userSound"
+#define userShake @"userShake"
 
 @implementation WTKUser
 
@@ -19,8 +21,10 @@
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         user = [[WTKUser alloc]init];
-        user.bageValue = 0;
-        user.bid = @"56c45924c2fb4e2050000022";
+        user.bageValue  = 0;
+        user.bid        = @"56c45924c2fb4e2050000022";
+        user.isSound    = YES;
+        user.isShake    = YES;
     });
     return user;
 }
@@ -33,6 +37,8 @@
     }
 }
 
+
+
 - (BOOL)isLogin
 {
     if ([[NSUserDefaults standardUserDefaults] valueForKey:userTag])
@@ -41,6 +47,7 @@
     }
     return  NO;
 }
+
 
 
 //实现归档解档

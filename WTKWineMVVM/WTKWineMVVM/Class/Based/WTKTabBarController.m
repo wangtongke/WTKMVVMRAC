@@ -49,10 +49,32 @@
     
 //监听读取用户数据
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(readDataFinish) name:READ_USER_DATA_FINISH object:nil];
-    @weakify(self);
 
 //    [[WTKUser currentUser] addObserver:self forKeyPath:@"bageValue" options:NSKeyValueObservingOptionNew context:nil];
-    
+    [self observerBadgeValue];
+}
+
+///监听badgeValue
+- (void)observerBadgeValue
+{
+    @weakify(self);
+    [RACObserve([WTKUser currentUser], bageValue) subscribeNext:^(id x) {
+        @strongify(self);
+        UIViewController *vc = self.viewControllers[3];
+        NSInteger num = [x integerValue];
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            if (num > 0)
+            {
+                [vc.tabBarItem setBadgeValue:[NSString stringWithFormat:@"%ld",num]];
+            }
+            else
+            {
+                [vc.tabBarItem setBadgeValue:nil];
+            }
+        });
+        
+    }];
 }
 
 - (void)setLaunch
@@ -114,36 +136,26 @@
             });
         }];
     }
-    @weakify(self);
-    [RACObserve([WTKUser currentUser], bageValue) subscribeNext:^(id x) {
-        @strongify(self);
-        UIViewController *vc = self.viewControllers[3];
-        NSInteger num = [x integerValue];
+//    CURRENT_USER;
+//    @weakify(self);
+//    [RACObserve([WTKUser currentUser], bageValue) subscribeNext:^(id x) {
+//        @strongify(self);
+//        UIViewController *vc = self.viewControllers[3];
+//        NSInteger num = [x integerValue];
+//
+//           dispatch_async(dispatch_get_main_queue(), ^{
+//               if (num > 0)
+//               {
+//                   [vc.tabBarItem setBadgeValue:[NSString stringWithFormat:@"%ld",num]];
+//               }
+//               else
+//               {
+//                   [vc.tabBarItem setBadgeValue:nil];
+//               }
+//           });
+//
+//    }];
 
-           dispatch_async(dispatch_get_main_queue(), ^{
-               if (num > 0)
-               {
-                   [vc.tabBarItem setBadgeValue:[NSString stringWithFormat:@"%ld",num]];
-               }
-               else
-               {
-                   [vc.tabBarItem setBadgeValue:nil];
-               }
-           });
-
-    }];
-
-//    NSInteger num = [WTKUser currentUser].bageValue;
-//    dispatch_sync(dispatch_get_main_queue(), ^{
-//        if (num <= 0)
-//        {
-//            vc.tabBarItem.badgeValue = nil;
-//        }
-//        else
-//        {
-//            vc.tabBarItem.badgeValue = [NSString stringWithFormat:@"%ld",14];
-//        }
-//    });
 
     
 }

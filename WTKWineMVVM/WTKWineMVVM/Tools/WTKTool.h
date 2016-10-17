@@ -57,4 +57,9 @@
  */
 + (NSString *)getVersion;
 
+/**
+ *  根据view获取一张模糊的图片
+ */
++ (UIImage *)imageWithView:(UIView *)view withBlurRadiu:(CGFloat)radiu;
+
 @end

@@ -92,9 +92,11 @@ static 	SystemSoundID soundID=0;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
             mp3URL                  = [[NSBundle mainBundle] URLForResource:@"AddShopAudio.mp3" withExtension:nil];
+        mp3URL = [NSURL URLWithString:[[NSBundle mainBundle]pathForResource:@"AddShopAudio" ofType:@"mp3"]];
             AudioServicesCreateSystemSoundID((__bridge CFURLRef _Nonnull)(mp3URL), &soundID);
         });
-    AudioServicesPlayAlertSound(soundID);
+//    AudioServicesPlayAlertSound(soundID);
+    AudioServicesPlaySystemSound(soundID);
     
     
 }
@@ -183,7 +185,7 @@ static 	SystemSoundID soundID=0;
     
     UIWindow *window = [[UIApplication sharedApplication].delegate window];
     UIView *blurView        = [[UIView alloc]initWithFrame:CGRectMake(0, 0, kWidth, kHeight)];
-    UIImageView *bgImage    = [[UIImageView alloc]initWithImage:[self imageWithView:window]];
+    UIImageView *bgImage    = [[UIImageView alloc]initWithImage:[self imageWithView:window withBlurRadiu:15]];
     bgImage.frame           = CGRectMake(0, 0, kWidth, kHeight);
     [blurView addSubview:bgImage];
     [window addSubview:blurView];
@@ -287,7 +289,7 @@ static 	SystemSoundID soundID=0;
     
     
 }
-+ (UIImage *)imageWithView:(UIView *)view
++ (UIImage *)imageWithView:(UIView *)view withBlurRadiu:(CGFloat)radiu
 {
     UIGraphicsBeginImageContextWithOptions(CGSizeMake(view.frame.size.width, view.frame.size.height),NO, 0);
     [view.layer renderInContext:UIGraphicsGetCurrentContext()];
@@ -301,7 +303,7 @@ static 	SystemSoundID soundID=0;
 
     
     //添加毛玻璃效果
-    img = [img applyBlurWithRadius:15 tintColor:[UIColor colorWithWhite:0.8 alpha:0.2] saturationDeltaFactor:1.8 maskImage:nil];
+    img = [img applyBlurWithRadius:radiu tintColor:[UIColor colorWithWhite:0.8 alpha:0.2] saturationDeltaFactor:1.8 maskImage:nil];
     UIGraphicsEndImageContext();
     
     return img;

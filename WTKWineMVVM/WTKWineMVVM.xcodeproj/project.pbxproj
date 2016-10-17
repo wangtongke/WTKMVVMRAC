@@ -99,6 +99,13 @@
 		F58C36CE1DAE21DE00C0A2D2 /* WTKMeBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = F58C36CD1DAE21DE00C0A2D2 /* WTKMeBtn.m */; };
 		F58C36D21DAE2B2000C0A2D2 /* WTKMeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F58C36D01DAE2B2000C0A2D2 /* WTKMeTableViewCell.m */; };
 		F58C36D31DAE2B2000C0A2D2 /* WTKMeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F58C36D11DAE2B2000C0A2D2 /* WTKMeTableViewCell.xib */; };
+		F58D824B1DB4617300BB897E /* WTKFunctionViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F58D824A1DB4617300BB897E /* WTKFunctionViewModel.m */; };
+		F58D824E1DB4618B00BB897E /* WTKFunctionVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F58D824D1DB4618B00BB897E /* WTKFunctionVC.m */; };
+		F58D82511DB4813000BB897E /* WTKAboutMeView.m in Sources */ = {isa = PBXBuildFile; fileRef = F58D82501DB4813000BB897E /* WTKAboutMeView.m */; };
+		F58D82531DB482FA00BB897E /* w_weixinerweima.png in Resources */ = {isa = PBXBuildFile; fileRef = F58D82521DB482FA00BB897E /* w_weixinerweima.png */; };
+		F58D82571DB49B6E00BB897E /* UITextField+WTK.m in Sources */ = {isa = PBXBuildFile; fileRef = F58D82561DB49B6E00BB897E /* UITextField+WTK.m */; };
+		F58D825A1DB49E4000BB897E /* WTKPsdManagerViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F58D82591DB49E4000BB897E /* WTKPsdManagerViewModel.m */; };
+		F58D82601DB4A14F00BB897E /* WTKPsdManagerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F58D825F1DB4A14F00BB897E /* WTKPsdManagerVC.m */; };
 		F592BA251DA89A58005EF581 /* backbutton_icon2.png in Resources */ = {isa = PBXBuildFile; fileRef = F592BA241DA89A58005EF581 /* backbutton_icon2.png */; };
 		F592BA2E1DA8E47D005EF581 /* WTKRecommendVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F592BA2C1DA8E47D005EF581 /* WTKRecommendVC.m */; };
 		F592BA321DA8EA77005EF581 /* WTKRecommendViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F592BA311DA8EA77005EF581 /* WTKRecommendViewModel.m */; };
@@ -331,6 +338,19 @@
 		F58C36CF1DAE2B2000C0A2D2 /* WTKMeTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTKMeTableViewCell.h; sourceTree = "<group>"; };
 		F58C36D01DAE2B2000C0A2D2 /* WTKMeTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTKMeTableViewCell.m; sourceTree = "<group>"; };
 		F58C36D11DAE2B2000C0A2D2 /* WTKMeTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WTKMeTableViewCell.xib; sourceTree = "<group>"; };
+		F58D82491DB4617300BB897E /* WTKFunctionViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTKFunctionViewModel.h; sourceTree = "<group>"; };
+		F58D824A1DB4617300BB897E /* WTKFunctionViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTKFunctionViewModel.m; sourceTree = "<group>"; };
+		F58D824C1DB4618B00BB897E /* WTKFunctionVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTKFunctionVC.h; sourceTree = "<group>"; };
+		F58D824D1DB4618B00BB897E /* WTKFunctionVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTKFunctionVC.m; sourceTree = "<group>"; };
+		F58D824F1DB4813000BB897E /* WTKAboutMeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTKAboutMeView.h; sourceTree = "<group>"; };
+		F58D82501DB4813000BB897E /* WTKAboutMeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTKAboutMeView.m; sourceTree = "<group>"; };
+		F58D82521DB482FA00BB897E /* w_weixinerweima.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = w_weixinerweima.png; sourceTree = "<group>"; };
+		F58D82551DB49B6E00BB897E /* UITextField+WTK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+WTK.h"; sourceTree = "<group>"; };
+		F58D82561DB49B6E00BB897E /* UITextField+WTK.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+WTK.m"; sourceTree = "<group>"; };
+		F58D82581DB49E4000BB897E /* WTKPsdManagerViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTKPsdManagerViewModel.h; sourceTree = "<group>"; };
+		F58D82591DB49E4000BB897E /* WTKPsdManagerViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTKPsdManagerViewModel.m; sourceTree = "<group>"; };
+		F58D825E1DB4A14F00BB897E /* WTKPsdManagerVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTKPsdManagerVC.h; sourceTree = "<group>"; };
+		F58D825F1DB4A14F00BB897E /* WTKPsdManagerVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTKPsdManagerVC.m; sourceTree = "<group>"; };
 		F592BA241DA89A58005EF581 /* backbutton_icon2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backbutton_icon2.png; sourceTree = "<group>"; };
 		F592BA2B1DA8E47D005EF581 /* WTKRecommendVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTKRecommendVC.h; sourceTree = "<group>"; };
 		F592BA2C1DA8E47D005EF581 /* WTKRecommendVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTKRecommendVC.m; sourceTree = "<group>"; };
@@ -696,8 +716,17 @@
 				F5A00BDD1D8E43EA0026DF67 /* UIFont+WTK.m */,
 				F56F77801DAB336500963C31 /* UILabel+WTK.h */,
 				F56F77811DAB336500963C31 /* UILabel+WTK.m */,
+				F58D82551DB49B6E00BB897E /* UITextField+WTK.h */,
+				F58D82561DB49B6E00BB897E /* UITextField+WTK.m */,
 			);
 			path = "Category(类别)";
+			sourceTree = "<group>";
+		};
+		F58D82541DB49B0C00BB897E /* TextField */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = TextField;
 			sourceTree = "<group>";
 		};
 		F592BA331DA8F645005EF581 /* FXBlurView */ = {
@@ -879,6 +908,7 @@
 		F596DA821D86A0650058844C /* View */ = {
 			isa = PBXGroup;
 			children = (
+				F58D82541DB49B0C00BB897E /* TextField */,
 				F53107401D892D1D003B402C /* cell */,
 				F531073D1D892B0D003B402C /* WTKHomeCollectionView.h */,
 				F531073E1D892B0D003B402C /* WTKHomeCollectionView.m */,
@@ -900,6 +930,8 @@
 				F567716F1DAF1D5C00AE9184 /* WTKMeHeaderView.m */,
 				F56771821DAF767900AE9184 /* WTKMenuView.h */,
 				F56771831DAF767900AE9184 /* WTKMenuView.m */,
+				F58D824F1DB4813000BB897E /* WTKAboutMeView.h */,
+				F58D82501DB4813000BB897E /* WTKAboutMeView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -931,6 +963,10 @@
 				F56CF91E1DB0A1B6004D46B3 /* WTKWebVC.m */,
 				F56CF9231DB0C429004D46B3 /* WTKSetUpVC.h */,
 				F56CF9241DB0C429004D46B3 /* WTKSetUpVC.m */,
+				F58D824C1DB4618B00BB897E /* WTKFunctionVC.h */,
+				F58D824D1DB4618B00BB897E /* WTKFunctionVC.m */,
+				F58D825E1DB4A14F00BB897E /* WTKPsdManagerVC.h */,
+				F58D825F1DB4A14F00BB897E /* WTKPsdManagerVC.m */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -960,6 +996,10 @@
 				F56CF9211DB0A1D9004D46B3 /* WTKWebViewModel.m */,
 				F56CF9261DB0C5D8004D46B3 /* WTKSetupViewModel.h */,
 				F56CF9271DB0C5D8004D46B3 /* WTKSetupViewModel.m */,
+				F58D82491DB4617300BB897E /* WTKFunctionViewModel.h */,
+				F58D824A1DB4617300BB897E /* WTKFunctionViewModel.m */,
+				F58D82581DB49E4000BB897E /* WTKPsdManagerViewModel.h */,
+				F58D82591DB49E4000BB897E /* WTKPsdManagerViewModel.m */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -975,6 +1015,7 @@
 				F57023911DAC9970008168A8 /* FinishDeliveryOrder */,
 				F56F77911DAB666800963C31 /* FinishOrder */,
 				F58695EF1D9E2D7E002441A9 /* AddShopAudio.mp3 */,
+				F58D82521DB482FA00BB897E /* w_weixinerweima.png */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -1213,6 +1254,7 @@
 				F570238B1DAC7AAA008168A8 /* backbutton_icon3.png in Resources */,
 				F57023921DAC9970008168A8 /* FinishDeliveryOrder in Resources */,
 				F56F77691DAB2E6800963C31 /* TencentOpenApi_IOS_Bundle.bundle in Resources */,
+				F58D82531DB482FA00BB897E /* w_weixinerweima.png in Resources */,
 				F596DABA1D86A0650058844C /* IQKeyboardManager.bundle in Resources */,
 				F56CF92D1DB0C7B1004D46B3 /* WTKSetupTableViewCell.xib in Resources */,
 				F57023901DAC9934008168A8 /* DeliveryOrder in Resources */,
@@ -1306,6 +1348,8 @@
 				F56771701DAF1D5C00AE9184 /* WTKMeHeaderView.m in Sources */,
 				F56CF9221DB0A1D9004D46B3 /* WTKWebViewModel.m in Sources */,
 				F5937E741D9CEBDB00C9E0B7 /* WTKAnimationRound.m in Sources */,
+				F58D825A1DB49E4000BB897E /* WTKPsdManagerViewModel.m in Sources */,
+				F58D824B1DB4617300BB897E /* WTKFunctionViewModel.m in Sources */,
 				F53107391D8928F4003B402C /* WTKShoppingCarViewModel.m in Sources */,
 				F56F77821DAB336500963C31 /* UILabel+WTK.m in Sources */,
 				F53106FA1D88E444003B402C /* WTKBasedViewController.m in Sources */,
@@ -1359,12 +1403,15 @@
 				F5937E6E1D9CEBDB00C9E0B7 /* UIApplication+WTK.m in Sources */,
 				F596DAB31D86A0650058844C /* IQKeyboardReturnKeyHandler.m in Sources */,
 				F596DAB61D86A0650058844C /* IQBarButtonItem.m in Sources */,
+				F58D82511DB4813000BB897E /* WTKAboutMeView.m in Sources */,
 				F588CE271D86B3A9003E3A74 /* UIImage+WTK.m in Sources */,
 				F531071E1D88F048003B402C /* UIColor+WTK.m in Sources */,
 				F53106F41D88E3F3003B402C /* WTKTabBarController.m in Sources */,
 				F56CF9281DB0C5D8004D46B3 /* WTKSetupViewModel.m in Sources */,
 				F58C36D21DAE2B2000C0A2D2 /* WTKMeTableViewCell.m in Sources */,
+				F58D824E1DB4618B00BB897E /* WTKFunctionVC.m in Sources */,
 				F56771811DAF75FF00AE9184 /* WTKFeedbackVC.m in Sources */,
+				F58D82571DB49B6E00BB897E /* UITextField+WTK.m in Sources */,
 				F596DA4F1D869FD30058844C /* AppDelegate.m in Sources */,
 				F5937E701D9CEBDB00C9E0B7 /* WTKAnimationDefault.m in Sources */,
 				F531070B1D88E5B0003B402C /* WTKFoundVC.m in Sources */,
@@ -1382,6 +1429,7 @@
 				F5A00C541D8E93AB0026DF67 /* WTKGoodsVC.m in Sources */,
 				F56CF92C1DB0C7B1004D46B3 /* WTKSetupTableViewCell.m in Sources */,
 				F596DAB41D86A0650058844C /* IQSegmentedNextPrevious.m in Sources */,
+				F58D82601DB4A14F00BB897E /* WTKPsdManagerVC.m in Sources */,
 				F5937E731D9CEBDB00C9E0B7 /* WTKAnimationOval.m in Sources */,
 				F53107241D891B1B003B402C /* WTKBasedViewModel.m in Sources */,
 			);

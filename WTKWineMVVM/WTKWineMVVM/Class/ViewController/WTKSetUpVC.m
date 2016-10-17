@@ -127,7 +127,7 @@
     {
         _exitBtn = [UIButton buttonWithType:UIButtonTypeCustom];
         _exitBtn.titleLabel.textAlignment = NSTextAlignmentCenter;
-        [_exitBtn setTitle:@"登录" forState:UIControlStateNormal];
+        [_exitBtn setTitle:@"退出" forState:UIControlStateNormal];
         [_exitBtn setTitleColor:THEME_COLOR forState:UIControlStateNormal];
         _exitBtn.layer.cornerRadius     = 5;
         _exitBtn.layer.masksToBounds    = YES;

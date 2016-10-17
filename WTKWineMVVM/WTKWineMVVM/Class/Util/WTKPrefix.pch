@@ -34,6 +34,7 @@
 #import "UIButton+WTKBtn.h"
 #import "UIFont+WTK.h"
 #import "UILabel+WTK.h"
+#import "UITextField+WTK.h"
 
 
 
