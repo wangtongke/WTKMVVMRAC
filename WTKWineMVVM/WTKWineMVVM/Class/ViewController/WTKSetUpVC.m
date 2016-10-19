@@ -36,6 +36,8 @@
 - (void)bindViewModel
 {
     [super bindViewModel];
+    
+     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(cancelPop) name:@"wtk_cancelPop" object:nil];
 }
 
 - (void)initView
@@ -55,6 +57,16 @@
 
 }
 
+- (void)resetNavi
+{
+    self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName:WTKCOLOR(70, 70, 70, 1)};
+}
+
+- (void)cancelPop
+{
+    [self resetNavi];
+}
+
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [self.viewModel.cellClickSubject sendNext:@[@(indexPath.row),tableView]];
@@ -64,7 +76,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     WTKSetupTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
-    NSArray *array  = @[[WTKTool getCacheSize],@"",@"",[WTKTool getVersion],@""];
+    NSArray *array  = @[[WTKTool getCacheSize],@"",[WTKTool getVersion],@"",@""];
     [cell updateTitle:self.array[indexPath.row] subTitle:array[indexPath.row]];
     return cell;
 }
@@ -136,6 +148,12 @@
         _exitBtn.backgroundColor        = WTKCOLOR(253, 253, 253, 1);
     }
     return _exitBtn;
+}
+
+- (void)dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+    NSLog(@"释放了");
 }
 
 - (void)didReceiveMemoryWarning {

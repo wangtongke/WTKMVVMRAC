@@ -79,8 +79,9 @@
 
 - (void)setLaunch
 {
+#warning 以后修改launchImage  名字
     self.launchImage        = [[UIImageView alloc]initWithFrame:self.view.frame];
-    self.launchImage.image  = [UIImage imageNamed:@"top_launch"];
+//    self.launchImage.image  = [UIImage imageNamed:@"top_launch"];
     self.launchImage.tag    = 111;
     [self.view addSubview:self.launchImage];
     @weakify(self);

@@ -107,6 +107,10 @@
     
 }
 - (IBAction)yuyinBtnClick:(id)sender {
+    UIAlertAction *action = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:nil];
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"提示" message:@"暂不支持" preferredStyle:UIAlertControllerStyleAlert];
+    [alert addAction:action];
+    [self presentViewController:alert animated:YES completion:nil];
 }
 
 
@@ -137,6 +141,10 @@
     }
     
     return YES;
+}
+- (void)dealloc
+{
+    NSLog(@"dealloc");
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

@@ -30,6 +30,9 @@
 ///是否开始震动
 @property(nonatomic,assign)BOOL         isShake;
 
+///密码
+@property(nonatomic,copy)NSString       *password;
+
 + (instancetype)currentUser;
 
 

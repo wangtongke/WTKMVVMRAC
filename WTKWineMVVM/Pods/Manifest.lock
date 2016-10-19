@@ -18,6 +18,7 @@ PODS:
   - FDFullscreenPopGesture (1.1)
   - Masonry (1.0.2)
   - MJRefresh (3.1.12)
+  - Reachability (3.2)
   - ReactiveCocoa (4.2.2):
     - Result (~> 2.0)
   - RESideMenu (4.0.7)
@@ -33,6 +34,7 @@ DEPENDENCIES:
   - FDFullscreenPopGesture (~> 1.1)
   - Masonry
   - MJRefresh (~> 3.1.12)
+  - Reachability (~> 3.2)
   - ReactiveCocoa (~> 4.2.1)
   - RESideMenu
   - SDWebImage (= 3.7.3)
@@ -44,12 +46,13 @@ SPEC CHECKSUMS:
   FDFullscreenPopGesture: a8a620179e3d9c40e8e00256dcee1c1a27c6d0f0
   Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
   MJRefresh: b96cdb21c4aa75a7b07654311ab2f315c497e806
+  Reachability: 33e18b67625424e47b6cde6d202dce689ad7af96
   ReactiveCocoa: 72263e7ac0770c274617ccd345e01049d0ca38ae
   RESideMenu: f24c508404b49c667344c54aba7e590883533958
   Result: 18e1a7597fbcca5923c565b40a25a98afafdee02
   SDWebImage: 1d2b1a1efda1ade1b00b6f8498865f8ddedc8a84
   SVProgressHUD: b0830714205bea1317ea1a2ebc71e5633af334d4
 
-PODFILE CHECKSUM: fe94f2dc05debcca27a506670f8377a513faac04
+PODFILE CHECKSUM: 69b21852711717bde027032d2117118339f67339
 
 COCOAPODS: 1.0.1

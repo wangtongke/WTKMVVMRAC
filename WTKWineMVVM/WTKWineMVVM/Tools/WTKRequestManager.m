@@ -32,7 +32,8 @@
         [subscriber sendNext:array];
         [subscriber sendCompleted];
         return nil;
-    }]delay:time];
+    }]delay:10086];
+#warning 以后修改delay
 }
 
 + (RACSignal *)postDicDataWithURL:(NSString *)urlString
@@ -44,7 +45,8 @@
         [subscriber sendNext:dic];
         [subscriber sendCompleted];
         return nil;
-    }] delay:time];
+    }] delay:10086];
+#warning 以后修改delay
 }
 
 + (RACSignal *)getWithURL:(NSString *)urlString withParamater:(NSDictionary *)paramter

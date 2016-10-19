@@ -30,6 +30,7 @@
 
 - (void)initViewModel
 {
+
     @weakify(self);
     RACSignal *phoneSignal      = [RACObserve(self, phoneNum) map:^id(id value) {
         @strongify(self);
@@ -85,7 +86,7 @@
         
         return [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
             [subscriber sendNext:@{@"code":@100}];
-            
+            [subscriber sendCompleted];
             return [RACDisposable disposableWithBlock:^{
                 NSLog(@"信号被销毁");
             }];

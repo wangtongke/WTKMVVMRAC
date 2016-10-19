@@ -40,4 +40,16 @@
     WTKBasedViewController *vc = [[NSClassFromString(_className) alloc]initWithViewModel:viewModel];
     [_navigationController pushViewController:vc animated:animated];
 }
+
+- (void)popViewControllerWithAnimation:(BOOL)animated
+{
+    if (!_navigationController)
+    {
+        NSLog(@"没有导航");
+        return;
+    }
+    
+    [_navigationController popViewControllerAnimated:animated];
+}
+
 @end

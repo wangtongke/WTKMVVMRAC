@@ -12,4 +12,8 @@
 
 - (void)pushViewModel:(WTKBasedViewModel *)viewModel animated:(BOOL)animated;
 
+- (void)popViewControllerWithAnimation:(BOOL)animated;
+
+
+
 @end

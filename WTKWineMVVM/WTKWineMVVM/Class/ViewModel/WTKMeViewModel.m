@@ -12,6 +12,7 @@
 #import "WTKLoginViewModel.h"
 #import "WTKWebViewModel.h"
 #import "WTKSetupViewModel.h"
+#import "WTKFeedBackViewModel.h"
 
 @implementation WTKMeViewModel
 
@@ -70,10 +71,14 @@
             case 3:
             {
 //                意见反馈
+                WTKFeedBackViewModel *viewModel     = [[WTKFeedBackViewModel alloc]initWithService:self.services params:@{@"title":@"意见反馈"}];
+                self.naviImpl.className             = @"WTKFeedbackVC";
+                [self.naviImpl pushViewModel:viewModel animated:YES];
             }
             case 4:
             {
 //                客服热线
+                
             }
                 break;
             case 5:

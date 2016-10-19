@@ -96,7 +96,11 @@ static 	SystemSoundID soundID=0;
             AudioServicesCreateSystemSoundID((__bridge CFURLRef _Nonnull)(mp3URL), &soundID);
         });
 //    AudioServicesPlayAlertSound(soundID);
-    AudioServicesPlaySystemSound(soundID);
+    if (CURRENT_USER.isSound)
+    {
+        AudioServicesPlaySystemSound(soundID);
+    }
+    
     
     
 }

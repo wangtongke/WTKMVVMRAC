@@ -154,6 +154,21 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [self.viewModel.cellClickSubject sendNext:@(indexPath.row + indexPath.section)];
+    if (indexPath.row == 2)
+    {
+//        客服热线
+        UIAlertAction *action = [UIAlertAction actionWithTitle:@"拨打" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+            NSURL *url = [NSURL URLWithString:@"telprompt://10086"];
+            [[UIApplication sharedApplication] openURL:url];
+        }];
+        UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+            
+        }];
+        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"客服热线" message:@"全国客服热线：10086" preferredStyle:UIAlertControllerStyleActionSheet];
+        [alert addAction:action];
+        [alert addAction:cancelAction];
+        [self presentViewController:alert animated:YES completion:nil];
+    }
 }
 
 #pragma mark - tableViewDataSource
@@ -221,7 +236,7 @@
     else
     {
         [cell updateTitle:self.titleArray[indexPath.row] subTitle:@""];
-        if (indexPath.row == 3)
+        if (indexPath.row == 2)
         {
             [cell updateTitle:self.titleArray[indexPath.row] subTitle:@"QQ81520140"];
         }
