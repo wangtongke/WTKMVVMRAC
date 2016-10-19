@@ -35,7 +35,7 @@
     @weakify(self);
     self.refreshCommand = [[RACCommand alloc]initWithSignalBlock:^RACSignal *(id input) {
         @strongify(self)
-        
+        SHOW_SVP(@"加载中");
 //        RACSignal *signal1 = [WTKRequestManager postArrayDataWithURL:HOME_HEAD withpramater:nil];
         RACSignal *signal1 = [WTKRequestManager getWithURL:@"http://www.jiuyunda.net:90/api/v1/product/slideshow" withParamater:@{@"id":@"56c45924c2fb4e2050000022"}];
         [signal1 subscribeNext:^(id x) {
@@ -45,6 +45,7 @@
         
         RACSignal *signal3 = [self rac_liftSelector:@selector(updateData:headDic:) withSignalsFromArray:@[signal1,signal2]];
         [signal3 subscribeNext:^(id x) {
+            [SVProgressHUD dismiss];
             UICollectionView *collectionView = input;
             if (collectionView.mj_header.isRefreshing)
             {
@@ -133,6 +134,8 @@
 
 - (void)updateData:(id)headArray headDic:(NSArray *)dataArray
 {
+#warning 以后修改
+    return;
     if ([headArray[@"code"] integerValue] == 100)
     {
         self.headData = headArray[@"data"];

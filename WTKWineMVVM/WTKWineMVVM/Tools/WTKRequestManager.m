@@ -32,7 +32,7 @@
         [subscriber sendNext:array];
         [subscriber sendCompleted];
         return nil;
-    }]delay:10086];
+    }]delay:time];
 #warning 以后修改delay
 }
 
@@ -45,7 +45,7 @@
         [subscriber sendNext:dic];
         [subscriber sendCompleted];
         return nil;
-    }] delay:10086];
+    }] delay:time];
 #warning 以后修改delay
 }
 

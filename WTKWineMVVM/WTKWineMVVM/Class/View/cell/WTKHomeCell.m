@@ -161,6 +161,18 @@
         make.width.mas_equalTo(110);
         make.height.equalTo(@40);
     }];
+    
+    self.wtkStockLabel              = [[UILabel alloc]init];
+    self.wtkStockLabel.font         = [UIFont wtkNormalFont:17];
+    self.wtkStockLabel.text         = @"补货中";
+    self.wtkStockLabel.textColor    = THEME_COLOR;
+    _wtkStockLabel.textAlignment    = NSTextAlignmentCenter;
+    [bgView addSubview:_wtkStockLabel];
+    [_wtkStockLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(weakSelf.managerView);
+        make.right.equalTo(weakSelf.managerView);
+        make.size.equalTo(weakSelf.managerView);
+    }];
 }
 
 

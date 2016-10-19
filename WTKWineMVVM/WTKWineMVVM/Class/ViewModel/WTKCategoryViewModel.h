@@ -10,4 +10,21 @@
 
 @interface WTKCategoryViewModel : WTKBasedViewModel
 
+@property(nonatomic,strong)RACCommand           *refreshCommand;
+
+@property(nonatomic,strong)NSArray              *leftArray;
+
+@property(nonatomic,strong)NSMutableDictionary  *dataDic;
+
+///左侧点击Command，需传入rightTableView、indexPath
+@property(nonatomic,strong)RACCommand           *leftClickCommand;
+
+@property(nonatomic,strong)RACCommand           *goodCommand;
+
+///右侧tableView滑动
+@property(nonatomic,strong)RACCommand           *rightCommand;
+
+///筛选按钮点击
+@property(nonatomic,strong)RACCommand           *selectedCommand;
+
 @end

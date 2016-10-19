@@ -34,7 +34,13 @@
 		F56771811DAF75FF00AE9184 /* WTKFeedbackVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F56771801DAF75FF00AE9184 /* WTKFeedbackVC.m */; };
 		F56771841DAF767900AE9184 /* WTKMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = F56771831DAF767900AE9184 /* WTKMenuView.m */; };
 		F56C52D11DB701BD00AF05DE /* WTKNetWork.m in Sources */ = {isa = PBXBuildFile; fileRef = F56C52D01DB701BD00AF05DE /* WTKNetWork.m */; };
-		F56CF8931DB071D3004D46B3 /* w_launch.png in Resources */ = {isa = PBXBuildFile; fileRef = F56CF8921DB071D3004D46B3 /* w_launch.png */; };
+		F56C52D31DB704AF00AF05DE /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F56C52D21DB704AF00AF05DE /* SystemConfiguration.framework */; };
+		F56C52D51DB70BE900AF05DE /* CategoryAllGoods in Resources */ = {isa = PBXBuildFile; fileRef = F56C52D41DB70BE900AF05DE /* CategoryAllGoods */; };
+		F56C52D81DB70D5800AF05DE /* WTKCategoryRightTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = F56C52D71DB70D5800AF05DE /* WTKCategoryRightTableView.m */; };
+		F56C52DC1DB710B000AF05DE /* WTKCategoryLeftTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F56C52DA1DB710B000AF05DE /* WTKCategoryLeftTableViewCell.m */; };
+		F56C52DD1DB710B000AF05DE /* WTKCategoryLeftTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F56C52DB1DB710B000AF05DE /* WTKCategoryLeftTableViewCell.xib */; };
+		F56C52E51DB724B900AF05DE /* WTKCategoryRightTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F56C52E41DB724B900AF05DE /* WTKCategoryRightTableViewCell.m */; };
+		F56C52EA1DB7724A00AF05DE /* w_launch1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F56C52E91DB7724A00AF05DE /* w_launch1.jpg */; };
 		F56CF89F1DB07ADC004D46B3 /* WTKLoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F56CF89E1DB07ADC004D46B3 /* WTKLoginVC.m */; };
 		F56CF8A21DB07B25004D46B3 /* WTKLoginViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F56CF8A11DB07B25004D46B3 /* WTKLoginViewModel.m */; };
 		F56CF9141DB08403004D46B3 /* WTKLoginVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = F56CF9131DB08403004D46B3 /* WTKLoginVC.xib */; };
@@ -233,7 +239,16 @@
 		F56771831DAF767900AE9184 /* WTKMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTKMenuView.m; sourceTree = "<group>"; };
 		F56C52CF1DB701BD00AF05DE /* WTKNetWork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTKNetWork.h; sourceTree = "<group>"; };
 		F56C52D01DB701BD00AF05DE /* WTKNetWork.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTKNetWork.m; sourceTree = "<group>"; };
-		F56CF8921DB071D3004D46B3 /* w_launch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = w_launch.png; sourceTree = "<group>"; };
+		F56C52D21DB704AF00AF05DE /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		F56C52D41DB70BE900AF05DE /* CategoryAllGoods */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CategoryAllGoods; sourceTree = "<group>"; };
+		F56C52D61DB70D5800AF05DE /* WTKCategoryRightTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTKCategoryRightTableView.h; sourceTree = "<group>"; };
+		F56C52D71DB70D5800AF05DE /* WTKCategoryRightTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTKCategoryRightTableView.m; sourceTree = "<group>"; };
+		F56C52D91DB710B000AF05DE /* WTKCategoryLeftTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTKCategoryLeftTableViewCell.h; sourceTree = "<group>"; };
+		F56C52DA1DB710B000AF05DE /* WTKCategoryLeftTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTKCategoryLeftTableViewCell.m; sourceTree = "<group>"; };
+		F56C52DB1DB710B000AF05DE /* WTKCategoryLeftTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WTKCategoryLeftTableViewCell.xib; sourceTree = "<group>"; };
+		F56C52E31DB724B900AF05DE /* WTKCategoryRightTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTKCategoryRightTableViewCell.h; sourceTree = "<group>"; };
+		F56C52E41DB724B900AF05DE /* WTKCategoryRightTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTKCategoryRightTableViewCell.m; sourceTree = "<group>"; };
+		F56C52E91DB7724A00AF05DE /* w_launch1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = w_launch1.jpg; sourceTree = "<group>"; };
 		F56CF89D1DB07ADC004D46B3 /* WTKLoginVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTKLoginVC.h; sourceTree = "<group>"; };
 		F56CF89E1DB07ADC004D46B3 /* WTKLoginVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTKLoginVC.m; sourceTree = "<group>"; };
 		F56CF8A01DB07B25004D46B3 /* WTKLoginViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTKLoginViewModel.h; sourceTree = "<group>"; };
@@ -457,6 +472,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F56C52D31DB704AF00AF05DE /* SystemConfiguration.framework in Frameworks */,
 				F56F777F1DAB2EEE00963C31 /* MessageUI.framework in Frameworks */,
 				F56F777D1DAB2EE000963C31 /* libsqlite3.tbd in Frameworks */,
 				F56F777B1DAB2ED300963C31 /* ImageIO.framework in Frameworks */,
@@ -506,6 +522,7 @@
 		738105B7EDCDC96147DA8B49 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F56C52D21DB704AF00AF05DE /* SystemConfiguration.framework */,
 				F56F777E1DAB2EEE00963C31 /* MessageUI.framework */,
 				F56F777C1DAB2EE000963C31 /* libsqlite3.tbd */,
 				F56F777A1DAB2ED300963C31 /* ImageIO.framework */,
@@ -543,6 +560,11 @@
 				F56CF9291DB0C7B1004D46B3 /* WTKSetupTableViewCell.h */,
 				F56CF92A1DB0C7B1004D46B3 /* WTKSetupTableViewCell.m */,
 				F56CF92B1DB0C7B1004D46B3 /* WTKSetupTableViewCell.xib */,
+				F56C52D91DB710B000AF05DE /* WTKCategoryLeftTableViewCell.h */,
+				F56C52DA1DB710B000AF05DE /* WTKCategoryLeftTableViewCell.m */,
+				F56C52DB1DB710B000AF05DE /* WTKCategoryLeftTableViewCell.xib */,
+				F56C52E31DB724B900AF05DE /* WTKCategoryRightTableViewCell.h */,
+				F56C52E41DB724B900AF05DE /* WTKCategoryRightTableViewCell.m */,
 			);
 			path = cell;
 			sourceTree = "<group>";
@@ -818,10 +840,10 @@
 			isa = PBXGroup;
 			children = (
 				F57061DA1DA9D13B0036263F /* Commont */,
+				F596DA861D86A0650058844C /* Tools */,
 				F596DA7D1D86A0640058844C /* Appdelegate */,
 				F596DA7E1D86A0640058844C /* Class */,
 				F596DA851D86A0650058844C /* Resource */,
-				F596DA861D86A0650058844C /* Tools */,
 				F596DA501D869FD30058844C /* ViewController.h */,
 				F596DA511D869FD30058844C /* ViewController.m */,
 				F596DA531D869FD30058844C /* Main.storyboard */,
@@ -829,8 +851,8 @@
 				F5BD1C5B1D93802A00F63B5F /* top_launch.png */,
 				F592BA241DA89A58005EF581 /* backbutton_icon2.png */,
 				F570238A1DAC7AAA008168A8 /* backbutton_icon3.png */,
-				F56CF8921DB071D3004D46B3 /* w_launch.png */,
 				F57023931DACB66A008168A8 /* 750x1334.png */,
+				F56C52E91DB7724A00AF05DE /* w_launch1.jpg */,
 				F596DA581D869FD30058844C /* LaunchScreen.storyboard */,
 				F596DA5B1D869FD30058844C /* Info.plist */,
 				F596DA4A1D869FD30058844C /* Supporting Files */,
@@ -960,6 +982,8 @@
 				F56771831DAF767900AE9184 /* WTKMenuView.m */,
 				F58D824F1DB4813000BB897E /* WTKAboutMeView.h */,
 				F58D82501DB4813000BB897E /* WTKAboutMeView.m */,
+				F56C52D61DB70D5800AF05DE /* WTKCategoryRightTableView.h */,
+				F56C52D71DB70D5800AF05DE /* WTKCategoryRightTableView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1044,6 +1068,7 @@
 				F570238F1DAC9934008168A8 /* DeliveryOrder */,
 				F57023911DAC9970008168A8 /* FinishDeliveryOrder */,
 				F56F77911DAB666800963C31 /* FinishOrder */,
+				F56C52D41DB70BE900AF05DE /* CategoryAllGoods */,
 				F58695EF1D9E2D7E002441A9 /* AddShopAudio.mp3 */,
 			);
 			path = Resource;
@@ -1270,14 +1295,15 @@
 			files = (
 				F5A00BE61D8E79900026DF67 /* WTKHomeBannerCollectionViewCell.xib in Resources */,
 				F596DA5A1D869FD30058844C /* LaunchScreen.storyboard in Resources */,
+				F56C52D51DB70BE900AF05DE /* CategoryAllGoods in Resources */,
 				F596DA571D869FD30058844C /* Assets.xcassets in Resources */,
 				F56F776D1DAB2E6800963C31 /* read_me.txt in Resources */,
 				F56F77641DAB2E6800963C31 /* ShareSDKUI.bundle in Resources */,
+				F56C52DD1DB710B000AF05DE /* WTKCategoryLeftTableViewCell.xib in Resources */,
 				F56CF9141DB08403004D46B3 /* WTKLoginVC.xib in Resources */,
 				F56F77901DAB660D00963C31 /* NoPayOrder in Resources */,
 				F56F776E1DAB2E6800963C31 /* README.txt in Resources */,
 				F58C36CB1DADD8E600C0A2D2 /* WTKOrderStateTableViewCell.xib in Resources */,
-				F56CF8931DB071D3004D46B3 /* w_launch.png in Resources */,
 				F570239F1DACE12C008168A8 /* WTKOrderDetailTableViewCell.xib in Resources */,
 				F56F77921DAB666800963C31 /* FinishOrder in Resources */,
 				F5BD1C5C1D93802A00F63B5F /* top_launch.png in Resources */,
@@ -1297,6 +1323,7 @@
 				F56F778E1DAB65B400963C31 /* AllOrder in Resources */,
 				F592BA251DA89A58005EF581 /* backbutton_icon2.png in Resources */,
 				F57023941DACB66A008168A8 /* 750x1334.png in Resources */,
+				F56C52EA1DB7724A00AF05DE /* w_launch1.jpg in Resources */,
 				F596DA551D869FD30058844C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1430,11 +1457,13 @@
 				F56771841DAF767900AE9184 /* WTKMenuView.m in Sources */,
 				F596DAB11D86A0650058844C /* IQUIWindow+Hierarchy.m in Sources */,
 				F58C36CA1DADD8E600C0A2D2 /* WTKOrderStateTableViewCell.m in Sources */,
+				F56C52E51DB724B900AF05DE /* WTKCategoryRightTableViewCell.m in Sources */,
 				F576D21D1DB5B93C002C66C8 /* WTKFeedBackViewModel.m in Sources */,
 				F56F77DF1DAB8A8500963C31 /* WTKOrderDetailModel.m in Sources */,
 				F588CE241D86AE5D003E3A74 /* UIButton+WTKBtn.m in Sources */,
 				F53107191D88E681003B402C /* WTKMeVC.m in Sources */,
 				F5937E6E1D9CEBDB00C9E0B7 /* UIApplication+WTK.m in Sources */,
+				F56C52D81DB70D5800AF05DE /* WTKCategoryRightTableView.m in Sources */,
 				F596DAB31D86A0650058844C /* IQKeyboardReturnKeyHandler.m in Sources */,
 				F596DAB61D86A0650058844C /* IQBarButtonItem.m in Sources */,
 				F58D82511DB4813000BB897E /* WTKAboutMeView.m in Sources */,
@@ -1448,6 +1477,7 @@
 				F56771811DAF75FF00AE9184 /* WTKFeedbackVC.m in Sources */,
 				F58D82571DB49B6E00BB897E /* UITextField+WTK.m in Sources */,
 				F596DA4F1D869FD30058844C /* AppDelegate.m in Sources */,
+				F56C52DC1DB710B000AF05DE /* WTKCategoryLeftTableViewCell.m in Sources */,
 				F5937E701D9CEBDB00C9E0B7 /* WTKAnimationDefault.m in Sources */,
 				F531070B1D88E5B0003B402C /* WTKFoundVC.m in Sources */,
 				F570238E1DAC7FD8008168A8 /* WTKOrderMenuView.m in Sources */,
@@ -1541,6 +1571,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COMPRESS_PNG_FILES = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -1586,6 +1617,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COMPRESS_PNG_FILES = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -1611,6 +1643,7 @@
 			baseConfigurationReference = E2969E7005841F781BBE8D64 /* Pods-WTKWineMVVM.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMPRESS_PNG_FILES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/WTKWineMVVM/Vendor/ShareSDK",
@@ -1638,6 +1671,7 @@
 			baseConfigurationReference = D9E426C5B301181044319B4E /* Pods-WTKWineMVVM.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMPRESS_PNG_FILES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/WTKWineMVVM/Vendor/ShareSDK",

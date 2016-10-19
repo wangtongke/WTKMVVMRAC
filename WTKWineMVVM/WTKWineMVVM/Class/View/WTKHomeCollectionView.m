@@ -147,8 +147,24 @@
 
 - (UIImage *)imageForEmptyDataSet:(UIScrollView *)scrollView
 {
-
-    return [UIImage imageNamed:@"NotWorkViews"];
+    [[WTKNetWork shareInatance] initNetWork];
+    if ([WTKNetWork shareInatance].isNetReachable)
+    {
+        return [UIImage imageNamed:@"NotWorkViews"];
+    }
+    return [UIImage imageNamed:@"w_dian4"];
+}
+- (NSAttributedString *)descriptionForEmptyDataSet:(UIScrollView *)scrollView
+{
+    [[WTKNetWork shareInatance] initNetWork];
+    if ([WTKNetWork shareInatance].isNetReachable)
+    {
+        return [[NSAttributedString alloc]initWithString:@""];
+    }
+    NSMutableAttributedString *string = [[NSMutableAttributedString alloc]initWithString:@"当前地址暂未开通服务"];
+    [string addAttribute:NSForegroundColorAttributeName value:WTKCOLOR(70, 70, 70, 1) range:NSMakeRange(0, 10)];
+    
+    return string;
 }
 
 - (void)emptyDataSet:(UIScrollView *)scrollView didTapView:(UIView *)view
