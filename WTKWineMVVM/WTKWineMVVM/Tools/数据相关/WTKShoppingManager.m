@@ -22,17 +22,20 @@
 }
 
 
-//- (instancetype)initWithCoder:(NSCoder *)aDecoder
-//{
-//    NSString *key = @"goodsDic";
-//    [self setValue:[aDecoder decodeObjectForKey:key] forKey:key];
-//    return self;
-//}
-//
-//- (void)encodeWithCoder:(NSCoder *)aCoder
-//{
-//    [aCoder encodeObject:[self valueForKey:@"goodsDic"] forKey:@"goodsDic"];
-//}
+- (NSMutableDictionary *)goodsDic
+{
+//    NSInteger a = [self.changed integerValue];
+//    if (a > 10000)
+//    {
+//        a = 0;
+//    }
+//    a++;
+    if (!self.flag)
+    {
+        self.changed = [NSString stringWithFormat:@"%ld",15];
+    }
+    return _goodsDic;
+}
 
 - (instancetype)initWithCoder:(NSCoder *)aDecoder
 {
@@ -45,7 +48,10 @@
         objc_property_t pro = propertyList[i];
         const char *name = property_getName(pro);
         NSString *key = [NSString stringWithUTF8String:name];
-        [self setValue:[aDecoder decodeObjectForKey:key] forKeyPath:key];
+        if ([aDecoder decodeObjectForKey:key])
+        {
+            [self setValue:[aDecoder decodeObjectForKey:key] forKey:key];
+        }
     }
     return self;
 }

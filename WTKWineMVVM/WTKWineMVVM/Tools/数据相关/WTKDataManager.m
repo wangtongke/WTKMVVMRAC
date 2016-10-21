@@ -31,6 +31,28 @@
     }
     
 }
+///删除
++ (void)removeUserData
+{
+    NSFileManager* fileManager=[NSFileManager defaultManager];
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask, YES);
+    
+    //文件名
+    NSString *uniquePath=[[paths objectAtIndex:0] stringByAppendingPathComponent:kUserPath];
+    BOOL blHave=[[NSFileManager defaultManager] fileExistsAtPath:uniquePath];
+    if (!blHave) {
+        NSLog(@"没有这个文件");
+        return ;
+    }else {
+        BOOL blDele= [fileManager removeItemAtPath:uniquePath error:nil];
+        if (blDele) {
+            NSLog(@"删除成功");
+        }else {
+            NSLog(@"删除失败");
+        }
+        
+    }
+}
 
 ///读取数据
 + (void)readUserData
@@ -61,6 +83,7 @@
     });
    
 }
+
 
 // obj1所有属性赋值给obj2   利用runtime
 + (void)setObj:(id)toObj

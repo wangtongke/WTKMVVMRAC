@@ -15,7 +15,10 @@
 @property (nonatomic, assign) NSInteger num;
 
 /// 添加到购物车
-@property(nonatomic,strong)RACSubject *addSubject;
+@property(nonatomic,strong)RACSubject   *addSubject;
+
+///移除时发送信号
+@property(nonatomic,strong)RACSubject   *reduceSubject;
 
 - (void)updateGood:(WTKGood *)good;
 

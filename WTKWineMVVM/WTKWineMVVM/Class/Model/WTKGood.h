@@ -53,6 +53,9 @@
 ///添加到购物车数量
 @property(nonatomic,assign)NSInteger num;
 
+///购物车中是否选择
+@property(nonatomic,assign)BOOL w_isSelected;
+
 
 
 

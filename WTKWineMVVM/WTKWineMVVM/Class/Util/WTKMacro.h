@@ -38,6 +38,8 @@
 
 #define CURRENT_USER [WTKUser currentUser]
 
+#define SHOPPING_MANAGER [WTKShoppingManager manager]
+
 ///SVP
 #define SHOW_SVP(title) \
 [SVProgressHUD showWithStatus:title];

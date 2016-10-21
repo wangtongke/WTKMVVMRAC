@@ -69,7 +69,7 @@
 - (void)initView
 {
     
-    [self.navigationController.navigationBar setBackgroundImage:[UIImage imageWithColor:THEME_COLOR size:CGSizeMake(kWidth, 64)] forBarMetrics:UIBarMetricsDefault];
+    [self.navigationController.navigationBar setBackgroundImage:[UIImage imageWithColor:THEME_COLOR_ALPHA size:CGSizeMake(kWidth, 64)] forBarMetrics:UIBarMetricsDefault];
     self.navigationController.navigationBar.shadowImage = nil;
     
     [self.view addSubview:self.webView];

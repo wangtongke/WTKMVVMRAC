@@ -97,6 +97,11 @@
 {
     [self.navigationController popViewControllerAnimated:YES];
 }
+
+- (void)dealloc
+{
+    NSLog(@"%@--释放了",NSStringFromClass([self class]));
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

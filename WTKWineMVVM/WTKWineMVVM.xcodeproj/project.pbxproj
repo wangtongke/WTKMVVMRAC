@@ -110,6 +110,9 @@
 		F577D1821D926081003E1D2E /* WTKTool.m in Sources */ = {isa = PBXBuildFile; fileRef = F577D1811D926081003E1D2E /* WTKTool.m */; };
 		F577D1861D9272CD003E1D2E /* WTKShoppingManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F577D1851D9272CD003E1D2E /* WTKShoppingManager.m */; };
 		F577D1891D9289F0003E1D2E /* WTKDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F577D1881D9289F0003E1D2E /* WTKDataManager.m */; };
+		F58537581DB9BF1400B66571 /* WTKShoppingCarTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = F58537571DB9BF1400B66571 /* WTKShoppingCarTableView.m */; };
+		F585375C1DB9C05500B66571 /* WTKShoppingCarTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F585375A1DB9C05500B66571 /* WTKShoppingCarTableViewCell.m */; };
+		F585375D1DB9C05500B66571 /* WTKShoppingCarTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F585375B1DB9C05500B66571 /* WTKShoppingCarTableViewCell.xib */; };
 		F58695F01D9E2D7E002441A9 /* AddShopAudio.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F58695EF1D9E2D7E002441A9 /* AddShopAudio.mp3 */; };
 		F588CE241D86AE5D003E3A74 /* UIButton+WTKBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = F588CE231D86AE5D003E3A74 /* UIButton+WTKBtn.m */; };
 		F588CE271D86B3A9003E3A74 /* UIImage+WTK.m in Sources */ = {isa = PBXBuildFile; fileRef = F588CE261D86B3A9003E3A74 /* UIImage+WTK.m */; };
@@ -375,6 +378,11 @@
 		F577D1851D9272CD003E1D2E /* WTKShoppingManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTKShoppingManager.m; sourceTree = "<group>"; };
 		F577D1871D9289F0003E1D2E /* WTKDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTKDataManager.h; sourceTree = "<group>"; };
 		F577D1881D9289F0003E1D2E /* WTKDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTKDataManager.m; sourceTree = "<group>"; };
+		F58537561DB9BF1400B66571 /* WTKShoppingCarTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTKShoppingCarTableView.h; sourceTree = "<group>"; };
+		F58537571DB9BF1400B66571 /* WTKShoppingCarTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTKShoppingCarTableView.m; sourceTree = "<group>"; };
+		F58537591DB9C05500B66571 /* WTKShoppingCarTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTKShoppingCarTableViewCell.h; sourceTree = "<group>"; };
+		F585375A1DB9C05500B66571 /* WTKShoppingCarTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTKShoppingCarTableViewCell.m; sourceTree = "<group>"; };
+		F585375B1DB9C05500B66571 /* WTKShoppingCarTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WTKShoppingCarTableViewCell.xib; sourceTree = "<group>"; };
 		F58695EF1D9E2D7E002441A9 /* AddShopAudio.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = AddShopAudio.mp3; sourceTree = "<group>"; };
 		F588CE221D86AE5D003E3A74 /* UIButton+WTKBtn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+WTKBtn.h"; sourceTree = "<group>"; };
 		F588CE231D86AE5D003E3A74 /* UIButton+WTKBtn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+WTKBtn.m"; sourceTree = "<group>"; };
@@ -595,6 +603,9 @@
 				F56C87511DB8AA8900B8B765 /* WTKAboutMeTableViewCell.h */,
 				F56C87521DB8AA8900B8B765 /* WTKAboutMeTableViewCell.m */,
 				F56C87531DB8AA8900B8B765 /* WTKAboutMeTableViewCell.xib */,
+				F58537591DB9C05500B66571 /* WTKShoppingCarTableViewCell.h */,
+				F585375A1DB9C05500B66571 /* WTKShoppingCarTableViewCell.m */,
+				F585375B1DB9C05500B66571 /* WTKShoppingCarTableViewCell.xib */,
 			);
 			path = cell;
 			sourceTree = "<group>";
@@ -1018,6 +1029,8 @@
 				F56C52D71DB70D5800AF05DE /* WTKCategoryRightTableView.m */,
 				F56C87381DB85A5800B8B765 /* WTKSiftView.h */,
 				F56C87391DB85A5800B8B765 /* WTKSiftView.m */,
+				F58537561DB9BF1400B66571 /* WTKShoppingCarTableView.h */,
+				F58537571DB9BF1400B66571 /* WTKShoppingCarTableView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1359,6 +1372,7 @@
 				F57023901DAC9934008168A8 /* DeliveryOrder in Resources */,
 				F58695F01D9E2D7E002441A9 /* AddShopAudio.mp3 in Resources */,
 				F56F776B1DAB2E6800963C31 /* WeiboSDK.bundle in Resources */,
+				F585375D1DB9C05500B66571 /* WTKShoppingCarTableViewCell.xib in Resources */,
 				F56F77701DAB2E6800963C31 /* ShareSDK.bundle in Resources */,
 				F58C36D31DAE2B2000C0A2D2 /* WTKMeTableViewCell.xib in Resources */,
 				F56C87551DB8AA8900B8B765 /* WTKAboutMeTableViewCell.xib in Resources */,
@@ -1482,6 +1496,7 @@
 				F53107131D88E644003B402C /* WTKCategoryVC.m in Sources */,
 				F56CF91F1DB0A1B6004D46B3 /* WTKWebVC.m in Sources */,
 				F596DAAD1D86A0650058844C /* IQNSArray+Sort.m in Sources */,
+				F58537581DB9BF1400B66571 /* WTKShoppingCarTableView.m in Sources */,
 				F576D2B21DB60567002C66C8 /* WTKDropView.m in Sources */,
 				F56CF9251DB0C429004D46B3 /* WTKSetUpVC.m in Sources */,
 				F56F77881DAB5EFF00963C31 /* WTKOrderViewModel.m in Sources */,
@@ -1499,6 +1514,7 @@
 				F596DAB01D86A0650058844C /* IQUIViewController+Additions.m in Sources */,
 				F58C36CE1DAE21DE00C0A2D2 /* WTKMeBtn.m in Sources */,
 				F53107301D8928BD003B402C /* WTKHomeViewModel.m in Sources */,
+				F585375C1DB9C05500B66571 /* WTKShoppingCarTableViewCell.m in Sources */,
 				F570239A1DACCC5A008168A8 /* WTKOrderDetailViewModel.m in Sources */,
 				F56771841DAF767900AE9184 /* WTKMenuView.m in Sources */,
 				F596DAB11D86A0650058844C /* IQUIWindow+Hierarchy.m in Sources */,

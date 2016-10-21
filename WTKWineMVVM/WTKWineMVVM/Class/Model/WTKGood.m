@@ -37,7 +37,10 @@
         objc_property_t pro = propertyList[i];
         const char *name = property_getName(pro);
         NSString *key = [NSString stringWithUTF8String:name];
-        [self setValue:[aDecoder decodeObjectForKey:key] forKey:key];
+        if ([aDecoder decodeObjectForKey:key])
+        {
+            [self setValue:[aDecoder decodeObjectForKey:key] forKey:key];
+        }
     }
     return self;
 }
@@ -52,6 +55,12 @@
         NSString *key  = [NSString stringWithUTF8String:name];
         [aCoder encodeObject:[self valueForKey:key] forKey:key];
     }
+    [aCoder encodeObject:@(NO) forKey:@"w_isSelected"];
+}
+
+- (NSString *)description
+{
+    return [NSString stringWithFormat:@"title:%@--isSelected:%d---num:%ld--price:%.2f",self.title,self.w_isSelected,self.num,self.price];
 }
 
 @end

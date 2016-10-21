@@ -59,6 +59,10 @@
             [leftTableView reloadData];
             [rightTableView reloadData];
             [SVProgressHUD dismiss];
+            if([rightTableView.mj_header isRefreshing])
+            {
+                [rightTableView.mj_header endRefreshing];
+            }
         }];
         return signal;
     }];
@@ -93,8 +97,10 @@
     self.selectedCommand    = [[RACCommand alloc]initWithSignalBlock:^RACSignal *(id input) {
         @strongify(self);
         WTKSiftView *siftView = input[2];
+        SHOW_SVP(@"加载中");
         RACSignal *signal   = [WTKRequestManager postArrayDataWithURL:@"CategorySiftAll" withpramater:@{}];
         [signal subscribeNext:^(id x) {
+            DISMISS_SVP(0.01);
             NSArray *all = x;
             [all enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
                 NSArray *dataArray = obj[@"data"];

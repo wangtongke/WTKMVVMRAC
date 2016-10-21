@@ -102,20 +102,62 @@
                     [action2 setValue:WTKCOLOR(80, 80, 80, 1) forKey:@"titleTextColor"];
                     [action3 setValue:THEME_COLOR forKey:@"titleTextColor"];
                     
-                    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"" message:@"请输入昵称" preferredStyle:UIAlertControllerStyleActionSheet];
+                    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"" message:@"请选择性别" preferredStyle:UIAlertControllerStyleActionSheet];
                     [alert addAction:action1];
                     [alert addAction:action2];
                     [alert addAction:action3];
                     [self.vc presentViewController:alert animated:YES completion:nil];
                 }
                     break;
-                    
+                case 3:
+                {
+                        
+                        UIDatePicker *datePicker    = [[UIDatePicker alloc]init];
+                        datePicker.datePickerMode   = UIDatePickerModeDate;
+                        NSDateFormatter *formatter  = [[NSDateFormatter alloc]init];
+                        [formatter setDateFormat:@"yy-MM-dd"];
+                        datePicker.minimumDate      = [formatter dateFromString:@"1916-01-01"];
+                        datePicker.maximumDate      = [NSDate date];
+                        UIAlertController *alert    = [UIAlertController alertControllerWithTitle:@"请选择日期" message:@"\n\n\n\n\n\n\n\n\n\n\n" preferredStyle:UIAlertControllerStyleAlert];
+                        [alert.view addSubview:datePicker];
+                        [datePicker mas_makeConstraints:^(MASConstraintMaker *make) {
+                            make.top.equalTo(alert.view).offset(20);
+                            make.left.equalTo(alert.view).offset(10);
+                            make.right.equalTo(alert.view).offset(-10);
+                            make.height.equalTo(datePicker.mas_width);
+                        }];
+                        UIAlertAction *action1 = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action) {
+                            @strongify(self);
+                            [self updateBirthDay:datePicker.date];
+                        }];
+                        UIAlertAction *action2 = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+                            
+                        }];
+                        [action1 setValue:WTKCOLOR(122, 230, 90, 1) forKey:@"titleTextColor"];
+                        [action2 setValue:WTKCOLOR(150, 150, 150, 1) forKey:@"titleTextColor"];
+                        [alert addAction:action2];
+                        [alert addAction:action1];
+                        [self.vc presentViewController:alert animated:YES completion:nil];
+
+                }
+                    break;
                 default:
                     break;
             }
         }
         return [RACSignal empty];
     }];
+}
+
+- (void)updateBirthDay:(NSDate *)date
+{
+    NSDateFormatter *formatter  = [[NSDateFormatter alloc]init];
+    [formatter setDateFormat:@"yyyy-MM-dd"];
+    NSString *time              = [formatter stringFromDate:date];
+    CURRENT_USER.birthDay       = time;
+    [self.vc.tableView reloadRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:3 inSection:0]] withRowAnimation:UITableViewRowAnimationFade];
+    [WTKDataManager saveUserData];
+    
 }
 
 - (void)updateHeader:(UIImagePickerControllerSourceType)sourcyType

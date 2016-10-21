@@ -85,8 +85,9 @@
     [self.tableView registerNib:[UINib nibWithNibName:@"WTKMeTableViewCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:@"cell"];
     self.tableView.tableHeaderView  = self.headView;
     
-    
+   
 }
+
 
 /**
  * 滑动tableView，更新导航

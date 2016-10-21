@@ -13,6 +13,9 @@
 @property(nonatomic,strong)UIImage          *headImage;
 ///昵称
 @property(nonatomic,copy)NSString           *nickName;
+///名字
+@property(nonatomic,copy)NSString           *userName;
+
 ///性别 YES-男 NO-女
 @property(nonatomic,assign)BOOL             sex;
 

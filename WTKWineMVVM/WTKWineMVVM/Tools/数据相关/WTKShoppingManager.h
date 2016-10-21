@@ -10,9 +10,19 @@
 
 @interface WTKShoppingManager : NSObject<NSCoding>
 
-@property(nonatomic,strong)NSMutableDictionary *goodsDic;
+///商品
+@property(nonatomic,strong)NSMutableDictionary  *goodsDic;
 
-@property(nonatomic,strong)UIView *view;
+///记录购物车改变
+@property(nonatomic,copy)NSString               *changed;
+
+///标志是添加至购物车还是监听  NO-ADD
+@property(nonatomic,assign)BOOL                 flag;
+
+@property(nonatomic,strong)UIView               *view;
+
+///当前购物车已选择的总价
+@property(nonatomic,assign)CGFloat               price;
 
 + (instancetype)manager;
 

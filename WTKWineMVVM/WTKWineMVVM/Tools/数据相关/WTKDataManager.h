@@ -22,4 +22,9 @@
  */
 + (void)readUserData;
 
+/**
+ *  删除用户数据
+ */
++ (void)removeUserData;
+
 @end

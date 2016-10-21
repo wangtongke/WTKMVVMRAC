@@ -38,7 +38,7 @@
 {
     CGFloat subviesH = 40;
     CGFloat subviewW = 30;
-    
+    self.backgroundColor            = [UIColor clearColor];
     _wtkLeftButton                  = [UIButton buttonWithType:UIButtonTypeCustom];
     _wtkLeftButton.backgroundColor  = [UIColor clearColor];
     _wtkLeftButton.layer.masksToBounds=YES;
@@ -82,11 +82,13 @@
 ///点击减
 - (void)leftBtnClick:(UIButton *)btn
 {
+     SHOPPING_MANAGER.flag = NO;
     self.num = self.num - 1;
     self.goods.num = self.num;
     if (self.goods.num == 0)
     {
         [[WTKShoppingManager manager].goodsDic removeObjectForKey:self.goods.id];
+        [self.reduceSubject sendNext:self.goods.id];
     }
     else
     {
@@ -98,6 +100,8 @@
 ///点击加
 - (void)rightBtnClick:(UIButton *)btn
 {
+    SHOPPING_MANAGER.flag = NO;
+    self.goods.w_isSelected = YES;
     if (self.num >= self.stokeNum)
     {
         [SVProgressHUD showImage:[UIImage imageNamed:@"wtkError"] status:@"库存不足"];
@@ -106,10 +110,9 @@
         });
         return;
     }
-    [self.addSubject sendNext:[NSNumber numberWithInteger:self.num]];
     self.num = self.num + 1;
     self.goods.num = self.num;
-    
+    [self.addSubject sendNext:[NSNumber numberWithInteger:self.num]];
     [[WTKShoppingManager manager].goodsDic setObject:self.goods forKey:self.goods.id];
 //    角标
     [WTKUser currentUser].bageValue++;
@@ -139,6 +142,13 @@
         self.wtkNumLable.hidden     = NO;
         self.wtkNumLable.text       = [NSString stringWithFormat:@"%ld",num];
     }
+}
+
+- (void)awakeFromNib
+{
+    self.addSubject = [RACSubject subject];
+    self.reduceSubject = [RACSubject subject];
+    [self configView];
 }
 
 /*
