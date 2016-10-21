@@ -46,4 +46,8 @@
  */
 + (UIImage *)getApplyImageViewInView:(UIView *)view;
 + (UIImage *)imageWithColor:(UIColor *)color size:(CGSize)size;
+
+///修正图片方向（从照片，相机获取的）
++(UIImage *)fixOrientation:(UIImage *)aImage;
+
 @end

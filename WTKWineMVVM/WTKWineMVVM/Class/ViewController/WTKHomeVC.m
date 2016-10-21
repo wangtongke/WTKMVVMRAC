@@ -63,7 +63,7 @@
     @weakify(self);
     
     
-    
+//    绑定数据
     RAC(self.collectionView,headArray)  = RACObserve(self.viewModel, headData);
     RAC(self.collectionView,dataArray)  = RACObserve(self.viewModel,dataArray);
     

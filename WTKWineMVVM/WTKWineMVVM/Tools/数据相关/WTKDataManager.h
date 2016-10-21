@@ -7,16 +7,18 @@
 //
 
 #import <Foundation/Foundation.h>
-
+/**
+ *  数据管理类
+ */
 @interface WTKDataManager : NSObject
 
 /**
- *程序进入后台，保存用户数据
+ *  保存用户数据
  */
 + (void)saveUserData;
 
 /**
- *程序进入前台，读取用户数据
+ *  读取用户数据
  */
 + (void)readUserData;
 

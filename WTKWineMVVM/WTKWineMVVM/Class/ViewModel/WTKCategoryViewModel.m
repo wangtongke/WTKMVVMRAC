@@ -8,6 +8,8 @@
 
 #import "WTKCategoryViewModel.h"
 #import "WTKGoodsViewModel.h"
+#import "WTKSiftModel.h"
+#import "WTKSiftView.h"
 @interface WTKCategoryViewModel ()
 
 
@@ -89,20 +91,77 @@
     }];
     
     self.selectedCommand    = [[RACCommand alloc]initWithSignalBlock:^RACSignal *(id input) {
-        
+        @strongify(self);
+        WTKSiftView *siftView = input[2];
+        RACSignal *signal   = [WTKRequestManager postArrayDataWithURL:@"CategorySiftAll" withpramater:@{}];
+        [signal subscribeNext:^(id x) {
+            NSArray *all = x;
+            [all enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+                NSArray *dataArray = obj[@"data"];
+                NSMutableArray *mArray = @[].mutableCopy;
+                for (NSDictionary *dic in dataArray)
+                {
+                    WTKSiftModel *model = [[WTKSiftModel alloc]init];
+                    [model setValuesForKeysWithDictionary:dic];
+                    [mArray addObject:model];
+                }
+                obj[@"data"] = mArray;
+            }];
+            self.selectArray = [NSMutableArray arrayWithArray:all];
+            [siftView reloadData];
+        }];
        return [RACSignal empty];
     }];
 }
 
-- (void)beginShowAnimation
+- (void)beginShowAnimation:(id)x
 {
+    NSLog(@"%@",x);
+    UITableView *left   = x[0];
+    UITableView *right  = x[1];
+    [UIView animateWithDuration:0.5
+                          delay:0
+         usingSpringWithDamping:1
+          initialSpringVelocity:0
+                        options:UIViewAnimationOptionCurveEaseOut
+                     animations:^{
+                         left.frame = CGRectMake(-75, 0, 75, kHeight - 64 - 79);
+                         right.frame    = CGRectMake(0, 0, kWidth - 75, kHeight - 64);
+                     }
+                     completion:^(BOOL finished) {
+        
+    }];
     
 }
-- (void)beginDismissAnimation
+- (void)beginDismissAnimation:(id)x
 {
-    
+    UITableView *left = x[0];
+    UITableView *right = x[1];
+    [UIView animateWithDuration:0.5
+                          delay:0
+         usingSpringWithDamping:1
+          initialSpringVelocity:0
+                        options:UIViewAnimationOptionCurveEaseOut
+                     animations:^{
+                         left.frame     = CGRectMake(0, 0, 75, kHeight - 64 - 79);
+                         right.frame    = CGRectMake(75, 0, kWidth - 75, kHeight - 64);
+                     }
+                     completion:^(BOOL finished) {
+                         
+                     }];
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        NSLog(@"%.2f",left.frame.origin.x);
+    });
 }
 
+- (NSMutableArray *)selectArray
+{
+    if (!_selectArray)
+    {
+        _selectArray = @[].mutableCopy;
+    }
+    return _selectArray;
+}
 - (NSMutableDictionary *)dataDic
 {
     if (!_dataDic)

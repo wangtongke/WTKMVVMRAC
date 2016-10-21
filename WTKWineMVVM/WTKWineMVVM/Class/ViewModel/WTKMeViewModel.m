@@ -13,6 +13,7 @@
 #import "WTKWebViewModel.h"
 #import "WTKSetupViewModel.h"
 #import "WTKFeedBackViewModel.h"
+#import "WTKAboutMeViewModel.h"
 
 @implementation WTKMeViewModel
 
@@ -127,6 +128,9 @@
                 if ([self judgeWhetherLogin:YES])
                 {
                     NSLog(@"YES");
+                    WTKAboutMeViewModel *viewModel = [[WTKAboutMeViewModel alloc]initWithService:self.services params:@{@"title":@"我的信息"}];
+                    self.naviImpl.className = @"WTKAboutMeVC";
+                    [self.naviImpl pushViewModel:viewModel animated:YES];
                 }
                 else
                 {

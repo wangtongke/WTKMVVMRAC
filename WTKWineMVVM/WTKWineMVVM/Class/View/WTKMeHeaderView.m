@@ -29,6 +29,13 @@
         self.w_phoneNum.text        = CURRENT_USER.phoneNum;
         self.w_phoneNum.hidden      = NO;
         self.w_right.hidden         = NO;
+        self.w_nickNameLabel.hidden = NO;
+        
+        if (CURRENT_USER.headImage)
+        {
+            self.w_headImage.image  = CURRENT_USER.headImage;
+        }
+        self.w_nickNameLabel.text   = CURRENT_USER.nickName;
     }
     else
     {
@@ -36,6 +43,8 @@
         self.w_headImage.hidden     = YES;
         self.w_phoneNum.hidden      = YES;
         self.w_right.hidden         = NO;
+        self.w_nickNameLabel.hidden = YES;
+        
     }
 }
 
@@ -56,6 +65,8 @@
     
     self.w_headImage            = [[UIImageView alloc]init];
     self.w_headImage.image      = [UIImage imageNamed:@"w_defaultHeader"];
+    _w_headImage.layer.cornerRadius = 75 / 2.0;
+    _w_headImage.layer.masksToBounds = YES;
     self.w_headImage.hidden     = YES;
     [self addSubview:self.w_headImage];
     [self.w_headImage mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -74,6 +85,19 @@
         make.centerX.equalTo(self);
         make.centerY.equalTo(self.w_headImage);
         make.size.equalTo(self.w_headImage);
+    }];
+    
+    self.w_nickNameLabel          = [[UILabel alloc]init];
+    _w_nickNameLabel.textColor    = WTKCOLOR(252, 252, 252, 1);
+    _w_nickNameLabel.font         = [UIFont wtkNormalFont:16];
+    _w_nickNameLabel.hidden       = YES;
+    [self addSubview:self.w_nickNameLabel];
+    [self.w_nickNameLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        @strongify(self);
+        make.bottom.equalTo(self.w_headImage.mas_bottom).offset(-35);
+        make.left.equalTo(self.w_headImage.mas_right).offset(10);
+        make.width.mas_equalTo(120);
+        make.height.mas_equalTo(20);
     }];
     
     self.w_phoneNum             = [[UILabel alloc]init];

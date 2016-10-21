@@ -16,6 +16,9 @@
 
 @property(nonatomic,strong)NSMutableDictionary  *dataDic;
 
+///筛选列表
+@property(nonatomic,strong)NSMutableArray       *selectArray;
+
 ///左侧点击Command，需传入rightTableView、indexPath
 @property(nonatomic,strong)RACCommand           *leftClickCommand;
 
@@ -26,5 +29,10 @@
 
 ///筛选按钮点击
 @property(nonatomic,strong)RACCommand           *selectedCommand;
+
+///添加sift动画
+- (void)beginShowAnimation:(id)x;
+///移除sift动画
+- (void)beginDismissAnimation:(id)x;
 
 @end

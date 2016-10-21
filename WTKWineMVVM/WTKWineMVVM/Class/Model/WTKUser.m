@@ -25,6 +25,10 @@
         user.bid        = @"56c45924c2fb4e2050000022";
         user.isSound    = YES;
         user.isShake    = YES;
+        user.nickName   = @"昵称";
+        user.sex        = YES;
+        user.birthDay   = @"输入后不可修改";
+
     });
     return user;
 }

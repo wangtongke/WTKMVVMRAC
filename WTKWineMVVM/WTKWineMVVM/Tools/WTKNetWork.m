@@ -79,6 +79,12 @@
     }
 }
 
+- (BOOL)isNetReachable
+{
+    [self initNetWork];
+    return _isNetReachable;
+}
+
 - (void)noNet{
     [SVProgressHUD showImage:[UIImage imageNamed:@"w_nonet"] status:@"网络不好"];
     DISMISS_SVP(1.2);

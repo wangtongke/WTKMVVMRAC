@@ -35,7 +35,7 @@
             {
                 if ([[WTKTool getCacheSize] floatValue] == 0)
                 {
-                    SHOW_SVP(@"暂无要清除的内容");
+                    SHOW_ERROE(@"暂无要清除的内容");
                     DISMISS_SVP(1.2);
                 }
                 else

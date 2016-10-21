@@ -45,7 +45,7 @@
 
 - (void)initView{
     [self.navigationController.navigationBar setBackgroundImage:[UIImage imageFromColor:THEME_COLOR] forBarMetrics:UIBarMetricsDefault];
-    self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName:WTKCOLOR(70, 70, 70, 1)};
+    self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName:WTKCOLOR(253, 253, 253, 1)};
     [self.view addSubview:self.imageView];
     @weakify(self);
     [self.imageView mas_makeConstraints:^(MASConstraintMaker *make) {
