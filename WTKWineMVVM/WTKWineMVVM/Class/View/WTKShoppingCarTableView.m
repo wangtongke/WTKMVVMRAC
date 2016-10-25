@@ -9,8 +9,10 @@
 #import "WTKShoppingCarTableView.h"
 #import "WTKShoppingCarTableViewCell.h"
 #import "WTKGoodManagerView.h"
+#import "WTKShoppingCarViewModel.h"
+#import "WTKEmptyShoppingCarView.h"
 
-@interface WTKShoppingCarTableView ()<UITableViewDataSource,UITableViewDelegate>
+@interface WTKShoppingCarTableView ()<UITableViewDataSource,UITableViewDelegate,DZNEmptyDataSetSource,DZNEmptyDataSetDelegate>
 
 @property(nonatomic,strong)UITextField  *remarkTXF;
 
@@ -44,7 +46,8 @@
     self.remarkTXF.layer.borderColor    = WTKCOLOR(190, 190, 190, 1).CGColor;
     self.remarkTXF.layer.borderWidth    = 0.4;
     
-    
+    self.emptyDataSetSource             = self;
+    self.emptyDataSetDelegate           = self;
     
 
 }
@@ -55,8 +58,22 @@
     [self reloadData];
 }
 
-#pragma mark - tableViewDataSource
+#pragma mark - tableViewDelegate
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (indexPath.section == 0)
+    {
+//        地址
+        [self.viewModel.addressCommand execute:@1];
+    }
+    else
+    {
+        [self.viewModel.goodClickCommand execute:self.dataArray[indexPath.row]];
+    }
+    
+}
 
+#pragma mark - tableViewDataSource
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -87,6 +104,10 @@
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
+    if (self.dataArray.count == 0)
+    {
+        return 0;
+    }
     if (section == 0)
     {
         return 1;
@@ -105,7 +126,6 @@
     }
     return 100;
 }
-
 
 # pragma mark - lazyLoad
 - (NSArray *)dataArray

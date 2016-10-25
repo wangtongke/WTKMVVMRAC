@@ -37,6 +37,7 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+    self.navigationController.navigationBar.shadowImage = [UIImage new];
     self.dismissFlag = NO;
     self.tableView.contentOffset = CGPointMake(self.tableView.contentOffset.x, self.tableView.contentOffset.y + 0.02);
     [self.tableView reloadData];
@@ -48,6 +49,7 @@
     [super viewWillDisappear:animated];
     self.dismissFlag = YES;
     [self.navigationController.navigationBar setBackgroundImage:[UIImage imageFromColor:WTKCOLOR(255, 255, 255, 0.99)] forBarMetrics:UIBarMetricsDefault];
+    self.navigationController.navigationBar.shadowImage = nil;
 }
 
 - (void)viewDidLoad {
@@ -170,6 +172,9 @@
         [alert addAction:cancelAction];
         [self presentViewController:alert animated:YES completion:nil];
     }
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.05 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    });
 }
 
 #pragma mark - tableViewDataSource

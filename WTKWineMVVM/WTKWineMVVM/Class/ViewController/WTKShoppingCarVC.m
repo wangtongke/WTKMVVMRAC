@@ -9,6 +9,7 @@
 #import "WTKShoppingCarVC.h"
 #import "WTKShoppingCarViewModel.h"
 #import "WTKShoppingCarTableView.h"
+#import "WTKEmptyShoppingCarView.h"
 @interface WTKShoppingCarVC ()
 
 @property(nonatomic,strong)WTKShoppingCarViewModel  *viewModel;
@@ -27,6 +28,9 @@
 ///判断当前事件是否为点击
 @property(nonatomic,assign)BOOL                     isClickAllBtn;
 
+///购物车为空时
+@property(nonatomic,strong)WTKEmptyShoppingCarView  *emptyView;
+
 
 
 @end
@@ -39,7 +43,11 @@
 {
     [super viewWillAppear:animated];
     [self.tableView w_reloadData];
+    [self.navigationController.navigationBar setBackgroundImage:[UIImage imageFromColor:WTKCOLOR(255, 255, 255, 0.99)] forBarMetrics:UIBarMetricsDefault];
+    self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName:WTKCOLOR(70, 70, 70, 1)};
+    NSLog(@"%@",SHOPPING_MANAGER.goodsDic);
 }
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self bindViewModel];
@@ -51,40 +59,12 @@
     [super bindViewModel];
     @weakify(self);
 // - 监听价格
-    [RACObserve([WTKShoppingManager manager], changed) subscribeNext:^(id x) {
-        static BOOL isFirst;//是否是第一次检测到没有选中。用来避免多次改变selectAllBtn
-        isFirst                 = YES;
-        SHOPPING_MANAGER.flag   = YES;
-        NSDictionary *dic       = SHOPPING_MANAGER.goodsDic;
-        [[dic allValues] enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-            @strongify(self);
-            WTKGood *good = obj;
-            if(isFirst && !good.w_isSelected && !self.isClickAllBtn)
-            {
-                self.selectAllBtn.selected = !self.selectAllBtn;
-                isFirst = NO;
-            }
-            if (idx == 0)
-            {
-                SHOPPING_MANAGER.price = 0;
-            }
-            if (good.w_isSelected)
-            {
-                SHOPPING_MANAGER.price += good.price * good.num;
-            }
-            if(idx == [dic allValues].count - 1)
-            {
-                self.isClickAllBtn = NO;
-            }
-            self.priceLabel.text    = [NSString stringWithFormat:@"共¥ %.2f",SHOPPING_MANAGER.price];
-        }];
-//        SHOPPING_MANAGER.flag = NO;
-    }];
-    
+    RAC(self.priceLabel,text)   = RACObserve(self.viewModel, price);
 //    全选按钮
     [[self.selectAllBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(id x) {
         @strongify(self);
         self.isClickAllBtn = YES;
+        self.viewModel.isClickAllBtn = YES;
         UIButton *btn = x;
         btn.selected = !btn.selected;
         SHOPPING_MANAGER.flag = NO;
@@ -99,6 +79,21 @@
             }
         }];
     }];
+    RAC(self.selectAllBtn,selected)  = RACObserve(self.viewModel, btnState);
+//    购物车改变
+    [self.viewModel.emptySubject subscribeNext:^(id x) {
+        @strongify(self);
+        [self judgeHasData:x];
+    }];
+    
+//  空的时候 点击
+    [[self.emptyView.goShopBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(id x) {
+        @strongify(self);
+        self.tabBarController.selectedIndex = 1;///跳转到分类页面
+    }];
+    
+//    goPay
+    RAC(self.payBtn,rac_command)    = RACObserve(self.viewModel, payCommand);
 }
 
 - (void)initView
@@ -122,7 +117,23 @@
     [self.payBtn setTitle:@"选好了" forState:UIControlStateNormal];
     self.payBtn.backgroundColor = THEME_COLOR;
     
-    
+    UILabel *label              = [[UILabel alloc]initWithFrame:CGRectMake(30, 15, 40, 20)];
+    label.textColor             = [UIColor whiteColor];
+    label.text                  = @"全选";
+    label.font                  = [UIFont wtkNormalFont:14];
+    [self.bottomView addSubview:label];
+}
+///判断当前是否有商品
+- (void)judgeHasData:(id)x
+{
+    if ([x integerValue] <= 0)
+    {
+        [self.view addSubview:self.emptyView];
+    }
+    else
+    {
+        [self.emptyView removeFromSuperview];
+    }
 }
 
 - (UITableView *)tableView
@@ -130,6 +141,7 @@
     if(!_tableView)
     {
         _tableView = [[WTKShoppingCarTableView alloc]initWithFrame:CGRectMake(0, 0, kWidth, kHeight - 40) style:UITableViewStylePlain];
+        _tableView.viewModel = self.viewModel;
     }
     return _tableView;
 }
@@ -171,6 +183,14 @@
         _selectAllBtn.layer.masksToBounds = YES;
     }
     return _selectAllBtn;
+}
+- (WTKEmptyShoppingCarView *)emptyView
+{
+    if (!_emptyView)
+    {
+        _emptyView = [[WTKEmptyShoppingCarView alloc]initWithFrame:CGRectMake(0, 0, kWidth, kHeight)];
+    }
+    return _emptyView;
 }
 
 - (void)didReceiveMemoryWarning {

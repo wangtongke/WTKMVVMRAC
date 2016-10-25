@@ -38,4 +38,6 @@
 - (void)updateCell2:(WTKOrderDetailModel *)order;
 - (void)updateCell3:(WTKOrderModel *)order;
 
+- (void)updateCell2WithGoods:(WTKGood *)goods;
+
 @end

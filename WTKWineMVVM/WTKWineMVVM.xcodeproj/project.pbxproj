@@ -107,9 +107,20 @@
 		F576D21D1DB5B93C002C66C8 /* WTKFeedBackViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F576D21C1DB5B93C002C66C8 /* WTKFeedBackViewModel.m */; };
 		F576D2A21DB5EB94002C66C8 /* WTKTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = F576D2A11DB5EB94002C66C8 /* WTKTextView.m */; };
 		F576D2B21DB60567002C66C8 /* WTKDropView.m in Sources */ = {isa = PBXBuildFile; fileRef = F576D2B11DB60567002C66C8 /* WTKDropView.m */; };
+		F577AED31DBF42B900A689C1 /* WTKPaySuccessVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F577AED21DBF42B900A689C1 /* WTKPaySuccessVC.m */; };
+		F577AED61DBF432500A689C1 /* WTKPaySuccessViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F577AED51DBF432500A689C1 /* WTKPaySuccessViewModel.m */; };
+		F577AED91DBF5B1800A689C1 /* WTKAddress.m in Sources */ = {isa = PBXBuildFile; fileRef = F577AED81DBF5B1800A689C1 /* WTKAddress.m */; };
+		F577AEDC1DBF5E9100A689C1 /* WTKAddressManagerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F577AEDB1DBF5E9100A689C1 /* WTKAddressManagerVC.m */; };
+		F577AEDF1DBF5EA800A689C1 /* WTKAddressManagerViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F577AEDE1DBF5EA800A689C1 /* WTKAddressManagerViewModel.m */; };
 		F577D1821D926081003E1D2E /* WTKTool.m in Sources */ = {isa = PBXBuildFile; fileRef = F577D1811D926081003E1D2E /* WTKTool.m */; };
 		F577D1861D9272CD003E1D2E /* WTKShoppingManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F577D1851D9272CD003E1D2E /* WTKShoppingManager.m */; };
 		F577D1891D9289F0003E1D2E /* WTKDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F577D1881D9289F0003E1D2E /* WTKDataManager.m */; };
+		F57FC6CB1DBDEF6100057ED9 /* WTKEmptyShoppingCarView.m in Sources */ = {isa = PBXBuildFile; fileRef = F57FC6CA1DBDEF6100057ED9 /* WTKEmptyShoppingCarView.m */; };
+		F57FC6CC1DBDF2DE00057ED9 /* WTKEmptyShoppingCarView.m in Sources */ = {isa = PBXBuildFile; fileRef = F57FC6CA1DBDEF6100057ED9 /* WTKEmptyShoppingCarView.m */; };
+		F57FC70E1DBE07FF00057ED9 /* WTKPayVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F57FC70D1DBE07FF00057ED9 /* WTKPayVC.m */; };
+		F57FC7111DBE081500057ED9 /* WTKPayViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F57FC7101DBE081500057ED9 /* WTKPayViewModel.m */; };
+		F57FC71D1DBE100C00057ED9 /* WTKPayTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F57FC71B1DBE100C00057ED9 /* WTKPayTableViewCell.m */; };
+		F57FC71E1DBE100C00057ED9 /* WTKPayTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F57FC71C1DBE100C00057ED9 /* WTKPayTableViewCell.xib */; };
 		F58537581DB9BF1400B66571 /* WTKShoppingCarTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = F58537571DB9BF1400B66571 /* WTKShoppingCarTableView.m */; };
 		F585375C1DB9C05500B66571 /* WTKShoppingCarTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F585375A1DB9C05500B66571 /* WTKShoppingCarTableViewCell.m */; };
 		F585375D1DB9C05500B66571 /* WTKShoppingCarTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F585375B1DB9C05500B66571 /* WTKShoppingCarTableViewCell.xib */; };
@@ -372,12 +383,31 @@
 		F576D2A11DB5EB94002C66C8 /* WTKTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTKTextView.m; sourceTree = "<group>"; };
 		F576D2B01DB60567002C66C8 /* WTKDropView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTKDropView.h; sourceTree = "<group>"; };
 		F576D2B11DB60567002C66C8 /* WTKDropView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTKDropView.m; sourceTree = "<group>"; };
+		F577AED11DBF42B900A689C1 /* WTKPaySuccessVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTKPaySuccessVC.h; sourceTree = "<group>"; };
+		F577AED21DBF42B900A689C1 /* WTKPaySuccessVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTKPaySuccessVC.m; sourceTree = "<group>"; };
+		F577AED41DBF432500A689C1 /* WTKPaySuccessViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTKPaySuccessViewModel.h; sourceTree = "<group>"; };
+		F577AED51DBF432500A689C1 /* WTKPaySuccessViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTKPaySuccessViewModel.m; sourceTree = "<group>"; };
+		F577AED71DBF5B1800A689C1 /* WTKAddress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTKAddress.h; sourceTree = "<group>"; };
+		F577AED81DBF5B1800A689C1 /* WTKAddress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTKAddress.m; sourceTree = "<group>"; };
+		F577AEDA1DBF5E9100A689C1 /* WTKAddressManagerVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTKAddressManagerVC.h; sourceTree = "<group>"; };
+		F577AEDB1DBF5E9100A689C1 /* WTKAddressManagerVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTKAddressManagerVC.m; sourceTree = "<group>"; };
+		F577AEDD1DBF5EA800A689C1 /* WTKAddressManagerViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTKAddressManagerViewModel.h; sourceTree = "<group>"; };
+		F577AEDE1DBF5EA800A689C1 /* WTKAddressManagerViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTKAddressManagerViewModel.m; sourceTree = "<group>"; };
 		F577D1801D926081003E1D2E /* WTKTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTKTool.h; sourceTree = "<group>"; };
 		F577D1811D926081003E1D2E /* WTKTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTKTool.m; sourceTree = "<group>"; };
 		F577D1841D9272CD003E1D2E /* WTKShoppingManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTKShoppingManager.h; sourceTree = "<group>"; };
 		F577D1851D9272CD003E1D2E /* WTKShoppingManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTKShoppingManager.m; sourceTree = "<group>"; };
 		F577D1871D9289F0003E1D2E /* WTKDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTKDataManager.h; sourceTree = "<group>"; };
 		F577D1881D9289F0003E1D2E /* WTKDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTKDataManager.m; sourceTree = "<group>"; };
+		F57FC6C91DBDEF6100057ED9 /* WTKEmptyShoppingCarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTKEmptyShoppingCarView.h; sourceTree = "<group>"; };
+		F57FC6CA1DBDEF6100057ED9 /* WTKEmptyShoppingCarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTKEmptyShoppingCarView.m; sourceTree = "<group>"; };
+		F57FC70C1DBE07FF00057ED9 /* WTKPayVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTKPayVC.h; sourceTree = "<group>"; };
+		F57FC70D1DBE07FF00057ED9 /* WTKPayVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTKPayVC.m; sourceTree = "<group>"; };
+		F57FC70F1DBE081500057ED9 /* WTKPayViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTKPayViewModel.h; sourceTree = "<group>"; };
+		F57FC7101DBE081500057ED9 /* WTKPayViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTKPayViewModel.m; sourceTree = "<group>"; };
+		F57FC71A1DBE100C00057ED9 /* WTKPayTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTKPayTableViewCell.h; sourceTree = "<group>"; };
+		F57FC71B1DBE100C00057ED9 /* WTKPayTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTKPayTableViewCell.m; sourceTree = "<group>"; };
+		F57FC71C1DBE100C00057ED9 /* WTKPayTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WTKPayTableViewCell.xib; sourceTree = "<group>"; };
 		F58537561DB9BF1400B66571 /* WTKShoppingCarTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTKShoppingCarTableView.h; sourceTree = "<group>"; };
 		F58537571DB9BF1400B66571 /* WTKShoppingCarTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTKShoppingCarTableView.m; sourceTree = "<group>"; };
 		F58537591DB9C05500B66571 /* WTKShoppingCarTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTKShoppingCarTableViewCell.h; sourceTree = "<group>"; };
@@ -606,6 +636,9 @@
 				F58537591DB9C05500B66571 /* WTKShoppingCarTableViewCell.h */,
 				F585375A1DB9C05500B66571 /* WTKShoppingCarTableViewCell.m */,
 				F585375B1DB9C05500B66571 /* WTKShoppingCarTableViewCell.xib */,
+				F57FC71A1DBE100C00057ED9 /* WTKPayTableViewCell.h */,
+				F57FC71B1DBE100C00057ED9 /* WTKPayTableViewCell.m */,
+				F57FC71C1DBE100C00057ED9 /* WTKPayTableViewCell.xib */,
 			);
 			path = cell;
 			sourceTree = "<group>";
@@ -974,6 +1007,8 @@
 			children = (
 				F532DE5B1D8F8B5400E68943 /* WTKUser.h */,
 				F532DE5C1D8F8B5400E68943 /* WTKUser.m */,
+				F577AED71DBF5B1800A689C1 /* WTKAddress.h */,
+				F577AED81DBF5B1800A689C1 /* WTKAddress.m */,
 				F5A00BD91D8E3C3A0026DF67 /* WTKGood.h */,
 				F5A00BDA1D8E3C3A0026DF67 /* WTKGood.m */,
 				F56F779B1DAB6B4500963C31 /* WTKOrderModel.h */,
@@ -1031,6 +1066,8 @@
 				F56C87391DB85A5800B8B765 /* WTKSiftView.m */,
 				F58537561DB9BF1400B66571 /* WTKShoppingCarTableView.h */,
 				F58537571DB9BF1400B66571 /* WTKShoppingCarTableView.m */,
+				F57FC6C91DBDEF6100057ED9 /* WTKEmptyShoppingCarView.h */,
+				F57FC6CA1DBDEF6100057ED9 /* WTKEmptyShoppingCarView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1046,6 +1083,10 @@
 				F531070A1D88E5B0003B402C /* WTKFoundVC.m */,
 				F5BD1C5D1D93A83E00F63B5F /* WTKShoppingCarVC.h */,
 				F5BD1C5E1D93A83E00F63B5F /* WTKShoppingCarVC.m */,
+				F57FC70C1DBE07FF00057ED9 /* WTKPayVC.h */,
+				F57FC70D1DBE07FF00057ED9 /* WTKPayVC.m */,
+				F577AED11DBF42B900A689C1 /* WTKPaySuccessVC.h */,
+				F577AED21DBF42B900A689C1 /* WTKPaySuccessVC.m */,
 				F53107171D88E681003B402C /* WTKMeVC.h */,
 				F53107181D88E681003B402C /* WTKMeVC.m */,
 				F5A00C521D8E93AB0026DF67 /* WTKGoodsVC.h */,
@@ -1068,6 +1109,8 @@
 				F58D825F1DB4A14F00BB897E /* WTKPsdManagerVC.m */,
 				F56C87481DB8A6AE00B8B765 /* WTKAboutMeVC.h */,
 				F56C87491DB8A6AE00B8B765 /* WTKAboutMeVC.m */,
+				F577AEDA1DBF5E9100A689C1 /* WTKAddressManagerVC.h */,
+				F577AEDB1DBF5E9100A689C1 /* WTKAddressManagerVC.m */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -1083,6 +1126,10 @@
 				F53107351D8928E6003B402C /* WTKFoundViewModel.m */,
 				F53107371D8928F4003B402C /* WTKShoppingCarViewModel.h */,
 				F53107381D8928F4003B402C /* WTKShoppingCarViewModel.m */,
+				F57FC70F1DBE081500057ED9 /* WTKPayViewModel.h */,
+				F57FC7101DBE081500057ED9 /* WTKPayViewModel.m */,
+				F577AED41DBF432500A689C1 /* WTKPaySuccessViewModel.h */,
+				F577AED51DBF432500A689C1 /* WTKPaySuccessViewModel.m */,
 				F531073A1D892905003B402C /* WTKMeViewModel.h */,
 				F531073B1D892905003B402C /* WTKMeViewModel.m */,
 				F5A00C551D8E93F50026DF67 /* WTKGoodsViewModel.h */,
@@ -1105,6 +1152,8 @@
 				F576D2191DB5B018002C66C8 /* WTKPsdManagerViewModel.m */,
 				F56C874E1DB8A71C00B8B765 /* WTKAboutMeViewModel.h */,
 				F56C874F1DB8A71C00B8B765 /* WTKAboutMeViewModel.m */,
+				F577AEDD1DBF5EA800A689C1 /* WTKAddressManagerViewModel.h */,
+				F577AEDE1DBF5EA800A689C1 /* WTKAddressManagerViewModel.m */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -1374,6 +1423,7 @@
 				F56F776B1DAB2E6800963C31 /* WeiboSDK.bundle in Resources */,
 				F585375D1DB9C05500B66571 /* WTKShoppingCarTableViewCell.xib in Resources */,
 				F56F77701DAB2E6800963C31 /* ShareSDK.bundle in Resources */,
+				F57FC71E1DBE100C00057ED9 /* WTKPayTableViewCell.xib in Resources */,
 				F58C36D31DAE2B2000C0A2D2 /* WTKMeTableViewCell.xib in Resources */,
 				F56C87551DB8AA8900B8B765 /* WTKAboutMeTableViewCell.xib in Resources */,
 				F56F778E1DAB65B400963C31 /* AllOrder in Resources */,
@@ -1490,12 +1540,16 @@
 				F5937E711D9CEBDB00C9E0B7 /* WTKAnimationDiffNavi.m in Sources */,
 				F596DAB91D86A0650058844C /* IQUIView+IQKeyboardToolbar.m in Sources */,
 				F53107001D88E486003B402C /* WTKHomeVC.m in Sources */,
+				F577AED61DBF432500A689C1 /* WTKPaySuccessViewModel.m in Sources */,
+				F57FC70E1DBE07FF00057ED9 /* WTKPayVC.m in Sources */,
 				F56F77671DAB2E6800963C31 /* README.md in Sources */,
 				F56C873D1DB8611600B8B765 /* WTKSiftModel.m in Sources */,
 				F5937E761D9CEBDB00C9E0B7 /* WTKTouchManager.m in Sources */,
+				F577AEDF1DBF5EA800A689C1 /* WTKAddressManagerViewModel.m in Sources */,
 				F53107131D88E644003B402C /* WTKCategoryVC.m in Sources */,
 				F56CF91F1DB0A1B6004D46B3 /* WTKWebVC.m in Sources */,
 				F596DAAD1D86A0650058844C /* IQNSArray+Sort.m in Sources */,
+				F577AED31DBF42B900A689C1 /* WTKPaySuccessVC.m in Sources */,
 				F58537581DB9BF1400B66571 /* WTKShoppingCarTableView.m in Sources */,
 				F576D2B21DB60567002C66C8 /* WTKDropView.m in Sources */,
 				F56CF9251DB0C429004D46B3 /* WTKSetUpVC.m in Sources */,
@@ -1513,6 +1567,7 @@
 				F5937E751D9CEBDB00C9E0B7 /* WTKBaseAnimation.m in Sources */,
 				F596DAB01D86A0650058844C /* IQUIViewController+Additions.m in Sources */,
 				F58C36CE1DAE21DE00C0A2D2 /* WTKMeBtn.m in Sources */,
+				F577AED91DBF5B1800A689C1 /* WTKAddress.m in Sources */,
 				F53107301D8928BD003B402C /* WTKHomeViewModel.m in Sources */,
 				F585375C1DB9C05500B66571 /* WTKShoppingCarTableViewCell.m in Sources */,
 				F570239A1DACCC5A008168A8 /* WTKOrderDetailViewModel.m in Sources */,
@@ -1527,11 +1582,14 @@
 				F5937E6E1D9CEBDB00C9E0B7 /* UIApplication+WTK.m in Sources */,
 				F56C52D81DB70D5800AF05DE /* WTKCategoryRightTableView.m in Sources */,
 				F596DAB31D86A0650058844C /* IQKeyboardReturnKeyHandler.m in Sources */,
+				F57FC6CB1DBDEF6100057ED9 /* WTKEmptyShoppingCarView.m in Sources */,
 				F596DAB61D86A0650058844C /* IQBarButtonItem.m in Sources */,
 				F58D82511DB4813000BB897E /* WTKAboutMeView.m in Sources */,
+				F577AEDC1DBF5E9100A689C1 /* WTKAddressManagerVC.m in Sources */,
 				F588CE271D86B3A9003E3A74 /* UIImage+WTK.m in Sources */,
 				F531071E1D88F048003B402C /* UIColor+WTK.m in Sources */,
 				F53106F41D88E3F3003B402C /* WTKTabBarController.m in Sources */,
+				F57FC71D1DBE100C00057ED9 /* WTKPayTableViewCell.m in Sources */,
 				F56C52D11DB701BD00AF05DE /* WTKNetWork.m in Sources */,
 				F56CF9281DB0C5D8004D46B3 /* WTKSetupViewModel.m in Sources */,
 				F56C87541DB8AA8900B8B765 /* WTKAboutMeTableViewCell.m in Sources */,
@@ -1555,6 +1613,7 @@
 				F5BD1C5F1D93A83E00F63B5F /* WTKShoppingCarVC.m in Sources */,
 				F596DAAE1D86A0650058844C /* IQUITextFieldView+Additions.m in Sources */,
 				F57023971DACCA62008168A8 /* WTKOrderDetailVC.m in Sources */,
+				F57FC7111DBE081500057ED9 /* WTKPayViewModel.m in Sources */,
 				F5A00C541D8E93AB0026DF67 /* WTKGoodsVC.m in Sources */,
 				F56CF92C1DB0C7B1004D46B3 /* WTKSetupTableViewCell.m in Sources */,
 				F596DAB41D86A0650058844C /* IQSegmentedNextPrevious.m in Sources */,
@@ -1569,6 +1628,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F57FC6CC1DBDF2DE00057ED9 /* WTKEmptyShoppingCarView.m in Sources */,
 				F596DA651D869FD30058844C /* WTKWineMVVMTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

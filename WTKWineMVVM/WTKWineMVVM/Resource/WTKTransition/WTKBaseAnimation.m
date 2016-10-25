@@ -121,7 +121,6 @@ const static NSTimeInterval DefauleAnimationDuration = 0.6;
         [self pop:transitionContext];
     }
 }
-
 - (void)animationEnded:(BOOL)transitionCompleted
 {
     if (!transitionCompleted)

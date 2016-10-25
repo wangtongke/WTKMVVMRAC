@@ -24,15 +24,15 @@
 
 @implementation WTKHomeVC
 @dynamic viewModel;
-- (instancetype)initWithViewModel:(WTKBasedViewModel *)viewModel
-{
-    if (self = [super initWithViewModel:viewModel])
-    {
-//        self.automaticallyAdjustsScrollViewInsets = NO;
-        [self bindViewModel];
-    }
-    return self;
-}
+//- (instancetype)initWithViewModel:(WTKBasedViewModel *)viewModel
+//{
+//    if (self = [super initWithViewModel:viewModel])
+//    {
+////        self.automaticallyAdjustsScrollViewInsets = NO;
+//        [self bindViewModel];
+//    }
+//    return self;
+//}
 #pragma mark - lifeCycle
 - (void)viewWillAppear:(BOOL)animated
 {
@@ -54,7 +54,7 @@
     [super viewDidLoad];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(cancelPop) name:@"wtk_cancelPop" object:nil];
-
+    [self bindViewModel];
     [self configView];
 }
 - (void)bindViewModel

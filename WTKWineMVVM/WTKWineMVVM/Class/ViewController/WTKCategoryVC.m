@@ -35,13 +35,21 @@
 
 @implementation WTKCategoryVC
 @dynamic viewModel;
+
+#pragma mark - lifeCycle
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [self.rightTableView reloadData];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.isFirstSift = YES;
     [self bindViewModel];
     [self initView];
     [self resetNavi];
-    
     
 }
 

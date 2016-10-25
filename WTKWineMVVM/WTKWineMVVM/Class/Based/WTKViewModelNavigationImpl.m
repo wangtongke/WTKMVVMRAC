@@ -51,5 +51,15 @@
     
     [_navigationController popViewControllerAnimated:animated];
 }
+- (void)popToRootViewModelWithAnimation:(BOOL)animated
+{
+    if (!_navigationController)
+    {
+        NSLog(@"没有导航");
+        return;
+    }
+    
+    [_navigationController popToRootViewControllerAnimated:animated];
+}
 
 @end

@@ -48,23 +48,13 @@
                             <constraint firstAttribute="width" constant="65" id="TPV-Fp-Rvz"/>
                         </constraints>
                     </imageView>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H4d-d7-Xsh">
-                        <rect key="frame" x="0.0" y="83" width="320" height="0.0"/>
-                        <color key="backgroundColor" red="0.78431372549019607" green="0.78431372549019607" blue="0.78431372549019607" alpha="1" colorSpace="calibratedRGB"/>
-                        <constraints>
-                            <constraint firstAttribute="height" id="ZIi-37-PRG"/>
-                        </constraints>
-                    </view>
                 </subviews>
                 <constraints>
                     <constraint firstItem="RH1-DP-2Qt" firstAttribute="leading" secondItem="Rbx-Xv-XT0" secondAttribute="trailing" constant="8" id="0Wj-yw-BaB"/>
-                    <constraint firstItem="H4d-d7-Xsh" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="-8" id="1kz-n1-vEl"/>
                     <constraint firstItem="hOJ-l0-NvE" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="8" id="6Qt-x8-KjN"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="H4d-d7-Xsh" secondAttribute="trailing" constant="-8" id="Aa2-8b-oBW"/>
                     <constraint firstItem="l3Q-Ka-nOg" firstAttribute="leading" secondItem="hOJ-l0-NvE" secondAttribute="trailing" constant="25" id="FF1-oZ-Urr"/>
                     <constraint firstItem="Rbx-Xv-XT0" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="SwT-kz-fIR"/>
                     <constraint firstItem="l3Q-Ka-nOg" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Xpk-sR-vEf"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="H4d-d7-Xsh" secondAttribute="bottom" constant="-8" id="fxW-60-bDj"/>
                     <constraint firstItem="RH1-DP-2Qt" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="gmd-zd-aWa"/>
                     <constraint firstItem="RH1-DP-2Qt" firstAttribute="leading" secondItem="l3Q-Ka-nOg" secondAttribute="trailing" constant="8" id="mO9-Te-TVa"/>
                     <constraint firstAttribute="trailingMargin" secondItem="RH1-DP-2Qt" secondAttribute="trailing" constant="12" id="mZE-dP-lKh"/>

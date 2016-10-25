@@ -32,9 +32,30 @@
 //    a++;
     if (!self.flag)
     {
-        self.changed = [NSString stringWithFormat:@"%ld",15];
+        self.changed = [NSString stringWithFormat:@"%d",15];
     }
     return _goodsDic;
+}
+
+- (void)refreshGoods
+{
+    NSArray *goodArray          = [self.goodsDic allValues];
+    [self.goodsDic removeAllObjects];
+    [goodArray enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        WTKGood *good = obj;
+        if (!good.w_isSelected)
+        {
+            self.goodsDic[good.id] = good;
+        }
+        else
+        {
+            CURRENT_USER.bageValue -= good.num;
+        }
+        if (idx == goodArray.count - 1)
+        {
+            [WTKDataManager saveUserData];
+        }
+    }];
 }
 
 - (instancetype)initWithCoder:(NSCoder *)aDecoder

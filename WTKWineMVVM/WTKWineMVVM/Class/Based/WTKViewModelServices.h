@@ -14,6 +14,8 @@
 
 - (void)popViewControllerWithAnimation:(BOOL)animated;
 
+- (void)popToRootViewModelWithAnimation:(BOOL)animated;
+
 
 
 @end

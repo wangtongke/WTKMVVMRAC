@@ -65,7 +65,16 @@
 
 - (void)updateCell3:(WTKOrderModel *)order
 {
-    
+    self.w_PayPrice.text    = [NSString stringWithFormat:@"¥ %.2f",order.paycost];
+
+}
+
+- (void)updateCell2WithGoods:(WTKGood *)goods
+{
+    [self.w_detailImg sd_setImageWithURL:[NSURL URLWithString:goods.avatar_url] placeholderImage:[UIImage imageNamed:@"placehoder2"]];
+    self.w_detailName.text      = goods.title;
+    self.w_detailPrice.text     = [NSString stringWithFormat:@"%.2f",goods.price * goods.num];
+    self.w_detailNumber.text    = [NSString stringWithFormat:@"x %ld",goods.num];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

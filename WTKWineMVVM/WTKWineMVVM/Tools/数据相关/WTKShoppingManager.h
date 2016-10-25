@@ -26,4 +26,7 @@
 
 + (instancetype)manager;
 
+///刷新购物车物品（删除已经购买的）
+- (void)refreshGoods;
+
 @end

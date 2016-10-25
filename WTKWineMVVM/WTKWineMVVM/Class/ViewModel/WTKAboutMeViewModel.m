@@ -7,7 +7,7 @@
 //
 
 #import "WTKAboutMeViewModel.h"
-
+#import "WTKAddressManagerViewModel.h"
 @interface WTKAboutMeViewModel ()<UIImagePickerControllerDelegate,UINavigationControllerDelegate>
 
 ///昵称
@@ -144,6 +144,13 @@
                 default:
                     break;
             }
+        }
+        else if (indexPath.section == 1)
+        {
+            NSLog(@"address");
+            WTKAddressManagerViewModel *viewModel = [[WTKAddressManagerViewModel alloc]initWithService:self.services params:@{@"title":@"地址管理"}];
+            self.naviImpl.className = @"WTKAddressManagerVC";
+            [self.naviImpl pushViewModel:viewModel animated:YES];
         }
         return [RACSignal empty];
     }];

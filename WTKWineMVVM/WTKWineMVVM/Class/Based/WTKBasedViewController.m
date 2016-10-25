@@ -20,7 +20,6 @@
     if (self == [super init])
     {
         self.viewModel = viewModel;
-//        [self bindViewModel];
     }
     return self;
 }

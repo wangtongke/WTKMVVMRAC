@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "WTKAddress.h"
 
 @interface WTKUser : NSObject<NSCoding>
 ///头像
@@ -43,7 +44,10 @@
 ///密码
 @property(nonatomic,copy)NSString           *password;
 
-@property(nonatomic,strong)NSMutableArray   *address;
+///地址
+@property(nonatomic,strong)NSMutableArray<WTKAddress *>   *address;
+
+
 
 
 

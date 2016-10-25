@@ -81,6 +81,13 @@
         NSLog(@"%d",CURRENT_USER.sex);
         [cell updateWithTitle:self.titleArray[indexPath.row] subTitle:array[indexPath.row]];
         cell.w_subLabel.textColor = indexPath.row == 3 ? THEME_COLOR : WTKCOLOR(120, 120, 120, 1);
+        if (![cell viewWithTag:111])
+        {
+            UIView *line = [[UIView alloc]initWithFrame:CGRectMake(0, cell.frame.size.height - 0.5, kWidth, 0.5)];
+            line.backgroundColor = WTKCOLOR(215, 215, 215, 1);
+            line.tag = 111;
+            [cell addSubview:line];
+        }
     }
     else
     {

@@ -243,7 +243,7 @@
                     </label>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Wu-OY-Lka">
                         <rect key="frame" x="68" y="69" width="252" height="1"/>
-                        <color key="backgroundColor" red="0.8980392157" green="0.8980392157" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.86274509803921573" green="0.86274509803921573" blue="0.86274509803921573" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="1" id="yzi-aC-YcZ"/>
                         </constraints>
@@ -464,6 +464,12 @@
                     </mask>
                 </variation>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="w_PayPrice" destination="lqN-ED-08c" id="4AH-Df-lv6"/>
+                <outlet property="w_couponCost" destination="BV0-3B-tRd" id="1q1-WI-aVU"/>
+                <outlet property="w_jiFenCost" destination="7t7-JC-U6m" id="zxk-2Y-aFt"/>
+                <outlet property="w_sendFee" destination="Z2D-fl-FGV" id="gcY-q6-bRE"/>
+            </connections>
             <point key="canvasLocation" x="361" y="657"/>
         </tableViewCell>
     </objects>
