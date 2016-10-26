@@ -20,7 +20,7 @@
 @property(nonatomic,strong)UITextField              *addressTXF;
 
 @property(nonatomic,strong)UIScrollView             *scrollView;
-
+/// 通讯录
 @property(nonatomic,strong)UIButton                 *phoneBook;
 
 @property(nonatomic,strong)WTKSexView               *sexView;
@@ -39,6 +39,20 @@
 - (void)bindViewModel
 {
     [super bindViewModel];
+    self.viewModel.vc = self;
+    RAC(self.phoneBook,rac_command)     = RACObserve(self.viewModel, phoneBookCommand);
+//    RAC(self.saveBtn,rac_command)       = RACObserve(self.viewModel, saveCommand);
+//    需传值
+    [[self.saveBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(id x) {
+        [self.viewModel.saveCommand execute:@{@"name":self.nameTXF.text,
+                                              @"sex":@(self.sexView.w_sex),
+                                              @"phone":self.phoneTXF.text,
+                                              @"adress":self.addressTXF.text}];
+    }];
+    
+    
+//    从通讯录选取联系人
+    RAC(self.phoneTXF,text)             = RACObserve(self.viewModel, phoneNum);
 }
 
 #pragma mark - textViewDelegate

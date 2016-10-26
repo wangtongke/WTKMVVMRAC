@@ -8,6 +8,7 @@
 
 #import "WTKBasedViewModel.h"
 
+@class WTKNewAddressVC;
 @interface WTKNewAddressViewModel : WTKBasedViewModel
 
 @property(nonatomic,strong)WTKAddress       *address;
@@ -15,5 +16,13 @@
 @property(nonatomic,strong)RACCommand       *saveCommand;
 /// 选择地址
 @property(nonatomic,strong)RACCommand       *addressCommand;
+
+///跳转通讯录
+@property(nonatomic,strong)RACCommand       *phoneBookCommand;
+
+///弱引用，用来present
+@property(nonatomic,weak)WTKNewAddressVC    *vc;
+
+@property(nonatomic,copy)NSString           *phoneNum;
 
 @end
