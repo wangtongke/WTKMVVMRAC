@@ -11,6 +11,7 @@
 #import <AVFoundation/AVFoundation.h>
 #import "FXBlurView.h"
 #import "WTKShareBtn.h"
+#import <objc/runtime.h>
 
 #define userTag @"user"
 
@@ -333,5 +334,24 @@ static 	SystemSoundID soundID=0;
 + (NSString *)getVersion
 {
     return [[[NSBundle mainBundle] infoDictionary]objectForKey:@"CFBundleShortVersionString"];
+}
+
++ (void)setObj:(id)toObj
+       fromObj:(id)fromObj
+{
+    unsigned int count = 0;
+    objc_property_t *propertyList = class_copyPropertyList([toObj class], &count);
+    for (int i = 0; i < count; i++)
+    {
+        objc_property_t pro = propertyList[i];
+        
+        const char *name = property_getName(pro);
+        NSString *key = [NSString stringWithUTF8String:name];
+#warning 不为空的时候赋值，防止以后添加新的类，读取时无法设置默认值
+        if ([fromObj valueForKey:key])
+        {
+            [toObj setValue:[fromObj valueForKey:key] forKey:key];
+        }
+    }
 }
 @end

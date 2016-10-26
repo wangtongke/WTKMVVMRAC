@@ -47,7 +47,8 @@
 ///地址
 @property(nonatomic,strong)NSMutableArray<WTKAddress *>   *address;
 
-
+///默认地址
+@property(nonatomic,strong)WTKAddress       *defaultAddress;
 
 
 

@@ -59,6 +59,11 @@
         WTKGood *good = [[WTKShoppingManager manager].goodsDic objectForKey:goods.id];
         goods.num = good.num ;
     }
+    else
+    {
+//        car没有这个商品
+        goods.num = 0;
+    }
     self.goods = goods;
     
     self.w_titleLabel.text      = goods.title;

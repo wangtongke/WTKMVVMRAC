@@ -28,6 +28,7 @@
         user.nickName   = @"昵称";
         user.sex        = YES;
         user.birthDay   = @"输入后不可修改";
+        user.address    = @[].mutableCopy;
 
     });
     return user;

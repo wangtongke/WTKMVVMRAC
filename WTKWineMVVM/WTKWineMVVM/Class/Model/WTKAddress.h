@@ -10,12 +10,15 @@
 
 @interface WTKAddress : NSObject<NSCoding>
 ///名字
-@property(nonatomic,copy)NSString *w_name;
+@property(nonatomic,copy)NSString   *w_name;
 
 ///地址
-@property(nonatomic,copy)NSString *w_address;
+@property(nonatomic,copy)NSString   *w_address;
 
 ///手机号
-@property(nonatomic,copy)NSString *w_phone;
+@property(nonatomic,copy)NSString   *w_phone;
+
+///性别 YES-男 NO-女
+@property(nonatomic,assign)BOOL     w_sex;
 
 @end

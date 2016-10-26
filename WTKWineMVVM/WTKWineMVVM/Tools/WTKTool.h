@@ -62,4 +62,11 @@
  */
 + (UIImage *)imageWithView:(UIView *)view withBlurRadiu:(CGFloat)radiu;
 
+/**
+ *  obj1所有属性赋值给obj2 
+ */
++ (void)setObj:(id)toObj
+       fromObj:(id)fromObj;
+
+
 @end

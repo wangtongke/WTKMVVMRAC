@@ -9,5 +9,7 @@
 #import "WTKBasedViewModel.h"
 
 @interface WTKAddressManagerViewModel : WTKBasedViewModel
+///新建地址
+@property(nonatomic,strong)RACCommand       *addAddressCommand;
 
 @end
