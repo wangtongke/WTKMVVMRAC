@@ -7,7 +7,7 @@
 //
 
 #import "WTKNewAddressViewModel.h"
-
+#import "WTKMapViewModel.h"
 @implementation WTKNewAddressViewModel
 
 - (instancetype)initWithService:(id<WTKViewModelServices>)service params:(NSDictionary *)params
@@ -28,7 +28,10 @@
     }];
     
     self.addressCommand = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(id input) {
-       
+        WTKMapViewModel *viewModel = [[WTKMapViewModel alloc]initWithService:self.services params:@{@"title":@"address"}];
+        self.naviImpl.className = @"WTKMapVC";
+        [self.naviImpl pushViewModel:viewModel animated:YES];
+
         return [RACSignal empty];
     }];
     

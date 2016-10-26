@@ -9,7 +9,7 @@
 #import "WTKNewAddressVC.h"
 #import "WTKNewAddressViewModel.h"
 #import "WTKSexView.h"
-@interface WTKNewAddressVC ()
+@interface WTKNewAddressVC ()<UITextFieldDelegate>
 
 @property(nonatomic,strong)WTKNewAddressViewModel   *viewModel;
 
@@ -39,6 +39,17 @@
 - (void)bindViewModel
 {
     [super bindViewModel];
+}
+
+#pragma mark - textViewDelegate
+- (BOOL)textFieldShouldBeginEditing:(UITextField *)textField
+{
+    if(textField == self.addressTXF)
+    {
+        [self.viewModel.addressCommand execute:textField];
+        return NO;
+    }
+    return YES;
 }
 
 - (void)initView
@@ -173,8 +184,8 @@
         make.height.mas_equalTo(0.5);
     }];
     
-    self.saveBtn.frame                  = CGRectMake(30, 10, kWidth - 60, 35);
     [self.scrollView addSubview:self.saveBtn];
+    _saveBtn.backgroundColor            = [UIColor whiteColor];
     _saveBtn.layer.cornerRadius         = 5;
     _saveBtn.layer.masksToBounds        = YES;
     _saveBtn.layer.borderColor          = THEME_COLOR.CGColor;
@@ -182,6 +193,12 @@
     _saveBtn.titleLabel.font            = [UIFont wtkNormalFont:20];
     [_saveBtn setTitle:@"保存地址" forState:UIControlStateNormal];
     [_saveBtn setTitleColor:THEME_COLOR forState:UIControlStateNormal];
+    [self.saveBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(bgView.mas_bottom).offset(30);
+        make.centerX.equalTo(bgView);
+        make.width.mas_equalTo(kWidth - 60);
+        make.height.mas_equalTo(40);
+    }];
 }
 
 #pragma mark - lazyLoad
@@ -198,6 +215,7 @@
     if (!_phoneTXF)
     {
         _phoneTXF = [[UITextField alloc]init];
+        _phoneTXF.delegate = self;
     }
     return _phoneTXF;
 }
@@ -206,6 +224,7 @@
     if (!_addressTXF)
     {
         _addressTXF = [[UITextField alloc]init];
+        _addressTXF.delegate = self;
     }
     return _addressTXF;
 }

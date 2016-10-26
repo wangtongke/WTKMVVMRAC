@@ -38,6 +38,11 @@
         return;
     }
     WTKBasedViewController *vc = [[NSClassFromString(_className) alloc]initWithViewModel:viewModel];
+    if (!vc)
+    {
+        NSLog(@"VC名字错误");
+        return;
+    }
     [_navigationController pushViewController:vc animated:animated];
 }
 

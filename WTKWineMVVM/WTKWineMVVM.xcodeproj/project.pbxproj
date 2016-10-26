@@ -120,6 +120,8 @@
 		F57A910F1DC05CD200A105EC /* WTKNewAddressVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F57A910E1DC05CD200A105EC /* WTKNewAddressVC.m */; };
 		F57A91121DC05CE800A105EC /* WTKNewAddressViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F57A91111DC05CE800A105EC /* WTKNewAddressViewModel.m */; };
 		F57A91151DC07AE400A105EC /* WTKSexView.m in Sources */ = {isa = PBXBuildFile; fileRef = F57A91141DC07AE400A105EC /* WTKSexView.m */; };
+		F57A91181DC09D4B00A105EC /* WTKMapVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F57A91171DC09D4B00A105EC /* WTKMapVC.m */; };
+		F57A911B1DC09D5B00A105EC /* WTKMapViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F57A911A1DC09D5B00A105EC /* WTKMapViewModel.m */; };
 		F57FC6CB1DBDEF6100057ED9 /* WTKEmptyShoppingCarView.m in Sources */ = {isa = PBXBuildFile; fileRef = F57FC6CA1DBDEF6100057ED9 /* WTKEmptyShoppingCarView.m */; };
 		F57FC6CC1DBDF2DE00057ED9 /* WTKEmptyShoppingCarView.m in Sources */ = {isa = PBXBuildFile; fileRef = F57FC6CA1DBDEF6100057ED9 /* WTKEmptyShoppingCarView.m */; };
 		F57FC70E1DBE07FF00057ED9 /* WTKPayVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F57FC70D1DBE07FF00057ED9 /* WTKPayVC.m */; };
@@ -413,6 +415,10 @@
 		F57A91111DC05CE800A105EC /* WTKNewAddressViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTKNewAddressViewModel.m; sourceTree = "<group>"; };
 		F57A91131DC07AE400A105EC /* WTKSexView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTKSexView.h; sourceTree = "<group>"; };
 		F57A91141DC07AE400A105EC /* WTKSexView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTKSexView.m; sourceTree = "<group>"; };
+		F57A91161DC09D4B00A105EC /* WTKMapVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTKMapVC.h; sourceTree = "<group>"; };
+		F57A91171DC09D4B00A105EC /* WTKMapVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTKMapVC.m; sourceTree = "<group>"; };
+		F57A91191DC09D5B00A105EC /* WTKMapViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTKMapViewModel.h; sourceTree = "<group>"; };
+		F57A911A1DC09D5B00A105EC /* WTKMapViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTKMapViewModel.m; sourceTree = "<group>"; };
 		F57FC6C91DBDEF6100057ED9 /* WTKEmptyShoppingCarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTKEmptyShoppingCarView.h; sourceTree = "<group>"; };
 		F57FC6CA1DBDEF6100057ED9 /* WTKEmptyShoppingCarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTKEmptyShoppingCarView.m; sourceTree = "<group>"; };
 		F57FC70C1DBE07FF00057ED9 /* WTKPayVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTKPayVC.h; sourceTree = "<group>"; };
@@ -1132,6 +1138,8 @@
 				F577AEDB1DBF5E9100A689C1 /* WTKAddressManagerVC.m */,
 				F57A910D1DC05CD200A105EC /* WTKNewAddressVC.h */,
 				F57A910E1DC05CD200A105EC /* WTKNewAddressVC.m */,
+				F57A91161DC09D4B00A105EC /* WTKMapVC.h */,
+				F57A91171DC09D4B00A105EC /* WTKMapVC.m */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -1177,6 +1185,8 @@
 				F577AEDE1DBF5EA800A689C1 /* WTKAddressManagerViewModel.m */,
 				F57A91101DC05CE800A105EC /* WTKNewAddressViewModel.h */,
 				F57A91111DC05CE800A105EC /* WTKNewAddressViewModel.m */,
+				F57A91191DC09D5B00A105EC /* WTKMapViewModel.h */,
+				F57A911A1DC09D5B00A105EC /* WTKMapViewModel.m */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -1551,6 +1561,7 @@
 				F531073C1D892905003B402C /* WTKMeViewModel.m in Sources */,
 				F56CF89F1DB07ADC004D46B3 /* WTKLoginVC.m in Sources */,
 				F592BA321DA8EA77005EF581 /* WTKRecommendViewModel.m in Sources */,
+				F57A911B1DC09D5B00A105EC /* WTKMapViewModel.m in Sources */,
 				F5937E6F1D9CEBDB00C9E0B7 /* UIViewController+WTKAnimationTransitioningSnapshot.m in Sources */,
 				F532DE5D1D8F8B5400E68943 /* WTKUser.m in Sources */,
 				F56F77991DAB683C00963C31 /* WTKOrderTableViewCell.m in Sources */,
@@ -1573,6 +1584,7 @@
 				F577AEDF1DBF5EA800A689C1 /* WTKAddressManagerViewModel.m in Sources */,
 				F53107131D88E644003B402C /* WTKCategoryVC.m in Sources */,
 				F56CF91F1DB0A1B6004D46B3 /* WTKWebVC.m in Sources */,
+				F57A91181DC09D4B00A105EC /* WTKMapVC.m in Sources */,
 				F596DAAD1D86A0650058844C /* IQNSArray+Sort.m in Sources */,
 				F577AED31DBF42B900A689C1 /* WTKPaySuccessVC.m in Sources */,
 				F57A91151DC07AE400A105EC /* WTKSexView.m in Sources */,
