@@ -49,5 +49,6 @@
 #import "WTKShoppingManager.h"
 #import "WTKDataManager.h"
 #import "WTKNetWork.h"
+#import "WTKMapManager.h"
 
 #endif /* WTKPrefix_pch */

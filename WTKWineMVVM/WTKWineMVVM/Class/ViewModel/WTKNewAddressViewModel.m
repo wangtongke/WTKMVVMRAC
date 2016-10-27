@@ -87,6 +87,8 @@
         CNPhoneNumber *number   = contactProperty.value;
         NSString *string        = number.stringValue;
         self.phoneNum           = [string stringByReplacingOccurrencesOfString:@"-" withString:@" "];
+        NSString *name          =  contactProperty.contact.givenName;
+        self.phoneName          = name;
     }
 }
 

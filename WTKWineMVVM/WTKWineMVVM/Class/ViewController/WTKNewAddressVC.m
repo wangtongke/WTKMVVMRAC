@@ -19,6 +19,8 @@
 
 @property(nonatomic,strong)UITextField              *addressTXF;
 
+@property(nonatomic,strong)UITextField              *detailTXF;
+
 @property(nonatomic,strong)UIScrollView             *scrollView;
 /// 通讯录
 @property(nonatomic,strong)UIButton                 *phoneBook;
@@ -26,6 +28,8 @@
 @property(nonatomic,strong)WTKSexView               *sexView;
 
 @property(nonatomic,strong)UIButton                 *saveBtn;
+
+
 
 @end
 
@@ -39,6 +43,7 @@
 - (void)bindViewModel
 {
     [super bindViewModel];
+    @weakify(self);
     self.viewModel.vc = self;
     RAC(self.phoneBook,rac_command)     = RACObserve(self.viewModel, phoneBookCommand);
 //    RAC(self.saveBtn,rac_command)       = RACObserve(self.viewModel, saveCommand);
@@ -47,12 +52,20 @@
         [self.viewModel.saveCommand execute:@{@"name":self.nameTXF.text,
                                               @"sex":@(self.sexView.w_sex),
                                               @"phone":self.phoneTXF.text,
-                                              @"adress":self.addressTXF.text}];
+                                              @"address":self.addressTXF.text}];
     }];
     
     
 //    从通讯录选取联系人
     RAC(self.phoneTXF,text)             = RACObserve(self.viewModel, phoneNum);
+    RAC(self.nameTXF,text)              = RACObserve(self.viewModel, phoneName);
+    [[WTKMapManager manager] startUserLocation];
+    [[WTKMapManager manager].locationSubject subscribeNext:^(id x) {
+        @strongify(self);
+        NSDictionary *dic = x[@"address"];
+        NSString *address = [NSString stringWithFormat:@"%@ %@ %@ %@",dic[@"admin"],dic[@"city"],dic[@"county"],dic[@"detail"]];
+        self.addressTXF.text = address;
+    }];
 }
 
 #pragma mark - textViewDelegate
@@ -89,7 +102,7 @@
         make.top.equalTo(self.scrollView).offset(15);
         make.left.equalTo(self.scrollView);
         make.width.mas_equalTo(kWidth);
-        make.height.mas_equalTo(160);
+        make.height.mas_equalTo(200);
     }];
     
     UILabel *topLabel                   = [[UILabel alloc]init];
@@ -173,7 +186,8 @@
     bottomLabel.font                    = [UIFont wtkNormalFont:14];
     [bgView addSubview:bottomLabel];
     [bottomLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.bottom.equalTo(bgView);
+        @strongify(self);
+        make.top.equalTo(self.phoneTXF.mas_bottom);
         make.left.equalTo(bgView).offset(10);
         make.width.mas_equalTo(80);
         make.height.mas_equalTo(39.6);
@@ -181,6 +195,7 @@
     
     self.addressTXF.font                  = [UIFont wtkNormalFont:14];
     self.addressTXF.placeholder           = @"请选择地址";
+    self.addressTXF.adjustsFontSizeToFitWidth = YES;
     [bgView addSubview:self.addressTXF];
     [self.addressTXF mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerY.equalTo(bottomLabel);
@@ -192,6 +207,39 @@
     line2.backgroundColor               = WTKCOLOR(215, 215, 215, 1);
     [bgView addSubview:line2];
     [line2 mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(bgView).offset(10);
+        make.right.equalTo(bgView);
+        make.bottom.equalTo(bgView).offset(-39.8 - 40);
+        make.height.mas_equalTo(0.5);
+    }];
+    
+
+    UILabel *detail                 = [[UILabel alloc]init];
+    detail.text                     = @"详细地址";
+    detail.textColor                = WTKCOLOR(120, 120, 120, 1);
+    detail.font                     = [UIFont wtkNormalFont:14];
+    [bgView addSubview:detail];
+    [detail mas_makeConstraints:^(MASConstraintMaker *make) {
+        @strongify(self);
+        make.top.equalTo(self.addressTXF.mas_bottom);
+        make.left.equalTo(bgView).offset(10);
+        make.width.mas_equalTo(80);
+        make.height.mas_equalTo(40);
+    }];
+    self.detailTXF.font                 = [UIFont wtkNormalFont:14];
+    self.detailTXF.placeholder          = @"请输入详细地址";
+    [bgView addSubview:self.detailTXF];
+    [self.detailTXF mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerY.equalTo(detail);
+        make.left.equalTo(detail.mas_right);
+        make.right.equalTo(bgView);
+        make.height.mas_equalTo(40);
+    }];
+    
+    UIView *line3                       = [[UIView alloc]init];
+    line3.backgroundColor               = WTKCOLOR(215, 215, 215, 1);
+    [bgView addSubview:line3];
+    [line3 mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(bgView).offset(10);
         make.right.equalTo(bgView);
         make.bottom.equalTo(bgView).offset(-39.8);
@@ -265,6 +313,14 @@
         _saveBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     }
     return _saveBtn;
+}
+- (UITextField *)detailTXF
+{
+    if (!_detailTXF)
+    {
+        _detailTXF = [[UITextField alloc]init];
+    }
+    return _detailTXF;
 }
 
 

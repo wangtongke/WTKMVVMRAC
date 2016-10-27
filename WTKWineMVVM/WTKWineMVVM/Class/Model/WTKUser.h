@@ -49,6 +49,11 @@
 
 ///默认地址
 @property(nonatomic,strong)WTKAddress       *defaultAddress;
+///城市
+@property(nonatomic,copy)NSString           *city;
+///定位地址
+@property(nonatomic,strong)NSDictionary     *currentAddress;
+
 
 
 

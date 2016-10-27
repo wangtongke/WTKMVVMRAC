@@ -23,6 +23,9 @@
 ///弱引用，用来present
 @property(nonatomic,weak)WTKNewAddressVC    *vc;
 
+/// 从通讯录获取的手机号
 @property(nonatomic,copy)NSString           *phoneNum;
+/// 从通讯录获取的姓名
+@property(nonatomic,copy)NSString           *phoneName;
 
 @end
