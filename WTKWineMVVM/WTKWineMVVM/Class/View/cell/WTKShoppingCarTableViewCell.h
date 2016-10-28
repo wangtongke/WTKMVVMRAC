@@ -27,6 +27,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *w_phoneLabel;
 @property (weak, nonatomic) IBOutlet UILabel *w_addressLabel;
 
+@property(nonatomic,strong)WTKAddress *address;
+
 - (void)updateWithGood:(WTKGood *)good;
 
 @end

@@ -31,4 +31,7 @@
 
 ///选好了
 @property(nonatomic,strong)RACCommand               *payCommand;
+
+///地址
+@property(nonatomic,strong)WTKAddress               *address;
 @end

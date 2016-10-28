@@ -27,6 +27,13 @@
     [self.w_selectBtn setBackgroundImage:image forState:UIControlStateNormal];
     [self.w_goodImageView sd_setImageWithURL:[NSURL URLWithString:good.avatar_url] placeholderImage:[UIImage imageNamed:@"placehoder2"]];
 }
+
+- (void)setAddress:(WTKAddress *)address
+{
+    self.w_nameLabel.text   = address.w_name;
+    self.w_phoneLabel.text  = address.w_phone;
+    self.w_addressLabel.text= [NSString stringWithFormat:@"%@%@",address.w_address,address.w_detailAddress];
+}
 - (IBAction)selectedBtnClick:(UIButton *)sender
 {
     SHOPPING_MANAGER.flag = NO;

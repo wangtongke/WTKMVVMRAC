@@ -9,6 +9,9 @@
 #import "WTKShoppingCarViewModel.h"
 #import "WTKGoodsViewModel.h"
 #import "WTKPayViewModel.h"
+#import "WTKAddressManagerViewModel.h"
+
+
 @implementation WTKShoppingCarViewModel
 
 - (instancetype)initWithService:(id<WTKViewModelServices>)service params:(NSDictionary *)params
@@ -74,6 +77,14 @@
     }];
     
     self.addressCommand         = [[RACCommand alloc]initWithSignalBlock:^RACSignal *(id input) {
+            WTKAddressManagerViewModel *viewModel = [[WTKAddressManagerViewModel alloc]initWithService:self.services params:@{@"title":@"选择地址"}];
+            viewModel.isShoppingCar = YES;
+            [viewModel.cellClickCommand.executionSignals.switchToLatest subscribeNext:^(id x) {
+                self.address = x;
+            }];
+            self.naviImpl.className = @"WTKAddressManagerVC";
+            [self.naviImpl pushViewModel:viewModel animated:YES];
+
         
         return [RACSignal empty];
     }];
@@ -104,6 +115,14 @@
         return [RACSignal empty];
     }];
     
+}
+- (WTKAddress *)address
+{
+    if (!_address)
+    {
+        _address = CURRENT_USER.defaultAddress;
+    }
+    return _address;
 }
 
 @end

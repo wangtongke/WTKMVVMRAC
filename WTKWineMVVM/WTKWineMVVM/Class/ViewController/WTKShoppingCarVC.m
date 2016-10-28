@@ -33,6 +33,8 @@
 
 
 
+
+
 @end
 
 @implementation WTKShoppingCarVC
@@ -60,6 +62,8 @@
     @weakify(self);
 // - 监听价格
     RAC(self.priceLabel,text)   = RACObserve(self.viewModel, price);
+//#error 选择地址后回调
+    
 //    全选按钮
     [[self.selectAllBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(id x) {
         @strongify(self);

@@ -11,6 +11,8 @@
 @interface WTKBasedViewController ()<UIGestureRecognizerDelegate>
 @property(nonatomic,strong,readwrite)WTKBasedViewModel *viewModel;
 @property(nonatomic,strong,readwrite)UIPercentDrivenInteractiveTransition *interactivePopTransition;
+
+
 @end
 
 @implementation WTKBasedViewController

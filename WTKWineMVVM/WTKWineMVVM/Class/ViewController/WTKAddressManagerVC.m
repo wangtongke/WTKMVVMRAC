@@ -42,6 +42,7 @@
     [super viewDidLoad];
     [self bindViewModel];
     [self initView];
+
 }
 
 - (void)bindViewModel
@@ -83,7 +84,7 @@
 #pragma mark - tableViewDelegate
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    
+    [self.viewModel.cellClickCommand execute:self.dataArray[indexPath.row]];
 }
 
 #pragma mark - tableViewDataSource

@@ -82,9 +82,7 @@
     {
          NSArray *array = [[NSBundle mainBundle]loadNibNamed:@"WTKShoppingCarTableViewCell" owner:nil options:nil];
         cell = array[1];
-        cell.w_nameLabel.text   = CURRENT_USER.nickName;
-        cell.w_phoneLabel.text  = CURRENT_USER.phoneNum;
-        cell.w_addressLabel.text= @"重庆市渝北区";
+        cell.address = self.viewModel.address;
     }
     else
     {
@@ -144,6 +142,7 @@
     }
     return _remarkTXF;
 }
+
 
 
 /*

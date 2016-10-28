@@ -17,4 +17,11 @@
 ///删除
 @property(nonatomic,strong)RACCommand       *deleteAddress;
 
+///判断是否从购物车进来
+@property(nonatomic,assign)BOOL             isShoppingCar;
+
+///点击cell
+@property(nonatomic,strong)RACCommand       *cellClickCommand;
+
+
 @end

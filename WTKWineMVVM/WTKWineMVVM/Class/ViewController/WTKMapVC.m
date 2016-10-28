@@ -219,7 +219,6 @@
     });
     [self.viewModel.cellClick execute:self.dataArray[indexPath.row]];
 }
-
 #pragma mark - tableViewDataSource
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {

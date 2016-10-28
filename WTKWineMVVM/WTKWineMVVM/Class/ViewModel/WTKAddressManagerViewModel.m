@@ -22,6 +22,7 @@
 
 - (void)initViewModel
 {
+    @weakify(self);
     self.addAddressCommand      = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(id input) {
         WTKNewAddressViewModel *viewModel = [[WTKNewAddressViewModel alloc]initWithService:self.services params:@{@"title":@"新建地址"}];
         self.naviImpl.className = @"WTKNewAddressVC";
@@ -47,6 +48,22 @@
                 
             }];
         }];
+    }];
+    
+    self.cellClickCommand       = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(id input) {
+        @strongify(self);
+        NSLog(@"13");
+        if (self.isShoppingCar)
+        {
+            RACSignal *signal = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+                [subscriber sendNext:input];
+                [subscriber sendCompleted];
+                [self.naviImpl popViewControllerWithAnimation:YES];
+                return nil;
+            }];
+            return signal;
+        }
+        return [RACSignal empty];
     }];
 }
 

@@ -29,6 +29,7 @@
         user.sex        = YES;
         user.birthDay   = @"输入后不可修改";
         user.address    = @[].mutableCopy;
+        user.phoneNum   = @"";
 
     });
     return user;
@@ -51,6 +52,25 @@
         return YES;
     }
     return  NO;
+}
+
+- (WTKAddress *)defaultAddress
+{
+    if (!_defaultAddress)
+    {
+        if (self.address.count >= 1)
+        {
+            _defaultAddress = self.address[0];
+        }
+        else
+        {
+            _defaultAddress = [[WTKAddress alloc]init];
+            _defaultAddress.w_name = CURRENT_USER.nickName;
+            _defaultAddress.w_phone = CURRENT_USER.phoneNum;
+            _defaultAddress.w_address = @"";
+        }
+    }
+    return _defaultAddress;
 }
 
 
