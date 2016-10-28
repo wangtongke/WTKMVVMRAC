@@ -11,5 +11,10 @@
 @interface WTKAddressManagerViewModel : WTKBasedViewModel
 ///新建地址
 @property(nonatomic,strong)RACCommand       *addAddressCommand;
+///编辑地址
+@property(nonatomic,strong)RACCommand       *editAddress;
+
+///删除
+@property(nonatomic,strong)RACCommand       *deleteAddress;
 
 @end

@@ -30,7 +30,7 @@
                         </constraints>
                     </imageView>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="w_shoujihao" translatesAutoresizingMaskIntoConstraints="NO" id="kP8-Jq-V9n">
-                        <rect key="frame" x="190" y="12" width="15" height="15"/>
+                        <rect key="frame" x="141" y="12" width="15" height="15"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="15" id="S6Q-DS-YZA"/>
                             <constraint firstAttribute="height" constant="15" id="ss9-1I-e7n"/>
@@ -47,9 +47,9 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="haD-Xk-KOF">
-                        <rect key="frame" x="211" y="9" width="101" height="20"/>
+                        <rect key="frame" x="162" y="9" width="150" height="20"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="101" id="CRg-9Q-bD9"/>
+                            <constraint firstAttribute="width" constant="150" id="CRg-9Q-bD9"/>
                             <constraint firstAttribute="height" constant="20" id="xJn-8O-gAV"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="15"/>

@@ -13,6 +13,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *w_phoneLabel;
 @property (weak, nonatomic) IBOutlet UILabel *w_addresslabel;
 
+@property(nonatomic,strong)RACSubject   *subject;
+
 - (void)updateAddress:(WTKAddress *)address;
 
 @end

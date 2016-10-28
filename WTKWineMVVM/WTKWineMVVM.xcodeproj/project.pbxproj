@@ -39,11 +39,19 @@
 		F5660AB71DC18FA4006C89D9 /* BaiduMapAPI_Utils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5660AB01DC18FA4006C89D9 /* BaiduMapAPI_Utils.framework */; };
 		F5660ABA1DC19456006C89D9 /* WTKMapManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F5660AB91DC19456006C89D9 /* WTKMapManager.m */; };
 		F5660ABC1DC1DE11006C89D9 /* LaunchImage.png in Resources */ = {isa = PBXBuildFile; fileRef = F5660ABB1DC1DE11006C89D9 /* LaunchImage.png */; };
+		F5660ACE1DC20818006C89D9 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5660ABD1DC1F741006C89D9 /* CoreLocation.framework */; };
+		F5660ACF1DC20829006C89D9 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5660ABF1DC1F74D006C89D9 /* QuartzCore.framework */; };
+		F5660AD01DC20835006C89D9 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5660AC11DC1F756006C89D9 /* OpenGLES.framework */; };
+		F5660AD11DC20841006C89D9 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F56C52D21DB704AF00AF05DE /* SystemConfiguration.framework */; };
+		F5660AD21DC2084D006C89D9 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5660AC31DC1F775006C89D9 /* CoreGraphics.framework */; };
+		F5660AD31DC2085B006C89D9 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5660AC51DC1F793006C89D9 /* Security.framework */; };
+		F5660AD41DC20866006C89D9 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F5660AC71DC1F7AB006C89D9 /* libsqlite3.0.tbd */; };
+		F5660AD51DC20871006C89D9 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5660AC91DC1F7C6006C89D9 /* CoreTelephony.framework */; };
+		F5660AD61DC2087E006C89D9 /* libstdc++.6.0.9.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F5660ACB1DC1F7D6006C89D9 /* libstdc++.6.0.9.tbd */; };
 		F56771701DAF1D5C00AE9184 /* WTKMeHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = F567716F1DAF1D5C00AE9184 /* WTKMeHeaderView.m */; };
 		F56771811DAF75FF00AE9184 /* WTKFeedbackVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F56771801DAF75FF00AE9184 /* WTKFeedbackVC.m */; };
 		F56771841DAF767900AE9184 /* WTKMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = F56771831DAF767900AE9184 /* WTKMenuView.m */; };
 		F56C52D11DB701BD00AF05DE /* WTKNetWork.m in Sources */ = {isa = PBXBuildFile; fileRef = F56C52D01DB701BD00AF05DE /* WTKNetWork.m */; };
-		F56C52D31DB704AF00AF05DE /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F56C52D21DB704AF00AF05DE /* SystemConfiguration.framework */; };
 		F56C52D51DB70BE900AF05DE /* CategoryAllGoods in Resources */ = {isa = PBXBuildFile; fileRef = F56C52D41DB70BE900AF05DE /* CategoryAllGoods */; };
 		F56C52D81DB70D5800AF05DE /* WTKCategoryRightTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = F56C52D71DB70D5800AF05DE /* WTKCategoryRightTableView.m */; };
 		F56C52DC1DB710B000AF05DE /* WTKCategoryLeftTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F56C52DA1DB710B000AF05DE /* WTKCategoryLeftTableViewCell.m */; };
@@ -67,6 +75,9 @@
 		F56CF9281DB0C5D8004D46B3 /* WTKSetupViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F56CF9271DB0C5D8004D46B3 /* WTKSetupViewModel.m */; };
 		F56CF92C1DB0C7B1004D46B3 /* WTKSetupTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F56CF92A1DB0C7B1004D46B3 /* WTKSetupTableViewCell.m */; };
 		F56CF92D1DB0C7B1004D46B3 /* WTKSetupTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F56CF92B1DB0C7B1004D46B3 /* WTKSetupTableViewCell.xib */; };
+		F56E37E91DC2E4D10013CD3B /* mapapi.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F56E37E81DC2E4D10013CD3B /* mapapi.bundle */; };
+		F56E37EB1DC2E6190013CD3B /* mapapi.bundle in Frameworks */ = {isa = PBXBuildFile; fileRef = F56E37EA1DC2E6190013CD3B /* mapapi.bundle */; };
+		F56E37EE1DC31D930013CD3B /* WTKMapSearchTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = F56E37ED1DC31D930013CD3B /* WTKMapSearchTableView.m */; };
 		F56F77621DAB2E6800963C31 /* ShareSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F56F773A1DAB2E6800963C31 /* ShareSDK.framework */; };
 		F56F77631DAB2E6800963C31 /* ShareSDKExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F56F773D1DAB2E6800963C31 /* ShareSDKExtension.framework */; };
 		F56F77641DAB2E6800963C31 /* ShareSDKUI.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F56F773E1DAB2E6800963C31 /* ShareSDKUI.bundle */; };
@@ -278,6 +289,14 @@
 		F5660AB81DC19456006C89D9 /* WTKMapManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTKMapManager.h; sourceTree = "<group>"; };
 		F5660AB91DC19456006C89D9 /* WTKMapManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTKMapManager.m; sourceTree = "<group>"; };
 		F5660ABB1DC1DE11006C89D9 /* LaunchImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LaunchImage.png; sourceTree = "<group>"; };
+		F5660ABD1DC1F741006C89D9 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		F5660ABF1DC1F74D006C89D9 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		F5660AC11DC1F756006C89D9 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		F5660AC31DC1F775006C89D9 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		F5660AC51DC1F793006C89D9 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		F5660AC71DC1F7AB006C89D9 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		F5660AC91DC1F7C6006C89D9 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		F5660ACB1DC1F7D6006C89D9 /* libstdc++.6.0.9.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.6.0.9.tbd"; path = "usr/lib/libstdc++.6.0.9.tbd"; sourceTree = SDKROOT; };
 		F567716E1DAF1D5C00AE9184 /* WTKMeHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTKMeHeaderView.h; sourceTree = "<group>"; };
 		F567716F1DAF1D5C00AE9184 /* WTKMeHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTKMeHeaderView.m; sourceTree = "<group>"; };
 		F567717F1DAF75FF00AE9184 /* WTKFeedbackVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTKFeedbackVC.h; sourceTree = "<group>"; };
@@ -326,6 +345,10 @@
 		F56CF9291DB0C7B1004D46B3 /* WTKSetupTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTKSetupTableViewCell.h; sourceTree = "<group>"; };
 		F56CF92A1DB0C7B1004D46B3 /* WTKSetupTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTKSetupTableViewCell.m; sourceTree = "<group>"; };
 		F56CF92B1DB0C7B1004D46B3 /* WTKSetupTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WTKSetupTableViewCell.xib; sourceTree = "<group>"; };
+		F56E37E81DC2E4D10013CD3B /* mapapi.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = mapapi.bundle; path = "../../../../../../百度地图/BaiduMap_IOSSDK_v3.1.0_All/BaiduMapAPI_Map.framework/Resources/mapapi.bundle"; sourceTree = "<group>"; };
+		F56E37EA1DC2E6190013CD3B /* mapapi.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = mapapi.bundle; path = WTKWineMVVM/Vendor/BaiduMap/BaiduMapAPI_Map.framework/Resources/mapapi.bundle; sourceTree = "<group>"; };
+		F56E37EC1DC31D930013CD3B /* WTKMapSearchTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTKMapSearchTableView.h; sourceTree = "<group>"; };
+		F56E37ED1DC31D930013CD3B /* WTKMapSearchTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTKMapSearchTableView.m; sourceTree = "<group>"; };
 		F56F773A1DAB2E6800963C31 /* ShareSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ShareSDK.framework; sourceTree = "<group>"; };
 		F56F773D1DAB2E6800963C31 /* ShareSDKExtension.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ShareSDKExtension.framework; sourceTree = "<group>"; };
 		F56F773E1DAB2E6800963C31 /* ShareSDKUI.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ShareSDKUI.bundle; sourceTree = "<group>"; };
@@ -569,13 +592,22 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F56E37EB1DC2E6190013CD3B /* mapapi.bundle in Frameworks */,
+				F5660AD61DC2087E006C89D9 /* libstdc++.6.0.9.tbd in Frameworks */,
+				F5660AD51DC20871006C89D9 /* CoreTelephony.framework in Frameworks */,
+				F5660AD41DC20866006C89D9 /* libsqlite3.0.tbd in Frameworks */,
+				F5660AD31DC2085B006C89D9 /* Security.framework in Frameworks */,
+				F5660AD21DC2084D006C89D9 /* CoreGraphics.framework in Frameworks */,
+				F5660AD11DC20841006C89D9 /* SystemConfiguration.framework in Frameworks */,
+				F5660AD01DC20835006C89D9 /* OpenGLES.framework in Frameworks */,
+				F5660ACF1DC20829006C89D9 /* QuartzCore.framework in Frameworks */,
+				F5660ACE1DC20818006C89D9 /* CoreLocation.framework in Frameworks */,
+				F56F777D1DAB2EE000963C31 /* libsqlite3.tbd in Frameworks */,
 				F5660AB51DC18FA4006C89D9 /* BaiduMapAPI_Radar.framework in Frameworks */,
-				F56C52D31DB704AF00AF05DE /* SystemConfiguration.framework in Frameworks */,
 				F5660AB61DC18FA4006C89D9 /* BaiduMapAPI_Search.framework in Frameworks */,
 				F56F777F1DAB2EEE00963C31 /* MessageUI.framework in Frameworks */,
 				F5660AB21DC18FA4006C89D9 /* BaiduMapAPI_Cloud.framework in Frameworks */,
 				F5660AB11DC18FA4006C89D9 /* BaiduMapAPI_Base.framework in Frameworks */,
-				F56F777D1DAB2EE000963C31 /* libsqlite3.tbd in Frameworks */,
 				F56F777B1DAB2ED300963C31 /* ImageIO.framework in Frameworks */,
 				F56F77791DAB2EA600963C31 /* JavaScriptCore.framework in Frameworks */,
 				F56F77771DAB2E9B00963C31 /* libstdc++.tbd in Frameworks */,
@@ -626,6 +658,15 @@
 		738105B7EDCDC96147DA8B49 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F56E37EA1DC2E6190013CD3B /* mapapi.bundle */,
+				F5660ACB1DC1F7D6006C89D9 /* libstdc++.6.0.9.tbd */,
+				F5660AC91DC1F7C6006C89D9 /* CoreTelephony.framework */,
+				F5660AC71DC1F7AB006C89D9 /* libsqlite3.0.tbd */,
+				F5660AC51DC1F793006C89D9 /* Security.framework */,
+				F5660AC31DC1F775006C89D9 /* CoreGraphics.framework */,
+				F5660AC11DC1F756006C89D9 /* OpenGLES.framework */,
+				F5660ABF1DC1F74D006C89D9 /* QuartzCore.framework */,
+				F5660ABD1DC1F741006C89D9 /* CoreLocation.framework */,
 				F56C52D21DB704AF00AF05DE /* SystemConfiguration.framework */,
 				F56F777E1DAB2EEE00963C31 /* MessageUI.framework */,
 				F56F777C1DAB2EE000963C31 /* libsqlite3.tbd */,
@@ -691,6 +732,7 @@
 		F5660AA91DC18FA4006C89D9 /* BaiduMap */ = {
 			isa = PBXGroup;
 			children = (
+				F56E37E81DC2E4D10013CD3B /* mapapi.bundle */,
 				F5660AAA1DC18FA4006C89D9 /* BaiduMapAPI_Base.framework */,
 				F5660AAB1DC18FA4006C89D9 /* BaiduMapAPI_Cloud.framework */,
 				F5660AAC1DC18FA4006C89D9 /* BaiduMapAPI_Location.framework */,
@@ -1128,6 +1170,8 @@
 				F57FC6CA1DBDEF6100057ED9 /* WTKEmptyShoppingCarView.m */,
 				F57A91131DC07AE400A105EC /* WTKSexView.h */,
 				F57A91141DC07AE400A105EC /* WTKSexView.m */,
+				F56E37EC1DC31D930013CD3B /* WTKMapSearchTableView.h */,
+				F56E37ED1DC31D930013CD3B /* WTKMapSearchTableView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1468,6 +1512,7 @@
 				F5A00BE61D8E79900026DF67 /* WTKHomeBannerCollectionViewCell.xib in Resources */,
 				F596DA5A1D869FD30058844C /* LaunchScreen.storyboard in Resources */,
 				F56C52D51DB70BE900AF05DE /* CategoryAllGoods in Resources */,
+				F56E37E91DC2E4D10013CD3B /* mapapi.bundle in Resources */,
 				F596DA571D869FD30058844C /* Assets.xcassets in Resources */,
 				F56F776D1DAB2E6800963C31 /* read_me.txt in Resources */,
 				F56F77641DAB2E6800963C31 /* ShareSDKUI.bundle in Resources */,
@@ -1607,6 +1652,7 @@
 				F531073F1D892B0D003B402C /* WTKHomeCollectionView.m in Sources */,
 				F592BA361DA8F645005EF581 /* FXBlurView.m in Sources */,
 				F532DE601D8FBA0D00E68943 /* WTKSearchBar.m in Sources */,
+				F56E37EE1DC31D930013CD3B /* WTKMapSearchTableView.m in Sources */,
 				F53107461D892F74003B402C /* WTKHomeHeadView.m in Sources */,
 				F596DAB51D86A0650058844C /* IQTextView.m in Sources */,
 				F56F77851DAB5EE300963C31 /* WTKOrderVC.m in Sources */,
@@ -1780,6 +1826,7 @@
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_INPUT_FILETYPE = automatic;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -1795,6 +1842,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1825,6 +1873,7 @@
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_INPUT_FILETYPE = automatic;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
@@ -1834,6 +1883,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;

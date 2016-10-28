@@ -21,4 +21,7 @@
 ///性别 YES-男 NO-女
 @property(nonatomic,assign)BOOL     w_sex;
 
+///详细地址
+@property(nonatomic,copy)NSString   *w_detailAddress;
+
 @end

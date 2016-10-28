@@ -29,16 +29,36 @@
 
 @property(nonatomic,strong)UIButton                 *saveBtn;
 
+@property(nonatomic,strong)UIButton                 *deleteBtn;
+
+
 
 
 @end
 
 @implementation WTKNewAddressVC
 @dynamic viewModel;
+#pragma mark - lifeCycle
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self bindViewModel];
     [self initView];
+    
+    if (self.viewModel.address)
+    {
+//        如果viewModel有address，本次不是创建
+        self.nameTXF.text   = self.viewModel.address.w_name;
+        self.phoneTXF.text  = self.viewModel.address.w_phone;
+        self.addressTXF.text= self.viewModel.address.w_address;
+        self.detailTXF.text = self.viewModel.address.w_detailAddress;
+        self.sexView.w_sex  = self.viewModel.address.w_sex;
+    }
+    
 }
 - (void)bindViewModel
 {
@@ -49,23 +69,26 @@
 //    RAC(self.saveBtn,rac_command)       = RACObserve(self.viewModel, saveCommand);
 //    需传值
     [[self.saveBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(id x) {
-        [self.viewModel.saveCommand execute:@{@"name":self.nameTXF.text,
-                                              @"sex":@(self.sexView.w_sex),
-                                              @"phone":self.phoneTXF.text,
-                                              @"address":self.addressTXF.text}];
+        @strongify(self);
+            [self.viewModel.saveCommand execute:@{@"name":self.nameTXF.text,
+                                                  @"sex":@(self.sexView.w_sex),
+                                                  @"phone":self.phoneTXF.text,
+                                                  @"address":self.addressTXF.text,
+                                                  @"detailAddress":self.detailTXF.text}];
+
     }];
-    
+    if (self.viewModel.address)
+    {
+        [[self.deleteBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(id x) {
+            @strongify(self);
+            [self.viewModel.deleteCommand execute:@1];
+        }];
+    }
     
 //    从通讯录选取联系人
     RAC(self.phoneTXF,text)             = RACObserve(self.viewModel, phoneNum);
     RAC(self.nameTXF,text)              = RACObserve(self.viewModel, phoneName);
-    [[WTKMapManager manager] startUserLocation];
-    [[WTKMapManager manager].locationSubject subscribeNext:^(id x) {
-        @strongify(self);
-        NSDictionary *dic = x[@"address"];
-        NSString *address = [NSString stringWithFormat:@"%@ %@ %@ %@",dic[@"admin"],dic[@"city"],dic[@"county"],dic[@"detail"]];
-        self.addressTXF.text = address;
-    }];
+    RAC(self.addressTXF,text)           = RACObserve(self.viewModel, addressString);
 }
 
 #pragma mark - textViewDelegate
@@ -261,7 +284,27 @@
         make.width.mas_equalTo(kWidth - 60);
         make.height.mas_equalTo(40);
     }];
+    if (self.viewModel.address)
+    {
+        [self.scrollView addSubview:self.deleteBtn];
+        _deleteBtn.backgroundColor            = WTKCOLOR(210, 210, 210, 1);
+        _deleteBtn.layer.cornerRadius         = 5;
+        _deleteBtn.layer.masksToBounds        = YES;
+        _deleteBtn.layer.borderColor          = THEME_COLOR.CGColor;
+        _deleteBtn.layer.borderWidth          = 0.4;
+        _deleteBtn.titleLabel.font            = [UIFont wtkNormalFont:20];
+        [_deleteBtn setTitle:@"删除地址" forState:UIControlStateNormal];
+        [_deleteBtn setTitleColor:THEME_COLOR forState:UIControlStateNormal];
+        [_deleteBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+            @strongify(self);
+            make.top.equalTo(self.saveBtn.mas_bottom).offset(30);
+            make.centerX.equalTo(bgView);
+            make.width.mas_equalTo(kWidth - 60);
+            make.height.mas_equalTo(40);
+        }];
+    }
 }
+
 
 #pragma mark - lazyLoad
 - (UITextField *)nameTXF
@@ -321,6 +364,14 @@
         _detailTXF = [[UITextField alloc]init];
     }
     return _detailTXF;
+}
+- (UIButton *)deleteBtn
+{
+    if (!_deleteBtn)
+    {
+        _deleteBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    }
+    return _deleteBtn;
 }
 
 

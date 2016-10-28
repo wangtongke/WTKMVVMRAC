@@ -10,6 +10,12 @@
 #import <objc/runtime.h>
 @implementation WTKAddress
 
+
+- (void)setValue:(id)value forUndefinedKey:(NSString *)key
+{
+    NSLog(@"address不能识别key---%@",key);
+}
+
 - (instancetype)initWithCoder:(NSCoder *)aDecoder
 {
     unsigned int count = 0;

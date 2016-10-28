@@ -24,6 +24,7 @@
     if (self)
     {
         self.subject = [RACSubject subject];
+        self.w_sex = YES;
         [self initView];
     }
     return self;
@@ -120,14 +121,26 @@
     self.leftImg.image      = [UIImage imageNamed:@"w_pay_select"];
     self.rightImg.image     = [UIImage imageNamed:@"w_pay_normal"];
     [self.subject sendNext:@1];
-    self.w_sex              = YES;
+    _w_sex              = YES;
 }
 - (void)rightBtnClick
 {
     self.leftImg.image      = [UIImage imageNamed:@"w_pay_normal"];
     self.rightImg.image     = [UIImage imageNamed:@"w_pay_select"];
     [self.subject sendNext:@0];
-    self.w_sex              = NO;
+    _w_sex              = NO;
+}
+- (void)setW_sex:(BOOL)w_sex
+{
+    _w_sex = w_sex;
+    if (w_sex)
+    {
+        [self leftBtnClick];
+    }
+    else
+    {
+        [self rightBtnClick];
+    }
 }
 
 /*

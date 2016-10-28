@@ -14,6 +14,8 @@
 @property(nonatomic,strong)WTKAddress       *address;
 /// 保存
 @property(nonatomic,strong)RACCommand       *saveCommand;
+///删除
+@property(nonatomic,strong)RACCommand       *deleteCommand;
 /// 选择地址
 @property(nonatomic,strong)RACCommand       *addressCommand;
 
@@ -27,5 +29,8 @@
 @property(nonatomic,copy)NSString           *phoneNum;
 /// 从通讯录获取的姓名
 @property(nonatomic,copy)NSString           *phoneName;
+
+///地址String
+@property(nonatomic,copy)NSString           *addressString;
 
 @end

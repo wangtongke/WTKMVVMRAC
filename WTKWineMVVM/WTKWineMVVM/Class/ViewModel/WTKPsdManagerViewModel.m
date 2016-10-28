@@ -42,6 +42,7 @@
                                        map:^id(id value) {
         return value;
     }];
+
     RACSignal *enableSignal         = [RACSignal combineLatest:@[newSignal,confirmSignal] reduce:^id(NSString *newPsd,NSString *configmString){
         return @([newPsd isEqualToString:configmString] && newPsd.length == 6);
     }];
@@ -50,7 +51,6 @@
                                                         reduce:^id(NSNumber *origin,NSNumber *new){
                                         return @([origin boolValue] && [new boolValue]);
     }];
-    
     
     
     self.confirmCommand             = [[RACCommand alloc]initWithSignalBlock:^RACSignal *(id input) {

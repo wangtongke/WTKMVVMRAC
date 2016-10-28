@@ -26,6 +26,18 @@
 
 @implementation WTKAddressManagerVC
 @dynamic viewModel;
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [self.tableView reloadData];
+}
+- (void)viewDidDisappear:(BOOL)animated
+{
+    [super viewDidDisappear:animated];
+    [WTKDataManager saveUserData];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self bindViewModel];
@@ -35,8 +47,12 @@
 - (void)bindViewModel
 {
     [super bindViewModel];
-    
+    @weakify(self);
     RAC(self.addAddress,rac_command)    = RACObserve(self.viewModel, addAddressCommand);
+    [self.viewModel.deleteAddress.executionSignals.switchToLatest subscribeNext:^(id x) {
+        @strongify(self);
+        [self.tableView reloadData];
+    }];
 }
 
 - (void)initView
@@ -64,6 +80,11 @@
     
     
 }
+#pragma mark - tableViewDelegate
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+}
 
 #pragma mark - tableViewDataSource
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -71,6 +92,18 @@
     WTKAddressTableViewCell *cell   = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
     WTKAddress *address             = self.dataArray[indexPath.row];
     [cell updateAddress:address];
+    [cell.subject subscribeNext:^(id x) {
+        if ([x[@"code"] integerValue] == 100)
+        {
+//            编辑
+            [self.viewModel.editAddress execute:x[@"address"]];
+        }
+        else
+        {
+//            删除
+            [self.viewModel.deleteAddress execute:x[@"address"]];
+        }
+    }];
     return cell;
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
