@@ -11,9 +11,11 @@
 @interface WTKRequestManager : NSObject
 
 //+ (instancetype)shareManager;
+///本地数据（array）
 + (RACSignal *)postArrayDataWithURL:(NSString *)urlString
                        withpramater:(NSDictionary *)paremater;
 
+///本地数据（dic）
 + (RACSignal *)postDicDataWithURL:(NSString *)urlString
                      withpramater:(NSDictionary *)paremater;
 

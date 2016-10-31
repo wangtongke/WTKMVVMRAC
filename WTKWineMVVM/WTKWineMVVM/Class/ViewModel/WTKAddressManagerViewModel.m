@@ -63,6 +63,22 @@
             }];
             return signal;
         }
+        else
+        {
+//            设置本address为默认
+            if (input == CURRENT_USER.defaultAddress)
+            {
+//                已经是默认
+                SHOW_ERROE(@"已经是默认地址");
+                DISMISS_SVP(1.2);
+            }
+            else
+            {
+                CURRENT_USER.defaultAddress = input;
+                SHOW_SUCCESS(@"设置成功");
+                DISMISS_SVP(1.2);
+            }
+        }
         return [RACSignal empty];
     }];
 }

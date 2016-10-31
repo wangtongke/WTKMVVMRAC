@@ -1,0 +1,128 @@
+(
+{
+"avatar_url" = "http://img.51xiaoniu.cn/product/main_assets/assets/5731/b89d/206a/af6a/1880/b9ed/56c2e8a8af48431bd5cd6aa8.jpg@!avatar";
+brand = "\U8305\U53f0";
+"category_name" = "\U767d\U9152";
+id = 569495feaf4843725f000046;
+manufacturer = "\U8d35\U5dde\U8305\U53f0\U9152\U80a1\U4efd\U6709\U9650\U516c\U53f8";
+marketPrice = 1098;
+origin = "\U8d35\U5dde";
+pid = "<null>";
+price = 1029;
+qrcode = 6902952880294;
+"sale_count" = 937;
+scent = "<null>";
+specification = "500ml*1/\U74f6\Uff1b53\U00b0";
+state = online;
+stock = 6;
+tags = "";
+"thumb_url" = "http://img.51xiaoniu.cn/product/main_assets/assets/5731/b89d/206a/af6a/1880/b9ed/56c2e8a8af48431bd5cd6aa8.jpg@!thumb";
+title = "53\U00b0\U98de\U5929\U8305\U53f0";
+type = "";
+},
+{
+"avatar_url" = "http://img.51xiaoniu.cn/product/main_assets/assets/5731/b98e/206a/af6a/233f/2883/56937805af4843339200072b.jpg@!avatar";
+brand = "\U8305\U53f0";
+"category_name" = "\U767d\U9152";
+id = 569377d7af48433392000723;
+manufacturer = "\U8d35\U5dde\U8305\U53f0\U9152\U80a1\U4efd\U6709\U9650\U516c\U53f8";
+marketPrice = 199;
+origin = "\U8d35\U5dde";
+pid = "<null>";
+price = 99;
+qrcode = 6902952883622;
+"sale_count" = 59;
+scent = "<null>";
+specification = "500ml*1/\U74f6\Uff1b53\U00b0";
+state = online;
+stock = 75;
+tags = "";
+"thumb_url" = "http://img.51xiaoniu.cn/product/main_assets/assets/5731/b98e/206a/af6a/233f/2883/56937805af4843339200072b.jpg@!thumb";
+title = "53\U00b0\U8305\U53f0\U738b\U5b50\U9152";
+type = "";
+},
+{
+"avatar_url" = "http://img.51xiaoniu.cn/product/main_assets/assets/570c/eef7/206a/af31/6023/d553/56975372af484319e50005fc.jpg@!avatar";
+brand = "\U8305\U53f0";
+"category_name" = "\U767d\U9152";
+id = 56975367af48435eba002f64;
+manufacturer = "\U8d35\U5dde\U8305\U53f0\U9152\U80a1\U4efd\U6709\U9650\U516c\U53f8";
+marketPrice = 319;
+origin = "\U8d35\U5dde";
+pid = "<null>";
+price = 279;
+qrcode = 6902952889174;
+"sale_count" = 38;
+scent = "\U9171\U9999\U578b";
+specification = "500ml*1/\U74f6\Uff1b53\U00b0";
+state = online;
+stock = 37;
+tags = "";
+"thumb_url" = "http://img.51xiaoniu.cn/product/main_assets/assets/570c/eef7/206a/af31/6023/d553/56975372af484319e50005fc.jpg@!thumb";
+title = "53\U00b0\U8d35\U5dde\U8305\U53f0\U4ec1\U9152";
+type = "";
+},
+{
+"avatar_url" = "http://img.51xiaoniu.cn/product/main_assets/assets/570d/c80d/206a/af31/6b98/753a/56985932af4843084c000401.jpg@!avatar";
+brand = "\U8305\U53f0";
+"category_name" = "\U767d\U9152";
+id = 5698591daf4843084c0003ff;
+manufacturer = "\U8d35\U5dde\U8305\U53f0\U9152\U80a1\U4efd\U6709\U9650\U516c\U53f8";
+marketPrice = 128;
+origin = "\U8d35\U5dde\U7701";
+pid = "<null>";
+price = 69;
+qrcode = 6902952881093;
+"sale_count" = 46;
+scent = "\U9171\U9999\U578b";
+specification = "500ml*1/\U74f6\Uff0c53\U00b0";
+state = online;
+stock = 26;
+tags = "";
+"thumb_url" = "http://img.51xiaoniu.cn/product/main_assets/assets/570d/c80d/206a/af31/6b98/753a/56985932af4843084c000401.jpg@!thumb";
+title = "53\U00b0\U8305\U53f0\U8fce\U5bbe\U9152";
+type = "";
+},
+{
+"avatar_url" = "http://img.51xiaoniu.cn/product/main_assets/assets/570c/f381/206a/af31/6729/b9f1/56c94d83af48431bd1cd9027.jpg@!avatar";
+brand = "\U9ed4\U575b";
+"category_name" = "\U6574\U7bb1\U8d2d";
+id = 56c94d76af48431bd5cd8fde;
+manufacturer = "\U8d35\U5dde\U8305\U53f0\U9547\U9e4f\U7a0b\U9152\U5382";
+marketPrice = 774;
+origin = "\U8d35\U5dde";
+pid = "<null>";
+price = 654;
+qrcode = 6944849904119;
+"sale_count" = 34;
+scent = "\U9171\U9999\U578b";
+specification = "500ml*6/\U7bb1\Uff0c53\U00b0";
+state = online;
+stock = 553;
+tags = "";
+"thumb_url" = "http://img.51xiaoniu.cn/product/main_assets/assets/570c/f381/206a/af31/6729/b9f1/56c94d83af48431bd1cd9027.jpg@!thumb";
+title = "53\U00b0 \U9ed4\U575b\U6781\U5ba2 \U6574\U7bb1";
+type = "";
+},
+{
+"avatar_url" = "http://img.51xiaoniu.cn/product/main_assets/assets/579f/0b9a/206a/af1b/b755/89fd/579f0850af48431f9cbfc77c.jpg@!avatar";
+brand = "\U9ed4\U575b";
+"category_name" = "\U767d\U9152";
+id = 579f083daf48431f98bfc669;
+manufacturer = "\U8d35\U5dde\U8305\U53f0\U9547\U9e4f\U7a0b\U9152\U5382";
+marketPrice = 129;
+origin = "\U8d35\U5dde\U7701";
+pid = "<null>";
+price = 109;
+qrcode = "";
+"sale_count" = 20;
+scent = "\U9171\U9999\U578b";
+specification = "500ml*1/\U74f6\Uff1b53\U00b0";
+state = online;
+stock = 3322;
+tags = "";
+"thumb_url" = "http://img.51xiaoniu.cn/product/main_assets/assets/579f/0b9a/206a/af1b/b755/89fd/579f0850af48431f9cbfc77c.jpg@!thumb";
+title = "53\U00b0\U8305\U53f0\U9547\U9ed4\U575b\U6781\U5ba2\U9152";
+type = "";
+}
+)

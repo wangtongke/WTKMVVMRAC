@@ -24,15 +24,6 @@
 
 @implementation WTKHomeVC
 @dynamic viewModel;
-//- (instancetype)initWithViewModel:(WTKBasedViewModel *)viewModel
-//{
-//    if (self = [super initWithViewModel:viewModel])
-//    {
-////        self.automaticallyAdjustsScrollViewInsets = NO;
-//        [self bindViewModel];
-//    }
-//    return self;
-//}
 #pragma mark - lifeCycle
 - (void)viewWillAppear:(BOOL)animated
 {
@@ -41,13 +32,12 @@
     [self.collectionView reloadSections:[NSIndexSet indexSetWithIndex:0]];
     [self.navigationController.navigationBar setBackgroundImage:[UIImage imageFromColor:WTKCOLOR(255, 255, 255, 0.01)] forBarMetrics:UIBarMetricsDefault];
         [self _setNavigationItem];
+    self.collectionView.contentOffset = CGPointMake(self.collectionView.contentOffset.x, self.collectionView.contentOffset.y + 0.02);
 }
 - (void)viewWillDisappear:(BOOL)animated
 {
     [super viewWillDisappear:animated];
     [self.navigationController.navigationBar setBackgroundImage:[UIImage imageFromColor:WTKCOLOR(255, 255, 255, 0.99)] forBarMetrics:UIBarMetricsDefault];
-//#error jixu
-//    [[UINavigationBar appearance] setBarTintColor:[UIColor whiteColor]];
 }
 
 - (void)viewDidLoad {
@@ -128,7 +118,6 @@
 {
     [self _setNavigationItem];
 }
-
 
 #pragma mark - searchDelegate
 - (BOOL)searchBarShouldBeginEditing:(UISearchBar *)searchBar{

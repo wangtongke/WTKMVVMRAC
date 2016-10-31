@@ -17,6 +17,11 @@
     NSLog(@"address不能识别key---%@",key);
 }
 
+- (NSString *)description
+{
+    return [NSString stringWithFormat:@"name = %@ ,address = %@ phone = %@",self.w_name,self.w_address,self.w_phone];
+}
+
 - (instancetype)initWithCoder:(NSCoder *)aDecoder
 {
     unsigned int count = 0;

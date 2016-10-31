@@ -11,6 +11,7 @@
 #import "WTKRecommendViewModel.h"
 #import "WTKOrderViewModel.h"
 #import "WTKWebViewModel.h"
+#import "WTKSearchViewModel.h"
 
 @interface WTKHomeViewModel ()
 
@@ -127,7 +128,9 @@
     self.searchSubject  = [RACSubject subject];
     [self.searchSubject subscribeNext:^(id x) {
 //       跳转搜索界面
-        NSLog(@"dainji ");
+        WTKSearchViewModel *viewModel = [[WTKSearchViewModel alloc]initWithService:self.services params:@{@"title":@"搜索"}];
+        self.naviImpl.className = @"WTKSearchVC";
+        [self.naviImpl pushViewModel:viewModel animated:YES];
     }];
 
 }
@@ -135,7 +138,7 @@
 - (void)updateData:(id)headArray headDic:(NSArray *)dataArray
 {
 #warning 以后修改
-//    return;
+    return;
     if ([headArray[@"code"] integerValue] == 100)
     {
         self.headData = headArray[@"data"];

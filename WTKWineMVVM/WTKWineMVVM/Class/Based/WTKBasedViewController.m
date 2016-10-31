@@ -10,7 +10,11 @@
 
 @interface WTKBasedViewController ()<UIGestureRecognizerDelegate>
 @property(nonatomic,strong,readwrite)WTKBasedViewModel *viewModel;
+
 @property(nonatomic,strong,readwrite)UIPercentDrivenInteractiveTransition *interactivePopTransition;
+
+///是否正在拖拽
+@property(nonatomic,assign)BOOL w_isDraging;
 
 
 @end
@@ -67,26 +71,30 @@
     CGFloat progress = [recognizer translationInView:self.view].x / CGRectGetWidth(self.view.frame);
     progress = MIN(1.0, MAX(0.0, progress));
     NSLog(@"progress---%.2f",progress);
-//    if (progress < 0) {
-//        return;
-//    }
+    if (progress <= 0 && !self.w_isDraging) {
+        return;
+    }
     if (recognizer.state == UIGestureRecognizerStateBegan)
     {
+        self.w_isDraging = YES;
         self.interactivePopTransition = [[UIPercentDrivenInteractiveTransition alloc]init];
         [self.navigationController popViewControllerAnimated:YES];
     }
     else if (recognizer.state == UIGestureRecognizerStateChanged)
     {
+        self.w_isDraging = YES;
         [self.interactivePopTransition updateInteractiveTransition:progress];
     }
     else if (recognizer.state == UIGestureRecognizerStateEnded || recognizer.state == UIGestureRecognizerStateCancelled)
     {
         if (progress > 0.25)
         {
+            self.w_isDraging = NO;
             [self.interactivePopTransition finishInteractiveTransition];
         }
         else
         {
+            self.w_isDraging = NO;
             [self.interactivePopTransition cancelInteractiveTransition];
         }
         self.interactivePopTransition = nil;
