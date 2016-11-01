@@ -14,5 +14,7 @@
 @property(nonatomic,strong)RACCommand   *addCommand;
 
 @property(nonatomic,strong)RACCommand   *clickShopCommand;
+///分享
+@property(nonatomic,strong)RACCommand *shareCommand;
 
 @end

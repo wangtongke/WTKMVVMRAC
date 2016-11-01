@@ -21,7 +21,7 @@
 #import "IQKeyBoardManager.h"
 #import <AFNetworking/AFNetworking.h>
 #import "UIScrollView+EmptyDataSet.h"
-
+#import <MJExtension/MJExtension.h>
 
 //宏
 #import "WTKColorHeader.h"

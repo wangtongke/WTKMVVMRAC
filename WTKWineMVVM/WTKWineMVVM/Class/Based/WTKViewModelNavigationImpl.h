@@ -10,7 +10,9 @@
 
 @interface WTKViewModelNavigationImpl : NSObject<WTKViewModelServices>
 @property(nonatomic,copy)NSString *className;
-
+///设置当前rootVC
+@property(nonatomic,assign)NSInteger selectedIndex;
 - (instancetype)initWithNavigationController:(UINavigationController *)navi;
+
 
 @end

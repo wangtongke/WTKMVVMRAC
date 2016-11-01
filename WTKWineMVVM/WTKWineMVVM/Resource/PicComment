@@ -1,0 +1,87 @@
+{
+"comment_count" =         {
+bad = 1;
+good = 84;
+middle = 0;
+picture = 4;
+whole = 86;
+};
+"comment_list" =         (
+{
+"avatar_url" = "http://customer.jiuyunda.net:3000//images/customer_avatar.png";
+"check_status" = 1;
+content = "\U5f88\U65b9\U4fbf\U54e6\Uff0c\U8001\U677f\U6001\U5ea6\U4e5f\U5f88\U597d\U3002";
+"created_at_str" = "2016-07-21 19:53";
+"customer_id" = 576a34fc06534d11333d420c;
+id = 5790b7d106534d6d17044e6e;
+name = "\U6682\U65e0\U6635\U79f0";
+"order_completed_time" = "2016-07-16 04:44";
+"pic_path" =                 (
+"http://www.jiuyunda.net:90//upload/comments/5790b7d106534d6d17044e6e/0.jpg"
+);
+"pic_thumb_path" =                 (
+"http://www.jiuyunda.net:90//upload/comments/5790b7d106534d6d17044e6e/thumb_0.jpg"
+);
+specification = "330ml*1/\U542c";
+star = 5;
+},
+{
+"avatar_url" = "http://customer.jiuyunda.net:3000//images/customer_avatar.png";
+"check_status" = 1;
+content = "\U514d\U8d39\U7ade\U731c\U5f97\U4e86\U8fd9\U4e48\U591a\U9152\Uff0c\U771f\U662f\U592a\U68d2\U4e86\Uff01";
+"created_at_str" = "2016-07-09 11:03";
+"customer_id" = 575cd9a8e138236199947a60;
+id = 5780698306534d67e0dfdfb3;
+name = "******";
+"order_completed_time" = "2016-07-04 07:07";
+"pic_path" =                 (
+"http://www.jiuyunda.net:90//upload/comments/5780698306534d67e0dfdfb3/0.jpg",
+"http://www.jiuyunda.net:90//upload/comments/5780698306534d67e0dfdfb3/1.jpg"
+);
+"pic_thumb_path" =                 (
+"http://www.jiuyunda.net:90//upload/comments/5780698306534d67e0dfdfb3/thumb_0.jpg",
+"http://www.jiuyunda.net:90//upload/comments/5780698306534d67e0dfdfb3/thumb_1.jpg"
+);
+specification = "330ml*1/\U542c";
+star = 5;
+},
+{
+"avatar_url" = "http://customer.jiuyunda.net:3000//images/customer_avatar.png";
+"check_status" = 1;
+content = "\U7cfb\U7edf\U4e0a\U663e\U793a20\U53f7\U8ba2\U5355\U5b8c\U6210\Uff0c\U4ee5\U4e3a\U662f\U9a97\U4eba\U7684\Uff0c\U6ca1\U60f3\U5230\U4eca\U5929\U6536\U5230\U4e86\Uff01";
+"created_at_str" = "2016-06-21 18:53";
+"customer_id" = 575cd783e138236184947a9e;
+id = 57691c8e06534d686e321a0d;
+name = "\U6682\U65e0\U6635\U79f0";
+"order_completed_time" = "2016-06-19 03:57";
+"pic_path" =                 (
+"http://www.jiuyunda.net:90//upload/comments/57691c8e06534d686e321a0d/0.jpg"
+);
+"pic_thumb_path" =                 (
+"http://www.jiuyunda.net:90//upload/comments/57691c8e06534d686e321a0d/thumb_0.jpg"
+);
+specification = "330ml*1/\U542c";
+star = 5;
+},
+{
+"avatar_url" = "http://customer.jiuyunda.net:3000//images/customer_avatar.png";
+"check_status" = 1;
+content = "";
+"created_at_str" = "2016-06-21 07:55";
+"customer_id" = 575cd9a8e138236184947aa9;
+id = 5768826106534d72d1b142ea;
+name = "\U6682\U65e0\U6635\U79f0";
+"order_completed_time" = "2016-06-20 06:37";
+"pic_path" =                 (
+"http://www.jiuyunda.net:90//upload/comments/5768826106534d72d1b142ea/0.jpg",
+"http://www.jiuyunda.net:90//upload/comments/5768826106534d72d1b142ea/1.jpg"
+);
+"pic_thumb_path" =                 (
+"http://www.jiuyunda.net:90//upload/comments/5768826106534d72d1b142ea/thumb_0.jpg",
+"http://www.jiuyunda.net:90//upload/comments/5768826106534d72d1b142ea/thumb_1.jpg"
+);
+specification = "330ml*1/\U542c";
+star = 5;
+}
+);
+}

@@ -24,6 +24,7 @@
 
 - (void)initViewModel
 {
+    @weakify(self);
     self.refershCommand = [[RACCommand alloc]initWithSignalBlock:^RACSignal *(id input) {
         [[WTKRequestManager postWithURL:@"http://www.jiuyunda.net:90/api/v1/shareIntegral/share_info" withParamater:@{@"userinfo_id":[WTKUser currentUser].bid,@"customer_id":@"57f8ac945b73294b2d7a97ad"}] subscribeNext:^(id x) {
             NSLog(@"%@",x);
@@ -33,7 +34,7 @@
     }];
     
     self.shareCommand   = [[RACCommand alloc]initWithSignalBlock:^RACSignal *(id input) {
-        
+        @strongify(self);
         [self share];
         
         return [RACSignal empty];

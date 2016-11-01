@@ -16,6 +16,7 @@ PODS:
     - AFNetworking/NSURLSession
   - DZNEmptyDataSet (1.8.1)
   - Masonry (1.0.2)
+  - MJExtension (3.0.13)
   - MJRefresh (3.1.12)
   - Reachability (3.2)
   - ReactiveCocoa (4.2.2):
@@ -31,6 +32,7 @@ DEPENDENCIES:
   - AFNetworking (~> 3.1.0)
   - DZNEmptyDataSet (~> 1.8.1)
   - Masonry
+  - MJExtension (~> 3.0.13)
   - MJRefresh (~> 3.1.12)
   - Reachability (~> 3.2)
   - ReactiveCocoa (~> 4.2.1)
@@ -42,6 +44,7 @@ SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
   DZNEmptyDataSet: 9525833b9e68ac21c30253e1d3d7076cc828eaa7
   Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
+  MJExtension: 5932755f451458eefa24239358817f8d291240c7
   MJRefresh: b96cdb21c4aa75a7b07654311ab2f315c497e806
   Reachability: 33e18b67625424e47b6cde6d202dce689ad7af96
   ReactiveCocoa: 72263e7ac0770c274617ccd345e01049d0ca38ae
@@ -50,6 +53,6 @@ SPEC CHECKSUMS:
   SDWebImage: 1d2b1a1efda1ade1b00b6f8498865f8ddedc8a84
   SVProgressHUD: b0830714205bea1317ea1a2ebc71e5633af334d4
 
-PODFILE CHECKSUM: 7a8f8308196593c14214da91e4f659ad969af5af
+PODFILE CHECKSUM: cf0805ed2aa0f4c275726ac17b95345d4b325a45
 
 COCOAPODS: 1.0.1

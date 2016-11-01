@@ -7,10 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
-
+@class WTKSearchViewModel;
 @interface WTKSearchResultView : UIView
 
-@property(nonatomic,strong)NSArray *dataArray;
+@property(nonatomic,strong)NSArray              *dataArray;
+
+@property(nonatomic,strong)WTKSearchViewModel   *viewModel;
 
 ///刷新
 - (void)w_reloadData;

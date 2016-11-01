@@ -59,7 +59,7 @@
         [sub sendCompleted];
 
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        [sub sendNext:@{@"code":@-400}];
+        [sub sendNext:@{@"code":@-400,@"data":@"请求失败"}];
         [sub sendCompleted];
     }];
     return sub;

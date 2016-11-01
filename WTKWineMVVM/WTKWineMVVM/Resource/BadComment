@@ -1,0 +1,27 @@
+{
+"comment_count" =         {
+bad = 1;
+good = 84;
+middle = 0;
+picture = 4;
+whole = 86;
+};
+"comment_list" =         (
+{
+"avatar_url" = "http://customer.jiuyunda.net:3000//images/customer_avatar.png";
+"check_status" = 1;
+content = "\U6446\U8131\Uff0c\U770b\U770b\U6211\U4ec0\U4e48\U65f6\U5019\U4e0b\U7684\U5355\U5b50\U3002\U4eca\U5929\U8fd8\U6ca1\U6709\U6536\U5230\U3002\n\U8fd9\U4e2a\U8bc4\U4ef75\U9897\U661f\U661f\U4e0d\U591f\U7528\U554a\Uff01";
+"created_at_str" = "2016-08-06 19:09";
+"customer_id" = 576fa9f006534d11333d435a;
+id = 57a5c56406534d2990b570f3;
+name = "\U6682\U65e0\U6635\U79f0";
+"order_completed_time" = "2016-07-16 01:31";
+"pic_path" =                 (
+);
+"pic_thumb_path" =                 (
+);
+specification = "330ml*1/\U542c";
+star = 1;
+}
+);
+}

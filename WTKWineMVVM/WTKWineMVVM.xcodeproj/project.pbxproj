@@ -38,7 +38,6 @@
 		F5660AB61DC18FA4006C89D9 /* BaiduMapAPI_Search.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5660AAF1DC18FA4006C89D9 /* BaiduMapAPI_Search.framework */; };
 		F5660AB71DC18FA4006C89D9 /* BaiduMapAPI_Utils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5660AB01DC18FA4006C89D9 /* BaiduMapAPI_Utils.framework */; };
 		F5660ABA1DC19456006C89D9 /* WTKMapManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F5660AB91DC19456006C89D9 /* WTKMapManager.m */; };
-		F5660ABC1DC1DE11006C89D9 /* LaunchImage.png in Resources */ = {isa = PBXBuildFile; fileRef = F5660ABB1DC1DE11006C89D9 /* LaunchImage.png */; };
 		F5660ACE1DC20818006C89D9 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5660ABD1DC1F741006C89D9 /* CoreLocation.framework */; };
 		F5660ACF1DC20829006C89D9 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5660ABF1DC1F74D006C89D9 /* QuartzCore.framework */; };
 		F5660AD01DC20835006C89D9 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5660AC11DC1F756006C89D9 /* OpenGLES.framework */; };
@@ -75,6 +74,13 @@
 		F56CF9281DB0C5D8004D46B3 /* WTKSetupViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F56CF9271DB0C5D8004D46B3 /* WTKSetupViewModel.m */; };
 		F56CF92C1DB0C7B1004D46B3 /* WTKSetupTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F56CF92A1DB0C7B1004D46B3 /* WTKSetupTableViewCell.m */; };
 		F56CF92D1DB0C7B1004D46B3 /* WTKSetupTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F56CF92B1DB0C7B1004D46B3 /* WTKSetupTableViewCell.xib */; };
+		F56CFD9F1DC83B34001727E7 /* WTKComment.m in Sources */ = {isa = PBXBuildFile; fileRef = F56CFD9E1DC83B34001727E7 /* WTKComment.m */; };
+		F56CFDA11DC83BB9001727E7 /* AllConment in Resources */ = {isa = PBXBuildFile; fileRef = F56CFDA01DC83BB9001727E7 /* AllConment */; };
+		F56CFDA31DC83C1E001727E7 /* BadComment in Resources */ = {isa = PBXBuildFile; fileRef = F56CFDA21DC83C1E001727E7 /* BadComment */; };
+		F56CFDA51DC83C6C001727E7 /* PicComment in Resources */ = {isa = PBXBuildFile; fileRef = F56CFDA41DC83C6C001727E7 /* PicComment */; };
+		F56CFDA71DC83CAE001727E7 /* MidComment in Resources */ = {isa = PBXBuildFile; fileRef = F56CFDA61DC83CAE001727E7 /* MidComment */; };
+		F56CFDAA1DC865EA001727E7 /* WTKCommentTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = F56CFDA91DC865EA001727E7 /* WTKCommentTableView.m */; };
+		F56CFDAD1DC86A4B001727E7 /* WTKCommentTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F56CFDAC1DC86A4B001727E7 /* WTKCommentTableViewCell.m */; };
 		F56E37E91DC2E4D10013CD3B /* mapapi.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F56E37E81DC2E4D10013CD3B /* mapapi.bundle */; };
 		F56E37EB1DC2E6190013CD3B /* mapapi.bundle in Frameworks */ = {isa = PBXBuildFile; fileRef = F56E37EA1DC2E6190013CD3B /* mapapi.bundle */; };
 		F56E37EE1DC31D930013CD3B /* WTKMapSearchTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = F56E37ED1DC31D930013CD3B /* WTKMapSearchTableView.m */; };
@@ -171,6 +177,7 @@
 		F58EE1C21DC6E1DD008E5A6E /* MSSAutoresizeLabelFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = F58EE1BE1DC6E1DD008E5A6E /* MSSAutoresizeLabelFlowLayout.m */; };
 		F58EE1CB1DC71269008E5A6E /* WTKSearchResultView.m in Sources */ = {isa = PBXBuildFile; fileRef = F58EE1CA1DC71269008E5A6E /* WTKSearchResultView.m */; };
 		F58EE1CD1DC71C5E008E5A6E /* SearchResult in Resources */ = {isa = PBXBuildFile; fileRef = F58EE1CC1DC71C5E008E5A6E /* SearchResult */; };
+		F58EE1CF1DC7361B008E5A6E /* LaunchImage.png in Resources */ = {isa = PBXBuildFile; fileRef = F58EE1CE1DC7361B008E5A6E /* LaunchImage.png */; };
 		F592BA251DA89A58005EF581 /* backbutton_icon2.png in Resources */ = {isa = PBXBuildFile; fileRef = F592BA241DA89A58005EF581 /* backbutton_icon2.png */; };
 		F592BA2E1DA8E47D005EF581 /* WTKRecommendVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F592BA2C1DA8E47D005EF581 /* WTKRecommendVC.m */; };
 		F592BA321DA8EA77005EF581 /* WTKRecommendViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F592BA311DA8EA77005EF581 /* WTKRecommendViewModel.m */; };
@@ -296,7 +303,6 @@
 		F5660AB01DC18FA4006C89D9 /* BaiduMapAPI_Utils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BaiduMapAPI_Utils.framework; sourceTree = "<group>"; };
 		F5660AB81DC19456006C89D9 /* WTKMapManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTKMapManager.h; sourceTree = "<group>"; };
 		F5660AB91DC19456006C89D9 /* WTKMapManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTKMapManager.m; sourceTree = "<group>"; };
-		F5660ABB1DC1DE11006C89D9 /* LaunchImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LaunchImage.png; sourceTree = "<group>"; };
 		F5660ABD1DC1F741006C89D9 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		F5660ABF1DC1F74D006C89D9 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		F5660AC11DC1F756006C89D9 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -353,6 +359,16 @@
 		F56CF9291DB0C7B1004D46B3 /* WTKSetupTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTKSetupTableViewCell.h; sourceTree = "<group>"; };
 		F56CF92A1DB0C7B1004D46B3 /* WTKSetupTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTKSetupTableViewCell.m; sourceTree = "<group>"; };
 		F56CF92B1DB0C7B1004D46B3 /* WTKSetupTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WTKSetupTableViewCell.xib; sourceTree = "<group>"; };
+		F56CFD9D1DC83B34001727E7 /* WTKComment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTKComment.h; sourceTree = "<group>"; };
+		F56CFD9E1DC83B34001727E7 /* WTKComment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTKComment.m; sourceTree = "<group>"; };
+		F56CFDA01DC83BB9001727E7 /* AllConment */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = AllConment; sourceTree = "<group>"; };
+		F56CFDA21DC83C1E001727E7 /* BadComment */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = BadComment; sourceTree = "<group>"; };
+		F56CFDA41DC83C6C001727E7 /* PicComment */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = PicComment; sourceTree = "<group>"; };
+		F56CFDA61DC83CAE001727E7 /* MidComment */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = MidComment; sourceTree = "<group>"; };
+		F56CFDA81DC865EA001727E7 /* WTKCommentTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTKCommentTableView.h; sourceTree = "<group>"; };
+		F56CFDA91DC865EA001727E7 /* WTKCommentTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTKCommentTableView.m; sourceTree = "<group>"; };
+		F56CFDAB1DC86A4B001727E7 /* WTKCommentTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTKCommentTableViewCell.h; sourceTree = "<group>"; };
+		F56CFDAC1DC86A4B001727E7 /* WTKCommentTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTKCommentTableViewCell.m; sourceTree = "<group>"; };
 		F56E37E81DC2E4D10013CD3B /* mapapi.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = mapapi.bundle; path = "../../../../../../百度地图/BaiduMap_IOSSDK_v3.1.0_All/BaiduMapAPI_Map.framework/Resources/mapapi.bundle"; sourceTree = "<group>"; };
 		F56E37EA1DC2E6190013CD3B /* mapapi.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = mapapi.bundle; path = WTKWineMVVM/Vendor/BaiduMap/BaiduMapAPI_Map.framework/Resources/mapapi.bundle; sourceTree = "<group>"; };
 		F56E37EC1DC31D930013CD3B /* WTKMapSearchTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTKMapSearchTableView.h; sourceTree = "<group>"; };
@@ -519,6 +535,7 @@
 		F58EE1C91DC71269008E5A6E /* WTKSearchResultView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTKSearchResultView.h; sourceTree = "<group>"; };
 		F58EE1CA1DC71269008E5A6E /* WTKSearchResultView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTKSearchResultView.m; sourceTree = "<group>"; };
 		F58EE1CC1DC71C5E008E5A6E /* SearchResult */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SearchResult; sourceTree = "<group>"; };
+		F58EE1CE1DC7361B008E5A6E /* LaunchImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LaunchImage.png; sourceTree = "<group>"; };
 		F592BA241DA89A58005EF581 /* backbutton_icon2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backbutton_icon2.png; sourceTree = "<group>"; };
 		F592BA2B1DA8E47D005EF581 /* WTKRecommendVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTKRecommendVC.h; sourceTree = "<group>"; };
 		F592BA2C1DA8E47D005EF581 /* WTKRecommendVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTKRecommendVC.m; sourceTree = "<group>"; };
@@ -748,6 +765,8 @@
 				F57A90931DC0415200A105EC /* WTKAddressTableViewCell.h */,
 				F57A90941DC0415200A105EC /* WTKAddressTableViewCell.m */,
 				F57A90951DC0415200A105EC /* WTKAddressTableViewCell.xib */,
+				F56CFDAB1DC86A4B001727E7 /* WTKCommentTableViewCell.h */,
+				F56CFDAC1DC86A4B001727E7 /* WTKCommentTableViewCell.m */,
 			);
 			path = cell;
 			sourceTree = "<group>";
@@ -1064,7 +1083,7 @@
 				F5BD1C5B1D93802A00F63B5F /* top_launch.png */,
 				F592BA241DA89A58005EF581 /* backbutton_icon2.png */,
 				F570238A1DAC7AAA008168A8 /* backbutton_icon3.png */,
-				F5660ABB1DC1DE11006C89D9 /* LaunchImage.png */,
+				F58EE1CE1DC7361B008E5A6E /* LaunchImage.png */,
 				F596DA581D869FD30058844C /* LaunchScreen.storyboard */,
 				F596DA5B1D869FD30058844C /* Info.plist */,
 				F596DA4A1D869FD30058844C /* Supporting Files */,
@@ -1155,6 +1174,8 @@
 				F56F77DE1DAB8A8500963C31 /* WTKOrderDetailModel.m */,
 				F56C873B1DB8611600B8B765 /* WTKSiftModel.h */,
 				F56C873C1DB8611600B8B765 /* WTKSiftModel.m */,
+				F56CFD9D1DC83B34001727E7 /* WTKComment.h */,
+				F56CFD9E1DC83B34001727E7 /* WTKComment.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1212,6 +1233,8 @@
 				F56E37ED1DC31D930013CD3B /* WTKMapSearchTableView.m */,
 				F58EE1C91DC71269008E5A6E /* WTKSearchResultView.h */,
 				F58EE1CA1DC71269008E5A6E /* WTKSearchResultView.m */,
+				F56CFDA81DC865EA001727E7 /* WTKCommentTableView.h */,
+				F56CFDA91DC865EA001727E7 /* WTKCommentTableView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1327,6 +1350,10 @@
 				F56F77911DAB666800963C31 /* FinishOrder */,
 				F56C52D41DB70BE900AF05DE /* CategoryAllGoods */,
 				F56C87361DB858E200B8B765 /* CategorySiftAll */,
+				F56CFDA01DC83BB9001727E7 /* AllConment */,
+				F56CFDA21DC83C1E001727E7 /* BadComment */,
+				F56CFDA41DC83C6C001727E7 /* PicComment */,
+				F56CFDA61DC83CAE001727E7 /* MidComment */,
 				F58695EF1D9E2D7E002441A9 /* AddShopAudio.mp3 */,
 			);
 			path = Resource;
@@ -1557,6 +1584,7 @@
 			files = (
 				F5A00BE61D8E79900026DF67 /* WTKHomeBannerCollectionViewCell.xib in Resources */,
 				F596DA5A1D869FD30058844C /* LaunchScreen.storyboard in Resources */,
+				F56CFDA31DC83C1E001727E7 /* BadComment in Resources */,
 				F56C52D51DB70BE900AF05DE /* CategoryAllGoods in Resources */,
 				F56E37E91DC2E4D10013CD3B /* mapapi.bundle in Resources */,
 				F596DA571D869FD30058844C /* Assets.xcassets in Resources */,
@@ -1564,9 +1592,9 @@
 				F56F77641DAB2E6800963C31 /* ShareSDKUI.bundle in Resources */,
 				F56C52DD1DB710B000AF05DE /* WTKCategoryLeftTableViewCell.xib in Resources */,
 				F56CF9141DB08403004D46B3 /* WTKLoginVC.xib in Resources */,
-				F5660ABC1DC1DE11006C89D9 /* LaunchImage.png in Resources */,
 				F56F77901DAB660D00963C31 /* NoPayOrder in Resources */,
 				F56F776E1DAB2E6800963C31 /* README.txt in Resources */,
+				F56CFDA71DC83CAE001727E7 /* MidComment in Resources */,
 				F58C36CB1DADD8E600C0A2D2 /* WTKOrderStateTableViewCell.xib in Resources */,
 				F570239F1DACE12C008168A8 /* WTKOrderDetailTableViewCell.xib in Resources */,
 				F58EE1CD1DC71C5E008E5A6E /* SearchResult in Resources */,
@@ -1579,9 +1607,12 @@
 				F570238B1DAC7AAA008168A8 /* backbutton_icon3.png in Resources */,
 				F57023921DAC9970008168A8 /* FinishDeliveryOrder in Resources */,
 				F56C87371DB858E200B8B765 /* CategorySiftAll in Resources */,
+				F56CFDA11DC83BB9001727E7 /* AllConment in Resources */,
+				F56CFDA51DC83C6C001727E7 /* PicComment in Resources */,
 				F57A90971DC0415200A105EC /* WTKAddressTableViewCell.xib in Resources */,
 				F56F77691DAB2E6800963C31 /* TencentOpenApi_IOS_Bundle.bundle in Resources */,
 				F596DABA1D86A0650058844C /* IQKeyboardManager.bundle in Resources */,
+				F58EE1CF1DC7361B008E5A6E /* LaunchImage.png in Resources */,
 				F56CF92D1DB0C7B1004D46B3 /* WTKSetupTableViewCell.xib in Resources */,
 				F57023901DAC9934008168A8 /* DeliveryOrder in Resources */,
 				F58695F01D9E2D7E002441A9 /* AddShopAudio.mp3 in Resources */,
@@ -1682,6 +1713,7 @@
 				F5660ABA1DC19456006C89D9 /* WTKMapManager.m in Sources */,
 				F5937E741D9CEBDB00C9E0B7 /* WTKAnimationRound.m in Sources */,
 				F56C874A1DB8A6AE00B8B765 /* WTKAboutMeVC.m in Sources */,
+				F56CFDAD1DC86A4B001727E7 /* WTKCommentTableViewCell.m in Sources */,
 				F56C873A1DB85A5800B8B765 /* WTKSiftView.m in Sources */,
 				F58D824B1DB4617300BB897E /* WTKFunctionViewModel.m in Sources */,
 				F53107391D8928F4003B402C /* WTKShoppingCarViewModel.m in Sources */,
@@ -1736,6 +1768,7 @@
 				F577D1821D926081003E1D2E /* WTKTool.m in Sources */,
 				F531072D1D8923D2003B402C /* WTKViewModelNavigationImpl.m in Sources */,
 				F596DAB81D86A0650058844C /* IQToolbar.m in Sources */,
+				F56CFD9F1DC83B34001727E7 /* WTKComment.m in Sources */,
 				F5937E751D9CEBDB00C9E0B7 /* WTKBaseAnimation.m in Sources */,
 				F596DAB01D86A0650058844C /* IQUIViewController+Additions.m in Sources */,
 				F58C36CE1DAE21DE00C0A2D2 /* WTKMeBtn.m in Sources */,
@@ -1779,6 +1812,7 @@
 				F570238E1DAC7FD8008168A8 /* WTKOrderMenuView.m in Sources */,
 				F5937E5A1D9CEBB800C9E0B7 /* WTKNavigationController.m in Sources */,
 				F577D1861D9272CD003E1D2E /* WTKShoppingManager.m in Sources */,
+				F56CFDAA1DC865EA001727E7 /* WTKCommentTableView.m in Sources */,
 				F5A00BE11D8E5F0D0026DF67 /* WTKGoodManagerView.m in Sources */,
 				F596DA4C1D869FD30058844C /* main.m in Sources */,
 				F56CF8A21DB07B25004D46B3 /* WTKLoginViewModel.m in Sources */,

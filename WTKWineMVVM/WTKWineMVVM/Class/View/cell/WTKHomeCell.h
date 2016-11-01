@@ -10,6 +10,9 @@
 
 @interface WTKHomeCell : UICollectionViewCell
 
+///是否为搜索界面的cell(标志是否做动画)
+@property(nonatomic,assign)BOOL isSearch;
+
 - (void)updateGood:(WTKGood *)goods;
 
 @end

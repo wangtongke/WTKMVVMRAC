@@ -10,6 +10,8 @@
 #import "WTKSearchViewModel.h"
 #import "MSSAutoresizeLabelFlow.h"
 #import "WTKSearchResultView.h"
+#define HISTORY @"historySearch"
+
 @interface WTKSearchVC ()<UISearchBarDelegate>
 
 @property(nonatomic,strong)WTKSearchViewModel       *viewModel;
@@ -34,9 +36,15 @@
 @implementation WTKSearchVC
 @dynamic viewModel;
 #pragma mark - lifeCycle
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+        [self.navigationController.navigationBar setBackgroundImage:[UIImage imageFromColor:WTKCOLOR(255, 255, 255, 0.99)] forBarMetrics:UIBarMetricsDefault];
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.automaticallyAdjustsScrollViewInsets = NO;
+    self.viewModel.vc = self;
     [self bindViewModel];
     [self resetNavi];
     [self initView];
@@ -48,9 +56,23 @@
     @weakify(self);
     [self.viewModel.searchCommand.executionSignals.switchToLatest subscribeNext:^(id x) {
         @strongify(self);
-        self.resultView.dataArray = x;
+        NSArray *a = x;
+        if (a.count <= 0)
+        {
+            [self.history reloadAllWithTitles:self.historyArray];
+            return;
+        }
+        NSArray *array = [WTKGood mj_objectArrayWithKeyValuesArray:x context:nil];
+        self.resultView.dataArray = array;
         [self.view addSubview:self.resultView];
         [self.resultView w_reloadData];
+    }];
+    
+    RAC(self.deleteBtn,rac_command) = RACObserve(self.viewModel, deleteHistory);
+    
+    [self.viewModel.deleteHistory.executionSignals.switchToLatest subscribeNext:^(id x) {
+        @strongify(self);
+       [self.history reloadAllWithTitles:self.historyArray];
     }];
 }
 ///导航栏
@@ -115,6 +137,7 @@
 {
     [searchBar setShowsCancelButton:NO animated:YES];
     [self.resultView removeFromSuperview];
+    [self.history reloadAllWithTitles:self.historyArray];
     [searchBar resignFirstResponder];
 }
 
@@ -162,10 +185,11 @@
 }
 - (NSMutableArray *)historyArray
 {
-    if (!_historyArray)
+    if (![USER_DEFAULTS valueForKey:HISTORY])
     {
-        _historyArray = @[@"茅台",@"汾酒",@"泸州",@"海之蓝",@"牛栏山",@"啤酒",@"费尔德城堡",@"剑南春",@"夜宴",@"农夫"].mutableCopy;
+        [USER_DEFAULTS setValue:@[].mutableCopy forKey:HISTORY];
     }
+    _historyArray = [USER_DEFAULTS valueForKey:HISTORY];
     return _historyArray;
 }
 - (UIScrollView *)bgView
@@ -190,6 +214,7 @@
     if (!_resultView)
     {
         _resultView = [[WTKSearchResultView alloc]initWithFrame:CGRectMake(0, 64, kWidth, kHeight - 64)];
+        _resultView.viewModel = self.viewModel;
     }
     return _resultView;
 }

@@ -22,6 +22,13 @@
     }
     return self;
 }
+
+- (void)setSelectedIndex:(NSInteger )selectedIndex
+{
+    _selectedIndex = selectedIndex;
+    _navigationController.tabBarController.selectedIndex = selectedIndex;
+}
+
 - (void)pushViewModel:(WTKBasedViewModel *)viewModel animated:(BOOL)animated
 {
     if (!_navigationController)

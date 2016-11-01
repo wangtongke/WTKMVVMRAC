@@ -38,7 +38,7 @@
         @strongify(self)
         SHOW_SVP(@"加载中");
 //        RACSignal *signal1 = [WTKRequestManager postArrayDataWithURL:HOME_HEAD withpramater:nil];
-        RACSignal *signal1 = [WTKRequestManager getWithURL:@"http://www.jiuyunda.net:90/api/v1/product/slideshow" withParamater:@{@"id":@"56c45924c2fb4e2050000022"}];
+        RACSignal *signal1 = [WTKRequestManager getWithURL:@"http://www.jiuyunda.net:90/api/v1/product/slideshow" withParamater:@{@"id":CURRENT_USER.bid}];
         [signal1 subscribeNext:^(id x) {
             NSLog(@"%@",x);
         }];
@@ -121,7 +121,6 @@
     }];
     
     self.naviCommand    = [[RACCommand alloc]initWithSignalBlock:^RACSignal *(id input) {
-        UIButton *btn = input;
         return [RACSignal empty];
     }];
     
