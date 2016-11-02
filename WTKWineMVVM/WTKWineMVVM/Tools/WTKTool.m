@@ -354,4 +354,13 @@ static 	SystemSoundID soundID=0;
         }
     }
 }
+
++ (CGFloat)calculateStringHeight:(NSString *)string
+                        withFont:(UIFont *)font
+                     stringWidth:(CGFloat)width
+{
+    CGRect rect = [string boundingRectWithSize:CGSizeMake(width-20, 0) options:NSStringDrawingUsesLineFragmentOrigin |NSStringDrawingUsesFontLeading | NSStringDrawingTruncatesLastVisibleLine attributes:@{NSFontAttributeName:font} context:nil];
+    return rect.size.height;
+}
+
 @end

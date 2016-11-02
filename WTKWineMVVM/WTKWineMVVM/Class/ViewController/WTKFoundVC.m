@@ -21,7 +21,7 @@
     dic[@"userinfo_id"] = CURRENT_USER.bid;
     dic[@"product_id"] = @"5757ec4baf48430bef628827";
     dic[@"page"] = @1;
-    dic[@"level"] = @4;
+    dic[@"level"] = @2;
     [[WTKRequestManager getWithURL:@"http://www.jiuyunda.net:90/api/v1/productComment/comment_list" withParamater:dic] subscribeNext:^(id x) {
         NSLog(@"评论----%@",x);
     }];

@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-
+@class WTKComment;
 @interface WTKCommentTableViewCell : UITableViewCell
+
+///刷新cell
+- (void)updateWithComment:(WTKComment *)comment;
 
 @end

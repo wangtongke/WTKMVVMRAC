@@ -11,6 +11,19 @@
 #import "WTKShoppingCarViewModel.h"
 #import <ShareSDKConnector/ShareSDKConnector.h>
 #import <ShareSDK/ShareSDK.h>
+#import "WTKComment.h"
+
+@interface WTKGoodsViewModel ()
+
+///当前选择的类型
+@property(nonatomic,assign)NSInteger selectType;
+
+@property(nonatomic,strong)NSArray *typeArray;
+
+@property(nonatomic,strong)NSMutableDictionary *dataDic;
+
+@end
+
 @implementation WTKGoodsViewModel
 
 - (instancetype)initWithService:(id<WTKViewModelServices>)service params:(NSDictionary *)params
@@ -19,6 +32,7 @@
     self = [super initWithService:service params:params];
     if (self)
     {
+        self.selectType = 0;
         [self initViewModel];
     }
     return self;
@@ -49,6 +63,44 @@
         @strongify(self);
         [self share];
         
+        return [RACSignal empty];
+    }];
+    
+    self.refreshCommand  = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(id input) {
+        SHOW_SVP(@"加载中");
+        RACSignal *signal = [WTKRequestManager  postDicDataWithURL:self.typeArray[self.selectType] withpramater:@{}];
+        [signal subscribeNext:^(id x) {
+            [SVProgressHUD dismiss];
+            self.titleDic = x[@"comment_count"];
+            NSArray *array = x[@"comment_list"];
+            NSMutableArray *mAarray = [NSMutableArray array];
+            for (NSDictionary *aDic in array)
+            {
+                WTKComment *comment = [[WTKComment alloc]init];
+                [comment setValuesForKeysWithDictionary:aDic];
+                [mAarray addObject:comment];
+            }
+            self.dataDic[self.typeArray[self.selectType]] = mAarray;
+            self.commentArray = mAarray;
+            UITableView *tableView = input;
+            if (tableView.mj_header.isRefreshing)
+            {
+                [tableView.mj_header endRefreshing];
+            }
+        }];
+        return signal;
+    }];
+    
+    self.menuCommand = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(id input) {
+        self.selectType = [input integerValue];
+        if (self.dataDic[self.typeArray[self.selectType]])
+        {///如果有，则不再请求
+            self.commentArray = self.dataDic[self.typeArray[self.selectType]];
+        }
+        else
+        {
+            [self.refreshCommand execute:[[UITableView alloc]init]];
+        }
         return [RACSignal empty];
     }];
 }
@@ -116,6 +168,46 @@
         
         
     }];
+}
+
+
+#pragma mark - lazyLoad
+
+- (NSArray *)typeArray
+{
+    if (!_typeArray)
+    {
+        _typeArray = @[@"AllComment",@"GoodComment",@"MidComment",@"BadComment",@"PicComment"];
+    }
+    return _typeArray;
+}
+- (NSDictionary *)titleDic
+{
+    if (!_titleDic)
+    {
+        _titleDic = @{@"whole":@"0",
+                      @"good":@"0",
+                      @"middle":@"0",
+                      @"bad":@"0",
+                      @"picture":@"0"};
+    }
+    return _titleDic;
+}
+- (NSMutableArray *)commentArray
+{
+    if (!_commentArray)
+    {
+        _commentArray = @[].mutableCopy;
+    }
+    return _commentArray;
+}
+- (NSMutableDictionary *)dataDic
+{
+    if (!_dataDic)
+    {
+        _dataDic = @{}.mutableCopy;
+    }
+    return _dataDic;
 }
 
 @end

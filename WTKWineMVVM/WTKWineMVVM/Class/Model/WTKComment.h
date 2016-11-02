@@ -7,7 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
-
+/**
+ * 评论
+ */
 @interface WTKComment : NSObject
 
 @property (nonatomic, copy  ) NSString       *id;
@@ -24,5 +26,7 @@
 @property (nonatomic, copy  ) NSString       *buy_time;
 @property (nonatomic, assign) NSInteger      reply_count;
 @property (nonatomic, copy  ) NSString       *avatar_url;
+@property (nonatomic, copy  ) NSString       *order_completed_time;
+@property (nonatomic, copy  ) NSString       *check_status;
 
 @end

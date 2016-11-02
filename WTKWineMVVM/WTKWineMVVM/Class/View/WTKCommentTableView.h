@@ -12,6 +12,6 @@
 
 @property(nonatomic,strong)NSMutableArray   *dataArray;
 
-@property(nonatomic,strong)NSDictionary     *titleDic;
+
 
 @end

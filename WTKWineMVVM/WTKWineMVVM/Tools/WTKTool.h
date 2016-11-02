@@ -60,7 +60,8 @@
 /**
  *  根据view获取一张模糊的图片
  */
-+ (UIImage *)imageWithView:(UIView *)view withBlurRadiu:(CGFloat)radiu;
++ (UIImage *)imageWithView:(UIView *)view
+             withBlurRadiu:(CGFloat)radiu;
 
 /**
  *  obj1所有属性赋值给obj2 
@@ -68,5 +69,11 @@
 + (void)setObj:(id)toObj
        fromObj:(id)fromObj;
 
-
+/**
+ *  计算文字的高度
+ *  @param width 文字要展示的宽度
+ */
++ (CGFloat)calculateStringHeight:(NSString *)string
+                        withFont:(UIFont *)font
+                     stringWidth:(CGFloat)width;
 @end

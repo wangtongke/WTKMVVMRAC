@@ -75,7 +75,7 @@
 		F56CF92C1DB0C7B1004D46B3 /* WTKSetupTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F56CF92A1DB0C7B1004D46B3 /* WTKSetupTableViewCell.m */; };
 		F56CF92D1DB0C7B1004D46B3 /* WTKSetupTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F56CF92B1DB0C7B1004D46B3 /* WTKSetupTableViewCell.xib */; };
 		F56CFD9F1DC83B34001727E7 /* WTKComment.m in Sources */ = {isa = PBXBuildFile; fileRef = F56CFD9E1DC83B34001727E7 /* WTKComment.m */; };
-		F56CFDA11DC83BB9001727E7 /* AllConment in Resources */ = {isa = PBXBuildFile; fileRef = F56CFDA01DC83BB9001727E7 /* AllConment */; };
+		F56CFDA11DC83BB9001727E7 /* AllComment in Resources */ = {isa = PBXBuildFile; fileRef = F56CFDA01DC83BB9001727E7 /* AllComment */; };
 		F56CFDA31DC83C1E001727E7 /* BadComment in Resources */ = {isa = PBXBuildFile; fileRef = F56CFDA21DC83C1E001727E7 /* BadComment */; };
 		F56CFDA51DC83C6C001727E7 /* PicComment in Resources */ = {isa = PBXBuildFile; fileRef = F56CFDA41DC83C6C001727E7 /* PicComment */; };
 		F56CFDA71DC83CAE001727E7 /* MidComment in Resources */ = {isa = PBXBuildFile; fileRef = F56CFDA61DC83CAE001727E7 /* MidComment */; };
@@ -146,6 +146,15 @@
 		F57A91151DC07AE400A105EC /* WTKSexView.m in Sources */ = {isa = PBXBuildFile; fileRef = F57A91141DC07AE400A105EC /* WTKSexView.m */; };
 		F57A91181DC09D4B00A105EC /* WTKMapVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F57A91171DC09D4B00A105EC /* WTKMapVC.m */; };
 		F57A911B1DC09D5B00A105EC /* WTKMapViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F57A911A1DC09D5B00A105EC /* WTKMapViewModel.m */; };
+		F57E4D231DC976C6004721F2 /* w_star_red.png in Resources */ = {isa = PBXBuildFile; fileRef = F57E4D1B1DC976C6004721F2 /* w_star_red.png */; };
+		F57E4D241DC976C6004721F2 /* w_star_red@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F57E4D1C1DC976C6004721F2 /* w_star_red@2x.png */; };
+		F57E4D251DC976C6004721F2 /* w_star_red@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F57E4D1D1DC976C6004721F2 /* w_star_red@3x.png */; };
+		F57E4D261DC976C6004721F2 /* w_star_white.png in Resources */ = {isa = PBXBuildFile; fileRef = F57E4D1E1DC976C6004721F2 /* w_star_white.png */; };
+		F57E4D271DC976C6004721F2 /* w_star_white@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F57E4D1F1DC976C6004721F2 /* w_star_white@2x.png */; };
+		F57E4D281DC976C6004721F2 /* w_star_white@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F57E4D201DC976C6004721F2 /* w_star_white@3x.png */; };
+		F57E4D291DC976C6004721F2 /* WTKStarView.m in Sources */ = {isa = PBXBuildFile; fileRef = F57E4D221DC976C6004721F2 /* WTKStarView.m */; };
+		F57E4D2C1DC9B802004721F2 /* WTKCommentBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = F57E4D2B1DC9B802004721F2 /* WTKCommentBtn.m */; };
+		F57E4D2E1DC9C0C5004721F2 /* GoodComment in Resources */ = {isa = PBXBuildFile; fileRef = F57E4D2D1DC9C0C5004721F2 /* GoodComment */; };
 		F57FC6CB1DBDEF6100057ED9 /* WTKEmptyShoppingCarView.m in Sources */ = {isa = PBXBuildFile; fileRef = F57FC6CA1DBDEF6100057ED9 /* WTKEmptyShoppingCarView.m */; };
 		F57FC6CC1DBDF2DE00057ED9 /* WTKEmptyShoppingCarView.m in Sources */ = {isa = PBXBuildFile; fileRef = F57FC6CA1DBDEF6100057ED9 /* WTKEmptyShoppingCarView.m */; };
 		F57FC70E1DBE07FF00057ED9 /* WTKPayVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F57FC70D1DBE07FF00057ED9 /* WTKPayVC.m */; };
@@ -361,7 +370,7 @@
 		F56CF92B1DB0C7B1004D46B3 /* WTKSetupTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WTKSetupTableViewCell.xib; sourceTree = "<group>"; };
 		F56CFD9D1DC83B34001727E7 /* WTKComment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTKComment.h; sourceTree = "<group>"; };
 		F56CFD9E1DC83B34001727E7 /* WTKComment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTKComment.m; sourceTree = "<group>"; };
-		F56CFDA01DC83BB9001727E7 /* AllConment */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = AllConment; sourceTree = "<group>"; };
+		F56CFDA01DC83BB9001727E7 /* AllComment */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = AllComment; sourceTree = "<group>"; };
 		F56CFDA21DC83C1E001727E7 /* BadComment */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = BadComment; sourceTree = "<group>"; };
 		F56CFDA41DC83C6C001727E7 /* PicComment */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = PicComment; sourceTree = "<group>"; };
 		F56CFDA61DC83CAE001727E7 /* MidComment */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = MidComment; sourceTree = "<group>"; };
@@ -481,6 +490,17 @@
 		F57A91171DC09D4B00A105EC /* WTKMapVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTKMapVC.m; sourceTree = "<group>"; };
 		F57A91191DC09D5B00A105EC /* WTKMapViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTKMapViewModel.h; sourceTree = "<group>"; };
 		F57A911A1DC09D5B00A105EC /* WTKMapViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTKMapViewModel.m; sourceTree = "<group>"; };
+		F57E4D1B1DC976C6004721F2 /* w_star_red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = w_star_red.png; sourceTree = "<group>"; };
+		F57E4D1C1DC976C6004721F2 /* w_star_red@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "w_star_red@2x.png"; sourceTree = "<group>"; };
+		F57E4D1D1DC976C6004721F2 /* w_star_red@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "w_star_red@3x.png"; sourceTree = "<group>"; };
+		F57E4D1E1DC976C6004721F2 /* w_star_white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = w_star_white.png; sourceTree = "<group>"; };
+		F57E4D1F1DC976C6004721F2 /* w_star_white@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "w_star_white@2x.png"; sourceTree = "<group>"; };
+		F57E4D201DC976C6004721F2 /* w_star_white@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "w_star_white@3x.png"; sourceTree = "<group>"; };
+		F57E4D211DC976C6004721F2 /* WTKStarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTKStarView.h; sourceTree = "<group>"; };
+		F57E4D221DC976C6004721F2 /* WTKStarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTKStarView.m; sourceTree = "<group>"; };
+		F57E4D2A1DC9B802004721F2 /* WTKCommentBtn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTKCommentBtn.h; sourceTree = "<group>"; };
+		F57E4D2B1DC9B802004721F2 /* WTKCommentBtn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTKCommentBtn.m; sourceTree = "<group>"; };
+		F57E4D2D1DC9C0C5004721F2 /* GoodComment */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = GoodComment; sourceTree = "<group>"; };
 		F57FC6C91DBDEF6100057ED9 /* WTKEmptyShoppingCarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTKEmptyShoppingCarView.h; sourceTree = "<group>"; };
 		F57FC6CA1DBDEF6100057ED9 /* WTKEmptyShoppingCarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTKEmptyShoppingCarView.m; sourceTree = "<group>"; };
 		F57FC70C1DBE07FF00057ED9 /* WTKPayVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTKPayVC.h; sourceTree = "<group>"; };
@@ -970,6 +990,21 @@
 			path = "数据相关";
 			sourceTree = "<group>";
 		};
+		F57E4D1A1DC976C6004721F2 /* WTKStar */ = {
+			isa = PBXGroup;
+			children = (
+				F57E4D1B1DC976C6004721F2 /* w_star_red.png */,
+				F57E4D1C1DC976C6004721F2 /* w_star_red@2x.png */,
+				F57E4D1D1DC976C6004721F2 /* w_star_red@3x.png */,
+				F57E4D1E1DC976C6004721F2 /* w_star_white.png */,
+				F57E4D1F1DC976C6004721F2 /* w_star_white@2x.png */,
+				F57E4D201DC976C6004721F2 /* w_star_white@3x.png */,
+				F57E4D211DC976C6004721F2 /* WTKStarView.h */,
+				F57E4D221DC976C6004721F2 /* WTKStarView.m */,
+			);
+			path = WTKStar;
+			sourceTree = "<group>";
+		};
 		F588CE1F1D86ADBD003E3A74 /* Category(类别) */ = {
 			isa = PBXGroup;
 			children = (
@@ -1235,6 +1270,8 @@
 				F58EE1CA1DC71269008E5A6E /* WTKSearchResultView.m */,
 				F56CFDA81DC865EA001727E7 /* WTKCommentTableView.h */,
 				F56CFDA91DC865EA001727E7 /* WTKCommentTableView.m */,
+				F57E4D2A1DC9B802004721F2 /* WTKCommentBtn.h */,
+				F57E4D2B1DC9B802004721F2 /* WTKCommentBtn.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1350,7 +1387,8 @@
 				F56F77911DAB666800963C31 /* FinishOrder */,
 				F56C52D41DB70BE900AF05DE /* CategoryAllGoods */,
 				F56C87361DB858E200B8B765 /* CategorySiftAll */,
-				F56CFDA01DC83BB9001727E7 /* AllConment */,
+				F56CFDA01DC83BB9001727E7 /* AllComment */,
+				F57E4D2D1DC9C0C5004721F2 /* GoodComment */,
 				F56CFDA21DC83C1E001727E7 /* BadComment */,
 				F56CFDA41DC83C6C001727E7 /* PicComment */,
 				F56CFDA61DC83CAE001727E7 /* MidComment */,
@@ -1378,6 +1416,7 @@
 		F596DA871D86A0650058844C /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				F57E4D1A1DC976C6004721F2 /* WTKStar */,
 				F58EE1B61DC6E1DD008E5A6E /* MSSAutoLabel */,
 				F5660AA91DC18FA4006C89D9 /* BaiduMap */,
 				F576D2AF1DB6055C002C66C8 /* WTKDropView */,
@@ -1589,6 +1628,7 @@
 				F56E37E91DC2E4D10013CD3B /* mapapi.bundle in Resources */,
 				F596DA571D869FD30058844C /* Assets.xcassets in Resources */,
 				F56F776D1DAB2E6800963C31 /* read_me.txt in Resources */,
+				F57E4D2E1DC9C0C5004721F2 /* GoodComment in Resources */,
 				F56F77641DAB2E6800963C31 /* ShareSDKUI.bundle in Resources */,
 				F56C52DD1DB710B000AF05DE /* WTKCategoryLeftTableViewCell.xib in Resources */,
 				F56CF9141DB08403004D46B3 /* WTKLoginVC.xib in Resources */,
@@ -1603,20 +1643,25 @@
 				F531074E1D893D34003B402C /* HomeHead in Resources */,
 				F531074D1D893D34003B402C /* HomeData in Resources */,
 				F56C87471DB875AD00B8B765 /* WTKSiftTableViewCell.xib in Resources */,
+				F57E4D251DC976C6004721F2 /* w_star_red@3x.png in Resources */,
 				F56F779A1DAB683C00963C31 /* WTKOrderTableViewCell.xib in Resources */,
 				F570238B1DAC7AAA008168A8 /* backbutton_icon3.png in Resources */,
 				F57023921DAC9970008168A8 /* FinishDeliveryOrder in Resources */,
 				F56C87371DB858E200B8B765 /* CategorySiftAll in Resources */,
-				F56CFDA11DC83BB9001727E7 /* AllConment in Resources */,
+				F56CFDA11DC83BB9001727E7 /* AllComment in Resources */,
+				F57E4D261DC976C6004721F2 /* w_star_white.png in Resources */,
 				F56CFDA51DC83C6C001727E7 /* PicComment in Resources */,
 				F57A90971DC0415200A105EC /* WTKAddressTableViewCell.xib in Resources */,
 				F56F77691DAB2E6800963C31 /* TencentOpenApi_IOS_Bundle.bundle in Resources */,
 				F596DABA1D86A0650058844C /* IQKeyboardManager.bundle in Resources */,
+				F57E4D271DC976C6004721F2 /* w_star_white@2x.png in Resources */,
 				F58EE1CF1DC7361B008E5A6E /* LaunchImage.png in Resources */,
 				F56CF92D1DB0C7B1004D46B3 /* WTKSetupTableViewCell.xib in Resources */,
 				F57023901DAC9934008168A8 /* DeliveryOrder in Resources */,
+				F57E4D241DC976C6004721F2 /* w_star_red@2x.png in Resources */,
 				F58695F01D9E2D7E002441A9 /* AddShopAudio.mp3 in Resources */,
 				F56F776B1DAB2E6800963C31 /* WeiboSDK.bundle in Resources */,
+				F57E4D231DC976C6004721F2 /* w_star_red.png in Resources */,
 				F585375D1DB9C05500B66571 /* WTKShoppingCarTableViewCell.xib in Resources */,
 				F56F77701DAB2E6800963C31 /* ShareSDK.bundle in Resources */,
 				F57FC71E1DBE100C00057ED9 /* WTKPayTableViewCell.xib in Resources */,
@@ -1625,6 +1670,7 @@
 				F56F778E1DAB65B400963C31 /* AllOrder in Resources */,
 				F592BA251DA89A58005EF581 /* backbutton_icon2.png in Resources */,
 				F596DA551D869FD30058844C /* Main.storyboard in Resources */,
+				F57E4D281DC976C6004721F2 /* w_star_white@3x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1725,6 +1771,7 @@
 				F531073C1D892905003B402C /* WTKMeViewModel.m in Sources */,
 				F56CF89F1DB07ADC004D46B3 /* WTKLoginVC.m in Sources */,
 				F592BA321DA8EA77005EF581 /* WTKRecommendViewModel.m in Sources */,
+				F57E4D291DC976C6004721F2 /* WTKStarView.m in Sources */,
 				F57A911B1DC09D5B00A105EC /* WTKMapViewModel.m in Sources */,
 				F5937E6F1D9CEBDB00C9E0B7 /* UIViewController+WTKAnimationTransitioningSnapshot.m in Sources */,
 				F532DE5D1D8F8B5400E68943 /* WTKUser.m in Sources */,
@@ -1753,6 +1800,7 @@
 				F57A91181DC09D4B00A105EC /* WTKMapVC.m in Sources */,
 				F596DAAD1D86A0650058844C /* IQNSArray+Sort.m in Sources */,
 				F577AED31DBF42B900A689C1 /* WTKPaySuccessVC.m in Sources */,
+				F57E4D2C1DC9B802004721F2 /* WTKCommentBtn.m in Sources */,
 				F57A91151DC07AE400A105EC /* WTKSexView.m in Sources */,
 				F58537581DB9BF1400B66571 /* WTKShoppingCarTableView.m in Sources */,
 				F576D2B21DB60567002C66C8 /* WTKDropView.m in Sources */,

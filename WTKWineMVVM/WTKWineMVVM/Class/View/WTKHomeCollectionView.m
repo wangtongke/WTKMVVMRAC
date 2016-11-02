@@ -159,7 +159,7 @@
     [[WTKNetWork shareInatance] initNetWork];
     if ([WTKNetWork shareInatance].isNetReachable)
     {
-        return [[NSAttributedString alloc]initWithString:@""];
+        return [[NSAttributedString alloc]initWithString:@"网络不好"];
     }
     NSMutableAttributedString *string = [[NSMutableAttributedString alloc]initWithString:@"当前地址暂未开通服务"];
     [string addAttribute:NSForegroundColorAttributeName value:WTKCOLOR(70, 70, 70, 1) range:NSMakeRange(0, 10)];

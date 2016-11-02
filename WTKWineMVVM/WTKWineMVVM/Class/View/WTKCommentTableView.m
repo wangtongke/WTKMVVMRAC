@@ -7,10 +7,13 @@
 //
 
 #import "WTKCommentTableView.h"
+#import "WTKCommentTableViewCell.h"
 #import "WTKComment.h"
-@interface WTKCommentTableView ()<UITableViewDelegate,UITableViewDataSource>
+@interface WTKCommentTableView ()<UITableViewDelegate,UITableViewDataSource,DZNEmptyDataSetSource>
 
+@property(nonatomic,strong)NSMutableDictionary *heightDic;
 
+@property(nonatomic,strong)UIView               *headerView;
 
 @end
 
@@ -29,38 +32,81 @@
 {
     self.dataSource     = self;
     self.delegate       = self;
+    self.emptyDataSetSource = self;
+    self.emptyDataSetDelegate = self;
     self.separatorStyle = UITableViewCellSeparatorStyleNone;
+    [self registerClass:[WTKCommentTableViewCell class] forCellReuseIdentifier:@"cell"];
+}
+
+- (void)setDataArray:(NSMutableArray *)dataArray
+{
+    _dataArray = dataArray;
+    [self reloadData];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return nil;
+    WTKCommentTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
+    WTKComment *commment = self.dataArray[indexPath.row];
+    [cell updateWithComment:commment];
+    return cell;
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     return self.dataArray.count;
 }
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    CGFloat height = 0;
+
+        WTKComment *comment = self.dataArray[indexPath.row];
+        height = [WTKTool calculateStringHeight:comment.content withFont:[UIFont wtkNormalFont:16] stringWidth:kWidth - 30] + 215;
+        if (comment.content.length <= 0)
+        {
+            height = 215;
+        }
+        if (comment.pic_path.count > 0)
+        {
+            height = [WTKTool calculateStringHeight:comment.content withFont:[UIFont wtkNormalFont:16] stringWidth:kWidth - 30] + 285;
+        }
+
+    
+    return height;
+}
+
+#pragma mark - DZNEmptyData
+
+- (UIImage *)imageForEmptyDataSet:(UIScrollView *)scrollView
+{
+    [[WTKNetWork shareInatance] initNetWork];
+    if ([WTKNetWork shareInatance].isNetReachable)
+    {
+        return [UIImage imageNamed:@"NotWorkViews"];
+    }
+    return [UIImage imageNamed:@"w_no_msg"];
+}
+- (NSAttributedString *)descriptionForEmptyDataSet:(UIScrollView *)scrollView
+{
+    [[WTKNetWork shareInatance] initNetWork];
+    if ([WTKNetWork shareInatance].isNetReachable)
+    {
+        return [[NSAttributedString alloc]initWithString:@""];
+    }
+    NSMutableAttributedString *string = [[NSMutableAttributedString alloc]initWithString:@"还没有评论哦"];
+    [string addAttribute:NSForegroundColorAttributeName value:WTKCOLOR(70, 70, 70, 1) range:NSMakeRange(0, 6)];
+    
+    return string;
+}
 
 #pragma mark - lazyLoad
-- (NSMutableArray *)dataArray
+
+- (NSMutableDictionary *)heightDic
 {
-    if (!_dataArray)
+    if (!_heightDic)
     {
-        _dataArray = @[].mutableCopy;
+        _heightDic = @{}.mutableCopy;
     }
-    return _dataArray;
-}
-- (NSDictionary *)titleDic
-{
-    if (!_titleDic)
-    {
-        _titleDic = @{@"bad":@"0",
-                      @"good":@"0",
-                      @"middle":@"0",
-                      @"picture":@"0",
-                      @"whole":@"0"};
-    }
-    return _titleDic;
+    return _heightDic;
 }
 
 /*

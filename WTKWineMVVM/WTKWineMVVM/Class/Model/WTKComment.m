@@ -10,4 +10,9 @@
 
 @implementation WTKComment
 
+- (void)setValue:(id)value forUndefinedKey:(NSString *)key
+{
+    NSLog(@"NO Key - %@",key);
+}
+
 @end

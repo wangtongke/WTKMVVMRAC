@@ -10,6 +10,9 @@
 #import "WTKGoodsViewModel.h"
 #import <WebKit/WebKit.h>
 #import "WTKTouchManager.h"
+#import "WTKCommentTableView.h"
+#import "WTKCommentBtn.h"
+
 @interface WTKGoodsVC ()<WKNavigationDelegate,WKUIDelegate,UIScrollViewDelegate>
 
 @property(nonatomic,strong,readwrite)WTKGoodsViewModel  *viewModel;
@@ -30,6 +33,18 @@
 @property(nonatomic,strong)UIScrollView                 *scrollView;
 
 @property(nonatomic,strong)UISegmentedControl           *titleView;
+///评论
+@property(nonatomic,strong)WTKCommentTableView          *tableView;
+///评论head
+@property(nonatomic,strong)UIView                       *headView;
+
+@property(nonatomic,strong)NSMutableArray               *headBtnArray;
+
+///上次选择
+@property(nonatomic,assign)NSInteger                    lastSelect;
+
+///评论标题
+@property(nonatomic,strong)NSDictionary                 *titleDic;
 
 
 
@@ -74,12 +89,19 @@
     RAC(self.shoppingCarBtn,rac_command)    = RACObserve(self.viewModel, clickShopCommand);
     RAC(self.bageLabel,rac_command)         = RACObserve(self.viewModel, clickShopCommand);
     RAC(self.shareBtn,rac_command)          = RACObserve(self.viewModel, shareCommand);
-    
+    RAC(self.tableView,dataArray)           = RACObserve(self.viewModel, commentArray);
+    RAC(self,titleDic)                      = RACObserve(self.viewModel, titleDic);
     [[self.titleView rac_signalForControlEvents:UIControlEventValueChanged] subscribeNext:^(id x) {
         @strongify(self);
          NSInteger page = self.titleView.selectedSegmentIndex;
         [self.scrollView setContentOffset:CGPointMake(kWidth * page, -64) animated:YES];
     }];
+    
+    self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+        @strongify(self);
+        [self.viewModel.refreshCommand execute:self.tableView];
+    }];
+    [self.tableView.mj_header beginRefreshing];
 }
 
 - (void)initView
@@ -102,6 +124,11 @@
     [self.goodImg sd_setImageWithURL:[NSURL URLWithString:self.viewModel.goods.avatar_url] placeholderImage:[UIImage imageNamed:@"placehoder2"]];
     self.goodImg.center                     = self.addBtn.center;
     self.goodImg.bounds                     = CGRectMake(0, 0, 100, 100);
+    
+    
+#pragma mark - 右侧
+    [self.scrollView addSubview:self.headView];
+    [self.scrollView addSubview:self.tableView];
 
 }
 ///导航栏
@@ -109,6 +136,33 @@
 {
     self.navigationItem.rightBarButtonItem  = [[UIBarButtonItem alloc]initWithCustomView:self.shareBtn];
     self.navigationItem.titleView           = self.titleView;
+}
+///刷新评论标题
+- (void)setTitleDic:(NSDictionary *)titleDic
+{
+    _titleDic = titleDic;
+    NSArray *titleNum = @[titleDic[@"whole"],titleDic[@"good"],titleDic[@"middle"],titleDic[@"bad"],titleDic[@"picture"]];
+    NSArray *title = @[@"全部评价",@"好评",@"中评",@"差评",@"晒图"];
+    [self.headBtnArray enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        WTKCommentBtn *btn = obj;
+        [btn setTitle:title[idx] subTitle:titleNum[idx]];
+    }];
+    
+}
+
+#pragma mark - headBtnClick
+- (void)headBtnClick:(UIButton *)btn
+{
+    if (btn.tag == self.lastSelect)
+    {
+        return;
+    }
+    [self.viewModel.menuCommand execute:@(btn.tag)];
+    WTKCommentBtn *lastBtn = self.headBtnArray[self.lastSelect];
+    lastBtn.w_titleColor = WTKCOLOR(80, 80, 80, 1);
+    WTKCommentBtn *newBtn = (WTKCommentBtn *)btn;
+    newBtn.w_titleColor = THEME_COLOR;
+    self.lastSelect = btn.tag;
 }
 
 /**角标动画*/
@@ -209,7 +263,7 @@
 {
     if (!_titleView)
     {
-        _titleView        = [[UISegmentedControl alloc]initWithItems:@[@"订单详情",@"订单状态"]];
+        _titleView        = [[UISegmentedControl alloc]initWithItems:@[@"详情",@"评价"]];
         _titleView.frame  = CGRectMake(0, 0, 100, 30);
         NSDictionary *selectDic = @{NSForegroundColorAttributeName :WTKCOLOR(70, 70, 70, 1),NSFontAttributeName:[UIFont wtkNormalFont:14]};
         NSDictionary *normalDic = @{NSForegroundColorAttributeName :WTKCOLOR(140, 140, 140, 1),NSFontAttributeName:[UIFont wtkNormalFont:14]};
@@ -230,7 +284,42 @@
     }
     return _scrollView;
 }
-
+- (UIView *)headView
+{
+    if (!_headView)
+    {
+        _headView = [[UIView alloc]initWithFrame:CGRectMake(kWidth, 0, kWidth, 50)];
+        NSArray *title = @[@"全部评价",@"好评",@"中评",@"差评",@"晒图"];
+        CGFloat width = kWidth  / 5.0;
+        for (int i = 0; i < 5; i++)
+        {
+            WTKCommentBtn *btn  = [WTKCommentBtn buttonWithTitle:title[i] subTitle:@"0"];
+            btn.frame           = CGRectMake(width * i, 0, width, 50);
+            btn.tag             = i;
+            btn.w_titleColor    = i == 0 ? THEME_COLOR : WTKCOLOR(80, 80, 80, 1);
+            [btn addTarget:self action:@selector(headBtnClick:) forControlEvents:UIControlEventTouchUpInside];
+            [_headView addSubview:btn];
+            [self.headBtnArray addObject:btn];
+        }
+    }
+    return _headView;
+}
+- (WTKCommentTableView *)tableView
+{
+    if (!_tableView)
+    {
+        _tableView = [[WTKCommentTableView alloc] initWithFrame:CGRectMake(kWidth, 50, kWidth, kHeight - 50 - 64) style:UITableViewStylePlain];
+    }
+    return _tableView;
+}
+- (NSMutableArray *)headBtnArray
+{
+    if (!_headBtnArray)
+    {
+        _headBtnArray = @[].mutableCopy;
+    }
+    return _headBtnArray;
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
