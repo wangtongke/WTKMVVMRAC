@@ -125,7 +125,7 @@
     [_w_nameLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerY.equalTo(weakSelf.w_headImg);
         make.left.equalTo(weakSelf.w_headImg.mas_right).offset(10);
-        make.width.mas_equalTo(150);
+        make.width.mas_equalTo(120);
         make.height.mas_equalTo(30);
     }];
     

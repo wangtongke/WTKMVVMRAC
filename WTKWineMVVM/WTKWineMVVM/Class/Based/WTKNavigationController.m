@@ -15,7 +15,6 @@
 @end
 
 @implementation WTKNavigationController
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self resetNavi];
