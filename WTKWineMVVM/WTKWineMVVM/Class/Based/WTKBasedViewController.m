@@ -71,6 +71,7 @@
     CGFloat progress = [recognizer translationInView:self.view].x / CGRectGetWidth(self.view.frame);
     progress = MIN(1.0, MAX(0.0, progress));
     NSLog(@"progress---%.2f",progress);
+    
     if (progress <= 0 && !self.w_isDraging) {
         return;
     }

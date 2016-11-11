@@ -15,7 +15,7 @@ id = 56d10f6fe138235a769963e2;
 "is_comment" = 0;
 "jyd_coupon_value" = 0;
 "online_paid" = 0;
-ordergoodcompleteds =     (
+ordergoods =     (
 {
 "avatar_url" = "http://img.51xiaoniu.cn/product/main_assets/assets/5731/b89d/206a/af6a/1880/b9ed/56c2e8a8af48431bd5cd6aa8.jpg@!avatar";
 integral = 1;
@@ -57,7 +57,7 @@ id = 56d11e05e138235a7299644d;
 "is_comment" = 0;
 "jyd_coupon_value" = 0;
 "online_paid" = 0;
-ordergoodcompleteds =     (
+ordergoods =     (
 {
 "avatar_url" = "http://img.51xiaoniu.cn/product/main_assets/assets/570d/5884/206a/af31/6024/2e5e/56c58932af48431bd5cd7e3f.jpg@!avatar";
 integral = 1;
@@ -99,7 +99,7 @@ id = 56cbb225e13823239251294a;
 "is_comment" = 0;
 "jyd_coupon_value" = 0;
 "online_paid" = 0;
-ordergoodcompleteds =     (
+ordergoods =     (
 {
 "avatar_url" = "http://img.51xiaoniu.cn/product/main_assets/assets/570e/1f94/206a/af31/6b98/b9f9/56c91bacaf48431bcdcd8db3.jpg@!avatar";
 integral = 1;
@@ -141,7 +141,7 @@ id = 56d11769e138235a6e99644b;
 "is_comment" = 0;
 "jyd_coupon_value" = 0;
 "online_paid" = 0;
-ordergoodcompleteds =     (
+ordergoods =     (
 {
 "avatar_url" = "http://img.51xiaoniu.cn/product/main_assets/assets/570d/1ff1/206a/af31/6b97/df41/56b1571daf484354d14a385a.jpg@!avatar";
 integral = 1;
@@ -183,7 +183,7 @@ id = 56d11af2e138235a6a996442;
 "is_comment" = 0;
 "jyd_coupon_value" = 0;
 "online_paid" = 0;
-ordergoodcompleteds =     (
+ordergoods =     (
 {
 "avatar_url" = "http://img.51xiaoniu.cn/product/main_assets/assets/570d/1ff1/206a/af31/6b97/df41/56b1571daf484354d14a385a.jpg@!avatar";
 integral = 1;
@@ -225,7 +225,7 @@ id = 56d141ade138235a6e9964ec;
 "is_comment" = 0;
 "jyd_coupon_value" = 0;
 "online_paid" = 0;
-ordergoodcompleteds =     (
+ordergoods =     (
 {
 "avatar_url" = "http://img.51xiaoniu.cn/product/main_assets/assets/570d/5884/206a/af31/6024/2e5e/56c58932af48431bd5cd7e3f.jpg@!avatar";
 integral = 1;
@@ -267,7 +267,7 @@ id = 56d116f6e138235a7699643e;
 "is_comment" = 0;
 "jyd_coupon_value" = 0;
 "online_paid" = 0;
-ordergoodcompleteds =     (
+ordergoods =     (
 {
 "avatar_url" = "http://img.51xiaoniu.cn/product/main_assets/assets/570d/f7c2/206a/af31/672a/9bda/56c97146af48431bd5cd9219.jpg@!avatar";
 integral = 1;
@@ -309,7 +309,7 @@ id = 56d1420ee138235a6e9964f3;
 "is_comment" = 0;
 "jyd_coupon_value" = 0;
 "online_paid" = 0;
-ordergoodcompleteds =     (
+ordergoods =     (
 {
 "avatar_url" = "http://img.51xiaoniu.cn/product/main_assets/assets/570d/1ff1/206a/af31/6b97/df41/56b1571daf484354d14a385a.jpg@!avatar";
 integral = 1;
@@ -351,7 +351,7 @@ id = 56d149e6e138235a769964f4;
 "is_comment" = 0;
 "jyd_coupon_value" = 0;
 "online_paid" = 0;
-ordergoodcompleteds =     (
+ordergoods =     (
 {
 "avatar_url" = "http://img.51xiaoniu.cn/product/main_assets/assets/570d/5884/206a/af31/6024/2e5e/56c58932af48431bd5cd7e3f.jpg@!avatar";
 integral = 1;
@@ -393,7 +393,7 @@ id = 56cbb552e138232396512982;
 "is_comment" = 0;
 "jyd_coupon_value" = 0;
 "online_paid" = 0;
-ordergoodcompleteds =     (
+ordergoods =     (
 {
 "avatar_url" = "http://img.51xiaoniu.cn/product/main_assets/assets/570d/f7c2/206a/af31/672a/9bda/56c97146af48431bd5cd9219.jpg@!avatar";
 integral = 1;
@@ -446,7 +446,7 @@ id = 56cbb43ee13823239a51294d;
 "is_comment" = 0;
 "jyd_coupon_value" = 0;
 "online_paid" = 0;
-ordergoodcompleteds =     (
+ordergoods =     (
 {
 "avatar_url" = "http://img.51xiaoniu.cn/product/main_assets/assets/570d/f7c2/206a/af31/672a/9bda/56c97146af48431bd5cd9219.jpg@!avatar";
 integral = 1;

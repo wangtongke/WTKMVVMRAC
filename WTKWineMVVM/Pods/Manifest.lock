@@ -35,7 +35,7 @@ DEPENDENCIES:
   - MJExtension (~> 3.0.13)
   - MJRefresh (~> 3.1.12)
   - Reachability (~> 3.2)
-  - ReactiveCocoa (~> 4.2.1)
+  - ReactiveCocoa (= 4.2.2)
   - RESideMenu
   - SDWebImage (= 3.7.3)
   - SVProgressHUD (~> 2.0.3)
@@ -53,6 +53,6 @@ SPEC CHECKSUMS:
   SDWebImage: 1d2b1a1efda1ade1b00b6f8498865f8ddedc8a84
   SVProgressHUD: b0830714205bea1317ea1a2ebc71e5633af334d4
 
-PODFILE CHECKSUM: cf0805ed2aa0f4c275726ac17b95345d4b325a45
+PODFILE CHECKSUM: 6cb82a2fc6da064b41fcfea61220a1abcb2cb7d2
 
 COCOAPODS: 1.0.1

@@ -214,6 +214,10 @@
                     [self.viewModel.headClickSubject sendNext:@(idx + section * 4)];
                 }];
                 [footView addSubview:btn];
+                if (idx == 3 && section == 0)
+                {
+                    btn.bageValue = 2;
+                }
             }];
             UIView *bottom = [[UIView alloc]initWithFrame:CGRectMake(0, 79.4, kWidth, 15.6)];
             bottom.backgroundColor = BASE_COLOR;

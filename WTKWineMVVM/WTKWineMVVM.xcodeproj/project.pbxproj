@@ -232,6 +232,9 @@
 		F5A00C571D8E93F50026DF67 /* WTKGoodsViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F5A00C561D8E93F50026DF67 /* WTKGoodsViewModel.m */; };
 		F5BD1C5C1D93802A00F63B5F /* top_launch.png in Resources */ = {isa = PBXBuildFile; fileRef = F5BD1C5B1D93802A00F63B5F /* top_launch.png */; };
 		F5BD1C5F1D93A83E00F63B5F /* WTKShoppingCarVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F5BD1C5E1D93A83E00F63B5F /* WTKShoppingCarVC.m */; };
+		F5F8D2171DD56F820076EB65 /* WTKCommentCenterVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F5F8D2161DD56F820076EB65 /* WTKCommentCenterVC.m */; };
+		F5F8D21A1DD570090076EB65 /* WTKCommentCenterViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F5F8D2191DD570090076EB65 /* WTKCommentCenterViewModel.m */; };
+		F5F8D21D1DD578EC0076EB65 /* WTKCommentCenterTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F5F8D21C1DD578EC0076EB65 /* WTKCommentCenterTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -645,6 +648,12 @@
 		F5BD1C5B1D93802A00F63B5F /* top_launch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = top_launch.png; sourceTree = "<group>"; };
 		F5BD1C5D1D93A83E00F63B5F /* WTKShoppingCarVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTKShoppingCarVC.h; sourceTree = "<group>"; };
 		F5BD1C5E1D93A83E00F63B5F /* WTKShoppingCarVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTKShoppingCarVC.m; sourceTree = "<group>"; };
+		F5F8D2151DD56F820076EB65 /* WTKCommentCenterVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTKCommentCenterVC.h; sourceTree = "<group>"; };
+		F5F8D2161DD56F820076EB65 /* WTKCommentCenterVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTKCommentCenterVC.m; sourceTree = "<group>"; };
+		F5F8D2181DD570090076EB65 /* WTKCommentCenterViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTKCommentCenterViewModel.h; sourceTree = "<group>"; };
+		F5F8D2191DD570090076EB65 /* WTKCommentCenterViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTKCommentCenterViewModel.m; sourceTree = "<group>"; };
+		F5F8D21B1DD578EC0076EB65 /* WTKCommentCenterTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTKCommentCenterTableViewCell.h; sourceTree = "<group>"; };
+		F5F8D21C1DD578EC0076EB65 /* WTKCommentCenterTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTKCommentCenterTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -787,6 +796,8 @@
 				F57A90951DC0415200A105EC /* WTKAddressTableViewCell.xib */,
 				F56CFDAB1DC86A4B001727E7 /* WTKCommentTableViewCell.h */,
 				F56CFDAC1DC86A4B001727E7 /* WTKCommentTableViewCell.m */,
+				F5F8D21B1DD578EC0076EB65 /* WTKCommentCenterTableViewCell.h */,
+				F5F8D21C1DD578EC0076EB65 /* WTKCommentCenterTableViewCell.m */,
 			);
 			path = cell;
 			sourceTree = "<group>";
@@ -1321,6 +1332,8 @@
 				F57A91171DC09D4B00A105EC /* WTKMapVC.m */,
 				F58EE1B01DC6DC74008E5A6E /* WTKSearchVC.h */,
 				F58EE1B11DC6DC74008E5A6E /* WTKSearchVC.m */,
+				F5F8D2151DD56F820076EB65 /* WTKCommentCenterVC.h */,
+				F5F8D2161DD56F820076EB65 /* WTKCommentCenterVC.m */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -1370,6 +1383,8 @@
 				F57A911A1DC09D5B00A105EC /* WTKMapViewModel.m */,
 				F58EE1B31DC6DCCE008E5A6E /* WTKSearchViewModel.h */,
 				F58EE1B41DC6DCCE008E5A6E /* WTKSearchViewModel.m */,
+				F5F8D2181DD570090076EB65 /* WTKCommentCenterViewModel.h */,
+				F5F8D2191DD570090076EB65 /* WTKCommentCenterViewModel.m */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -1585,6 +1600,8 @@
 				TargetAttributes = {
 					F596DA461D869FD30058844C = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 7A692X8NVA;
+						LastSwiftMigration = 0820;
 					};
 					F596DA5F1D869FD30058844C = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -1755,6 +1772,7 @@
 				F596DAB71D86A0650058844C /* IQTitleBarButtonItem.m in Sources */,
 				F56F779D1DAB6B4500963C31 /* WTKOrderModel.m in Sources */,
 				F56771701DAF1D5C00AE9184 /* WTKMeHeaderView.m in Sources */,
+				F5F8D2171DD56F820076EB65 /* WTKCommentCenterVC.m in Sources */,
 				F56CF9221DB0A1D9004D46B3 /* WTKWebViewModel.m in Sources */,
 				F5660ABA1DC19456006C89D9 /* WTKMapManager.m in Sources */,
 				F5937E741D9CEBDB00C9E0B7 /* WTKAnimationRound.m in Sources */,
@@ -1790,6 +1808,7 @@
 				F596DAB91D86A0650058844C /* IQUIView+IQKeyboardToolbar.m in Sources */,
 				F53107001D88E486003B402C /* WTKHomeVC.m in Sources */,
 				F577AED61DBF432500A689C1 /* WTKPaySuccessViewModel.m in Sources */,
+				F5F8D21D1DD578EC0076EB65 /* WTKCommentCenterTableViewCell.m in Sources */,
 				F57FC70E1DBE07FF00057ED9 /* WTKPayVC.m in Sources */,
 				F56F77671DAB2E6800963C31 /* README.md in Sources */,
 				F56C873D1DB8611600B8B765 /* WTKSiftModel.m in Sources */,
@@ -1870,6 +1889,7 @@
 				F58EE1C11DC6E1DD008E5A6E /* MSSAutoresizeLabelFlowConfig.m in Sources */,
 				F596DAAE1D86A0650058844C /* IQUITextFieldView+Additions.m in Sources */,
 				F57023971DACCA62008168A8 /* WTKOrderDetailVC.m in Sources */,
+				F5F8D21A1DD570090076EB65 /* WTKCommentCenterViewModel.m in Sources */,
 				F58EE1C01DC6E1DD008E5A6E /* MSSAutoresizeLabelFlowCell.m in Sources */,
 				F57FC7111DBE081500057ED9 /* WTKPayViewModel.m in Sources */,
 				F5A00C541D8E93AB0026DF67 /* WTKGoodsVC.m in Sources */,
@@ -2032,6 +2052,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMPRESS_PNG_FILES = YES;
+				DEVELOPMENT_TEAM = 7A692X8NVA;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/WTKWineMVVM/Vendor/ShareSDK",
@@ -2043,6 +2064,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/WTKWineMVVM/Class/Util/WTKPrefix.pch";
 				INFOPLIST_FILE = WTKWineMVVM/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2052,6 +2074,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.wang.WTKWineMVVM;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -2061,6 +2084,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMPRESS_PNG_FILES = YES;
+				DEVELOPMENT_TEAM = 7A692X8NVA;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/WTKWineMVVM/Vendor/ShareSDK",
@@ -2072,6 +2096,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/WTKWineMVVM/Class/Util/WTKPrefix.pch";
 				INFOPLIST_FILE = WTKWineMVVM/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2081,6 +2106,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.wang.WTKWineMVVM;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};

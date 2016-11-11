@@ -65,15 +65,17 @@
         if (self.bageLabel.tag == 0)
         {
             [self addSubview:self.bageLabel];
+            [self bringSubviewToFront:self.bageLabel];
             self.bageLabel.tag = 1;
             UIView *view = [self viewWithTag:111];
             [self.bageLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-                make.top.equalTo(view).offset(-7.5);
-                make.right.equalTo(view).offset(7.5);
-                make.width.mas_equalTo(15);
-                make.height.mas_equalTo(15);
+                make.top.equalTo(view).offset(-8);
+                make.right.equalTo(view).offset(8);
+                make.width.mas_equalTo(16);
+                make.height.mas_equalTo(16);
             }];
         }
+        self.bageLabel.text = [NSString stringWithFormat:@"%ld",bageValue];
     }
 }
 
@@ -86,7 +88,7 @@
         _bageLabel.textColor    = [UIColor whiteColor];
         _bageLabel.font         = [UIFont wtkNormalFont:10];
         _bageLabel.backgroundColor      = [UIColor redColor];
-        _bageLabel.layer.cornerRadius   = 7.5;
+        _bageLabel.layer.cornerRadius   = 8;
         _bageLabel.layer.masksToBounds  = YES;
     }
     return _bageLabel;

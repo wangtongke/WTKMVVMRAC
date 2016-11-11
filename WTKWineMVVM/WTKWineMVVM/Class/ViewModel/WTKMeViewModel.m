@@ -14,6 +14,8 @@
 #import "WTKSetupViewModel.h"
 #import "WTKFeedBackViewModel.h"
 #import "WTKAboutMeViewModel.h"
+#import "WTKCommentCenterViewModel.h"
+
 
 @implementation WTKMeViewModel
 
@@ -153,10 +155,20 @@
             {
 //                订单
                 NSArray *arr = @[@"待支付",@"配送中",@"待配送",@"待评价"];
-                WTKOrderViewModel *viewModel = [[WTKOrderViewModel alloc]initWithService:self.services params:@{@"title":arr[num]}];
-                viewModel.orderType = num + 1;
-                self.naviImpl.className = @"WTKOrderVC";
-                [self.naviImpl pushViewModel:viewModel animated:YES];
+                if (num == 3)
+                {
+                    WTKCommentCenterViewModel *viewModel = [[WTKCommentCenterViewModel alloc]initWithService:self.services params:@{@"title":@"评价中心"}];
+                    self.naviImpl.className = @"WTKCommentCenterVC";
+                    [self.naviImpl pushViewModel:viewModel animated:YES];
+                }
+                else
+                {
+                    WTKOrderViewModel *viewModel = [[WTKOrderViewModel alloc]initWithService:self.services params:@{@"title":arr[num]}];
+                    viewModel.orderType = num + 1;
+                    self.naviImpl.className = @"WTKOrderVC";
+                    [self.naviImpl pushViewModel:viewModel animated:YES];
+                }
+                
             }
                 break;
         }
