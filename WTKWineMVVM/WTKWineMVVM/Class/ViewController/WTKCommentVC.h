@@ -10,6 +10,6 @@
 
 @interface WTKCommentVC : WTKBasedViewController
 
-@property(nonatomic,strong)NSMutableArray *imgArray;
+@property(nonatomic,strong)NSMutableArray<UIButton *> *imgArray;
 
 @end

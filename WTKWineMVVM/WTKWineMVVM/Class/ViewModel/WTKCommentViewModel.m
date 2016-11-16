@@ -29,11 +29,11 @@
     self.addPicCommand = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(id input) {
         UIAlertAction *action1 = [UIAlertAction actionWithTitle:@"拍照" style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action) {
             @strongify(self);
-            [self updateHeader:UIImagePickerControllerSourceTypeCamera];
+            [self addPickture:UIImagePickerControllerSourceTypeCamera];
         }];
         UIAlertAction *action2 = [UIAlertAction actionWithTitle:@"从相册选择" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
             @strongify(self);
-            [self updateHeader:UIImagePickerControllerSourceTypePhotoLibrary];
+            [self addPickture:UIImagePickerControllerSourceTypePhotoLibrary];
         }];
         UIAlertAction *action3 = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
             
@@ -48,8 +48,33 @@
         [self.vc presentViewController:alert animated:YES completion:nil];
         return [RACSignal empty];
     }];
+    
+    self.changeImgSubject = [RACSubject subject];
+    
+    self.commitCommand = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(id input) {
+        @strongify(self);
+        NSString *comment = input[@"comment"];
+        if (comment.length > 0)
+        {
+            SHOW_SVP(@"提交中");
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.8 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                SHOW_SUCCESS(@"评论成功");
+                [self.naviImpl popViewControllerWithAnimation:YES];
+                DISMISS_SVP(1.3);
+            });
+        }
+        else
+        {
+            UIAlertAction *action1 = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDestructive handler:nil];
+            UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"提示" message:@"请输入您的评论" preferredStyle:UIAlertControllerStyleAlert];
+            [alert addAction:action1];
+            [self.vc presentViewController:alert animated:YES completion:nil];
+        }
+        return [RACSignal empty];
+    }];
+    
 }
-- (void)updateHeader:(UIImagePickerControllerSourceType)sourcyType
+- (void)addPickture:(UIImagePickerControllerSourceType)sourcyType
 {
     if (![UIImagePickerController isSourceTypeAvailable:sourcyType])
     {
@@ -72,11 +97,13 @@
     UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
     [btn setBackgroundImage:newImage forState:UIControlStateNormal];
     [self.vc.imgArray addObject:btn];
+    [self.changeImgSubject sendNext:@1];
 //    CURRENT_USER.headImage = newImage;
 //    [WTKDataManager saveUserData];
 //    [self.vc.tableView reloadRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:0 inSection:0]] withRowAnimation:UITableViewRowAnimationAutomatic];
     
-    
 }
+
+
 
 @end

@@ -11,12 +11,17 @@
 @class WTKCommentVC;
 @interface WTKCommentViewModel : WTKBasedViewModel
 
-@property(nonatomic,strong)WTKOrderModel *order;
+@property(nonatomic,strong)WTKOrderModel    *order;
 
-@property(nonatomic,weak)WTKCommentVC *vc;
+@property(nonatomic,weak)WTKCommentVC       *vc;
 
-@property(nonatomic,strong)RACCommand   *addPicCommand;
+@property(nonatomic,strong)RACCommand       *addPicCommand;
 
-@property(nonatomic,strong)RACCommand   *commitCommand;
+@property(nonatomic,strong)RACCommand       *commitCommand;
+
+@property(nonatomic,strong)RACSubject       *changeImgSubject;
+
+///评论
+@property(nonatomic,copy)NSString           *comment;
 
 @end

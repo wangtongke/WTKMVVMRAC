@@ -30,6 +30,8 @@
 
 @property(nonatomic,strong)UIButton             *anonyBtn;
 
+@property(nonatomic,strong)UIView               *bgView;
+
 
 @end
 
@@ -39,6 +41,7 @@
     [super viewDidLoad];
     [self bindViewModel];
     [self initView];
+    [self resetNavigation];
 }
 - (void)bindViewModel
 {
@@ -51,22 +54,119 @@
         [self.starLabel setText:self.starLabel.text Font:[UIFont wtkNormalFont:16] withColor:THEME_COLOR Range:NSMakeRange(3, star.length)];
     };
     RAC(self.addBtn,rac_command)    = RACObserve(self.viewModel, addPicCommand);
-    RAC(self.commitBtn,rac_command) = RACObserve(self.viewModel, commitCommand);
+    [[self.commitBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(id x) {
+        @strongify(self);
+        [self.viewModel.commitCommand execute:@{@"comment":self.textView.text,@"image":self.imgArray}];
+    }];
+    [self.viewModel.changeImgSubject subscribeNext:^(id x) {
+        @strongify(self);
+        [self addSelecteImg];
+    }];
 }
 
+- (void)resetNavigation
+{
+    UIButton *leftBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    [leftBtn setBackgroundImage:[UIImage imageNamed:@"backbutton_icon3"] forState:UIControlStateNormal];
+    leftBtn.frame = CGRectMake(0, 0, 30, 30);
+    [leftBtn addTarget:self action:@selector(backBtnClick) forControlEvents:UIControlEventTouchUpInside];
+    
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithCustomView:leftBtn];
+}
+- (void)backBtnClick
+{
+    @weakify(self);
+    UIAlertAction *action1 = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action) {
+        @strongify(self);
+        [self.navigationController popViewControllerAnimated:YES];
+    }];
+    UIAlertAction *action2 = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleDefault handler:nil];
+    [action1 setValue:THEME_COLOR forKey:@"titleTextColor"];
+    [action2 setValue:WTKCOLOR(30, 30, 30, 1) forKey:@"titleTextColor"];
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"提示" message:@"您正在评价，确定离开这个页面吗？" preferredStyle:UIAlertControllerStyleAlert];
+    [self presentViewController:alert animated:YES completion:nil];
+}
+
+///重新布局img  flag-本次改变的第几个  isDelete是否为删除
+- (void)addSelecteImg
+{
+    float width = kWidth / 5.0;
+//  每次只处理最后一个
+    if (self.imgArray.count >= 1)
+    {
+        @weakify(self);
+        UIButton *btn = [self.imgArray lastObject];
+        btn.tag = self.imgArray.count - 1;
+        [btn addTarget:self action:@selector(comfirmDelete:) forControlEvents:UIControlEventTouchUpInside];
+        [self.bgView addSubview:btn];
+
+        [btn mas_makeConstraints:^(MASConstraintMaker *make) {
+            @strongify(self);
+            make.bottom.equalTo(self.bgView);
+            make.left.equalTo(self.bgView).offset((self.imgArray.count - 1) * width);
+            make.width.mas_equalTo(width);
+            make.height.mas_equalTo(width);
+        }];
+        [self.addBtn mas_remakeConstraints:^(MASConstraintMaker *make) {
+            @strongify(self);
+            make.left.equalTo(self.bgView).offset(self.imgArray.count * width);
+            make.bottom.equalTo(self.bgView);
+            make.width.mas_equalTo(width);
+            make.height.mas_equalTo(width);
+        }];
+    }
+    [self.addBtn setBackgroundImage:[UIImage imageNamed:@"plusbutton_icon"] forState:UIControlStateNormal];
+    [self.addBtn setTitle:@"" forState:UIControlStateNormal];
+    self.addBtn.backgroundColor = [UIColor clearColor];
+    self.addBtn.layer.cornerRadius = width / 2.0;
+}
+
+- (void)comfirmDelete:(UIButton *)btn
+{
+    @weakify(self);
+    UIAlertAction *action1 = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action) {
+        @strongify(self);
+        [self deleteSelectImgWithIndex:btn.tag];
+    }];
+    UIAlertAction *action2 = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleDefault handler:nil];
+    [action1 setValue:THEME_COLOR forKey:@"titleTextColor"];
+    [action2 setValue:WTKCOLOR(30, 30, 30, 1) forKey:@"titleTextColor"];
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"确定删除所选图片吗" message:@"" preferredStyle:UIAlertControllerStyleActionSheet];
+    [alert addAction:action1];
+    [alert addAction:action2];
+    [self presentViewController:alert animated:YES completion:nil];
+}
+
+///删除 flag-  index
+- (void)deleteSelectImgWithIndex:(NSInteger)index
+{
+    float width = kWidth / 5.0;
+    [self.imgArray[index] removeFromSuperview];
+    [self.imgArray removeObjectAtIndex:index];
+    WS(weakSelf);
+    for (NSInteger i = index; i < self.imgArray.count; i++)
+    {
+        UIButton *btn = self.imgArray[i];
+        btn.tag = i;
+        [btn mas_remakeConstraints:^(MASConstraintMaker *make) {
+            make.left.equalTo(weakSelf.bgView).offset(i * kWidth);
+            make.bottom.equalTo(weakSelf.bgView);
+            make.width.mas_equalTo(width);
+            make.height.mas_equalTo(width);
+        }];
+    }
+    [self.addBtn mas_remakeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(weakSelf.bgView).offset(weakSelf.imgArray.count * width);
+        make.bottom.equalTo(weakSelf.bgView);
+        make.width.mas_equalTo(width);
+        make.height.mas_equalTo(width);
+    }];
+}
+
+///匿名
 - (void)anonyBtnClick:(UIButton *)btn
 {
     self.anonyBtn.selected = !self.anonyBtn.selected;
-}
-
-//图片
-- (void)setImgArray:(NSMutableArray *)imgArray
-{
-    @weakify(self);
-    _imgArray = imgArray;
-    [imgArray enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-        @strongify(self);
-    }];
 }
 
 - (void)initView
@@ -81,6 +181,7 @@
     WS(weakSelf);
     UIView *bgView      = [[UIView alloc]init];
     bgView.backgroundColor = [UIColor whiteColor];
+    self.bgView = bgView;
     [self.view addSubview:bgView];
     [bgView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(weakSelf.view).offset(10 + 64);
@@ -139,6 +240,7 @@
         make.bottom.equalTo(bgView).offset(-65);
     }];
     
+    self.addBtn.tag = 111;
     self.addBtn.layer.cornerRadius = 15;
     self.addBtn.layer.masksToBounds = YES;
     self.addBtn.backgroundColor = THEME_COLOR;
