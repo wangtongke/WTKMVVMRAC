@@ -13,9 +13,6 @@
 
 @property(nonatomic,strong,readwrite)UIPercentDrivenInteractiveTransition *interactivePopTransition;
 
-///是否正在拖拽
-@property(nonatomic,assign)BOOL w_isDraging;
-
 
 @end
 
@@ -72,30 +69,39 @@
     progress = MIN(1.0, MAX(0.0, progress));
     NSLog(@"progress---%.2f",progress);
     
-    if (progress <= 0 && !self.w_isDraging) {
-        return;
-    }
+    static BOOL flag = NO;
     if (recognizer.state == UIGestureRecognizerStateBegan)
     {
-        self.w_isDraging = YES;
+        flag = YES;
+    }
+    if (flag && progress > 0)
+    {
         self.interactivePopTransition = [[UIPercentDrivenInteractiveTransition alloc]init];
         [self.navigationController popViewControllerAnimated:YES];
+        flag = NO;
     }
-    else if (recognizer.state == UIGestureRecognizerStateChanged)
+    
+//    if (progress <= 0 && !self.w_isDraging && recognizer.state != UIGestureRecognizerStateBegan) {
+//        return;
+//    }
+//    if (recognizer.state == UIGestureRecognizerStateBegan)
+//    {
+//        self.w_isDraging = YES;
+//        self.interactivePopTransition = [[UIPercentDrivenInteractiveTransition alloc]init];
+//        [self.navigationController popViewControllerAnimated:YES];
+//    }
+    if (recognizer.state == UIGestureRecognizerStateChanged)
     {
-        self.w_isDraging = YES;
         [self.interactivePopTransition updateInteractiveTransition:progress];
     }
     else if (recognizer.state == UIGestureRecognizerStateEnded || recognizer.state == UIGestureRecognizerStateCancelled)
     {
         if (progress > 0.25)
         {
-            self.w_isDraging = NO;
             [self.interactivePopTransition finishInteractiveTransition];
         }
         else
         {
-            self.w_isDraging = NO;
             [self.interactivePopTransition cancelInteractiveTransition];
         }
         self.interactivePopTransition = nil;

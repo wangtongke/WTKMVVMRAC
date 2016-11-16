@@ -151,7 +151,7 @@
             }
             else
             {
-                imageView              = [[UIImageView alloc]initWithFrame:CGRectMake(i + 90, 0, 80, 80)];
+                imageView              = [[UIImageView alloc]initWithFrame:CGRectMake(i * 90, 0, 80, 80)];
                 [self.imageArray addObject:imageView];
             }
             WTKOrderDetailModel *model          = array[i];

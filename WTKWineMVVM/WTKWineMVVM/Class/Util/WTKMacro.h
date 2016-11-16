@@ -20,8 +20,10 @@
 
 #ifdef DEBUG
 #define NSLog(...) NSLog(__VA_ARGS__)
+#define WTKLog(fmt, ...) NSLog((@"\n[文件名:%s]\n""[函数名:%s]""[行号:%d] \n" fmt), __FILE__, __FUNCTION__, __LINE__, ##__VA_ARGS__);
 #else
 #define NSLog(...) {}
+#define WTKLog(...);
 #endif
 
 #pragma mark - 宽高

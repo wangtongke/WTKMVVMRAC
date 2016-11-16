@@ -30,6 +30,8 @@
 		F53107511D893E1E003B402C /* WTKRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F53107501D893E1E003B402C /* WTKRequestManager.m */; };
 		F532DE5D1D8F8B5400E68943 /* WTKUser.m in Sources */ = {isa = PBXBuildFile; fileRef = F532DE5C1D8F8B5400E68943 /* WTKUser.m */; };
 		F532DE601D8FBA0D00E68943 /* WTKSearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = F532DE5F1D8FBA0D00E68943 /* WTKSearchBar.m */; };
+		F55C13001DD5AA8E0048D865 /* WTKCommentVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F55C12FF1DD5AA8E0048D865 /* WTKCommentVC.m */; };
+		F55C13031DD5AAA50048D865 /* WTKCommentViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F55C13021DD5AAA50048D865 /* WTKCommentViewModel.m */; };
 		F5660AB11DC18FA4006C89D9 /* BaiduMapAPI_Base.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5660AAA1DC18FA4006C89D9 /* BaiduMapAPI_Base.framework */; };
 		F5660AB21DC18FA4006C89D9 /* BaiduMapAPI_Cloud.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5660AAB1DC18FA4006C89D9 /* BaiduMapAPI_Cloud.framework */; };
 		F5660AB31DC18FA4006C89D9 /* BaiduMapAPI_Location.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5660AAC1DC18FA4006C89D9 /* BaiduMapAPI_Location.framework */; };
@@ -306,6 +308,10 @@
 		F532DE5C1D8F8B5400E68943 /* WTKUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTKUser.m; sourceTree = "<group>"; };
 		F532DE5E1D8FBA0D00E68943 /* WTKSearchBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTKSearchBar.h; sourceTree = "<group>"; };
 		F532DE5F1D8FBA0D00E68943 /* WTKSearchBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTKSearchBar.m; sourceTree = "<group>"; };
+		F55C12FE1DD5AA8E0048D865 /* WTKCommentVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTKCommentVC.h; sourceTree = "<group>"; };
+		F55C12FF1DD5AA8E0048D865 /* WTKCommentVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTKCommentVC.m; sourceTree = "<group>"; };
+		F55C13011DD5AAA50048D865 /* WTKCommentViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTKCommentViewModel.h; sourceTree = "<group>"; };
+		F55C13021DD5AAA50048D865 /* WTKCommentViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTKCommentViewModel.m; sourceTree = "<group>"; };
 		F5660AAA1DC18FA4006C89D9 /* BaiduMapAPI_Base.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BaiduMapAPI_Base.framework; sourceTree = "<group>"; };
 		F5660AAB1DC18FA4006C89D9 /* BaiduMapAPI_Cloud.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BaiduMapAPI_Cloud.framework; sourceTree = "<group>"; };
 		F5660AAC1DC18FA4006C89D9 /* BaiduMapAPI_Location.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BaiduMapAPI_Location.framework; sourceTree = "<group>"; };
@@ -1334,6 +1340,8 @@
 				F58EE1B11DC6DC74008E5A6E /* WTKSearchVC.m */,
 				F5F8D2151DD56F820076EB65 /* WTKCommentCenterVC.h */,
 				F5F8D2161DD56F820076EB65 /* WTKCommentCenterVC.m */,
+				F55C12FE1DD5AA8E0048D865 /* WTKCommentVC.h */,
+				F55C12FF1DD5AA8E0048D865 /* WTKCommentVC.m */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -1385,6 +1393,8 @@
 				F58EE1B41DC6DCCE008E5A6E /* WTKSearchViewModel.m */,
 				F5F8D2181DD570090076EB65 /* WTKCommentCenterViewModel.h */,
 				F5F8D2191DD570090076EB65 /* WTKCommentCenterViewModel.m */,
+				F55C13011DD5AAA50048D865 /* WTKCommentViewModel.h */,
+				F55C13021DD5AAA50048D865 /* WTKCommentViewModel.m */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -1602,6 +1612,7 @@
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = 7A692X8NVA;
 						LastSwiftMigration = 0820;
+						ProvisioningStyle = Automatic;
 					};
 					F596DA5F1D869FD30058844C = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -1771,6 +1782,7 @@
 				F58EE1B51DC6DCCE008E5A6E /* WTKSearchViewModel.m in Sources */,
 				F596DAB71D86A0650058844C /* IQTitleBarButtonItem.m in Sources */,
 				F56F779D1DAB6B4500963C31 /* WTKOrderModel.m in Sources */,
+				F55C13031DD5AAA50048D865 /* WTKCommentViewModel.m in Sources */,
 				F56771701DAF1D5C00AE9184 /* WTKMeHeaderView.m in Sources */,
 				F5F8D2171DD56F820076EB65 /* WTKCommentCenterVC.m in Sources */,
 				F56CF9221DB0A1D9004D46B3 /* WTKWebViewModel.m in Sources */,
@@ -1785,6 +1797,7 @@
 				F53106FA1D88E444003B402C /* WTKBasedViewController.m in Sources */,
 				F56C87461DB875AD00B8B765 /* WTKSiftTableViewCell.m in Sources */,
 				F592BA2E1DA8E47D005EF581 /* WTKRecommendVC.m in Sources */,
+				F55C13001DD5AA8E0048D865 /* WTKCommentVC.m in Sources */,
 				F5A00BDE1D8E43EA0026DF67 /* UIFont+WTK.m in Sources */,
 				F531073C1D892905003B402C /* WTKMeViewModel.m in Sources */,
 				F56CF89F1DB07ADC004D46B3 /* WTKLoginVC.m in Sources */,
@@ -2051,6 +2064,7 @@
 			baseConfigurationReference = E2969E7005841F781BBE8D64 /* Pods-WTKWineMVVM.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COMPRESS_PNG_FILES = YES;
 				DEVELOPMENT_TEAM = 7A692X8NVA;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -2064,7 +2078,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/WTKWineMVVM/Class/Util/WTKPrefix.pch";
 				INFOPLIST_FILE = WTKWineMVVM/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2083,6 +2097,7 @@
 			baseConfigurationReference = D9E426C5B301181044319B4E /* Pods-WTKWineMVVM.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COMPRESS_PNG_FILES = YES;
 				DEVELOPMENT_TEAM = 7A692X8NVA;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -2096,7 +2111,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/WTKWineMVVM/Class/Util/WTKPrefix.pch";
 				INFOPLIST_FILE = WTKWineMVVM/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",

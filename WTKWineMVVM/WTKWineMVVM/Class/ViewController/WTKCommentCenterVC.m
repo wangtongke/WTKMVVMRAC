@@ -9,6 +9,7 @@
 #import "WTKCommentCenterVC.h"
 #import "WTKCommentCenterViewModel.h"
 #import "WTKCommentCenterTableViewCell.h"
+#import "WTKOrderModel.h"
 @interface WTKCommentCenterVC ()<UITableViewDelegate,UITableViewDataSource>
 
 @property(nonatomic,strong)WTKCommentCenterViewModel *viewModel;
@@ -26,6 +27,7 @@
     // Do any additional setup after loading the view.
     [self bindViewModel];
     [self resetNavi];
+    [self initView];
     
 }
 - (void)bindViewModel
@@ -37,6 +39,12 @@
         @strongify(self);
         [self resetNavi];
     }];
+    RAC(self,dataArray)             = RACObserve(self.viewModel, dataArray);
+    self.tableView.mj_header        = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+        @strongify(self);
+        [self.viewModel.refreshCommand execute:self.tableView];
+    }];
+    [self.tableView.mj_header beginRefreshing];
 }
 
 - (void)initView
@@ -48,17 +56,36 @@
     [self.tableView registerClass:[WTKCommentCenterTableViewCell class] forCellReuseIdentifier:@"cell"];
     
 }
+- (void)setDataArray:(NSMutableArray *)dataArray
+{
+    _dataArray=  dataArray;
+    [self.tableView reloadData];
+}
 
 - (void)resetNavi
 {
     self.navigationController.navigationBar.barStyle = UIBarStyleDefault;
     self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName:WTKCOLOR(70, 70, 70, 1)};
 }
+#pragma mark - tableViewDelegate
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [self.viewModel.cellClickCommand execute:self.dataArray[indexPath.row]];
+}
 
 #pragma mark tableViewDataSource
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return nil;
+    @weakify(self);
+    WTKCommentCenterTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
+    WTKOrderModel *model = self.dataArray[indexPath.row];
+    [cell updateWithOrder:model];
+//  commentBtnClick
+    [cell.commentSubject subscribeNext:^(id x) {
+        @strongify(self);
+        [self.viewModel.commentCommand execute:self.dataArray[indexPath.row]];
+    }];
+    return cell;
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
@@ -76,14 +103,6 @@
     return _tableView;
 }
 
-- (NSMutableArray *)dataArray
-{
-    if (!_dataArray)
-    {
-        _dataArray = @[].mutableCopy;
-    }
-    return _dataArray;
-}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

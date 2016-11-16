@@ -98,14 +98,13 @@
 ///允许半颗星
 - (void)initForFloatStar
 {
-    self.foreView   = [self createViewWithImageName:RED_NAME];
-    self.bgView     = [self createViewWithImageName:WHITE_NAME];
+    self.foreView   = [self createViewWithImageName:RED_NAME withFlag:YES];
+    self.bgView     = [self createViewWithImageName:WHITE_NAME withFlag:NO];
     [self addSubview:self.bgView];
     [self addSubview:self.foreView];
 }
-- (UIView *)createViewWithImageName:(NSString *)name
+- (UIView *)createViewWithImageName:(NSString *)name withFlag:(BOOL)flag
 {
-    static int a = 0;
     UIView *view = [[UIView alloc]initWithFrame:CGRectMake(0, 0, self.frame.size.width, self.frame.size.height)];
     view.layer.masksToBounds = YES;
     view.backgroundColor = [UIColor clearColor];
@@ -115,12 +114,11 @@
         imgView.frame = CGRectMake(i * (self.width + self.listMargin) + self.listMargin / 2.0, self.lineMargin, self.width, self.height);
         imgView.contentMode = UIViewContentModeScaleAspectFit;
         [view addSubview:imgView];
-        if (a == 0)
+        if (flag)
         {
             [self.starArray addObject:imgView];
         }
     }
-    a++;
     return view;
 }
 

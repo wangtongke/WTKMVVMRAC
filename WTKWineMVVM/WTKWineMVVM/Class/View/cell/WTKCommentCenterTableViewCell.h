@@ -9,7 +9,9 @@
 #import <UIKit/UIKit.h>
 @class WTKOrderModel;
 @interface WTKCommentCenterTableViewCell : UITableViewCell
+///评价
+@property(nonatomic,strong)RACSubject *commentSubject;
 
-
+- (void)updateWithOrder:(WTKOrderModel *)order;
 
 @end
