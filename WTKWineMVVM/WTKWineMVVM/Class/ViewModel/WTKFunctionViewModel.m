@@ -28,9 +28,32 @@
         {
             CURRENT_USER.isSound = sw.on;
         }
-        else
+        else if (sw.tag == 1)
         {
             CURRENT_USER.isShake = sw.on;
+        }
+        else
+        {
+            if (sw.on)
+            {
+                [WTKTool registTouchIDWithCompleteBlock:^(NSString *str) {
+                    if ([str isEqualToString:@"验证成功"])
+                    {
+                        sw.on = YES;
+                        SHOW_SUCCESS(@"验证成功");
+                    }
+                    else
+                    {
+                        sw.on = NO;
+                        SHOW_ERROE(str);
+                        DISMISS_SVP(1.3);
+                    }
+                }];
+            }
+            else
+            {
+                [WTKTool delegateTouchID];
+            }
         }
         return [RACSignal empty];
     }];

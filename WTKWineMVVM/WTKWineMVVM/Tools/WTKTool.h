@@ -30,6 +30,11 @@
 + (void) registTouchIDWithCompleteBlock:(void(^)(NSString *))block;
 
 /**
+ *  验证指纹
+ */
++ (void)testTouchIDWithCompleteBlock:(void(^)(BOOL))completeBlock;
+
+/**
  *  删除指纹
  */
 + (BOOL) delegateTouchID;

@@ -76,7 +76,7 @@
 {
 #warning 以后修改launchImage  名字
     self.launchImage        = [[UIImageView alloc]initWithFrame:self.view.frame];
-//    self.launchImage.image  = [UIImage imageNamed:@"top_launch"];
+    self.launchImage.image  = [UIImage imageNamed:@"top_launch"];
     self.launchImage.tag    = 111;
     [self.view addSubview:self.launchImage];
     @weakify(self);
@@ -125,6 +125,10 @@
     {
         [WTKTool registTouchIDWithCompleteBlock:^(NSString *tip) {
             dispatch_sync(dispatch_get_main_queue(), ^{
+                if ([tip isEqualToString:@"不支持指纹验证"])
+                {
+                    return ;
+                }
                 UIAlertAction *action = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil];
                 UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"提示" message:tip preferredStyle:UIAlertControllerStyleAlert];
                 [alert addAction:action];

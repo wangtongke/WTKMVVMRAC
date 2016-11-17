@@ -174,7 +174,43 @@ static 	SystemSoundID soundID=0;
             }
         }];
     }
+    else
+    {
+        block(@"不支持指纹验证");
+    }
 }
+
++ (void)testTouchIDWithCompleteBlock:(void (^)(BOOL))completeBlock
+{
+    LAContext *wtkContext           = [[LAContext alloc]init];
+    
+    NSError *autoError              = nil;
+    
+    NSString *title                 = @"请验证已有指纹，用于支付";
+    //    判断设备是否支持
+    
+    if ([wtkContext canEvaluatePolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics error:&autoError])
+    {
+        [wtkContext evaluatePolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics localizedReason:title reply:^(BOOL success, NSError * _Nullable error) {
+            if (success)
+            {
+                completeBlock(YES);
+            }
+            else
+            {
+                NSLog(@"%ld",error.code);
+                // 错误码 error.code
+                // -1: 连续三次指纹识别错误
+                // -2: 在TouchID对话框中点击了取消按钮
+                // -3: 在TouchID对话框中点击了输入密码按钮
+                // -4: TouchID对话框被系统取消，例如按下Home或者电源键
+                // -8: 连续五次指纹识别错误，TouchID功能被锁定，下一次需要输入系统密码
+                completeBlock(NO);
+            }
+        }];
+    }
+}
+
 ///删除指纹
 + (BOOL)delegateTouchID
 {

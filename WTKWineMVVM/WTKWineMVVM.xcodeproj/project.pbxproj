@@ -163,6 +163,8 @@
 		F57FC7111DBE081500057ED9 /* WTKPayViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F57FC7101DBE081500057ED9 /* WTKPayViewModel.m */; };
 		F57FC71D1DBE100C00057ED9 /* WTKPayTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F57FC71B1DBE100C00057ED9 /* WTKPayTableViewCell.m */; };
 		F57FC71E1DBE100C00057ED9 /* WTKPayTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F57FC71C1DBE100C00057ED9 /* WTKPayTableViewCell.xib */; };
+		F58420F81DDC59E400AA6046 /* WTKQRCodeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F58420F71DDC59E400AA6046 /* WTKQRCodeVC.m */; };
+		F58420FB1DDC5A4000AA6046 /* WTKQRCodeViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F58420FA1DDC5A4000AA6046 /* WTKQRCodeViewModel.m */; };
 		F58537581DB9BF1400B66571 /* WTKShoppingCarTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = F58537571DB9BF1400B66571 /* WTKShoppingCarTableView.m */; };
 		F585375C1DB9C05500B66571 /* WTKShoppingCarTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F585375A1DB9C05500B66571 /* WTKShoppingCarTableViewCell.m */; };
 		F585375D1DB9C05500B66571 /* WTKShoppingCarTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F585375B1DB9C05500B66571 /* WTKShoppingCarTableViewCell.xib */; };
@@ -519,6 +521,10 @@
 		F57FC71A1DBE100C00057ED9 /* WTKPayTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTKPayTableViewCell.h; sourceTree = "<group>"; };
 		F57FC71B1DBE100C00057ED9 /* WTKPayTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTKPayTableViewCell.m; sourceTree = "<group>"; };
 		F57FC71C1DBE100C00057ED9 /* WTKPayTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WTKPayTableViewCell.xib; sourceTree = "<group>"; };
+		F58420F61DDC59E400AA6046 /* WTKQRCodeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTKQRCodeVC.h; sourceTree = "<group>"; };
+		F58420F71DDC59E400AA6046 /* WTKQRCodeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTKQRCodeVC.m; sourceTree = "<group>"; };
+		F58420F91DDC5A4000AA6046 /* WTKQRCodeViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTKQRCodeViewModel.h; sourceTree = "<group>"; };
+		F58420FA1DDC5A4000AA6046 /* WTKQRCodeViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTKQRCodeViewModel.m; sourceTree = "<group>"; };
 		F58537561DB9BF1400B66571 /* WTKShoppingCarTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTKShoppingCarTableView.h; sourceTree = "<group>"; };
 		F58537571DB9BF1400B66571 /* WTKShoppingCarTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTKShoppingCarTableView.m; sourceTree = "<group>"; };
 		F58537591DB9C05500B66571 /* WTKShoppingCarTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTKShoppingCarTableViewCell.h; sourceTree = "<group>"; };
@@ -1342,6 +1348,8 @@
 				F5F8D2161DD56F820076EB65 /* WTKCommentCenterVC.m */,
 				F55C12FE1DD5AA8E0048D865 /* WTKCommentVC.h */,
 				F55C12FF1DD5AA8E0048D865 /* WTKCommentVC.m */,
+				F58420F61DDC59E400AA6046 /* WTKQRCodeVC.h */,
+				F58420F71DDC59E400AA6046 /* WTKQRCodeVC.m */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -1395,6 +1403,8 @@
 				F5F8D2191DD570090076EB65 /* WTKCommentCenterViewModel.m */,
 				F55C13011DD5AAA50048D865 /* WTKCommentViewModel.h */,
 				F55C13021DD5AAA50048D865 /* WTKCommentViewModel.m */,
+				F58420F91DDC5A4000AA6046 /* WTKQRCodeViewModel.h */,
+				F58420FA1DDC5A4000AA6046 /* WTKQRCodeViewModel.m */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -1810,6 +1820,7 @@
 				F577D1891D9289F0003E1D2E /* WTKDataManager.m in Sources */,
 				F531073F1D892B0D003B402C /* WTKHomeCollectionView.m in Sources */,
 				F592BA361DA8F645005EF581 /* FXBlurView.m in Sources */,
+				F58420FB1DDC5A4000AA6046 /* WTKQRCodeViewModel.m in Sources */,
 				F532DE601D8FBA0D00E68943 /* WTKSearchBar.m in Sources */,
 				F56E37EE1DC31D930013CD3B /* WTKMapSearchTableView.m in Sources */,
 				F53107461D892F74003B402C /* WTKHomeHeadView.m in Sources */,
@@ -1888,6 +1899,7 @@
 				F596DA4F1D869FD30058844C /* AppDelegate.mm in Sources */,
 				F56C52DC1DB710B000AF05DE /* WTKCategoryLeftTableViewCell.m in Sources */,
 				F5937E701D9CEBDB00C9E0B7 /* WTKAnimationDefault.m in Sources */,
+				F58420F81DDC59E400AA6046 /* WTKQRCodeVC.m in Sources */,
 				F531070B1D88E5B0003B402C /* WTKFoundVC.m in Sources */,
 				F570238E1DAC7FD8008168A8 /* WTKOrderMenuView.m in Sources */,
 				F5937E5A1D9CEBB800C9E0B7 /* WTKNavigationController.m in Sources */,

@@ -42,7 +42,7 @@
     
     UIView *headerView              = [[UIView alloc]initWithFrame:CGRectMake(0, 0, kWidth, 30)];
     UILabel *label                  = [[UILabel alloc]initWithFrame:CGRectMake(22, 0, kWidth - 22, 30)];
-    label.text                      = @"设置系统提示音和震动";
+    label.text                      = @"设置系统提示音、震动和指纹支付";
     label.textColor                 = WTKCOLOR(120, 120, 120, 1);
     label.font                      = [UIFont wtkNormalFont:14];
     [headerView addSubview:label];
@@ -62,7 +62,7 @@
     {
         cell                    = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@"cell"];
         cell.textLabel.textColor= WTKCOLOR(70, 70, 70, 1);
-        cell.textLabel.text     = indexPath.row == 0? @"声音" : @"震动";
+        cell.textLabel.text     = indexPath.row == 0? @"声音" : indexPath.row == 1 ? @"震动" : @"指纹支付";
         UISwitch *sw            = [[UISwitch alloc]initWithFrame:CGRectMake(kWidth - 70, 10, 50, 30)];
         sw.tintColor            = THEME_COLOR;
         sw.tag                  = indexPath.row;
@@ -72,9 +72,13 @@
         {
             sw.on               = CURRENT_USER.isSound;
         }
-        else
+        else if (indexPath.row == 1)
         {
             sw.on               = CURRENT_USER.isShake;
+        }
+        else
+        {
+            sw.on               = CURRENT_USER.isTouchID;
         }
         [cell.contentView addSubview:sw];
     }
@@ -82,7 +86,7 @@
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 2;
+    return 3;
 }
 
 

@@ -33,7 +33,7 @@
 - (void)initNetWork
 {
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reachabilityChanged:) name:kReachabilityChangedNotification object:nil];
-    self.hostReach = [Reachability reachabilityWithAddress:@"www.baidu.com"];
+    self.hostReach = [Reachability reachabilityWithAddress:@"https://www.baidu.com"];
     [self.hostReach startNotifier];
     [self updateInterfaceWithReachability:self.hostReach];
     

@@ -26,21 +26,33 @@
     @weakify(self);
     self.payCommand   = [[RACCommand alloc]initWithSignalBlock:^RACSignal *(id input) {
         @strongify(self);
-        NSLog(@"pay");
-        NSInteger payType = [input integerValue];
-        SHOW_SVP(@"正在生成订单");
-        NSString *tip = payType == 1 ? @"微信支付成功" : payType == 2 ? @"支付宝支付成功" : @"支付成功";
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-            SHOW_SUCCESS(tip);
-            DISMISS_SVP(1.2);
-            [SHOPPING_MANAGER refreshGoods];
-            WTKPaySuccessViewModel *viewModel = [[WTKPaySuccessViewModel alloc]initWithService:self.services params:@{@"title":@"付款成功"}];
-            WTKOrderModel *model = [[WTKOrderModel alloc]initWithDic:@{@"ordertype":@(payType),@"paycost":[NSString stringWithFormat:@"%.2f",self.price]}];
-            viewModel.orderModel = model;
-            self.naviImpl.className = @"WTKPaySuccessVC";
-            [self.naviImpl pushViewModel:viewModel animated:YES];
-            
-        });
+        if (CURRENT_USER.isTouchID)
+        {
+            [WTKTool testTouchIDWithCompleteBlock:^(BOOL flag) {
+                if (flag)
+                {
+                    NSInteger payType = [input integerValue];
+                    SHOW_SVP(@"正在生成订单");
+                    NSString *tip = payType == 1 ? @"微信支付成功" : payType == 2 ? @"支付宝支付成功" : @"支付成功";
+                    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                        SHOW_SUCCESS(tip);
+                        DISMISS_SVP(1.2);
+                        [SHOPPING_MANAGER refreshGoods];
+                        WTKPaySuccessViewModel *viewModel = [[WTKPaySuccessViewModel alloc]initWithService:self.services params:@{@"title":@"付款成功"}];
+                        WTKOrderModel *model = [[WTKOrderModel alloc]initWithDic:@{@"ordertype":@(payType),@"paycost":[NSString stringWithFormat:@"%.2f",self.price]}];
+                        viewModel.orderModel = model;
+                        self.naviImpl.className = @"WTKPaySuccessVC";
+                        [self.naviImpl pushViewModel:viewModel animated:YES];
+                        
+                    });
+                }
+            }];
+        }
+        else
+        {
+            SHOW_ERROE(@"请前往设置页面\n开通指纹支付");
+            DISMISS_SVP(1.9);
+        }
         return [RACSignal empty];
     }];
     
