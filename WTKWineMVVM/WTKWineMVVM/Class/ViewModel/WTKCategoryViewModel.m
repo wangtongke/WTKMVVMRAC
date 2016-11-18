@@ -37,7 +37,7 @@
         UITableView *rightTableView = input[1];
         RACSignal *signal   = [WTKRequestManager postArrayDataWithURL:@"CategoryAllGoods" withpramater:@{}];
         [signal subscribeNext:^(id x) {
-            NSLog(@"%@",x);
+//            NSLog(@"%@",x);
             NSArray *array  = x;
             [array enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
                 @strongify(self);

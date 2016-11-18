@@ -140,6 +140,13 @@
     [self.history reloadAllWithTitles:self.historyArray];
     [searchBar resignFirstResponder];
 }
+- (void)searchBarTextDidEndEditing:(UISearchBar *)searchBar
+{
+    [searchBar setShowsCancelButton:NO animated:YES];
+    [self.resultView removeFromSuperview];
+    [self.history reloadAllWithTitles:self.historyArray];
+    [searchBar resignFirstResponder];
+}
 
 #pragma mark - lazyLoad
 - (UITableView *)tableView

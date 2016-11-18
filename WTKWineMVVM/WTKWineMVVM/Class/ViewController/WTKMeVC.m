@@ -126,7 +126,7 @@
         if (a < 0.5)
         {
             NSLog(@"22222");
-            self.navigationController.navigationBar.barStyle = UIBarStyleDefault;
+            self.navigationController.navigationBar.barStyle = UIBarStyleBlack;
             [self.setBtn setBackgroundImage:[UIImage imageNamed:@"w_shezhi"] forState:UIControlStateNormal];
         }
         else

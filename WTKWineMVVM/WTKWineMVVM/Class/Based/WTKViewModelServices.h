@@ -16,6 +16,9 @@
 
 - (void)popToRootViewModelWithAnimation:(BOOL)animated;
 
+- (void)presentViewModel:(WTKBasedViewModel *)viewModel animated:(BOOL)animated complete:(void(^)())complete;
 
+///模态弹出vc，用于alert
+- (void)presentViewController:(UIViewController *)viewController animated:(BOOL)animated complete:(void(^)())complete;
 
 @end

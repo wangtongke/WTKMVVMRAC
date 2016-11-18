@@ -41,8 +41,7 @@
 #pragma mark - scrollViewDelegate
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
-
-    if (self.isDrag)
+    if (self.isDrag && [self.dataDic allKeys].count > 0)
     {
         UITableView *tableView = (UITableView *)scrollView;
         UITableViewCell *topCell = [[tableView visibleCells] firstObject];

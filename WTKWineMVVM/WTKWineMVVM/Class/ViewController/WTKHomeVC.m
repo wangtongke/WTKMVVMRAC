@@ -20,6 +20,9 @@
 
 @property(nonatomic,strong)UIButton *rightBtn;
 
+///是否为显示页面 (控制collectionView)
+@property(nonatomic,assign)BOOL isShow;
+
 @end
 
 @implementation WTKHomeVC
@@ -28,7 +31,7 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    
+    self.isShow = YES;
     [self.collectionView reloadSections:[NSIndexSet indexSetWithIndex:0]];
     [self.navigationController.navigationBar setBackgroundImage:[UIImage imageFromColor:WTKCOLOR(255, 255, 255, 0.01)] forBarMetrics:UIBarMetricsDefault];
         [self _setNavigationItem];
@@ -37,6 +40,7 @@
 - (void)viewWillDisappear:(BOOL)animated
 {
     [super viewWillDisappear:animated];
+    self.isShow = NO;
     [self.navigationController.navigationBar setBackgroundImage:[UIImage imageFromColor:WTKCOLOR(255, 255, 255, 0.99)] forBarMetrics:UIBarMetricsDefault];
 }
 
@@ -44,6 +48,7 @@
     [super viewDidLoad];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(cancelPop) name:@"wtk_cancelPop" object:nil];
+    self.automaticallyAdjustsScrollViewInsets = NO;
     [self bindViewModel];
     [self configView];
 }
@@ -68,7 +73,10 @@
     RAC(self,leftButton.rac_command)    = RACObserve(self.viewModel, naviCommand);
 
     [RACObserve(self.collectionView, contentOffset) subscribeNext:^(id x) {
-        
+        if (!self.isShow)
+        {
+            return ;
+        }
         CGPoint point = [x CGPointValue];
         CGFloat y = point.y;
         if(y < kWidth * 0.23)
@@ -83,7 +91,36 @@
             [self.rightBtn setBackgroundImage:[UIImage imageNamed:@"xiaoxih"] forState:UIControlStateNormal];
             self.searchBar.wtk_bgColor = WTKCOLOR(160, 160, 160, 0.5);
         }
-        
+//        if (y < 0)
+//        {
+//            [self.navigationController setNavigationBarHidden:YES animated:YES];
+//            self.navigationController.navigationBar.barStyle = UIBarStyleDefault;
+//        }
+//        else
+//        {
+//            [self.navigationController setNavigationBarHidden:NO animated:YES];
+//            self.navigationController.navigationBar.barStyle = UIBarStyleBlack;
+//        }
+        if (y >= 0)
+        {
+            float a = y / kWidth / 0.23 > 0.9 ? 0.9 : y / kWidth / 0.23;
+            NSLog(@"%f",a);
+            if (a < 0.9 && a >= 0)
+            {
+                NSLog(@"11111");
+                [self.navigationController.navigationBar setBackgroundImage:[UIImage imageFromColor:WTKCOLOR(255, 255, 255, a)] forBarMetrics:UIBarMetricsDefault];
+            }
+            if (a < 0.5)
+            {
+                NSLog(@"22222");
+                self.navigationController.navigationBar.barStyle = UIBarStyleBlack;
+            }
+            else
+            {
+                NSLog(@"333333");
+                self.navigationController.navigationBar.barStyle = UIBarStyleDefault;
+            }
+        }
     }];
 }
 
@@ -130,7 +167,7 @@
     if (!_collectionView)
     {
         UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc]init];
-        _collectionView = [[WTKHomeCollectionView alloc]initWithFrame:CGRectMake(0, -64, kWidth, kHeight - 49 + 64) collectionViewLayout:layout];
+        _collectionView = [[WTKHomeCollectionView alloc]initWithFrame:CGRectMake(0, 0, kWidth, kHeight - 49) collectionViewLayout:layout];
         _collectionView.viewModel = self.viewModel;
     }
     return _collectionView;
@@ -140,6 +177,7 @@
 {
     if (!_leftButton){
         _leftButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        _leftButton.tag = 111;
     }
     return _leftButton;
 }

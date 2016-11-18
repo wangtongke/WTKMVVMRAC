@@ -163,6 +163,7 @@
 		F57FC7111DBE081500057ED9 /* WTKPayViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F57FC7101DBE081500057ED9 /* WTKPayViewModel.m */; };
 		F57FC71D1DBE100C00057ED9 /* WTKPayTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F57FC71B1DBE100C00057ED9 /* WTKPayTableViewCell.m */; };
 		F57FC71E1DBE100C00057ED9 /* WTKPayTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F57FC71C1DBE100C00057ED9 /* WTKPayTableViewCell.xib */; };
+		F583D8331DDDB91A00468B09 /* WTKQRCode.m in Sources */ = {isa = PBXBuildFile; fileRef = F583D8321DDDB91A00468B09 /* WTKQRCode.m */; };
 		F58420F81DDC59E400AA6046 /* WTKQRCodeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F58420F71DDC59E400AA6046 /* WTKQRCodeVC.m */; };
 		F58420FB1DDC5A4000AA6046 /* WTKQRCodeViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F58420FA1DDC5A4000AA6046 /* WTKQRCodeViewModel.m */; };
 		F58537581DB9BF1400B66571 /* WTKShoppingCarTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = F58537571DB9BF1400B66571 /* WTKShoppingCarTableView.m */; };
@@ -521,6 +522,8 @@
 		F57FC71A1DBE100C00057ED9 /* WTKPayTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTKPayTableViewCell.h; sourceTree = "<group>"; };
 		F57FC71B1DBE100C00057ED9 /* WTKPayTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTKPayTableViewCell.m; sourceTree = "<group>"; };
 		F57FC71C1DBE100C00057ED9 /* WTKPayTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WTKPayTableViewCell.xib; sourceTree = "<group>"; };
+		F583D8311DDDB91A00468B09 /* WTKQRCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTKQRCode.h; sourceTree = "<group>"; };
+		F583D8321DDDB91A00468B09 /* WTKQRCode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTKQRCode.m; sourceTree = "<group>"; };
 		F58420F61DDC59E400AA6046 /* WTKQRCodeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTKQRCodeVC.h; sourceTree = "<group>"; };
 		F58420F71DDC59E400AA6046 /* WTKQRCodeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTKQRCodeVC.m; sourceTree = "<group>"; };
 		F58420F91DDC5A4000AA6046 /* WTKQRCodeViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTKQRCodeViewModel.h; sourceTree = "<group>"; };
@@ -1028,6 +1031,15 @@
 			path = WTKStar;
 			sourceTree = "<group>";
 		};
+		F583D8301DDDB91A00468B09 /* WTKQRCode */ = {
+			isa = PBXGroup;
+			children = (
+				F583D8311DDDB91A00468B09 /* WTKQRCode.h */,
+				F583D8321DDDB91A00468B09 /* WTKQRCode.m */,
+			);
+			path = WTKQRCode;
+			sourceTree = "<group>";
+		};
 		F588CE1F1D86ADBD003E3A74 /* Category(类别) */ = {
 			isa = PBXGroup;
 			children = (
@@ -1451,6 +1463,7 @@
 		F596DA871D86A0650058844C /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				F583D8301DDDB91A00468B09 /* WTKQRCode */,
 				F57E4D1A1DC976C6004721F2 /* WTKStar */,
 				F58EE1B61DC6E1DD008E5A6E /* MSSAutoLabel */,
 				F5660AA91DC18FA4006C89D9 /* BaiduMap */,
@@ -1902,6 +1915,7 @@
 				F58420F81DDC59E400AA6046 /* WTKQRCodeVC.m in Sources */,
 				F531070B1D88E5B0003B402C /* WTKFoundVC.m in Sources */,
 				F570238E1DAC7FD8008168A8 /* WTKOrderMenuView.m in Sources */,
+				F583D8331DDDB91A00468B09 /* WTKQRCode.m in Sources */,
 				F5937E5A1D9CEBB800C9E0B7 /* WTKNavigationController.m in Sources */,
 				F577D1861D9272CD003E1D2E /* WTKShoppingManager.m in Sources */,
 				F56CFDAA1DC865EA001727E7 /* WTKCommentTableView.m in Sources */,
@@ -2076,6 +2090,7 @@
 			baseConfigurationReference = E2969E7005841F781BBE8D64 /* Pods-WTKWineMVVM.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COMPRESS_PNG_FILES = YES;
 				DEVELOPMENT_TEAM = 7A692X8NVA;
@@ -2100,6 +2115,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.wang.WTKWineMVVM;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -2109,6 +2125,7 @@
 			baseConfigurationReference = D9E426C5B301181044319B4E /* Pods-WTKWineMVVM.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COMPRESS_PNG_FILES = YES;
 				DEVELOPMENT_TEAM = 7A692X8NVA;
@@ -2133,6 +2150,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.wang.WTKWineMVVM;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

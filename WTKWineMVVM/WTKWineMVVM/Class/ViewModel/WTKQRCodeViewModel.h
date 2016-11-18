@@ -10,4 +10,6 @@
 
 @interface WTKQRCodeViewModel : WTKBasedViewModel
 
+@property(nonatomic,strong)RACCommand       *scanCommand;
+
 @end

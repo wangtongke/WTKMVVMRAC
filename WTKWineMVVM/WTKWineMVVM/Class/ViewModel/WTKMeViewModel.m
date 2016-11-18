@@ -107,21 +107,29 @@
             case 4:
             {
 //                积分
+                SHOW_ERROE(@"敬请期待");
+                DISMISS_SVP(1.2);
             }
                 break;
             case 5:
             {
 //                酒库
+                SHOW_ERROE(@"敬请期待");
+                DISMISS_SVP(1.2);
             }
                 break;
             case 6:
             {
 //                优惠券
+                SHOW_ERROE(@"敬请期待");
+                DISMISS_SVP(1.2);
             }
                 break;
             case 7:
             {
 //                酒券
+                SHOW_ERROE(@"敬请期待");
+                DISMISS_SVP(1.2);
             }
                 break;
             case 8:

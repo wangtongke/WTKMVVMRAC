@@ -34,7 +34,9 @@
     if (!_navigationController)
     {
         NSLog(@"没有导航");
-//        return;
+        SHOW_ERROE(@"导航错误");
+        DISMISS_SVP(1.2);
+        return;
     }
     if (_className.length <= 0)
     {
@@ -72,6 +74,40 @@
     }
     
     [_navigationController popToRootViewControllerAnimated:animated];
+}
+
+- (void)presentViewModel:(WTKBasedViewModel *)viewModel animated:(BOOL)animated complete:(void (^)())complete
+{
+    if (!_navigationController)
+    {
+        NSLog(@"没有导航");
+        //        return;
+    }
+    if (_className.length <= 0)
+    {
+        [SVProgressHUD showWithStatus:@"错误,未指定viewController"];
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [SVProgressHUD dismiss];
+        });
+        return;
+    }
+    WTKBasedViewController *vc = [[NSClassFromString(_className) alloc]initWithViewModel:viewModel];
+    if (!vc)
+    {
+        NSLog(@"VC名字错误");
+        return;
+    }
+    [_navigationController presentViewController:vc animated:animated completion:complete];
+}
+- (void)presentViewController:(UIViewController *)viewController animated:(BOOL)animated complete:(void (^)())complete
+{
+    if (!_navigationController)
+    {
+        SHOW_ERROE(@"导航错误");
+        DISMISS_SVP(1.2);
+        return;
+    }
+    [_navigationController presentViewController:viewController animated:animated completion:complete];
 }
 
 @end

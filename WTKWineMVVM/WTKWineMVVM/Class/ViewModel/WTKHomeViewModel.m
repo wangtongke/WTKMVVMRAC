@@ -12,7 +12,7 @@
 #import "WTKOrderViewModel.h"
 #import "WTKWebViewModel.h"
 #import "WTKSearchViewModel.h"
-
+#import "WTKQRCodeViewModel.h"
 @interface WTKHomeViewModel ()
 
 
@@ -121,6 +121,14 @@
     }];
     
     self.naviCommand    = [[RACCommand alloc]initWithSignalBlock:^RACSignal *(id input) {
+        UIButton *btn = input;
+        if (btn.tag == 111)
+        {
+//            erweima
+            WTKQRCodeViewModel *viewModel = [[WTKQRCodeViewModel alloc]initWithService:self.services params:@{@"title":@"二维码"}];
+            self.naviImpl.className = @"WTKQRCodeVC";
+            [self.naviImpl pushViewModel:viewModel animated:YES];
+        }
         return [RACSignal empty];
     }];
     
