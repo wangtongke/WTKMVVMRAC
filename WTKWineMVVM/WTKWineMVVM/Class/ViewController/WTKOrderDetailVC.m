@@ -87,7 +87,7 @@
     self.tableView.delegate         = self;
     self.automaticallyAdjustsScrollViewInsets = NO;
     self.navigationItem.titleView   = self.segment;
-    [self.tableView addSubview:self.bottomView];
+    [self.view addSubview:self.bottomView];
     
 }
 - (void)bottomBtnClick:(UIButton *)btn
@@ -209,7 +209,7 @@
 {
     if (!_bottomView)
     {
-        _bottomView = [[UIView alloc]initWithFrame:CGRectMake(0, kHeight - 49 - 64, kWidth, 49)];
+        _bottomView = [[UIView alloc]initWithFrame:CGRectMake(0, kHeight - 49, kWidth, 49)];
         _bottomView.backgroundColor = WTKCOLOR(30, 30, 30, 0.8);
         
         UILabel *moneyLabel     = [[UILabel alloc] initWithFrame:(CGRectMake(15,10, kWidth/2-20, 29))];

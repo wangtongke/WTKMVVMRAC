@@ -41,7 +41,9 @@
 {
     [super viewWillDisappear:animated];
     self.isShow = NO;
+    self.navigationController.navigationBar.barStyle = UIBarStyleDefault;
     [self.navigationController.navigationBar setBackgroundImage:[UIImage imageFromColor:WTKCOLOR(255, 255, 255, 0.99)] forBarMetrics:UIBarMetricsDefault];
+    
 }
 
 - (void)viewDidLoad {
@@ -91,18 +93,14 @@
             [self.rightBtn setBackgroundImage:[UIImage imageNamed:@"xiaoxih"] forState:UIControlStateNormal];
             self.searchBar.wtk_bgColor = WTKCOLOR(160, 160, 160, 0.5);
         }
-//        if (y < 0)
-//        {
-//            [self.navigationController setNavigationBarHidden:YES animated:YES];
-//            self.navigationController.navigationBar.barStyle = UIBarStyleDefault;
-//        }
-//        else
-//        {
-//            [self.navigationController setNavigationBarHidden:NO animated:YES];
-//            self.navigationController.navigationBar.barStyle = UIBarStyleBlack;
-//        }
-        if (y >= 0)
+        if (y < 0)
         {
+            [self.navigationController setNavigationBarHidden:YES animated:YES];
+            self.navigationController.navigationBar.barStyle = UIBarStyleDefault;
+        }
+        else
+        {
+            [self.navigationController setNavigationBarHidden:NO animated:YES];
             float a = y / kWidth / 0.23 > 0.9 ? 0.9 : y / kWidth / 0.23;
             NSLog(@"%f",a);
             if (a < 0.9 && a >= 0)

@@ -39,9 +39,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setLaunch];
-    
     [self addChileVC];
-    
 //监听读取用户数据
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(readDataFinish) name:READ_USER_DATA_FINISH object:nil];
 

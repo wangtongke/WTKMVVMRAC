@@ -172,6 +172,7 @@
 		F58695F01D9E2D7E002441A9 /* AddShopAudio.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F58695EF1D9E2D7E002441A9 /* AddShopAudio.mp3 */; };
 		F588CE241D86AE5D003E3A74 /* UIButton+WTKBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = F588CE231D86AE5D003E3A74 /* UIButton+WTKBtn.m */; };
 		F588CE271D86B3A9003E3A74 /* UIImage+WTK.m in Sources */ = {isa = PBXBuildFile; fileRef = F588CE261D86B3A9003E3A74 /* UIImage+WTK.m */; };
+		F58AF0A71DDEF982007DAC47 /* w_LaunchImage1.png in Resources */ = {isa = PBXBuildFile; fileRef = F58AF0A61DDEF982007DAC47 /* w_LaunchImage1.png */; };
 		F58C36C61DADD86700C0A2D2 /* WTKOrderStateTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = F58C36C51DADD86700C0A2D2 /* WTKOrderStateTableView.m */; };
 		F58C36CA1DADD8E600C0A2D2 /* WTKOrderStateTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F58C36C81DADD8E600C0A2D2 /* WTKOrderStateTableViewCell.m */; };
 		F58C36CB1DADD8E600C0A2D2 /* WTKOrderStateTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F58C36C91DADD8E600C0A2D2 /* WTKOrderStateTableViewCell.xib */; };
@@ -538,6 +539,7 @@
 		F588CE231D86AE5D003E3A74 /* UIButton+WTKBtn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+WTKBtn.m"; sourceTree = "<group>"; };
 		F588CE251D86B3A9003E3A74 /* UIImage+WTK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+WTK.h"; sourceTree = "<group>"; };
 		F588CE261D86B3A9003E3A74 /* UIImage+WTK.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+WTK.m"; sourceTree = "<group>"; };
+		F58AF0A61DDEF982007DAC47 /* w_LaunchImage1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = w_LaunchImage1.png; sourceTree = "<group>"; };
 		F58C36C41DADD86700C0A2D2 /* WTKOrderStateTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTKOrderStateTableView.h; sourceTree = "<group>"; };
 		F58C36C51DADD86700C0A2D2 /* WTKOrderStateTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTKOrderStateTableView.m; sourceTree = "<group>"; };
 		F58C36C71DADD8E600C0A2D2 /* WTKOrderStateTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTKOrderStateTableViewCell.h; sourceTree = "<group>"; };
@@ -979,11 +981,12 @@
 			path = Required;
 			sourceTree = "<group>";
 		};
-		F57061DA1DA9D13B0036263F /* Commont */ = {
+		F57061DA1DA9D13B0036263F /* Common */ = {
 			isa = PBXGroup;
 			children = (
 				F596DA871D86A0650058844C /* Vendor */,
 			);
+			name = Common;
 			path = Commont;
 			sourceTree = "<group>";
 		};
@@ -1141,7 +1144,7 @@
 		F596DA491D869FD30058844C /* WTKWineMVVM */ = {
 			isa = PBXGroup;
 			children = (
-				F57061DA1DA9D13B0036263F /* Commont */,
+				F57061DA1DA9D13B0036263F /* Common */,
 				F596DA861D86A0650058844C /* Tools */,
 				F596DA7D1D86A0640058844C /* Appdelegate */,
 				F596DA7E1D86A0640058844C /* Class */,
@@ -1154,6 +1157,7 @@
 				F592BA241DA89A58005EF581 /* backbutton_icon2.png */,
 				F570238A1DAC7AAA008168A8 /* backbutton_icon3.png */,
 				F58EE1CE1DC7361B008E5A6E /* w_LaunchImage.png */,
+				F58AF0A61DDEF982007DAC47 /* w_LaunchImage1.png */,
 				F596DA581D869FD30058844C /* LaunchScreen.storyboard */,
 				F596DA5B1D869FD30058844C /* Info.plist */,
 				F596DA4A1D869FD30058844C /* Supporting Files */,
@@ -1703,6 +1707,7 @@
 				F57E4D261DC976C6004721F2 /* w_star_white.png in Resources */,
 				F56CFDA51DC83C6C001727E7 /* PicComment in Resources */,
 				F57A90971DC0415200A105EC /* WTKAddressTableViewCell.xib in Resources */,
+				F58AF0A71DDEF982007DAC47 /* w_LaunchImage1.png in Resources */,
 				F56F77691DAB2E6800963C31 /* TencentOpenApi_IOS_Bundle.bundle in Resources */,
 				F596DABA1D86A0650058844C /* IQKeyboardManager.bundle in Resources */,
 				F57E4D271DC976C6004721F2 /* w_star_white@2x.png in Resources */,
