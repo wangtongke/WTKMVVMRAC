@@ -984,7 +984,6 @@
 		F57061DA1DA9D13B0036263F /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				F596DA871D86A0650058844C /* Vendor */,
 			);
 			name = Common;
 			path = Commont;
@@ -1144,6 +1143,7 @@
 		F596DA491D869FD30058844C /* WTKWineMVVM */ = {
 			isa = PBXGroup;
 			children = (
+				F596DA871D86A0650058844C /* Vendor */,
 				F57061DA1DA9D13B0036263F /* Common */,
 				F596DA861D86A0650058844C /* Tools */,
 				F596DA7D1D86A0640058844C /* Appdelegate */,
@@ -1478,8 +1478,7 @@
 				F5937E5B1D9CEBDB00C9E0B7 /* WTKTransition */,
 				F596DA881D86A0650058844C /* IQKeyBoardManager */,
 			);
-			name = Vendor;
-			path = ../Vendor;
+			path = Vendor;
 			sourceTree = "<group>";
 		};
 		F596DA881D86A0650058844C /* IQKeyBoardManager */ = {
