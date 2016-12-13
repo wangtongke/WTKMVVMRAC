@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		83184EDC4D2521D8EC3C71AC /* Pods_WTKWineMVVM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E158A064F71CB82494B85710 /* Pods_WTKWineMVVM.framework */; };
+		F50231281DFAACB100844F66 /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = F50231271DFAACB100844F66 /* AppDelegate.mm */; };
 		F53106F41D88E3F3003B402C /* WTKTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = F53106F31D88E3F3003B402C /* WTKTabBarController.m */; };
 		F53106FA1D88E444003B402C /* WTKBasedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F53106F91D88E444003B402C /* WTKBasedViewController.m */; };
 		F53107001D88E486003B402C /* WTKHomeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F53106FF1D88E486003B402C /* WTKHomeVC.m */; };
@@ -208,7 +209,6 @@
 		F5937E751D9CEBDB00C9E0B7 /* WTKBaseAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = F5937E6B1D9CEBDB00C9E0B7 /* WTKBaseAnimation.m */; };
 		F5937E761D9CEBDB00C9E0B7 /* WTKTouchManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F5937E6D1D9CEBDB00C9E0B7 /* WTKTouchManager.m */; };
 		F596DA4C1D869FD30058844C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F596DA4B1D869FD30058844C /* main.m */; };
-		F596DA4F1D869FD30058844C /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = F596DA4E1D869FD30058844C /* AppDelegate.mm */; };
 		F596DA521D869FD30058844C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F596DA511D869FD30058844C /* ViewController.m */; };
 		F596DA551D869FD30058844C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F596DA531D869FD30058844C /* Main.storyboard */; };
 		F596DA571D869FD30058844C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F596DA561D869FD30058844C /* Assets.xcassets */; };
@@ -264,6 +264,8 @@
 		D9E426C5B301181044319B4E /* Pods-WTKWineMVVM.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WTKWineMVVM.release.xcconfig"; path = "Pods/Target Support Files/Pods-WTKWineMVVM/Pods-WTKWineMVVM.release.xcconfig"; sourceTree = "<group>"; };
 		E158A064F71CB82494B85710 /* Pods_WTKWineMVVM.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WTKWineMVVM.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2969E7005841F781BBE8D64 /* Pods-WTKWineMVVM.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WTKWineMVVM.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WTKWineMVVM/Pods-WTKWineMVVM.debug.xcconfig"; sourceTree = "<group>"; };
+		F50231261DFAACB100844F66 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = WTKWineMVVM/AppDelegate.h; sourceTree = SOURCE_ROOT; };
+		F50231271DFAACB100844F66 /* AppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = AppDelegate.mm; path = WTKWineMVVM/AppDelegate.mm; sourceTree = SOURCE_ROOT; };
 		F53106F21D88E3F3003B402C /* WTKTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTKTabBarController.h; sourceTree = "<group>"; };
 		F53106F31D88E3F3003B402C /* WTKTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTKTabBarController.m; sourceTree = "<group>"; };
 		F53106F51D88E432003B402C /* WTKNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTKNavigationController.h; sourceTree = "<group>"; };
@@ -604,8 +606,6 @@
 		F5937E6D1D9CEBDB00C9E0B7 /* WTKTouchManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTKTouchManager.m; sourceTree = "<group>"; };
 		F596DA471D869FD30058844C /* WTKWineMVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WTKWineMVVM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F596DA4B1D869FD30058844C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		F596DA4D1D869FD30058844C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = ../AppDelegate.h; sourceTree = "<group>"; };
-		F596DA4E1D869FD30058844C /* AppDelegate.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; name = AppDelegate.mm; path = ../AppDelegate.mm; sourceTree = "<group>"; };
 		F596DA501D869FD30058844C /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		F596DA511D869FD30058844C /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		F596DA541D869FD30058844C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -1194,8 +1194,8 @@
 		F596DA7D1D86A0640058844C /* Appdelegate */ = {
 			isa = PBXGroup;
 			children = (
-				F596DA4D1D869FD30058844C /* AppDelegate.h */,
-				F596DA4E1D869FD30058844C /* AppDelegate.mm */,
+				F50231261DFAACB100844F66 /* AppDelegate.h */,
+				F50231271DFAACB100844F66 /* AppDelegate.mm */,
 			);
 			path = Appdelegate;
 			sourceTree = "<group>";
@@ -1822,6 +1822,7 @@
 				F53107391D8928F4003B402C /* WTKShoppingCarViewModel.m in Sources */,
 				F56F77821DAB336500963C31 /* UILabel+WTK.m in Sources */,
 				F53106FA1D88E444003B402C /* WTKBasedViewController.m in Sources */,
+				F50231281DFAACB100844F66 /* AppDelegate.mm in Sources */,
 				F56C87461DB875AD00B8B765 /* WTKSiftTableViewCell.m in Sources */,
 				F592BA2E1DA8E47D005EF581 /* WTKRecommendVC.m in Sources */,
 				F55C13001DD5AA8E0048D865 /* WTKCommentVC.m in Sources */,
@@ -1913,7 +1914,6 @@
 				F56771811DAF75FF00AE9184 /* WTKFeedbackVC.m in Sources */,
 				F58D82571DB49B6E00BB897E /* UITextField+WTK.m in Sources */,
 				F56C87501DB8A71C00B8B765 /* WTKAboutMeViewModel.m in Sources */,
-				F596DA4F1D869FD30058844C /* AppDelegate.mm in Sources */,
 				F56C52DC1DB710B000AF05DE /* WTKCategoryLeftTableViewCell.m in Sources */,
 				F5937E701D9CEBDB00C9E0B7 /* WTKAnimationDefault.m in Sources */,
 				F58420F81DDC59E400AA6046 /* WTKQRCodeVC.m in Sources */,

@@ -90,28 +90,34 @@
     }];
     
     self.payCommand             = [[RACCommand alloc]initWithSignalBlock:^RACSignal *(id input) {
-//        跳转支付
-        if ([[self.price substringFromIndex:2] floatValue] > 0)
+//        是否登录
+        if ([self judgeWhetherLogin:YES])
         {
-            WTKPayViewModel *viewModel = [[WTKPayViewModel alloc]initWithService:self.services params:@{@"title":@"结算付款"}];
-            self.naviImpl.className = @"WTKPayVC";
-            NSMutableArray *array = @[].mutableCopy;
-            [[SHOPPING_MANAGER.goodsDic allValues] enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-                WTKGood *good = obj;
-                if (good.w_isSelected)
-                {
-                    [array addObject:obj];
-                }
-            }];
-            viewModel.goodsArray = array;
-            [self.naviImpl pushViewModel:viewModel animated:YES];
-            
+            //        跳转支付
+            if ([[self.price substringFromIndex:2] floatValue] > 0)
+            {
+                WTKPayViewModel *viewModel = [[WTKPayViewModel alloc]initWithService:self.services params:@{@"title":@"结算付款"}];
+                self.naviImpl.className = @"WTKPayVC";
+                NSMutableArray *array = @[].mutableCopy;
+                [[SHOPPING_MANAGER.goodsDic allValues] enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+                    WTKGood *good = obj;
+                    if (good.w_isSelected)
+                    {
+                        [array addObject:obj];
+                    }
+                }];
+                viewModel.goodsArray = array;
+                [self.naviImpl pushViewModel:viewModel animated:YES];
+                
+            }
+            else
+            {
+                SHOW_ERROE(@"您还没有选择物品");
+                DISMISS_SVP(1.3);
+            }
         }
-        else
-        {
-            SHOW_ERROE(@"您还没有选择物品");
-            DISMISS_SVP(1.3);
-        }
+        
+
         return [RACSignal empty];
     }];
     
