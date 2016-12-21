@@ -84,6 +84,8 @@
     [action1 setValue:THEME_COLOR forKey:@"titleTextColor"];
     [action2 setValue:WTKCOLOR(30, 30, 30, 1) forKey:@"titleTextColor"];
     UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"提示" message:@"您正在评价，确定离开这个页面吗？" preferredStyle:UIAlertControllerStyleAlert];
+    [alert addAction:action1];
+    [alert addAction:action2];
     [self presentViewController:alert animated:YES completion:nil];
 }
 
@@ -149,7 +151,7 @@
         UIButton *btn = self.imgArray[i];
         btn.tag = i;
         [btn mas_remakeConstraints:^(MASConstraintMaker *make) {
-            make.left.equalTo(weakSelf.bgView).offset(i * kWidth);
+            make.left.equalTo(weakSelf.bgView).offset(i * kWidth / 5.0);
             make.bottom.equalTo(weakSelf.bgView);
             make.width.mas_equalTo(width);
             make.height.mas_equalTo(width);

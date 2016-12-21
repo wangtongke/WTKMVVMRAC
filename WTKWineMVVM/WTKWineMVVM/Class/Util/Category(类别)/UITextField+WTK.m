@@ -50,10 +50,6 @@
     {
         [self btnClick:btn];
     }
-    else
-    {
-        NSLog(@"222");
-    }
 }
 
 - (void)btnClick:(UIButton *)btn
