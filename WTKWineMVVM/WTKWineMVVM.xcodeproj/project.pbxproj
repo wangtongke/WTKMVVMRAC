@@ -238,6 +238,7 @@
 		F5A00C571D8E93F50026DF67 /* WTKGoodsViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F5A00C561D8E93F50026DF67 /* WTKGoodsViewModel.m */; };
 		F5BD1C5C1D93802A00F63B5F /* top_launch.png in Resources */ = {isa = PBXBuildFile; fileRef = F5BD1C5B1D93802A00F63B5F /* top_launch.png */; };
 		F5BD1C5F1D93A83E00F63B5F /* WTKShoppingCarVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F5BD1C5E1D93A83E00F63B5F /* WTKShoppingCarVC.m */; };
+		F5D9B53D1E0A554500C0B063 /* UMMobClick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5D9B53C1E0A554500C0B063 /* UMMobClick.framework */; };
 		F5F8D2171DD56F820076EB65 /* WTKCommentCenterVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F5F8D2161DD56F820076EB65 /* WTKCommentCenterVC.m */; };
 		F5F8D21A1DD570090076EB65 /* WTKCommentCenterViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F5F8D2191DD570090076EB65 /* WTKCommentCenterViewModel.m */; };
 		F5F8D21D1DD578EC0076EB65 /* WTKCommentCenterTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F5F8D21C1DD578EC0076EB65 /* WTKCommentCenterTableViewCell.m */; };
@@ -665,6 +666,7 @@
 		F5BD1C5B1D93802A00F63B5F /* top_launch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = top_launch.png; sourceTree = "<group>"; };
 		F5BD1C5D1D93A83E00F63B5F /* WTKShoppingCarVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTKShoppingCarVC.h; sourceTree = "<group>"; };
 		F5BD1C5E1D93A83E00F63B5F /* WTKShoppingCarVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTKShoppingCarVC.m; sourceTree = "<group>"; };
+		F5D9B53C1E0A554500C0B063 /* UMMobClick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = UMMobClick.framework; sourceTree = "<group>"; };
 		F5F8D2151DD56F820076EB65 /* WTKCommentCenterVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTKCommentCenterVC.h; sourceTree = "<group>"; };
 		F5F8D2161DD56F820076EB65 /* WTKCommentCenterVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTKCommentCenterVC.m; sourceTree = "<group>"; };
 		F5F8D2181DD570090076EB65 /* WTKCommentCenterViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTKCommentCenterViewModel.h; sourceTree = "<group>"; };
@@ -678,9 +680,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F56F77751DAB2E9000963C31 /* libz.tbd in Frameworks */,
+				F5660AD51DC20871006C89D9 /* CoreTelephony.framework in Frameworks */,
 				F56E37EB1DC2E6190013CD3B /* mapapi.bundle in Frameworks */,
 				F5660AD61DC2087E006C89D9 /* libstdc++.6.0.9.tbd in Frameworks */,
-				F5660AD51DC20871006C89D9 /* CoreTelephony.framework in Frameworks */,
 				F5660AD41DC20866006C89D9 /* libsqlite3.0.tbd in Frameworks */,
 				F5660AD31DC2085B006C89D9 /* Security.framework in Frameworks */,
 				F5660AD21DC2084D006C89D9 /* CoreGraphics.framework in Frameworks */,
@@ -695,9 +698,9 @@
 				F5660AB21DC18FA4006C89D9 /* BaiduMapAPI_Cloud.framework in Frameworks */,
 				F5660AB11DC18FA4006C89D9 /* BaiduMapAPI_Base.framework in Frameworks */,
 				F56F777B1DAB2ED300963C31 /* ImageIO.framework in Frameworks */,
+				F5D9B53D1E0A554500C0B063 /* UMMobClick.framework in Frameworks */,
 				F56F77791DAB2EA600963C31 /* JavaScriptCore.framework in Frameworks */,
 				F56F77771DAB2E9B00963C31 /* libstdc++.tbd in Frameworks */,
-				F56F77751DAB2E9000963C31 /* libz.tbd in Frameworks */,
 				F5660AB41DC18FA4006C89D9 /* BaiduMapAPI_Map.framework in Frameworks */,
 				F56F77731DAB2E8600963C31 /* libicucore.tbd in Frameworks */,
 				83184EDC4D2521D8EC3C71AC /* Pods_WTKWineMVVM.framework in Frameworks */,
@@ -1467,6 +1470,7 @@
 		F596DA871D86A0650058844C /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				F5D9B53B1E0A554500C0B063 /* UMMob */,
 				F583D8301DDDB91A00468B09 /* WTKQRCode */,
 				F57E4D1A1DC976C6004721F2 /* WTKStar */,
 				F58EE1B61DC6E1DD008E5A6E /* MSSAutoLabel */,
@@ -1564,6 +1568,14 @@
 				F596DAAC1D86A0650058844C /* IQKeyboardManager.bundle */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		F5D9B53B1E0A554500C0B063 /* UMMob */ = {
+			isa = PBXGroup;
+			children = (
+				F5D9B53C1E0A554500C0B063 /* UMMobClick.framework */,
+			);
+			path = UMMob;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -2105,6 +2117,7 @@
 					"$(PROJECT_DIR)/WTKWineMVVM/Vendor/ShareSDK/Support/PlatformSDK/QQSDK",
 					"$(PROJECT_DIR)/WTKWineMVVM/Vendor/ShareSDK/Support/Required",
 					"$(PROJECT_DIR)/WTKWineMVVM/Vendor/BaiduMap",
+					"$(PROJECT_DIR)/WTKWineMVVM/Vendor/UMMob",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/WTKWineMVVM/Class/Util/WTKPrefix.pch";
@@ -2140,6 +2153,7 @@
 					"$(PROJECT_DIR)/WTKWineMVVM/Vendor/ShareSDK/Support/PlatformSDK/QQSDK",
 					"$(PROJECT_DIR)/WTKWineMVVM/Vendor/ShareSDK/Support/Required",
 					"$(PROJECT_DIR)/WTKWineMVVM/Vendor/BaiduMap",
+					"$(PROJECT_DIR)/WTKWineMVVM/Vendor/UMMob",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/WTKWineMVVM/Class/Util/WTKPrefix.pch";

@@ -22,6 +22,7 @@
 #import <TencentOpenAPI/TencentOAuth.h>
 #import <TencentOpenAPI/TencentApiInterface.h>
 #import <TencentOpenAPI/QQApiInterface.h>
+#import <UMMobClick/MobClick.h>
 @interface AppDelegate ()
 
 @end
@@ -31,7 +32,6 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     NSLog(@"%@",NSHomeDirectory());
-    [self changeRootViewController];
 //    NSArray *arr   = [NSArray arrayWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"HomeHead" ofType:nil]];
     [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
     //    设置键盘
@@ -47,6 +47,8 @@
 
     [self registShareSDK];
     
+    [self registUM];
+    
     BMKMapManager *mapManager           = [[BMKMapManager alloc]init];
     if ([mapManager start:@"MoboTBCXuQbImL0wfRSCtyHAjk9j6prp" generalDelegate:nil])
     {
@@ -54,6 +56,8 @@
 //        开始定位
         [[WTKMapManager manager] startUserLocation];
     }
+    
+    [self changeRootViewController];
     return YES;
 }
 
@@ -64,6 +68,16 @@
 
 }
 
+#pragma mark - UM and shareSDK
+/** UM*/
+- (void)registUM
+{
+    UMConfigInstance.appKey = @"585a1bfc82b6353d33001888";
+    [MobClick startWithConfigure:UMConfigInstance];
+    [MobClick setCrashReportEnabled:YES];
+}
+
+/** shareSDK*/
 - (void)registShareSDK
 {
     dispatch_async(dispatch_get_global_queue(0, 0), ^{
