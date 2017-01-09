@@ -36,6 +36,7 @@
     [self bindViewModel];
     [self initView];
     [self.navigationController.navigationBar setBackgroundImage:[UIImage imageFromColor:WTKCOLOR(255, 255, 255, 0.99)] forBarMetrics:UIBarMetricsDefault];
+    NSLog(@"123");
 }
 
 
