@@ -399,4 +399,17 @@ static 	SystemSoundID soundID=0;
     return rect.size.height;
 }
 
++ (void)startNightSche
+{
+    if(CURRENT_USER.isNight)
+    {
+        
+    }
+}
+
+
+
+
+
+
 @end

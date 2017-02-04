@@ -29,6 +29,13 @@
 		F531074D1D893D34003B402C /* HomeData in Resources */ = {isa = PBXBuildFile; fileRef = F531074B1D893D34003B402C /* HomeData */; };
 		F531074E1D893D34003B402C /* HomeHead in Resources */ = {isa = PBXBuildFile; fileRef = F531074C1D893D34003B402C /* HomeHead */; };
 		F53107511D893E1E003B402C /* WTKRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F53107501D893E1E003B402C /* WTKRequestManager.m */; };
+		F5317CC11E237C5600D8F9AB /* mapapi.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F5317CC01E237C5600D8F9AB /* mapapi.bundle */; };
+		F5317CD51E2389A400D8F9AB /* ImageUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = F5317CC91E2389A400D8F9AB /* ImageUtil.m */; };
+		F5317CD61E2389A400D8F9AB /* UIImage+Alpha.m in Sources */ = {isa = PBXBuildFile; fileRef = F5317CCC1E2389A400D8F9AB /* UIImage+Alpha.m */; };
+		F5317CD71E2389A400D8F9AB /* UIImage+Cut.m in Sources */ = {isa = PBXBuildFile; fileRef = F5317CCE1E2389A400D8F9AB /* UIImage+Cut.m */; };
+		F5317CD81E2389A400D8F9AB /* UIImage+Resize.m in Sources */ = {isa = PBXBuildFile; fileRef = F5317CD01E2389A400D8F9AB /* UIImage+Resize.m */; };
+		F5317CD91E2389A400D8F9AB /* UIImage+RoundedCorner.m in Sources */ = {isa = PBXBuildFile; fileRef = F5317CD21E2389A400D8F9AB /* UIImage+RoundedCorner.m */; };
+		F5317CDA1E2389A400D8F9AB /* UIImage+SplitImageIntoTwoParts.m in Sources */ = {isa = PBXBuildFile; fileRef = F5317CD41E2389A400D8F9AB /* UIImage+SplitImageIntoTwoParts.m */; };
 		F532DE5D1D8F8B5400E68943 /* WTKUser.m in Sources */ = {isa = PBXBuildFile; fileRef = F532DE5C1D8F8B5400E68943 /* WTKUser.m */; };
 		F532DE601D8FBA0D00E68943 /* WTKSearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = F532DE5F1D8FBA0D00E68943 /* WTKSearchBar.m */; };
 		F55C13001DD5AA8E0048D865 /* WTKCommentVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F55C12FF1DD5AA8E0048D865 /* WTKCommentVC.m */; };
@@ -84,7 +91,6 @@
 		F56CFDA71DC83CAE001727E7 /* MidComment in Resources */ = {isa = PBXBuildFile; fileRef = F56CFDA61DC83CAE001727E7 /* MidComment */; };
 		F56CFDAA1DC865EA001727E7 /* WTKCommentTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = F56CFDA91DC865EA001727E7 /* WTKCommentTableView.m */; };
 		F56CFDAD1DC86A4B001727E7 /* WTKCommentTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F56CFDAC1DC86A4B001727E7 /* WTKCommentTableViewCell.m */; };
-		F56E37E91DC2E4D10013CD3B /* mapapi.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F56E37E81DC2E4D10013CD3B /* mapapi.bundle */; };
 		F56E37EB1DC2E6190013CD3B /* mapapi.bundle in Frameworks */ = {isa = PBXBuildFile; fileRef = F56E37EA1DC2E6190013CD3B /* mapapi.bundle */; };
 		F56E37EE1DC31D930013CD3B /* WTKMapSearchTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = F56E37ED1DC31D930013CD3B /* WTKMapSearchTableView.m */; };
 		F56F77621DAB2E6800963C31 /* ShareSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F56F773A1DAB2E6800963C31 /* ShareSDK.framework */; };
@@ -311,6 +317,20 @@
 		F531074F1D893E1E003B402C /* WTKRequestManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTKRequestManager.h; sourceTree = "<group>"; };
 		F53107501D893E1E003B402C /* WTKRequestManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTKRequestManager.m; sourceTree = "<group>"; };
 		F53107521D8940EE003B402C /* WTKURLMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WTKURLMacro.h; sourceTree = "<group>"; };
+		F5317CC01E237C5600D8F9AB /* mapapi.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = mapapi.bundle; path = BaiduMapAPI_Map.framework/Resources/mapapi.bundle; sourceTree = "<group>"; };
+		F5317CC71E2389A400D8F9AB /* ColorMatrix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorMatrix.h; sourceTree = "<group>"; };
+		F5317CC81E2389A400D8F9AB /* ImageUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageUtil.h; sourceTree = "<group>"; };
+		F5317CC91E2389A400D8F9AB /* ImageUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageUtil.m; sourceTree = "<group>"; };
+		F5317CCB1E2389A400D8F9AB /* UIImage+Alpha.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Alpha.h"; sourceTree = "<group>"; };
+		F5317CCC1E2389A400D8F9AB /* UIImage+Alpha.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Alpha.m"; sourceTree = "<group>"; };
+		F5317CCD1E2389A400D8F9AB /* UIImage+Cut.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Cut.h"; sourceTree = "<group>"; };
+		F5317CCE1E2389A400D8F9AB /* UIImage+Cut.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Cut.m"; sourceTree = "<group>"; };
+		F5317CCF1E2389A400D8F9AB /* UIImage+Resize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Resize.h"; sourceTree = "<group>"; };
+		F5317CD01E2389A400D8F9AB /* UIImage+Resize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Resize.m"; sourceTree = "<group>"; };
+		F5317CD11E2389A400D8F9AB /* UIImage+RoundedCorner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+RoundedCorner.h"; sourceTree = "<group>"; };
+		F5317CD21E2389A400D8F9AB /* UIImage+RoundedCorner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+RoundedCorner.m"; sourceTree = "<group>"; };
+		F5317CD31E2389A400D8F9AB /* UIImage+SplitImageIntoTwoParts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+SplitImageIntoTwoParts.h"; sourceTree = "<group>"; };
+		F5317CD41E2389A400D8F9AB /* UIImage+SplitImageIntoTwoParts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+SplitImageIntoTwoParts.m"; sourceTree = "<group>"; };
 		F532DE5B1D8F8B5400E68943 /* WTKUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTKUser.h; sourceTree = "<group>"; };
 		F532DE5C1D8F8B5400E68943 /* WTKUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTKUser.m; sourceTree = "<group>"; };
 		F532DE5E1D8FBA0D00E68943 /* WTKSearchBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTKSearchBar.h; sourceTree = "<group>"; };
@@ -394,7 +414,6 @@
 		F56CFDA91DC865EA001727E7 /* WTKCommentTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTKCommentTableView.m; sourceTree = "<group>"; };
 		F56CFDAB1DC86A4B001727E7 /* WTKCommentTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTKCommentTableViewCell.h; sourceTree = "<group>"; };
 		F56CFDAC1DC86A4B001727E7 /* WTKCommentTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTKCommentTableViewCell.m; sourceTree = "<group>"; };
-		F56E37E81DC2E4D10013CD3B /* mapapi.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = mapapi.bundle; path = "../../../../../../百度地图/BaiduMap_IOSSDK_v3.1.0_All/BaiduMapAPI_Map.framework/Resources/mapapi.bundle"; sourceTree = "<group>"; };
 		F56E37EA1DC2E6190013CD3B /* mapapi.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = mapapi.bundle; path = WTKWineMVVM/Vendor/BaiduMap/BaiduMapAPI_Map.framework/Resources/mapapi.bundle; sourceTree = "<group>"; };
 		F56E37EC1DC31D930013CD3B /* WTKMapSearchTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTKMapSearchTableView.h; sourceTree = "<group>"; };
 		F56E37ED1DC31D930013CD3B /* WTKMapSearchTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTKMapSearchTableView.m; sourceTree = "<group>"; };
@@ -822,10 +841,38 @@
 			path = cell;
 			sourceTree = "<group>";
 		};
+		F5317CC61E2389A400D8F9AB /* Lib */ = {
+			isa = PBXGroup;
+			children = (
+				F5317CC71E2389A400D8F9AB /* ColorMatrix.h */,
+				F5317CC81E2389A400D8F9AB /* ImageUtil.h */,
+				F5317CC91E2389A400D8F9AB /* ImageUtil.m */,
+				F5317CCA1E2389A400D8F9AB /* UIImage-Extensions */,
+			);
+			path = Lib;
+			sourceTree = "<group>";
+		};
+		F5317CCA1E2389A400D8F9AB /* UIImage-Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F5317CCB1E2389A400D8F9AB /* UIImage+Alpha.h */,
+				F5317CCC1E2389A400D8F9AB /* UIImage+Alpha.m */,
+				F5317CCD1E2389A400D8F9AB /* UIImage+Cut.h */,
+				F5317CCE1E2389A400D8F9AB /* UIImage+Cut.m */,
+				F5317CCF1E2389A400D8F9AB /* UIImage+Resize.h */,
+				F5317CD01E2389A400D8F9AB /* UIImage+Resize.m */,
+				F5317CD11E2389A400D8F9AB /* UIImage+RoundedCorner.h */,
+				F5317CD21E2389A400D8F9AB /* UIImage+RoundedCorner.m */,
+				F5317CD31E2389A400D8F9AB /* UIImage+SplitImageIntoTwoParts.h */,
+				F5317CD41E2389A400D8F9AB /* UIImage+SplitImageIntoTwoParts.m */,
+			);
+			path = "UIImage-Extensions";
+			sourceTree = "<group>";
+		};
 		F5660AA91DC18FA4006C89D9 /* BaiduMap */ = {
 			isa = PBXGroup;
 			children = (
-				F56E37E81DC2E4D10013CD3B /* mapapi.bundle */,
+				F5317CC01E237C5600D8F9AB /* mapapi.bundle */,
 				F5660AAA1DC18FA4006C89D9 /* BaiduMapAPI_Base.framework */,
 				F5660AAB1DC18FA4006C89D9 /* BaiduMapAPI_Cloud.framework */,
 				F5660AAC1DC18FA4006C89D9 /* BaiduMapAPI_Location.framework */,
@@ -1470,6 +1517,7 @@
 		F596DA871D86A0650058844C /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				F5317CC61E2389A400D8F9AB /* Lib */,
 				F5D9B53B1E0A554500C0B063 /* UMMob */,
 				F583D8301DDDB91A00468B09 /* WTKQRCode */,
 				F57E4D1A1DC976C6004721F2 /* WTKStar */,
@@ -1687,11 +1735,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F5317CC11E237C5600D8F9AB /* mapapi.bundle in Resources */,
 				F5A00BE61D8E79900026DF67 /* WTKHomeBannerCollectionViewCell.xib in Resources */,
 				F596DA5A1D869FD30058844C /* LaunchScreen.storyboard in Resources */,
 				F56CFDA31DC83C1E001727E7 /* BadComment in Resources */,
 				F56C52D51DB70BE900AF05DE /* CategoryAllGoods in Resources */,
-				F56E37E91DC2E4D10013CD3B /* mapapi.bundle in Resources */,
 				F596DA571D869FD30058844C /* Assets.xcassets in Resources */,
 				F56F776D1DAB2E6800963C31 /* read_me.txt in Resources */,
 				F57E4D2E1DC9C0C5004721F2 /* GoodComment in Resources */,
@@ -1894,6 +1942,7 @@
 				F596DAB01D86A0650058844C /* IQUIViewController+Additions.m in Sources */,
 				F58C36CE1DAE21DE00C0A2D2 /* WTKMeBtn.m in Sources */,
 				F577AED91DBF5B1800A689C1 /* WTKAddress.m in Sources */,
+				F5317CD61E2389A400D8F9AB /* UIImage+Alpha.m in Sources */,
 				F53107301D8928BD003B402C /* WTKHomeViewModel.m in Sources */,
 				F585375C1DB9C05500B66571 /* WTKShoppingCarTableViewCell.m in Sources */,
 				F570239A1DACCC5A008168A8 /* WTKOrderDetailViewModel.m in Sources */,
@@ -1903,6 +1952,7 @@
 				F56C52E51DB724B900AF05DE /* WTKCategoryRightTableViewCell.m in Sources */,
 				F576D21D1DB5B93C002C66C8 /* WTKFeedBackViewModel.m in Sources */,
 				F56F77DF1DAB8A8500963C31 /* WTKOrderDetailModel.m in Sources */,
+				F5317CD71E2389A400D8F9AB /* UIImage+Cut.m in Sources */,
 				F58EE1BF1DC6E1DD008E5A6E /* MSSAutoresizeLabelFlow.m in Sources */,
 				F588CE241D86AE5D003E3A74 /* UIButton+WTKBtn.m in Sources */,
 				F53107191D88E681003B402C /* WTKMeVC.m in Sources */,
@@ -1928,6 +1978,7 @@
 				F56C87501DB8A71C00B8B765 /* WTKAboutMeViewModel.m in Sources */,
 				F56C52DC1DB710B000AF05DE /* WTKCategoryLeftTableViewCell.m in Sources */,
 				F5937E701D9CEBDB00C9E0B7 /* WTKAnimationDefault.m in Sources */,
+				F5317CDA1E2389A400D8F9AB /* UIImage+SplitImageIntoTwoParts.m in Sources */,
 				F58420F81DDC59E400AA6046 /* WTKQRCodeVC.m in Sources */,
 				F531070B1D88E5B0003B402C /* WTKFoundVC.m in Sources */,
 				F570238E1DAC7FD8008168A8 /* WTKOrderMenuView.m in Sources */,
@@ -1940,6 +1991,7 @@
 				F56CF8A21DB07B25004D46B3 /* WTKLoginViewModel.m in Sources */,
 				F596DAAF1D86A0650058844C /* IQUIView+Hierarchy.m in Sources */,
 				F53107511D893E1E003B402C /* WTKRequestManager.m in Sources */,
+				F5317CD51E2389A400D8F9AB /* ImageUtil.m in Sources */,
 				F5BD1C5F1D93A83E00F63B5F /* WTKShoppingCarVC.m in Sources */,
 				F58EE1C11DC6E1DD008E5A6E /* MSSAutoresizeLabelFlowConfig.m in Sources */,
 				F596DAAE1D86A0650058844C /* IQUITextFieldView+Additions.m in Sources */,
@@ -1956,6 +2008,8 @@
 				F5937E731D9CEBDB00C9E0B7 /* WTKAnimationOval.m in Sources */,
 				F576D2A21DB5EB94002C66C8 /* WTKTextView.m in Sources */,
 				F53107241D891B1B003B402C /* WTKBasedViewModel.m in Sources */,
+				F5317CD81E2389A400D8F9AB /* UIImage+Resize.m in Sources */,
+				F5317CD91E2389A400D8F9AB /* UIImage+RoundedCorner.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

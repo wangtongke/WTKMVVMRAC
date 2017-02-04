@@ -32,7 +32,7 @@
         {
             CURRENT_USER.isShake = sw.on;
         }
-        else
+        else if (sw.tag == 2)
         {
             if (sw.on)
             {
@@ -54,6 +54,11 @@
             {
                 [WTKTool delegateTouchID];
             }
+        }
+        else
+        {
+            CURRENT_USER.isNight = sw.on;
+            [WTKTool startNightSche];
         }
         return [RACSignal empty];
     }];

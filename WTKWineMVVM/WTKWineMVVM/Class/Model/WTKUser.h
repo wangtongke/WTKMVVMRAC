@@ -38,8 +38,11 @@
 ///是否开启声音
 @property(nonatomic,assign)BOOL             isSound;
 
-///是否开始震动
+///是否开启震动
 @property(nonatomic,assign)BOOL             isShake;
+
+///是否夜间模式
+@property(nonatomic,assign)BOOL             isNight;
 
 ///密码
 @property(nonatomic,copy)NSString           *password;

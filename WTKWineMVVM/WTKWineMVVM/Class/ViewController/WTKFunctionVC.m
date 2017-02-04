@@ -62,7 +62,7 @@
     {
         cell                    = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@"cell"];
         cell.textLabel.textColor= WTKCOLOR(70, 70, 70, 1);
-        cell.textLabel.text     = indexPath.row == 0? @"声音" : indexPath.row == 1 ? @"震动" : @"指纹支付";
+        cell.textLabel.text     = indexPath.row == 0? @"声音" : indexPath.row == 1 ? @"震动" : indexPath.row == 2 ? @"指纹支付" : @"夜间模式";
         UISwitch *sw            = [[UISwitch alloc]initWithFrame:CGRectMake(kWidth - 70, 10, 50, 30)];
         sw.tintColor            = THEME_COLOR;
         sw.tag                  = indexPath.row;
@@ -76,9 +76,13 @@
         {
             sw.on               = CURRENT_USER.isShake;
         }
-        else
+        else if (indexPath.row == 2)
         {
             sw.on               = CURRENT_USER.isTouchID;
+        }
+        else
+        {
+            sw.on               = CURRENT_USER.isNight;
         }
         [cell.contentView addSubview:sw];
     }
@@ -86,7 +90,7 @@
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 3;
+    return 4;
 }
 
 

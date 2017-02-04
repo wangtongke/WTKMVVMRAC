@@ -81,4 +81,10 @@
 + (CGFloat)calculateStringHeight:(NSString *)string
                         withFont:(UIFont *)font
                      stringWidth:(CGFloat)width;
+
+/**
+ * 开启夜间模式
+ *
+*/
++ (void)startNightSche;
 @end
