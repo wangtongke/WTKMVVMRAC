@@ -34,22 +34,12 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>RESideMenu.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>Reachability.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
 		<key>ReactiveCocoa.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>Result.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -67,62 +57,52 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>161FDF3C329058F2F6395B0711B22DB0</key>
+		<key>51430F1D287AA16C94CBC716A7599A94</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>16FB872D0D2D4BA0F378AB34D47CF95F</key>
+		<key>5AA17C95E926B760FD08E0B487DAEFA2</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>1C3436CEA5C3D39764C5F54374794ECB</key>
+		<key>5AF30C289BF4D122B483B2C2AD879510</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>29DD99664D189A7CA206368F493B1E0B</key>
+		<key>C352E65B3E3CC330E749AB57AD0D9681</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>6ED4CBD2804535EA991B02A9EEF0C156</key>
+		<key>CF671F7E57B92905F1CC91D036D6B4A7</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>70206FAC5BF491F3D65706556DC01E24</key>
+		<key>D386C75EFD4F03725E4EFB866B600B9A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>70DACA59EAE23BFC436DBB98B2119D8D</key>
+		<key>D52144DE9D7255DE912490FF5A806573</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>7C0126D717EB28DC6DB2EEA2E20B5172</key>
+		<key>E14A62900910444707A5504D25EC98DC</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>9C3F7C3BC0C804D9FEB6A7C69392D6F6</key>
+		<key>EA24B18A991A2C1292ED02BA5FE85B9D</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A9A83F63385AA43314397B8DD375464B</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>AEF9BAD2FF322B13363203A8A1E943BD</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>EA799F6B4847ABF00E9865F1DE7005D4</key>
+		<key>F44438C55EB7906BC97B99C594CC695D</key>
 		<dict>
 			<key>primary</key>
 			<true/>

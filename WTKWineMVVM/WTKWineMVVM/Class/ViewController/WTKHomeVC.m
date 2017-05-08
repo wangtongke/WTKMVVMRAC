@@ -36,6 +36,9 @@
     [self.navigationController.navigationBar setBackgroundImage:[UIImage imageFromColor:WTKCOLOR(255, 255, 255, 0.01)] forBarMetrics:UIBarMetricsDefault];
         [self _setNavigationItem];
     self.collectionView.contentOffset = CGPointMake(self.collectionView.contentOffset.x, self.collectionView.contentOffset.y + 0.02);
+    [[WTKRequestManager postWithURL:@"http://localhost:7777" withParamater:@{}] subscribeNext:^(id x) {
+        NSLog(@"%@",x);
+    }];
 }
 - (void)viewWillDisappear:(BOOL)animated
 {

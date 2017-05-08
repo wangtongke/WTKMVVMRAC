@@ -18,7 +18,9 @@
     {
         
 //        view = [self.navigationController.view snapshotViewAfterScreenUpdates:NO];
-        view = [self.tabBarController.view snapshotViewAfterScreenUpdates:NO];
+        view = [self.tabBarController.view snapshotViewAfterScreenUpdates:YES];
+//        view=  [self imageFromView:self.view];
+//        view = [self.tabBarController.view resizableSnapshotViewFromRect:self.tabBarController.view.frame afterScreenUpdates:NO withCapInsets:UIEdgeInsetsZero];
       
         [self setSnapshot:view];
     }
@@ -62,5 +64,28 @@
 - (void)setViewSnapshot:(UIView *)viewSnapshot
 {
     objc_setAssociatedObject(self, @"WTKAnimationTransitioningViewSnapshot", viewSnapshot, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+}
+
+- (UIView *)imageFromView:(UIView *)snapView {
+//    UIGraphicsBeginImageContext(snapView.frame.size);
+//    CGContextRef context = UIGraphicsGetCurrentContext();
+//    [snapView.layer renderInContext:context];
+//    UIImage *targetImage = UIGraphicsGetImageFromCurrentImageContext();
+//    UIGraphicsEndImageContext();
+//    
+//    UIImageView *tmpView = [[UIImageView alloc] initWithImage:targetImage];
+//    tmpView.frame = snapView.frame;
+//    return tmpView;
+    
+    UIGraphicsBeginImageContextWithOptions(snapView.bounds.size, snapView.opaque, [UIScreen mainScreen].scale);
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    [snapView.layer renderInContext:context];
+    UIImage *snapshot = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    UIImageView *tmpView = [[UIImageView alloc] initWithImage:snapshot];
+    tmpView.frame = snapView.frame;
+    return tmpView;
+    
+    
 }
 @end

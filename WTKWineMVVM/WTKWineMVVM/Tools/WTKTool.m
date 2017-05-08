@@ -49,7 +49,7 @@ static 	SystemSoundID soundID=0;
     [path addQuadCurveToPoint:endPoint controlPoint:centerPoint];
     
 //    位置动画
-    CAKeyframeAnimation *animation1 = [CAKeyframeAnimation animationWithKeyPath:@"position"];
+    CAKeyframeAnimation *animation1 = [CAKeyframeAnimation animationWithKeyPath:@"f"];
     animation1.path                 = path.CGPath;
     animation1.removedOnCompletion  = NO;
     

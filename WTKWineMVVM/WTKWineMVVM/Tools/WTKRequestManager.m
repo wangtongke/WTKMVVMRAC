@@ -70,6 +70,8 @@
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     manager.requestSerializer.timeoutInterval = 5;
     RACSubject *sub =[ RACSubject subject];
+    manager.responseSerializer = [AFHTTPResponseSerializer serializer];
+    [NSSet setWithObjects:@"application/json", @"text/json", @"text/javascript",@"text/html", nil];
     [manager POST:urlString parameters:parameter progress:^(NSProgress * _Nonnull uploadProgress) {
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
@@ -78,6 +80,15 @@
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         [sub sendNext:@{@"code":@-400}];
         [sub sendCompleted];
+    }];
+    [manager GET:urlString parameters:parameter progress:^(NSProgress * _Nonnull downloadProgress) {
+        
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        NSLog(@"response---%@",responseObject);
+        id dic = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];
+        NSLog(@"%@",dic);
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        NSLog(@"%@",error);
     }];
     
     return sub;
