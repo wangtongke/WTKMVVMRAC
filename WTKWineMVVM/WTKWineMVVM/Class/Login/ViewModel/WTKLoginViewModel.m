@@ -99,7 +99,13 @@
 {
     UIButton *btn = timer.userInfo;
     self.time--;
-    [btn setTitle:[NSString stringWithFormat:@"%ld",self.time] forState:UIControlStateNormal];
+    if (self.time <= 0) {
+        self.time = 60;
+        [btn setTitle:@"验证" forState:UIControlStateNormal];
+    } else {
+        [btn setTitle:[NSString stringWithFormat:@"%ld",self.time] forState:UIControlStateNormal];
+    }
+    
 }
 
 - (BOOL)isPhoneNum:(NSString *)phoneNum
